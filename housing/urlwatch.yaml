@@ -1,0 +1,49 @@
+display:
+  error: true
+  new: true
+  unchanged: false
+job_defaults:
+  all: {}
+  browser: {}
+  shell: {}
+  url:
+    ignore_cached: true
+    filter:
+      - css: 
+          selector: body
+          exclude: 'div.gform_wrapper,a[href^="/cdn-cgi/l/email-protection"],ul[id^="slideshow"],div.slideshow-wrapper,div.ngg-slideshow,div.lazy-community-carousel,div.testimonials-widget,.adtester-container,.today-office-hours,.yelp-reviews,.other-communities,img[src^="https://api.fouanalytics.com"],.search-form,.searchForm,.search_form,.contact-form,.contactForm,.contact_form,.office-hours,#BrochureDateTime'
+      - re.sub: 'Image Detail [a-z0-9]{32}'
+      # - re.ssub:
+      #     substring: '(alt)=".*?"'
+      #     pattern: '((?=.*\d)[0-9a-z]{13,64}|[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}|[0-9]{6,32})'
+      - html2text:
+          method: pyhtml2text
+      - re.sub: 'time=\d+'
+report:
+  custom_email:
+    enabled: true
+    from: 'Changebot <changebot@theunitedeffort.org>'
+    to: 'housing-db-editors@theunitedeffort.org'
+    # to: 'trevor@theunitedeffort.org'
+    html: false
+    method: sendmail
+    sendmail:
+      path: /sbin/sendmail
+    subject: '{count} housing changes detected ({datetime})'
+    details_url: https://storage.googleapis.com/ueo-changes/housing/report-{datetime}.html
+  gcs:
+    enabled: true
+    filename: report-{datetime}.html
+    bucket: ueo-changes
+    local_dir: ~/ueo-watch/housing/staging
+    gcs_dir: housing
+  html:
+    diff: table
+  stdout:
+    color: true
+    enabled: true
+  text:
+    details: false
+    footer: true
+    line_length: 75
+    minimal: false

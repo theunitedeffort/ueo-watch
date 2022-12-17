@@ -1,0 +1,53 @@
+display:
+  error: true
+  new: true
+  unchanged: false
+job_defaults:
+  all: {}
+  browser: {}
+  shell: {}
+  url:
+    ignore_cached: true
+    filter:
+      - css: 
+          selector: body
+          exclude: 'script,style,iframe,div.gform_wrapper,ul[id^="slideshow"],div.slideshow-wrapper,form,a[href^="/cdn-cgi/l/email-protection"],div.ngg-slideshow,input[type="hidden"],picture[id^="logo"],div.lazy-community-carousel,div.testimonials-widget,.adtester-container,.today-office-hours,img[src^="https://api.fouanalytics.com"],.yelp-reviews'
+      - re.sub: 'time=\d+'
+      - re.ssub:
+          substring: '(class|id|alt|aria-labelledby|aria-label|data-[0-9A-za-z_-]*?)=".*?"'
+          pattern: '((?=.*\d)[0-9a-z]{13,64}|[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}|[0-9]{4,32})'
+      - re.sub: '[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}-(matter-port-tour|video)'
+      # - re.sub: '(row|custom-inner|custom-inner-column|tgpli|custom|button)-[0-9a-z]{13,17}' 
+      # - re.sub: 'carousel-[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}'
+      # - re.sub: 'custom_[0-9]{6}'
+      # - re.sub: '(content-|imageContent|Image Detail |bg-)[0-9a-z]{32}'
+      # - re.sub: 'dom-id-[0-9a-z]{64}'
+      - striplines
+      - grepi: '^\s*$'
+report:
+  custom_email:
+    enabled: true
+    from: 'Changebot <changebot@theunitedeffort.org>'
+    to: 'trevor@theunitedeffort.org'
+    html: false
+    method: sendmail
+    sendmail:
+      path: /sbin/sendmail
+    subject: '{count} housing (full html) changes detected ({datetime})'
+    details_url: https://storage.googleapis.com/ueo-changes/housing/fullhtml/report-{datetime}.html
+  gcs:
+    enabled: true
+    filename: report-{datetime}.html
+    bucket: ueo-changes
+    local_dir: ~/ueo-watch/housing_fullhtml/staging
+    gcs_dir: housing/fullhtml
+  html:
+    diff: table
+  stdout:
+    color: true
+    enabled: true
+  text:
+    details: false
+    footer: true
+    line_length: 75
+    minimal: false
