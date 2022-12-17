@@ -12,7 +12,7 @@ cd "$root_dir"
 urlwatch -v --hooks config/hooks.py --urls housing/urls.yaml --config housing/urlwatch.yaml --cache housing/cache.db 2> housing/urlwatch_debug.log 1> housing/urlwatch_output.log
 
 # Run housing_fullhtml jobs
-urlwatch -v --hooks config/hooks.py --urls housing_fullhtml/urls.yaml --config housing_fullhtml/urlwatch.yaml --cache housing/cache.db 2> housing_fullhtml/urlwatch_debug.log 1> ~/ueo-watch/housing_fullhtml/urlwatch_output.log
+urlwatch -v --hooks config/hooks.py --urls housing_fullhtml/urls.yaml --config housing_fullhtml/urlwatch.yaml --cache housing/cache.db 2> housing_fullhtml/urlwatch_debug.log 1> housing_fullhtml/urlwatch_output.log
 
 # Check for errors in the housing debug log.
 body="$(grep "ERROR: " housing/urlwatch_debug.log)" && now="$(date)" && printf "Subject: urlwatch housing error [$now]\nFrom: Changebot <changebot@theunitedeffort.org>\nTo: trevor@theunitedeffort.org\n\n$body" | /sbin/sendmail -oi -t
