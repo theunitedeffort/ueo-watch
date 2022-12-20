@@ -43,6 +43,7 @@ report:
     gcs_dir: housing/fullhtml
   html:
     diff: table
+    enabled: false
   stdout:
     color: true
     enabled: true
@@ -51,3 +52,6 @@ report:
     footer: true
     line_length: 75
     minimal: false
+    enabled: false
+  markdown:
+    enabled: false
