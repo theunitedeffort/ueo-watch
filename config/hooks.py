@@ -57,7 +57,6 @@ class UpdateUrlsReporter(reporters.ReporterBase):
             old_loc,
             new_loc 
         ])
-        # self.urls_map[old_loc]['url'] = new_loc
 
     def _remove(self, loc):
         subprocess.run([
@@ -67,7 +66,6 @@ class UpdateUrlsReporter(reporters.ReporterBase):
             '--delete',
             loc 
         ])
-        # del self.urls_map[loc]['url']
 
     def _add(self, loc):
         subprocess.run([
@@ -77,25 +75,8 @@ class UpdateUrlsReporter(reporters.ReporterBase):
             '--add',
             'url=%s' % loc 
         ])
-        # self.urls.append({'url': loc})
 
     def submit(self):
-        # self.urls = []
-        # self.urls_map = {}
-        # with open(os.path.expanduser('~/projects/ueo-watch/housing_links/stage2/urls.yaml')) as urls_file:
-        #     index = 0
-        #     for doc in yaml.safe_load_all(urls_file):
-        #         print(doc)
-        #         if doc and 'url' in doc:
-        #             self.urls.append(doc)
-        #             self.urls_map[doc['url']] = doc
-        #         index += 1
-        self._add('test4')
-        self._remove('test1')
-        self._change('test2', 'TEST2')
-        # with open(os.path.expanduser('~/projects/ueo-watch/housing_links/stage2/urls.yaml'), 'w') as urls_file:
-        #     yaml.dump_all((u for u in self.urls if 'url' in u), urls_file)
-        return
         href_regex = 'href="(.*?)"'
         for job_state in self.report.get_filtered_job_states(self.job_states):
             if job_state.verb == 'new':
