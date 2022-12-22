@@ -1,0 +1,41 @@
+display:
+  error: true
+  new: true
+  unchanged: false
+job_defaults:
+  all: {}
+  browser: {}
+  shell: {}
+  url:
+    ignore_cached: true
+report:
+  custom_email:
+    enabled: true
+    from: 'Changebot <changebot@theunitedeffort.org>'
+    to: 'trevor@theunitedeffort.org'
+    html: false
+    method: sendmail
+    sendmail:
+      path: /sbin/sendmail
+    subject: '{count} housing links (stage 2) changes detected ({datetime})'
+    details_url: https://storage.googleapis.com/ueo-changes/housing/links/stage2/report-{datetime}.html
+  gcs:
+    enabled: true
+    filename: report-{datetime}.html
+    bucket: ueo-changes
+    local_dir: ~/ueo-watch/housing_links/stage2/staging
+    gcs_dir: housing/links/stage2
+  html:
+    diff: table
+    enabled: false
+  stdout:
+    color: true
+    enabled: true
+  text:
+    details: false
+    footer: true
+    line_length: 75
+    minimal: false
+    enabled: false
+  markdown:
+    enabled: false

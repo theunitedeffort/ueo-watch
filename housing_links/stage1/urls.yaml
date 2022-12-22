@@ -1,0 +1,91 @@
+command: cat /tmp/PageStreet.html
+filter:
+  - css: 'div.property-apply a[href$=".pdf"]'
+---
+url: https://charitieshousing.org/property/107-and-220-224-los-gatos-apartments/
+filter:
+  - css: 'div.property-apply a[href$=".pdf"]'
+---
+url: https://charitieshousing.org/property/archer-street/
+filter:
+  - css: 'div.property-apply a[href$=".pdf"]'
+---
+url: https://charitieshousing.org/property/belovida/
+filter:
+  - css: 'div.property-apply a[href$=".pdf"]'
+---
+url: https://charitieshousing.org/property/casa-de-palma/
+filter:
+  - css: 'div.property-apply a[href$=".pdf"]'
+---
+url: https://charitieshousing.org/property/home-safe-san-jose/
+filter:
+  - css: 'div.property-apply a[href$=".pdf"]'
+---
+url: https://charitieshousing.org/property/home-safe-santa-clara/
+filter:
+  - css: 'div.property-apply a[href$=".pdf"]'
+---
+url: https://charitieshousing.org/property/kings-crossing-apartments/
+filter:
+  - css: 'div.property-apply a[href$=".pdf"]'
+---
+url: https://charitieshousing.org/property/met-north/
+filter:
+  - css: 'div.property-apply a[href$=".pdf"]'
+---
+url: https://charitieshousing.org/property/met-south-1/
+filter:
+  - css: 'div.property-apply a[href$=".pdf"]'
+---
+url: https://charitieshousing.org/property/page-street/
+filter:
+  - css: 'div.property-apply a[href$=".pdf"]'
+---
+url: https://charitieshousing.org/property/parkside-studios/
+filter:
+  - css: 'div.property-apply a[href$=".pdf"]'
+---
+url: https://charitieshousing.org/property/paseo-senter/
+filter:
+  - css: 'div.property-apply a[href$=".pdf"]'
+---
+url: https://charitieshousing.org/property/pensione-esperanza-apts/
+filter:
+  - css: 'div.property-apply a[href$=".pdf"]'
+---
+url: https://charitieshousing.org/property/renascent-place/
+filter:
+  - css: 'div.property-apply a[href$=".pdf"]'
+---
+url: https://charitieshousing.org/property/san-antonio-place/
+filter:
+  - css: 'div.property-apply a[href$=".pdf"]'
+---
+url: https://charitieshousing.org/property/san-tomas-gardens/
+filter:
+  - css: 'div.property-apply a[href$=".pdf"]'
+---
+url: https://charitieshousing.org/property/sierra-vista-i-apartments/
+filter:
+  - css: 'div.property-apply a[href$=".pdf"]'
+---
+url: https://charitieshousing.org/property/stoney-pine-villa/
+filter:
+  - css: 'div.property-apply a[href$=".pdf"]'
+---
+url: https://charitieshousing.org/property/sunset-square-apartments/
+filter:
+  - css: 'div.property-apply a[href$=".pdf"]'
+---
+url: https://charitieshousing.org/property/susie-b-wilson/
+filter:
+  - css: 'div.property-apply a[href$=".pdf"]'
+---
+url: https://charitieshousing.org/property/the-veranda/
+filter:
+  - css: 'div.property-apply a[href$=".pdf"]'
+---
+url: https://charitieshousing.org/property/westwood-ambassador-apartments/
+filter:
+  - css: 'div.property-apply a[href$=".pdf"]'

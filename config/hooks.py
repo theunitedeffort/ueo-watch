@@ -1,7 +1,9 @@
+import difflib
 import logging
 import os
 import re
 import subprocess
+import yaml
 
 from urlwatch import filters
 from urlwatch import reporters
@@ -34,6 +36,92 @@ class RegexSuperSub(filters.FilterBase):
         else:
             return re.sub(subfilter['pattern'], subfilter.get('repl', ''), data)
 
+
+class UpdateUrlsReporter(reporters.ReporterBase):
+    """Uses job diffs to update a URLs YAML file for a later urlwatch run."""
+
+    __kind__ = 'update_urls'
+
+    @staticmethod
+    def unmarkup(line):
+        for mark in ['\0+', '\0-', '\0^', '\1']:
+            line = line.replace(mark, '')
+        return line.strip()
+
+    def _change(self, old_loc, new_loc):
+        subprocess.run([
+            'urlwatch',
+            '--urls',
+            os.path.expanduser('~/projects/ueo-watch/housing_links/stage2/urls.yaml'),
+            '--change-location',
+            old_loc,
+            new_loc 
+        ])
+        # self.urls_map[old_loc]['url'] = new_loc
+
+    def _remove(self, loc):
+        subprocess.run([
+            'urlwatch',
+            '--urls',
+            os.path.expanduser('~/projects/ueo-watch/housing_links/stage2/urls.yaml'),
+            '--delete',
+            loc 
+        ])
+        # del self.urls_map[loc]['url']
+
+    def _add(self, loc):
+        subprocess.run([
+            'urlwatch',
+            '--urls',
+            os.path.expanduser('~/projects/ueo-watch/housing_links/stage2/urls.yaml'),
+            '--add',
+            'url=%s' % loc 
+        ])
+        # self.urls.append({'url': loc})
+
+    def submit(self):
+        # self.urls = []
+        # self.urls_map = {}
+        # with open(os.path.expanduser('~/projects/ueo-watch/housing_links/stage2/urls.yaml')) as urls_file:
+        #     index = 0
+        #     for doc in yaml.safe_load_all(urls_file):
+        #         print(doc)
+        #         if doc and 'url' in doc:
+        #             self.urls.append(doc)
+        #             self.urls_map[doc['url']] = doc
+        #         index += 1
+        self._add('test4')
+        self._remove('test1')
+        self._change('test2', 'TEST2')
+        # with open(os.path.expanduser('~/projects/ueo-watch/housing_links/stage2/urls.yaml'), 'w') as urls_file:
+        #     yaml.dump_all((u for u in self.urls if 'url' in u), urls_file)
+        return
+        href_regex = 'href="(.*?)"'
+        for job_state in self.report.get_filtered_job_states(self.job_states):
+            if job_state.verb == 'new':
+                for line in job_state.new_data.splitlines():
+                    match = re.search(href_regex, line)
+                    if match:
+                        print('NEW ADD %s' % match[1])
+                        self._add(match[1])
+            if not job_state.old_data:
+                continue
+            diffs = difflib._mdiff(job_state.old_data.splitlines(),
+                job_state.new_data.splitlines())
+            for from_data, to_data, changed in diffs:
+                if not changed:
+                    continue
+                from_match = re.search(href_regex, unmarkup(from_data[1]))
+                to_match = re.search(href_regex, unmarkup(to_data[1]))
+                if from_match and to_match:
+                    print('CHANGED %s --> %s' % (from_match[1], to_match[1]))
+                    self._change(from_match[1], to_match[1])
+                elif not from_match and to_match:
+                    print('ADDED   %s' % to_match[1])
+                    self._add(to_match[1])
+                elif from_match and not to_match:
+                    print('REMOVED %s' % from_match[1])
+                    self._remove(from_match[1])
         
 
 class GcsFileReporter(reporters.HtmlReporter):
