@@ -11,7 +11,7 @@ job_defaults:
     filter:
       - css: 
           selector: body
-          exclude: 'script,style,iframe,div.gform_wrapper,ul[id^="slideshow"],div.slideshow-wrapper,form,a[href^="/cdn-cgi/l/email-protection"],div.ngg-slideshow,input[type="hidden"],picture[id^="logo"],div.lazy-community-carousel,div.testimonials-widget,.adtester-container,.today-office-hours,.yelp-reviews,.other-communities,img[src^="https://api.fouanalytics.com"],.search-form,.searchForm,.search_form,.contact-form,.contactForm,.contact_form,.office-hours,#BrochureDateTime,div.latest-news,div.latest-blog-post,div.apartment-reviews'
+          exclude: 'script,style,iframe,div.gform_wrapper,ul[id^="slideshow"],div.slideshow-wrapper,div.orbit,form,a[href^="/cdn-cgi/l/email-protection"],div.ngg-slideshow,input[type="hidden"],picture[id^="logo"],div.lazy-community-carousel,div.testimonials-widget,.adtester-container,.today-office-hours,.yelp-reviews,.other-communities,img[src^="https://api.fouanalytics.com"],.search-form,.searchForm,.search_form,.contact-form,.contactForm,.contact_form,.office-hours,#BrochureDateTime,div.latest-news,div.latest-blog-post,div.apartment-reviews,.g-review,.posts-wrapper'
       - re.sub: 'time=\d+'
       - re.ssub:
           substring: '(class|id|alt|aria-labelledby|aria-label|data-[0-9A-za-z_-]*?)=".*?"'

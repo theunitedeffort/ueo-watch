@@ -11,7 +11,7 @@ job_defaults:
     filter:
       - css: 
           selector: body
-          exclude: 'div.gform_wrapper,a[href^="/cdn-cgi/l/email-protection"],ul[id^="slideshow"],div.slideshow-wrapper,div.ngg-slideshow,div.lazy-community-carousel,div.testimonials-widget,.adtester-container,.today-office-hours,.yelp-reviews,.other-communities,img[src^="https://api.fouanalytics.com"],.search-form,.searchForm,.search_form,.contact-form,.contactForm,.contact_form,.office-hours,#BrochureDateTime,div.latest-news,div.latest-blog-post,div.apartment-reviews'
+          exclude: 'div.gform_wrapper,a[href^="/cdn-cgi/l/email-protection"],ul[id^="slideshow"],div.slideshow-wrapper,div.orbit,div.ngg-slideshow,div.lazy-community-carousel,div.testimonials-widget,.adtester-container,.today-office-hours,.yelp-reviews,.other-communities,img[src^="https://api.fouanalytics.com"],.search-form,.searchForm,.search_form,.contact-form,.contactForm,.contact_form,.office-hours,#BrochureDateTime,div.latest-news,div.latest-blog-post,div.apartment-reviews,.g-review,.posts-wrapper'
       - re.sub: 'Image Detail [a-z0-9]{32}'
       # - re.ssub:
       #     substring: '(alt)=".*?"'
