@@ -17,6 +17,7 @@ job_defaults:
           substring: '(class|id|alt|aria-labelledby|aria-label|data-[0-9A-za-z_-]*?)=".*?"'
           pattern: '((?=.*\d)[0-9a-z]{13,64}|[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}|[0-9]{4,32})'
       - re.sub: '[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}-(matter-port-tour|video)'
+      - re.sub: '<!--.*?-->'
       # - re.sub: '(row|custom-inner|custom-inner-column|tgpli|custom|button)-[0-9a-z]{13,17}' 
       # - re.sub: 'carousel-[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}'
       # - re.sub: 'custom_[0-9]{6}'
