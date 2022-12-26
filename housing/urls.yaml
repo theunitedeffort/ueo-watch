@@ -25,6 +25,13 @@ url: https://altahousing.org/resources/los-altos/los-alto-bmr-rental-program/
 url: https://altahousing.org/resources/palo_alto_bmr/rental-program/
 ---
 url: https://housing.sanjoseca.gov/listings
+filter:
+  - css: 'script#__NEXT_DATA__'
+  - html2text:
+      method: re
+  - jq: '.props'
+  - format-json:
+      indentation: 2
 ---
 url: https://www.losgatosca.gov/345/Housing-Programs
 ---
