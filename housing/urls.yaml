@@ -731,6 +731,18 @@ url: https://www.lakevisioncap.com/museum-park/
 ---
 url: https://www.fpiliving.com/jardines-paloma-blanca/default.aspx
 ---
+url: https://www.housekeys7.com/prado
+---
+url: https://www.housekeys7.com/santana-terrace
+---
+url: https://www.cityofgilroy.org/DocumentCenter/View/12922/Interest-List-Flyer---Village-at-First-Affordable-Apartments-Flyer---English?bidId=
+filter:
+  - pdf2text
+---
+url: https://www.cityofgilroy.org/DocumentCenter/View/12529/Glen-Loma-Ranch-Affordable-Apartments-Interest-List-English?bidId=
+filter:
+  - pdf2text
+---
 url: https://static1.squarespace.com/static/5dc7476c0941b54dd5f9e7f9/t/5e2e36a1ec0b682714c882d8/1580086949905/SantaClaraCounty_PropertyProfileInfo_1.23.20.pdf
 filter:
   - pdf2text
