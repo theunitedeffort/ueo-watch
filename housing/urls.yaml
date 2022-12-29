@@ -24,15 +24,6 @@ url: https://altahousing.org/resources/los-altos/los-alto-bmr-rental-program/
 ---
 url: https://altahousing.org/resources/palo_alto_bmr/rental-program/
 ---
-url: https://housing.sanjoseca.gov/listings
-filter:
-  - css: 'script#__NEXT_DATA__'
-  - html2text:
-      method: re
-  - jq: '.props'
-  - format-json:
-      indentation: 2
----
 url: https://www.losgatosca.gov/345/Housing-Programs
 ---
 url: https://www.housekeys12.com/
@@ -734,6 +725,109 @@ url: https://www.fpiliving.com/jardines-paloma-blanca/default.aspx
 url: https://www.housekeys7.com/prado
 ---
 url: https://www.housekeys7.com/santana-terrace
+---
+url: https://www.housekeys1.com/morgan-ranch-od-398
+---
+url: https://www.housekeys2.com/merrill-gardens-unit-236-od-403
+---
+url: https://housing.sanjoseca.gov/listing/b7869b77-ad7c-47e4-8e9f-1d5003e4807e/virginia_street_studios_295_east_virginia_street_san_jose_ca
+filter:
+  - css: 'script#__NEXT_DATA__'
+  - html2text:
+      method: re
+  - jq: '.props'
+  - format-json:
+      indentation: 2
+---
+url: https://housing.sanjoseca.gov/listing/2023af19-65b2-4724-8d37-199f982291f2/el_paseo_studios_4980_hamilton_avenue_san_jose_ca
+filter:
+  - css: 'script#__NEXT_DATA__'
+  - html2text:
+      method: re
+  - jq: '.props'
+  - format-json:
+      indentation: 2
+---
+url: https://housing.sanjoseca.gov/listing/416dc55d-f387-452e-8b53-7521618ec43a/arya_500_almaden_blvd_san_jose_ca
+filter:
+  - css: 'script#__NEXT_DATA__'
+  - html2text:
+      method: re
+  - jq: '.props'
+  - format-json:
+      indentation: 2
+---
+url: https://housing.sanjoseca.gov/listing/3b374f00-628a-4886-ad74-691835d74af7/mesa_terrace_1171_mesa_drive_san_jose_ca
+filter:
+  - css: 'script#__NEXT_DATA__'
+  - html2text:
+      method: re
+  - jq: '.props'
+  - format-json:
+      indentation: 2
+---
+url: https://housing.sanjoseca.gov/listing/51bc9c3e-e896-4730-80d4-36420b995db9/casa_feliz_525_s_ninth_street_san_jose_ca
+filter:
+  - css: 'script#__NEXT_DATA__'
+  - html2text:
+      method: re
+  - jq: '.props'
+  - format-json:
+      indentation: 2
+---
+url: https://housing.sanjoseca.gov/listing/07cc5bd0-4f22-4794-923e-b5de163b8db8/gish_apartments_35_east_gish_road_san_jose_ca
+filter:
+  - css: 'script#__NEXT_DATA__'
+  - html2text:
+      method: re
+  - jq: '.props'
+  - format-json:
+      indentation: 2
+---
+url: https://housing.sanjoseca.gov/listing/b7ae212c-fbf4-455b-a8c6-7048ef648a98/met_north_2122_monterey_road_san_jose_ca
+filter:
+  - css: 'script#__NEXT_DATA__'
+  - html2text:
+      method: re
+  - jq: '.props'
+  - format-json:
+      indentation: 2
+---
+url: https://housing.sanjoseca.gov/listing/1dc905e8-b2d2-4ad1-9ae7-aef1e4842687/archer_studios_98_archer_street_san_jose_ca
+filter:
+  - css: 'script#__NEXT_DATA__'
+  - html2text:
+      method: re
+  - jq: '.props'
+  - format-json:
+      indentation: 2
+---
+url: https://housing.sanjoseca.gov/listing/b31f97c9-624f-45d3-a717-4ee0fbb0d4a7/pensione_esperanza_598_columbia_avenue_san_jose_ca
+filter:
+  - css: 'script#__NEXT_DATA__'
+  - html2text:
+      method: re
+  - jq: '.props'
+  - format-json:
+      indentation: 2
+---
+url: https://housing.sanjoseca.gov/listing/f91c078a-bb25-4a53-9111-50259b0460da/page_street_studios_333_page_street_san_jose_ca
+filter:
+  - css: 'script#__NEXT_DATA__'
+  - html2text:
+      method: re
+  - jq: '.props'
+  - format-json:
+      indentation: 2
+---
+url: https://housing.sanjoseca.gov/listings
+filter:
+  - css: 'script#__NEXT_DATA__'
+  - html2text:
+      method: re
+  - jq: '.props'
+  - format-json:
+      indentation: 2
 ---
 url: https://www.cityofgilroy.org/DocumentCenter/View/12922/Interest-List-Flyer---Village-at-First-Affordable-Apartments-Flyer---English?bidId=
 filter:
