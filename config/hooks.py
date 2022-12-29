@@ -49,6 +49,7 @@ class UpdateUrlsReporter(reporters.ReporterBase):
         return line.strip()
 
     def _change(self, old_loc, new_loc):
+        logger.info('changing %s to %s' % (old_loc, new_loc))
         subprocess.run([
             'urlwatch',
             '--urls',
@@ -59,6 +60,7 @@ class UpdateUrlsReporter(reporters.ReporterBase):
         ])
 
     def _remove(self, loc):
+        logger.info('removing %s' % loc)
         subprocess.run([
             'urlwatch',
             '--urls',
@@ -68,6 +70,7 @@ class UpdateUrlsReporter(reporters.ReporterBase):
         ])
 
     def _add(self, loc):
+        logger.info('adding %s' % loc)
         subprocess.run([
             'urlwatch',
             '--urls',
@@ -79,6 +82,7 @@ class UpdateUrlsReporter(reporters.ReporterBase):
     def submit(self):
         href_regex = 'href="(.*?)"'
         for job_state in self.report.get_filtered_job_states(self.job_states):
+            logger.info('processing %s' % job_state.job)
             if job_state.verb == 'new':
                 for line in job_state.new_data.splitlines():
                     match = re.search(href_regex, line)
@@ -86,6 +90,7 @@ class UpdateUrlsReporter(reporters.ReporterBase):
                         print('NEW ADD %s' % match[1])
                         self._add(match[1])
             if not job_state.old_data:
+                logger.debug('no data for diff');
                 continue
             diffs = difflib._mdiff(job_state.old_data.splitlines(),
                 job_state.new_data.splitlines())

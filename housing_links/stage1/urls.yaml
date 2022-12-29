@@ -89,3 +89,399 @@ filter:
 url: https://charitieshousing.org/property/westwood-ambassador-apartments/
 filter:
   - css: 'div.property-apply a[href$=".pdf"]'
+---
+url: https://altahousing.org/properties/emerson-house/
+filter:
+  - css: 'div.chart-block a[href$=".pdf"], div.chart-block img, div.housing-block a[href$=".pdf"]'
+---
+url: https://altahousing.org/properties/emerson-north-apartments/
+filter:
+  - css: 'div.chart-block a[href$=".pdf"], div.chart-block img, div.housing-block a[href$=".pdf"]'
+---
+url: https://altahousing.org/properties/emerson-south-apartments/
+filter:
+  - css: 'div.chart-block a[href$=".pdf"], div.chart-block img, div.housing-block a[href$=".pdf"]'
+---
+url: https://altahousing.org/properties/ferne-apartments/
+filter:
+  - css: 'div.chart-block a[href$=".pdf"], div.chart-block img, div.housing-block a[href$=".pdf"]'
+---
+url: https://altahousing.org/properties/950ecr/
+filter:
+  - css: 'div.chart-block a[href$=".pdf"], div.chart-block img, div.housing-block a[href$=".pdf"]'
+---
+url: https://altahousing.org/properties/mariposa-club/
+filter:
+  - css: 'div.chart-block a[href$=".pdf"], div.chart-block img, div.housing-block a[href$=".pdf"]'
+---
+url: https://altahousing.org/properties/hotel-california/
+filter:
+  - css: 'div.chart-block a[href$=".pdf"], div.chart-block img, div.housing-block a[href$=".pdf"]'
+---
+url: https://altahousing.org/properties/oak-court-apartments/
+filter:
+  - css: 'div.chart-block a[href$=".pdf"], div.chart-block img, div.housing-block a[href$=".pdf"]'
+---
+url: https://altahousing.org/properties/oak-manor-townhouses/
+filter:
+  - css: 'div.chart-block a[href$=".pdf"], div.chart-block img, div.housing-block a[href$=".pdf"]'
+---
+url: https://altahousing.org/properties/plum-tree-apartments/
+filter:
+  - css: 'div.chart-block a[href$=".pdf"], div.chart-block img, div.housing-block a[href$=".pdf"]'
+---
+url: https://altahousing.org/properties/sheridan-apartments/
+filter:
+  - css: 'div.chart-block a[href$=".pdf"], div.chart-block img, div.housing-block a[href$=".pdf"]'
+---
+url: https://altahousing.org/properties/tree-house-apartments/
+filter:
+  - css: 'div.chart-block a[href$=".pdf"], div.chart-block img, div.housing-block a[href$=".pdf"]'
+---
+url: https://altahousing.org/properties/ventura-apartments/
+filter:
+  - css: 'div.chart-block a[href$=".pdf"], div.chart-block img, div.housing-block a[href$=".pdf"]'
+---
+url: https://altahousing.org/properties/waldo-apartments/
+filter:
+  - css: 'div.chart-block a[href$=".pdf"], div.chart-block img, div.housing-block a[href$=".pdf"]'
+---
+url: https://altahousing.org/properties/webster-wood-apartments/
+filter:
+  - css: 'div.chart-block a[href$=".pdf"], div.chart-block img, div.housing-block a[href$=".pdf"]'
+---
+url: https://altahousing.org/properties/wilton-court/
+filter:
+  - css: 'div.chart-block a[href$=".pdf"], div.chart-block img, div.housing-block a[href$=".pdf"]'
+---
+url: https://altahousing.org/properties/alma-place/
+filter:
+  - css: 'div.chart-block a[href$=".pdf"], div.chart-block img, div.housing-block a[href$=".pdf"]'
+---
+url: https://altahousing.org/properties/arastradero-park/
+filter:
+  - css: 'div.chart-block a[href$=".pdf"], div.chart-block img, div.housing-block a[href$=".pdf"]'
+---
+url: https://altahousing.org/properties/alma-village-apartments/
+filter:
+  - css: 'div.chart-block a[href$=".pdf"], div.chart-block img, div.housing-block a[href$=".pdf"]'
+---
+url: https://altahousing.org/properties/barker-hotel/
+filter:
+  - css: 'div.chart-block a[href$=".pdf"], div.chart-block img, div.housing-block a[href$=".pdf"]'
+---
+url: https://altahousing.org/properties/california-park-apartments/
+filter:
+  - css: 'div.chart-block a[href$=".pdf"], div.chart-block img, div.housing-block a[href$=".pdf"]'
+---
+url: https://altahousing.org/properties/colorado-park-apartments/
+filter:
+  - css: 'div.chart-block a[href$=".pdf"], div.chart-block img, div.housing-block a[href$=".pdf"]'
+---
+url: https://altahousing.org/properties/college-terrace/
+filter:
+  - css: 'div.chart-block a[href$=".pdf"], div.chart-block img, div.housing-block a[href$=".pdf"]'
+---
+url: https://altahousing.org/properties/curtner-apartments/
+filter:
+  - css: 'div.chart-block a[href$=".pdf"], div.chart-block img, div.housing-block a[href$=".pdf"]'
+---
+url: https://altahousing.org/properties/eagle-park/
+filter:
+  - css: 'div.chart-block a[href$=".pdf"], div.chart-block img, div.housing-block a[href$=".pdf"]'
+---
+url: https://altahousing.org/properties/el-dorado-place/
+filter:
+  - css: 'div.chart-block a[href$=".pdf"], div.chart-block img, div.housing-block a[href$=".pdf"]'
+---
+url: https://altahousing.org/properties/elm-apartments/
+filter:
+  - css: 'div.chart-block a[href$=".pdf"], div.chart-block img, div.housing-block a[href$=".pdf"]'
+---
+url: https://www.eahhousing.org/apartment-search/
+filter:
+  - css: 'div#downloads a[href$=".pdf"]'
+---
+url: https://www.eahhousing.org/apartments/art-ark-apartments/
+filter:
+  - css: 'div#downloads a[href$=".pdf"]'
+---
+url: https://www.eahhousing.org/apartments/arturo-ochoa-migrant-center/
+filter:
+  - css: 'div#downloads a[href$=".pdf"]'
+---
+url: https://www.eahhousing.org/apartments/bella-terra/
+filter:
+  - css: 'div#downloads a[href$=".pdf"]'
+---
+url: https://www.eahhousing.org/apartments/belovida-newbury-park/
+filter:
+  - css: 'div#downloads a[href$=".pdf"]'
+---
+url: https://www.eahhousing.org/apartments/buena-vista-midtown/
+filter:
+  - css: 'div#downloads a[href$=".pdf"]'
+---
+url: https://www.eahhousing.org/apartments/casa-real/
+filter:
+  - css: 'div#downloads a[href$=".pdf"]'
+---
+url: https://www.eahhousing.org/apartments/charter-court/
+filter:
+  - css: 'div#downloads a[href$=".pdf"]'
+---
+url: https://www.eahhousing.org/apartments/cochrane-village/
+filter:
+  - css: 'div#downloads a[href$=".pdf"]'
+---
+url: https://www.eahhousing.org/apartments/cornerstone-at-japantown/
+filter:
+  - css: 'div#downloads a[href$=".pdf"]'
+---
+url: https://www.eahhousing.org/apartments/delmas-park/
+filter:
+  - css: 'div#downloads a[href$=".pdf"]'
+---
+url: https://www.eahhousing.org/apartments/don-de-dios/
+filter:
+  - css: 'div#downloads a[href$=".pdf"]'
+---
+url: https://www.eahhousing.org/apartments/elena-gardens/
+filter:
+  - css: 'div#downloads a[href$=".pdf"]'
+---
+url: https://www.eahhousing.org/apartments/fellowship-plaza/
+filter:
+  - css: 'div#downloads a[href$=".pdf"]'
+---
+url: https://www.eahhousing.org/apartments/gateway-santa-clara/
+filter:
+  - css: 'div#downloads a[href$=".pdf"]'
+---
+url: https://www.eahhousing.org/apartments/market-gateway/
+filter:
+  - css: 'div#downloads a[href$=".pdf"]'
+---
+url: https://www.eahhousing.org/apartments/markham-plaza/
+filter:
+  - css: 'div#downloads a[href$=".pdf"]'
+---
+url: https://www.eahhousing.org/apartments/orchard-ranch/
+filter:
+  - css: 'div#downloads a[href$=".pdf"]'
+---
+url: https://www.eahhousing.org/apartments/palm-court/
+filter:
+  - css: 'div#downloads a[href$=".pdf"]'
+---
+url: https://www.eahhousing.org/apartments/park-place/
+filter:
+  - css: 'div#downloads a[href$=".pdf"]'
+---
+url: https://www.eahhousing.org/apartments/parkview-family/
+filter:
+  - css: 'div#downloads a[href$=".pdf"]'
+---
+url: https://www.eahhousing.org/apartments/parkview-senior/
+filter:
+  - css: 'div#downloads a[href$=".pdf"]'
+---
+url: https://www.eahhousing.org/apartments/pollard-plaza/
+filter:
+  - css: 'div#downloads a[href$=".pdf"]'
+---
+url: https://www.eahhousing.org/apartments/presidio-el-camino/
+filter:
+  - css: 'div#downloads a[href$=".pdf"]'
+---
+url: https://www.eahhousing.org/apartments/taylor-oaks/
+filter:
+  - css: 'div#downloads a[href$=".pdf"]'
+---
+url: https://www.eahhousing.org/apartments/town-park-towers/
+filter:
+  - css: 'div#downloads a[href$=".pdf"]'
+---
+url: https://www.eahhousing.org/apartments/villa-monterey/
+filter:
+  - css: 'div#downloads a[href$=".pdf"]'
+---
+url: https://www.eahhousing.org/apartments/vista-park/
+filter:
+  - css: 'div#downloads a[href$=".pdf"]'
+---
+url: https://edenhousing.org/properties/801-alma/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://edenhousing.org/properties/aspen-grove/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://edenhousing.org/properties/connell-apartments/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://edenhousing.org/properties/edenvale/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://edenhousing.org/properties/ford-road-plaza/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://edenhousing.org/properties/hillview-glen/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://edenhousing.org/properties/maple-gardens/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://edenhousing.org/properties/monterra-village/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://edenhousing.org/properties/monticelli/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://edenhousing.org/properties/royal-court/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://edenhousing.org/properties/studio-819/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://edenhousing.org/properties/the-redwoods-apartments/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://edenhousing.org/properties/the-trees/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://edenhousing.org/properties/villa-esperanza/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://edenhousing.org/properties/wheeler-manor/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://edenhousing.org/properties/catalonia/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://edenhousing.org/properties/eden-palms/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://edenhousing.org/properties/monterey-villa/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://edenhousing.org/properties/ohlone-chynoweth-commons/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://jscosccha.com/property/avenida-espana/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://jscosccha.com/property/bendorf-drive/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://jscosccha.com/property/blossom-river-apartments/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://jscosccha.com/property/de-rose-gardens/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://jscosccha.com/property/clarendon-st-apartments/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://jscosccha.com/property/cypress-gardens/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://jscosccha.com/property/deborah-gardens/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://jscosccha.com/property/eklund-1-aka-halford-ave/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://jscosccha.com/property/eklund-2-aka-poinciana-dr/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://jscosccha.com/property/el-parador/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://jscosccha.com/property/helzer-courts/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://jscosccha.com/property/huff-gardens/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://jscosccha.com/property/john-burns-gardens/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://jscosccha.com/property/julian-gardens/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://jscosccha.com/property/laurel-grove/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://jscosccha.com/property/lenzen-gardens/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://jscosccha.com/property/lucretia-gardens/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://jscosccha.com/property/miramar-apartments/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://jscosccha.com/property/park-avenue-senior/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://jscosccha.com/property/poco-way-apartments/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://jscosccha.com/property/rincon-gardens/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://jscosccha.com/property/rivertown-apartments/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://jscosccha.com/property/san-pedro-gardens/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://jscosccha.com/property/sunset-gardens/
+filter:
+  - css: 'a[href$=".pdf"]'
+---
+url: https://jscosccha.com/property/the-willows/
+filter:
+  - css: 'a[href$=".pdf"]'
