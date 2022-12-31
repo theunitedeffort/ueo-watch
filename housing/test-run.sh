@@ -28,10 +28,13 @@ cp cache.db cache-backup.db
 
 # Change the email address reports are sent to so that we don't send test
 # reports to a production email list.
-echo "Changing report recipient"
+echo "Changing report recipient to $TEST_RECIPIENT"
 cat urlwatch.yaml | sed -E "s/^([[:blank:]]*to: )(.*)/\1'$TEST_RECIPIENT'/" > "$TEMP_FILE"
+echo "Temporary urlwatch config created at $TEMP_FILE"
 
 echo "Running urlwatch..."
+echo
 urlwatch -v --hooks ../config/hooks.py --urls urls.yaml --config "$TEMP_FILE" --cache cache.db 2> "$LOG_PATH"
+echo
 
 echo "Done! Log is at $LOG_PATH"
