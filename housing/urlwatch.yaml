@@ -4,7 +4,16 @@ display:
   unchanged: false
 job_defaults:
   all: {}
-  browser: {}
+  browser:
+    ignore_cached: true
+    filter:
+      - css: 
+          selector: body
+          exclude: 'div.gform_wrapper,a[href^="/cdn-cgi/l/email-protection"],ul[id^="slideshow"],div.slideshow-wrapper,div.orbit,div.ngg-slideshow,div.lazy-community-carousel,div.testimonials-widget,.adtester-container,.today-office-hours,.yelp-reviews,.other-communities,img[src^="https://api.fouanalytics.com"],.search-form,.searchForm,.search_form,.contact-form,.contactForm,.contact_form,.office-hours,#BrochureDateTime,div.latest-news,div.latest-blog-post,div.apartment-reviews,.g-review,.posts-wrapper,#ole_office_hours_status,img[src^="data:"]'
+      - re.sub: 'Image Detail [a-z0-9]{32}'
+      - html2text:
+          method: pyhtml2text
+      - re.sub: 'time=\d+'
   shell: {}
   url:
     ignore_cached: true
@@ -13,9 +22,6 @@ job_defaults:
           selector: body
           exclude: 'div.gform_wrapper,a[href^="/cdn-cgi/l/email-protection"],ul[id^="slideshow"],div.slideshow-wrapper,div.orbit,div.ngg-slideshow,div.lazy-community-carousel,div.testimonials-widget,.adtester-container,.today-office-hours,.yelp-reviews,.other-communities,img[src^="https://api.fouanalytics.com"],.search-form,.searchForm,.search_form,.contact-form,.contactForm,.contact_form,.office-hours,#BrochureDateTime,div.latest-news,div.latest-blog-post,div.apartment-reviews,.g-review,.posts-wrapper,#ole_office_hours_status,img[src^="data:"]'
       - re.sub: 'Image Detail [a-z0-9]{32}'
-      # - re.ssub:
-      #     substring: '(alt)=".*?"'
-      #     pattern: '((?=.*\d)[0-9a-z]{13,64}|[0-9a-z]{8}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{4}-[0-9a-z]{12}|[0-9]{6,32})'
       - html2text:
           method: pyhtml2text
       - re.sub: 'time=\d+'
@@ -24,7 +30,6 @@ report:
     enabled: true
     from: 'Changebot <changebot@theunitedeffort.org>'
     to: 'housing-db-editors@theunitedeffort.org'
-    # to: 'trevor@theunitedeffort.org'
     html: false
     method: sendmail
     sendmail:
