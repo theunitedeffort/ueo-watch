@@ -107,11 +107,12 @@ For details, visit %s
         else:
             logger.error('Invalid entry for method {method}'.format(method=self.config['method']))
 
+        reply_to = self.config.get('reply_to', self.config['from'])
         if self.config['html']:
             body_html = '\n'.join(self.convert(reporters.HtmlReporter).submit())
 
-            msg = mailer.msg_html(self.config['from'], self.config['to'], subject, body_text, body_html)
+            msg = mailer.msg_html(self.config['from'], self.config['to'], reply_to, subject, body_text, body_html)
         else:
-            msg = mailer.msg_plain(self.config['from'], self.config['to'], subject, body_text)
+            msg = mailer.msg_plain(self.config['from'], self.config['to'], reply_to, subject, body_text)
 
         mailer.send(msg)
