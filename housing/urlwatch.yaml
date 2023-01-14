@@ -30,6 +30,7 @@ report:
     enabled: true
     from: 'Changebot <changebot@theunitedeffort.org>'
     to: 'housing-db-editors@theunitedeffort.org'
+    reply_to: 'housing-db-editors@theunitedeffort.org'
     html: false
     method: sendmail
     sendmail:
