@@ -772,4 +772,5 @@ filter:
 ---
 name: "Test change"
 command: "date"
+filter: []
 ---
