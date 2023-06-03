@@ -13,7 +13,8 @@ job_defaults:
       - html2text:
           method: pyhtml2text
       - re.sub: 'time=\d+'
-  browser: {}
+  browser:
+    compared_versions: 2
   shell: {}
   url: {}
 report:
