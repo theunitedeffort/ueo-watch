@@ -26,21 +26,27 @@ filter:
   - pdf2text
 ---
 url: https://stgenssa.sccgov.org/debs/policy_handbook_CalWORKs/afchap33.pdf
+filter:
   - pdf2text
 ---
 url: https://stgenssa.sccgov.org/debs/policy_handbook_CalWORKs/afchap31.pdf
+filter:
   - pdf2text
 ---
 url: https://stgenssa.sccgov.org/debs/policy_handbook_CalWORKs/afchap27.pdf
+filter:
   - pdf2text
 ---
 url: https://stgenssa.sccgov.org/debs/policy_handbook_CalWORKs/afchap13.pdf
+filter:
   - pdf2text
 ---
 url: https://www.cdss.ca.gov/cdssweb/entres/forms/english/cw29.pdf
+filter:
   - pdf2text
 ---
 url: https://stgenssa.sccgov.org/debs/policy_handbook_CalWORKs/afchap35.pdf
+filter:
   - pdf2text
 ---
 
