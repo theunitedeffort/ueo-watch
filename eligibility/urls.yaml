@@ -1,0 +1,80 @@
+# CalFresh
+---
+url: https://stgenssa.sccgov.org/debs/policy_handbook_Charts/ch-fs.pdf
+filter:
+  - pdf2text
+---
+url: https://stgenssa.sccgov.org/debs/policy_handbook_calfresh/fschap11.pdf
+filter:
+  - pdf2text
+---
+url: https://stgenssa.sccgov.org/debs/policy_handbook_calfresh/fschap19.pdf
+filter:
+  - pdf2text
+---
+
+# CalWORKS
+---
+url: https://ca.db101.org/ca/programs/income_support/calworks/program2.htm
+---
+url: https://stgenssa.sccgov.org/debs/policy_handbook_Charts/ch-afdc.pdf
+filter:
+  - pdf2text
+---
+url: https://stgenssa.sccgov.org/debs/policy_handbook_CalWORKs/afchap14.pdf
+filter:
+  - pdf2text
+---
+url: https://stgenssa.sccgov.org/debs/policy_handbook_CalWORKs/afchap33.pdf
+  - pdf2text
+---
+url: https://stgenssa.sccgov.org/debs/policy_handbook_CalWORKs/afchap31.pdf
+  - pdf2text
+---
+url: https://stgenssa.sccgov.org/debs/policy_handbook_CalWORKs/afchap27.pdf
+  - pdf2text
+---
+url: https://stgenssa.sccgov.org/debs/policy_handbook_CalWORKs/afchap13.pdf
+  - pdf2text
+---
+url: https://www.cdss.ca.gov/cdssweb/entres/forms/english/cw29.pdf
+  - pdf2text
+---
+url: https://stgenssa.sccgov.org/debs/policy_handbook_CalWORKs/afchap35.pdf
+  - pdf2text
+---
+
+# CARE & FERA
+---
+url: https://www.cpuc.ca.gov/industries-and-topics/electrical-energy/electric-costs/care-fera-program
+---
+
+# GA
+---
+url: https://stgenssa.sccgov.org/debs/policy_handbook_Charts/ch-ga.pdf
+filter:
+  - pdf2text
+---
+url: https://stgenssa.sccgov.org/debs/policy_handbook_GA/gachap02.pdf
+filter:
+  - pdf2text
+---
+url: https://stgenssa.sccgov.org/debs/policy_handbook_GA/gachap08.pdf
+filter:
+  - pdf2text
+---
+url: https://stgenssa.sccgov.org/debs/policy_handbook_GA/gachap07.pdf
+filter:
+  - pdf2text
+---
+url: https://stgenssa.sccgov.org/debs/policy_handbook_GA/gachap05.pdf
+filter:
+  - pdf2text
+---
+
+
+---
+name: "Test change"
+command: "date"
+filter: []
+---

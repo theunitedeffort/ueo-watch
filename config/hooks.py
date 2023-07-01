@@ -34,7 +34,6 @@ class RegexSuperSub(filters.FilterBase):
         else:
             return re.sub(subfilter['pattern'], subfilter.get('repl', ''), data)
 
-        
 
 class GcsFileReporter(reporters.HtmlReporter):
     """Custom reporter that writes an HTML file to Google Cloud Storage."""

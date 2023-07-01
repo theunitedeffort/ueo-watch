@@ -1,0 +1,48 @@
+display:
+  error: true
+  new: true
+  unchanged: false
+job_defaults:
+  all:
+    ignore_cached: true
+    filter:
+      - css:
+          selector: body
+          exclude: 'div.gform_wrapper,a[href^="/cdn-cgi/l/email-protection"],ul[id^="slideshow"],div.slideshow-wrapper,div.orbit,div.ngg-slideshow,.adtester-container,.search-form,.searchForm,.search_form,.contact-form,.contactForm,.contact_form,img[src^="data:"],span.xversion'
+      - html2text:
+          method: pyhtml2text
+      - re.sub: 'time=\d+'
+  shell: {}
+  url: {}
+report:
+  custom_email:
+    enabled: true
+    from: 'Changebot <changebot@theunitedeffort.org>'
+    to: 'trevor@theunitedeffort.org'
+    reply_to: 'trevor@theunitedeffort.org'
+    html: false
+    method: sendmail
+    sendmail:
+      path: /sbin/sendmail
+    subject: '{count} program eligibility changes detected ({datetime})'
+    details_url: https://storage.googleapis.com/ueo-changes/eligibility/report-{datetime}.html
+  gcs:
+    enabled: true
+    filename: report-{datetime}.html
+    bucket: ueo-changes
+    local_dir: ~/ueo-watch/eligibility/staging
+    gcs_dir: eligibility
+  html:
+    diff: table
+    enabled: false
+  stdout:
+    color: true
+    enabled: true
+  text:
+    details: false
+    footer: true
+    line_length: 75
+    minimal: false
+    enabled: false
+  markdown:
+    enabled: false
