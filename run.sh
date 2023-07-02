@@ -18,9 +18,10 @@ urlwatch  --urls housing/urls.yaml --config housing/urlwatch.yaml --cache housin
 # Run eligibility jobs
 urlwatch -v --hooks config/hooks.py --urls eligibility/urls.yaml --config eligibility/urlwatch.yaml --cache eligibility/cache.db 2> eligibility/urlwatch_debug.log 1> eligibility/urlwatch_output.log
 # Check for errors in the eligibility debug log.
-if [ $? -ne 0 ]
+if [ $? -gt 0 ]
 then
   body="$(tail -n 50 eligibility/urlwatch_debug.log)" && now="$(date)" && printf "Subject: urlwatch eligibility error [$now]\nFrom: Changebot <changebot@theunitedeffort.org>\nTo: trevor@theunitedeffort.org\n\n$body" | /sbin/sendmail -oi -t
+fi
 body="$(grep "ERROR: " eligibility/urlwatch_debug.log)" && now="$(date)" && printf "Subject: urlwatch eligibility error [$now]\nFrom: Changebot <changebot@theunitedeffort.org>\nTo: trevor@theunitedeffort.org\n\n$body" | /sbin/sendmail -oi -t
 # Database garbage collection
 urlwatch  --urls eligibility/urls.yaml --config eligibility/urlwatch.yaml --cache eligibility/cache.db --gc-cache 5
