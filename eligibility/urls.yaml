@@ -1,4 +1,11 @@
+# ADSA
+---
+url: https://www.cdss.ca.gov/assistance-dogs
+---
+
 # CalFresh
+---
+url: https://www.cdss.ca.gov/calfresh
 ---
 url: https://stgenssa.sccgov.org/debs/policy_handbook_Charts/ch-fs.pdf
 filter:
@@ -14,6 +21,8 @@ filter:
 ---
 
 # CalWORKS
+---
+url: https://www.cdss.ca.gov/calworks
 ---
 url: https://ca.db101.org/ca/programs/income_support/calworks/program2.htm
 ---
@@ -50,12 +59,30 @@ filter:
   - pdf2text
 ---
 
-# CARE & FERA
+# CAPI
+---
+url: https://www.cdss.ca.gov/capi
+---
+url: https://ca.db101.org/ca/programs/income_support/capi/program2.htm
+---
+
+# CARE
+---
+url: https://www.cpuc.ca.gov/consumer-support/financial-assistance-savings-and-discounts/california-alternate-rates-for-energy
 ---
 url: https://www.cpuc.ca.gov/industries-and-topics/electrical-energy/electric-costs/care-fera-program
 ---
 
+# FERA
+---
+url: https://www.cpuc.ca.gov/consumer-support/financial-assistance-savings-and-discounts/family-electric-rate-assistance-program
+---
+
 # GA
+---
+url: https://socialservices.sccgov.org/financial-assistance/financial-assistance-adults-without-dependent-children-general-assistance
+---
+url: https://socialservices.sccgov.org/how-do-i/apply-for-benefits
 ---
 url: https://stgenssa.sccgov.org/debs/policy_handbook_Charts/ch-ga.pdf
 filter:
@@ -80,6 +107,8 @@ filter:
 
 # Housing Choice Voucher
 ---
+url: https://www.scchousingauthority.org/section-8/
+---
 url: https://www.scchousingauthority.org/section-8/for-participants/for-new-applicants/applicant-portal/
 ---
 url: https://www.huduser.gov/portal/datasets/il/il2023/2023IlCalc.odn?inputname=Santa+Clara+County&area_id=METRO41940M41940&fips=0608599999&type=county&year=2023&yy=23&stname=California&stusps=CA&statefp=06&ACS_Survey=%24ACS_Survey%24&State_Count=%24State_Count%24&areaname=San+Jose-Sunnyvale-Santa+Clara%2C+CA+HUD+Metro+FMR+Area&incpath=%24incpath%24&level=50
@@ -95,15 +124,24 @@ url: https://www.ecfr.gov/current/title-24/subtitle-A/part-5/subpart-E/section-5
 ---
 url: https://socialservices.sccgov.org/other-services/in-home-supportive-services/in-home-supportive-services-recipients
 ---
+url: https://ca.db101.org/ca/programs/health_coverage/medi_cal/ihss/program2.htm
+---
 
 # LifeLine
 ---
 url: https://www.cpuc.ca.gov/consumer-support/financial-assistance-savings-and-discounts/lifeline/california-lifeline-eligibility#qualify
 ---
+url: https://www.californialifeline.com/en/eligibility_requirements
+---
+url: https://www.californialifeline.com/en
 
 # LIHEAP
 ---
 url: https://www.csd.ca.gov/Pages/LIHEAP-Income-Eligibility.aspx
+---
+url: https://www.csd.ca.gov/Pages/Services.aspx?SCU=Santa%20Clara%20County&PT=CM
+---
+url: https://www.csd.ca.gov/Pages/Assistance-PayingMyEnergyBills.aspx
 ---
 
 # No-Fee ID
@@ -115,6 +153,66 @@ url: https://www.dmv.ca.gov/portal/driver-licenses-identification-cards/identifi
 ---
 url: https://www.ssa.gov/benefits/retirement/planner/agereduction.html
 ---
+url: https://www.ssa.gov/applyfordisability/
+---
+url: https://ca.db101.org/ca/programs/income_support/ssdi2/program.htm
+---
+
+# SSI
+---
+url: https://www.ssa.gov/benefits/ssi/
+---
+url: https://www.ssa.gov/oact/cola/sga.html
+---
+url: https://www.ssa.gov/pubs/EN-05-11125.pdf
+filter:
+  - pdf2text
+---
+url: https://www.ssa.gov/ssi/text-resources-ussi.htm
+---
+url: https://www.ssa.gov/oact/cola/incomexcluded.html
+---
+url: https://www.ssa.gov/ssi/text-eligibility-ussi.htm
+---
+url: https://ca.db101.org/ca/programs/income_support/ssi/program2.htm
+---
+
+# VA Disability
+---
+url: https://www.va.gov/disability/
+---
+url: https://www.va.gov/disability/how-to-file-claim/
+---
+
+# VA Pension
+---
+url: https://www.va.gov/pension/eligibility/
+---
+url: https://www.va.gov/pension/veterans-pension-rates/
+---
+url: https://www.va.gov/pension/how-to-apply/
+---
+url: https://www.va.gov/pension/
+---
+
+# VTA Paratransit
+---
+url: https://www.vta.org/go/paratransit#accordion-applying-for-vta-access-paratransit-service
+---
+
+# WIC
+---
+url: https://www.ecfr.gov/current/title-7/subtitle-B/chapter-II/subchapter-A/part-246#p-246.2(Children)
+---
+url: https://www.cdph.ca.gov/Programs/CFH/DWICSN/Pages/HowCanIGetWIC.aspx
+---
+url: https://www.cdph.ca.gov/Programs/CFH/DWICSN/CDPH%20Document%20Library/LocalAgencies/WPPM/980-1060WICIncomeGuidelinesTable.pdf
+filter:
+  - pdf2text
+---
+url: https://myfamily.wic.ca.gov/Home/HowCanIGetWIC
+---
+url: https://www.cdph.ca.gov/Programs/CFH/DWICSN/Pages/Program-Landing1.aspx
 
 ---
 name: "Test change"
