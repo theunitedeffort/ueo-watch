@@ -136,9 +136,9 @@ url: https://ca.db101.org/ca/programs/health_coverage/medi_cal/ihss/program2.htm
 ---
 url: https://www.cpuc.ca.gov/consumer-support/financial-assistance-savings-and-discounts/lifeline/california-lifeline-eligibility#qualify
 ---
-url: https://www.californialifeline.com/en/eligibility_requirements
+navigate: https://www.californialifeline.com/en/eligibility_requirements
 ---
-url: https://www.californialifeline.com/en
+navigate: https://www.californialifeline.com/en
 
 # LIHEAP
 ---
@@ -165,7 +165,7 @@ url: https://ca.db101.org/ca/programs/income_support/ssdi2/program.htm
 
 # SSI
 ---
-url: https://www.ssa.gov/benefits/ssi/
+url: https://www.ssa.gov/ssi/
 ---
 url: https://www.ssa.gov/oact/cola/sga.html
 ---
