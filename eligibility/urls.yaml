@@ -80,9 +80,11 @@ url: https://www.cpuc.ca.gov/consumer-support/financial-assistance-savings-and-d
 
 # GA
 ---
-url: https://socialservices.sccgov.org/financial-assistance/financial-assistance-adults-without-dependent-children-general-assistance
+# Blocked by cloudflare
+# url: https://socialservices.sccgov.org/financial-assistance/financial-assistance-adults-without-dependent-children-general-assistance
 ---
-url: https://socialservices.sccgov.org/how-do-i/apply-for-benefits
+# Blocked by cloudflare
+# url: https://socialservices.sccgov.org/how-do-i/apply-for-benefits
 ---
 url: https://stgenssa.sccgov.org/debs/policy_handbook_Charts/ch-ga.pdf
 filter:
@@ -113,16 +115,19 @@ url: https://www.scchousingauthority.org/section-8/for-participants/for-new-appl
 ---
 url: https://www.huduser.gov/portal/datasets/il/il2023/2023IlCalc.odn?inputname=Santa+Clara+County&area_id=METRO41940M41940&fips=0608599999&type=county&year=2023&yy=23&stname=California&stusps=CA&statefp=06&ACS_Survey=%24ACS_Survey%24&State_Count=%24State_Count%24&areaname=San+Jose-Sunnyvale-Santa+Clara%2C+CA+HUD+Metro+FMR+Area&incpath=%24incpath%24&level=50
 ---
-url: https://www.ecfr.gov/current/title-24/subtitle-B/chapter-IX/part-982#p-982.201(b)(1)(i)
+# TODO: access via API
+# url: https://www.ecfr.gov/current/title-24/subtitle-B/chapter-IX/part-982#p-982.201(b)(1)(i)
 ---
 url: https://www.huduser.gov/portal/datasets/il/il2023/2023summary.odn?states=6.0&data=2023&inputname=METRO41940M41940*0608599999%2BSanta+Clara+County&stname=California&statefp=06&year=2023&selection_type=county
 ---
-url: https://www.ecfr.gov/current/title-24/subtitle-A/part-5/subpart-E/section-5.516#p-5.516(b)
+# TODO: access via API
+# url: https://www.ecfr.gov/current/title-24/subtitle-A/part-5/subpart-E/section-5.516#p-5.516(b)
 ---
 
 # IHSS
 ---
-url: https://socialservices.sccgov.org/other-services/in-home-supportive-services/in-home-supportive-services-recipients
+# Blocked by cloudflare
+# url: https://socialservices.sccgov.org/other-services/in-home-supportive-services/in-home-supportive-services-recipients
 ---
 url: https://ca.db101.org/ca/programs/health_coverage/medi_cal/ihss/program2.htm
 ---
@@ -202,7 +207,8 @@ url: https://www.vta.org/go/paratransit#accordion-applying-for-vta-access-paratr
 
 # WIC
 ---
-url: https://www.ecfr.gov/current/title-7/subtitle-B/chapter-II/subchapter-A/part-246#p-246.2(Children)
+# TODO: access via API
+# url: https://www.ecfr.gov/current/title-7/subtitle-B/chapter-II/subchapter-A/part-246#p-246.2(Children)
 ---
 url: https://www.cdph.ca.gov/Programs/CFH/DWICSN/Pages/HowCanIGetWIC.aspx
 ---
