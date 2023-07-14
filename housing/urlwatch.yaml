@@ -4,6 +4,7 @@ display:
   unchanged: false
 job_defaults:
   all:
+    max_tries: 5
     ignore_cached: true
     filter:
       - css:
