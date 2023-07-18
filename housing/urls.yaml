@@ -98,7 +98,9 @@ url: https://altahousing.org/properties/el-dorado-place/
 ---
 url: https://altahousing.org/properties/elm-apartments/
 ---
-url: https://www.eahhousing.org/apartment-search/
+url: https://www.eahhousing.org/apartment-search-result-never-delete/
+data:
+  county: Santa Clara
 ---
 url: https://www.eahhousing.org/apartments/art-ark-apartments/
 ---
@@ -580,7 +582,13 @@ url: http://www.buckinghampm.com/property/monterey-village/
 ---
 url: http://www.cinnabarcommons.com/
 ---
-url: http://www.corpforbetterhousing.com/property/brooks-house/
+url: http://www.cinnabarcommons.com/leasing-information.html
+---
+url: http://www.domusmc.com/properties/properties%20-%20the%20brooks%20house.html
+---
+url: https://www.canoasterraceliving.com/
+---
+url: https://www.canoasterraceliving.com/floorplans
 ---
 url: http://www.impactdevgroup.com/properties-canoas-terrace.php
 ---
@@ -593,6 +601,8 @@ url: http://www.roemcorp.com/projects/shiraz-senior-housing/
 url: https://www.roemcorp.com/project/summer-breeze/
 ---
 url: https://pwapt.com/alexanderstation/
+---
+url: https://bridgehousing.com/properties/?fwp_categories=santa-clara
 ---
 url: https://bridgehousing.com/properties/almaden-lake/
 ---
@@ -643,6 +653,10 @@ url: https://rcdhousing.org/quetzal-gardens/
 url: https://valleyvillageretirement.com/
 ---
 url: https://www.amcapartments.com/California/SanJose/VilladeGuadalupe/Apartments/494
+---
+url: https://www.villadeguadalupeapts.com/
+---
+url: https://www.villadeguadalupeapts.com/floor-plans
 ---
 url: https://www.buckinghampm.com/property/crossings-at-morgan-hill/
 ---
