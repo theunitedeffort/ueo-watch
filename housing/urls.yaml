@@ -843,3 +843,12 @@ name: "Test change"
 command: "date"
 filter: []
 ---
+
+# Temporary example URLs for debugging.
+---
+url: https://www.google.com
+---
+url: https://www.example.com
+---
+navigate: https://www.wikipedia.org
+---

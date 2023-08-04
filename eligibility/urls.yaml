@@ -225,3 +225,8 @@ name: "Test change"
 command: "date"
 filter: []
 ---
+
+# Temporary example URLs for debugging.
+---
+url: https://www.w3.org
+---
