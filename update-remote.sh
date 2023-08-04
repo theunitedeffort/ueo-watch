@@ -14,18 +14,46 @@ fi
 gcloud compute instances start "$1"
 
 echo "Connecting to \"$1\" via SSH..."
-COUNT=0
+count=0
 until gcloud compute ssh "$1" --command "cd ueo-watch; git pull"
 do
-	((COUNT++))
-	ATTEMPT_COUNT="Attempt $COUNT:"
-	if [ $COUNT -ge $MAX_TRIES ]
+	((count++))
+	attempt_count="Attempt $count:"
+	if [ $count -ge $MAX_TRIES ]
 		then
-			echo "$ATTEMPT_COUNT No response, exiting."
+			echo "$attempt_count No response, exiting."
 			exit 1
 	fi
-	echo "$ATTEMPT_COUNT No response, trying again."
+	echo "$attempt_count No response, trying again."
 	sleep $RETRY_DELAY_S
 done
+
+new_urls=$(gcloud compute ssh "$1" --command "cd ueo-watch; git show | grep -E '^\+(url)|(navigate):|^\+\+\+ b/' | sed -e 's/+\(\(url\)\|\(navigate\)\): //g' | sed -e 's/+++ b\//<FILE> /g'")
+old_ifs=$IFS
+IFS=$'\n'
+new_urls=($new_urls)
+IFS=$old_ifs
+
+if [ ${#new_urls[@]} != 0 ]
+then
+  echo "URLs added:"
+  echo ""
+  printf '%s\n' "${new_urls[@]}"
+  echo ""
+
+  basepath=""
+  for url in "${new_urls[@]}"
+  do
+    if [[ "$url" =~ ^\<FILE\>\ .*  ]]
+    then
+      filepath=$(echo "$url" | sed -e 's/<FILE> //')
+      basepath=$(dirname "$filepath")
+    else
+      echo "Press Enter to verify $url"
+      read
+      gcloud compute ssh "$1" --command "cd /home/trevor/ueo-watch/$basepath; /home/trevor/urlwatch/urlwatch --urls urls.yaml --config urlwatch.yaml --cache cache.db --hooks ../config/hooks.py --test-filter $url" | less
+    fi
+  done
+fi
 
 exit 0
