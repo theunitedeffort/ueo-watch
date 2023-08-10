@@ -7,7 +7,7 @@ if [ -z "$1" ]
   then
   	echo "Provide the name of the GCE instance to update."
     echo "For example:"
-    echo "  $0 ueo-vm-1"
+    echo "  $0 ueo-vm-1 [diff-lookback]"
     exit 1
 fi
 
@@ -28,7 +28,13 @@ do
 	sleep $RETRY_DELAY_S
 done
 
-new_urls=$(gcloud compute ssh "$1" --command "cd ueo-watch; git show | grep -E '^\+(url)|(navigate):|^\+\+\+ b/' | sed -e 's/+\(\(url\)\|\(navigate\)\): //g' | sed -e 's/+++ b\//<FILE> /g'")
+lookback=$2
+if [ -z "$lookback" ]
+  then
+    lookback=1
+fi
+
+new_urls=$(gcloud compute ssh "$1" --command "cd ueo-watch; git diff HEAD~$lookback | grep -E '^\+((url)|(navigate)):|^\+\+\+ b/' | sed -e 's/+\(\(url\)\|\(navigate\)\): //g' | sed -e 's/+++ b\//<FILE> /g'")
 old_ifs=$IFS
 IFS=$'\n'
 new_urls=($new_urls)
