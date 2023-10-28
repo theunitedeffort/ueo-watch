@@ -166,6 +166,14 @@ url: https://ca.db101.org/ca/programs/income_support/ssdi2/program.htm
 # SSI
 ---
 url: https://www.ssa.gov/ssi/
+# Note we dont' use the standard filter here because of HTML issues with the
+# page that makes the main content be read as part of the <header> and gets
+# filtered out.
+filter:
+  - css:
+      selector: body
+  - html2text:
+      method: pyhtml2text
 ---
 url: https://www.ssa.gov/oact/cola/sga.html
 ---
