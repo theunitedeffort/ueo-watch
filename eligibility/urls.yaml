@@ -7,17 +7,13 @@ url: https://www.cdss.ca.gov/assistance-dogs
 ---
 url: https://www.cdss.ca.gov/calfresh
 ---
-url: https://stgenssa.sccgov.org/debs/policy_handbook_Charts/ch-fs.pdf
-filter:
-  - pdf2text
+url: https://stgenssa.sccgov.org/debs/program_handbooks/charts/assets/2CalFresh/CFMonthAllIncomeElig.htm
 ---
-url: https://stgenssa.sccgov.org/debs/policy_handbook_calfresh/fschap11.pdf
-filter:
-  - pdf2text
+url: https://stgenssa.sccgov.org/debs/program_handbooks/calfresh/assets/CalFresh/CEHouseholds/MCE.htm
 ---
-url: https://stgenssa.sccgov.org/debs/policy_handbook_calfresh/fschap19.pdf
-filter:
-  - pdf2text
+url: https://stgenssa.sccgov.org/debs/program_handbooks/calfresh/assets/CalFresh/CEHouseholds/CEHouseholds.htm
+---
+url: https://stgenssa.sccgov.org/debs/program_handbooks/calfresh/assets/CalFresh/Income_Definitions_and_Exemptions/EarndIncm.htm
 ---
 
 # CalWORKS
@@ -26,35 +22,19 @@ url: https://www.cdss.ca.gov/calworks
 ---
 url: https://ca.db101.org/ca/programs/income_support/calworks/program2.htm
 ---
-url: https://stgenssa.sccgov.org/debs/policy_handbook_Charts/ch-afdc.pdf
-filter:
-  - pdf2text
+url: https://stgenssa.sccgov.org/debs/program_handbooks/charts/assets/1CalWorksRCAECATCVAP/NonExEmpAUStndsCht.htm
 ---
-url: https://stgenssa.sccgov.org/debs/policy_handbook_CalWORKs/afchap14.pdf
-filter:
-  - pdf2text
+url: https://stgenssa.sccgov.org/debs/program_handbooks/calworks/assets/14Property_Gen/Property_Limit.htm
 ---
-url: https://stgenssa.sccgov.org/debs/policy_handbook_CalWORKs/afchap33.pdf
-filter:
-  - pdf2text
+url: https://stgenssa.sccgov.org/debs/program_handbooks/calworks/assets/33Financial_Eligibility/Applicant_GI_Test.htm
 ---
-url: https://stgenssa.sccgov.org/debs/policy_handbook_CalWORKs/afchap31.pdf
-filter:
-  - pdf2text
+url: https://stgenssa.sccgov.org/debs/program_handbooks/calworks/assets/31Self_Employment/Income_Determination.htm
 ---
-url: https://stgenssa.sccgov.org/debs/policy_handbook_CalWORKs/afchap27.pdf
-filter:
-  - pdf2text
+url: https://stgenssa.sccgov.org/debs/program_handbooks/calworks/assets/27Other_Exempt_Income/Other_Exempt_Income.htm
 ---
-url: https://stgenssa.sccgov.org/debs/policy_handbook_CalWORKs/afchap13.pdf
-filter:
-  - pdf2text
+url: https://stgenssa.sccgov.org/debs/program_handbooks/calworks/assets/13Age_Student_Immunization/Age_Requirements.htm
 ---
 url: https://www.cdss.ca.gov/cdssweb/entres/forms/english/cw29.pdf
-filter:
-  - pdf2text
----
-url: https://stgenssa.sccgov.org/debs/policy_handbook_CalWORKs/afchap35.pdf
 filter:
   - pdf2text
 ---
@@ -86,25 +66,13 @@ url: https://www.cpuc.ca.gov/consumer-support/financial-assistance-savings-and-d
 # Blocked by cloudflare
 # url: https://socialservices.sccgov.org/how-do-i/apply-for-benefits
 ---
-url: https://stgenssa.sccgov.org/debs/policy_handbook_Charts/ch-ga.pdf
-filter:
-  - pdf2text
+url: https://stgenssa.sccgov.org/debs/program_handbooks/charts/assets/4GA/NeedStnds.htm
 ---
-url: https://stgenssa.sccgov.org/debs/policy_handbook_GA/gachap02.pdf
-filter:
-  - pdf2text
+url: https://stgenssa.sccgov.org/debs/program_handbooks/general_assistance/assets/05Identification/Age_Identity.htm
 ---
-url: https://stgenssa.sccgov.org/debs/policy_handbook_GA/gachap08.pdf
-filter:
-  - pdf2text
+url: https://stgenssa.sccgov.org/debs/program_handbooks/general_assistance/assets/08Property/GA_Policies.htm
 ---
-url: https://stgenssa.sccgov.org/debs/policy_handbook_GA/gachap07.pdf
-filter:
-  - pdf2text
----
-url: https://stgenssa.sccgov.org/debs/policy_handbook_GA/gachap05.pdf
-filter:
-  - pdf2text
+url: https://stgenssa.sccgov.org/debs/program_handbooks/general_assistance/assets/07Citizens_Noncitizens/Citizens_Noncitizens.htm
 ---
 
 # Housing Choice Voucher
@@ -166,7 +134,7 @@ url: https://ca.db101.org/ca/programs/income_support/ssdi2/program.htm
 # SSI
 ---
 url: https://www.ssa.gov/ssi/
-# Note we dont' use the standard filter here because of HTML issues with the
+# Note we don't use the standard filter here because of HTML issues with the
 # page that makes the main content be read as part of the <header> and gets
 # filtered out.
 filter:
