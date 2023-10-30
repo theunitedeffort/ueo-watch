@@ -83,13 +83,17 @@ url: https://www.scchousingauthority.org/section-8/for-participants/for-new-appl
 ---
 url: https://www.huduser.gov/portal/datasets/il/il2023/2023IlCalc.odn?inputname=Santa+Clara+County&area_id=METRO41940M41940&fips=0608599999&type=county&year=2023&yy=23&stname=California&stusps=CA&statefp=06&ACS_Survey=%24ACS_Survey%24&State_Count=%24State_Count%24&areaname=San+Jose-Sunnyvale-Santa+Clara%2C+CA+HUD+Metro+FMR+Area&incpath=%24incpath%24&level=50
 ---
-# TODO: access via API
-# url: https://www.ecfr.gov/current/title-24/subtitle-B/chapter-IX/part-982#p-982.201(b)(1)(i)
+url: https://www.theunitedeffort.org/ecfr/api/versioner/v1/full/current/title-24.xml?subtitle=B&chapter=IX&part=982&subpart=E&section=982.201
+filter:
+  - html2text:
+      method: pyhtml2text
 ---
 url: https://www.huduser.gov/portal/datasets/il/il2023/2023summary.odn?states=6.0&data=2023&inputname=METRO41940M41940*0608599999%2BSanta+Clara+County&stname=California&statefp=06&year=2023&selection_type=county
 ---
-# TODO: access via API
-# url: https://www.ecfr.gov/current/title-24/subtitle-A/part-5/subpart-E/section-5.516#p-5.516(b)
+url: https://www.theunitedeffort.org/ecfr/api/versioner/v1/full/current/title-24.xml?subtitle=A&part=5&subpart=E&section=5.516
+filter:
+  - html2text:
+      method: pyhtml2text
 ---
 
 # IHSS
@@ -183,8 +187,10 @@ url: https://www.vta.org/go/paratransit#accordion-applying-for-vta-access-paratr
 
 # WIC
 ---
-# TODO: access via API
-# url: https://www.ecfr.gov/current/title-7/subtitle-B/chapter-II/subchapter-A/part-246#p-246.2(Children)
+url: https://www.theunitedeffort.org/ecfr/api/versioner/v1/full/current/title-7.xml?subtitle=B&chapter=II&subchapter=A&part=246&section=246.2
+filter:
+  - html2text:
+      method: pyhtml2text
 ---
 url: https://www.cdph.ca.gov/Programs/CFH/DWICSN/Pages/HowCanIGetWIC.aspx
 ---
