@@ -9,7 +9,7 @@ job_defaults:
     filter:
       - css:
           selector: body
-          exclude: 'div.gform_wrapper,a[href^="/cdn-cgi/l/email-protection"],ul[id^="slideshow"],div.slideshow-wrapper,div.orbit,div.ngg-slideshow,div.lazy-community-carousel,div.testimonials-widget,.adtester-container,.today-office-hours,.yelp-reviews,.other-communities,img[src^="https://api.fouanalytics.com"],.search-form,.searchForm,.search_form,.contact-form,.contactForm,.contact_form,.office-hours,#BrochureDateTime,div.latest-news,div.latest-blog-post,div.apartment-reviews,.g-review,.posts-wrapper,#ole_office_hours_status,img[src^="data:"],span.xversion'
+          exclude: 'div.gform_wrapper,a[href^="/cdn-cgi/l/email-protection"],ul[id^="slideshow"],div.slideshow-wrapper,div.orbit,div.ngg-slideshow,div.lazy-community-carousel,div.testimonials-widget,.adtester-container,.today-office-hours,.yelp-reviews,.other-communities,img[src^="https://api.fouanalytics.com"],.search-form,.searchForm,.search_form,.contact-form,.contactForm,.contact_form,.office-hours,#BrochureDateTime,div.latest-news,div.latest-blog-post,div.apartment-reviews,.g-review,.posts-wrapper,#ole_office_hours_status,img[src^="data:"],span.xversion,div[id$="google-cache-hdr"]>div:nth-child(2)'
       - re.sub: 'Image Detail [a-z0-9]{32}'
       - html2text:
           method: pyhtml2text
