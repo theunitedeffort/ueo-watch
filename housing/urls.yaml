@@ -29,6 +29,8 @@ url: https://www.affirmedhousing.com/coming-soon/
 ---
 url: https://www.affirmedhousing.com/completed/vela/
 ---
+url: https://www.aflcio-hit.com/project/casa-del-pueblo/
+---
 url: https://altahousing.org/find-housing/
 ---
 url: https://altahousing.org/properties/950ecr/
@@ -429,7 +431,11 @@ url: https://fpisccha.com/property/corde-terra-senior/
 ---
 url: https://fpisccha.com/property/corde-terra-village/
 ---
+url: https://www.greystar.com/properties/mountain-view-ca/mv-apartments
+---
 url: https://www.housekeys1.com/
+---
+url: https://www.housekeys1.com/morgan-ranch-od-528
 ---
 url: https://www.housekeys1.com/vida-at-morgan-hill
 ---
@@ -443,11 +449,11 @@ url: https://www.housekeys13.com/elan-mountain-view-apts-od-501
 ---
 url: https://www.housekeys13.com/landsby-mountain-view
 ---
+url: https://www.housekeys13.com/novo-apartments-od-522
+---
 url: https://www.housekeys13.com/novo-apartments-od-536
 ---
 url: https://www.housekeys13.com/rental-program
----
-url: https://www.housekeys13.com/revela-apartments-od-546
 ---
 url: https://www.housekeys2.com/merrill-gardens-unit344-od-430
 ---
@@ -471,6 +477,16 @@ url: https://www.housingchoices.org/partner-properties
 ---
 url: https://www.housingchoices.org/santa-clara-properties
 ---
+url: https://www.housingchoices.org/santa-clara-properties/1585-studios-ffxjx-a9cnm
+---
+url: https://www.housingchoices.org/santa-clara-properties/casa-feliz-studios-pkr9d-e7gbd
+---
+url: https://www.housingchoices.org/santa-clara-properties/gish-apartments-ge55c-ypclp
+---
+url: https://www.housingchoices.org/santa-clara-properties/iamesi-village-ryw3b-749pm
+---
+url: https://www.housingchoices.org/santa-clara-properties/monterey-villa-fwpfl-5ww46
+---
 url: https://www.humangood.org/lifes-garden
 ---
 url: https://www.humangood.org/the-terraces-of-los-gatos
@@ -478,6 +494,10 @@ url: https://www.humangood.org/the-terraces-of-los-gatos
 url: http://www.impactdevgroup.com/properties-canoas-terrace.php
 ---
 url: https://www.jamboreehousing.com/blogs/affordable-housing-developer-partner/hillview-court-milpitas-santa-clara-county
+---
+url: https://jsco.net/property/casa-feliz-studios/
+---
+url: https://jsco.net/property/craig-gardens-senior-housing/
 ---
 url: https://jsco.net/property/giovanni-center/
 ---
@@ -488,6 +508,12 @@ url: https://jsco.net/property/jeanne-darc-manor/
 url: http://jsco.net/property/monte-alban-apartments/
 ---
 url: https://jsco.net/property/opportunity-center/
+---
+url: https://jsco.net/property/renascent-place/
+---
+url: https://jsco.net/property/rincon-de-los-esteros/
+---
+url: https://jsco.net/property/second-street-studios/
 ---
 url: https://jsco.net/property/stevenson-house/
 ---
@@ -573,11 +599,15 @@ url: http://www.laspalmashousing.com/summercrest-villas/
 ---
 url: http://www.laspalmashousing.com/the-fairways-of-san-antonio/
 ---
+url: https://webcache.googleusercontent.com/search?q=cache:https://www.liveatvillagefirst.com/
+---
 url: https://webcache.googleusercontent.com/search?q=cache:https://www.liveatvillagefirst.com/floorplans
 ---
 url: https://livelandsby.com/
 ---
 url: https://www.loganpm.com/properties/lilly-gardens/
+---
+url: https://www.marketgatewayapartments.com/
 ---
 url: https://www.mercyhousing.org/california/plaza-maria/
 ---
@@ -701,6 +731,10 @@ url: https://www.relatedcalifornia.com/our-company/properties/mayfield-place
 ---
 url: https://www.relatedcalifornia.com/our-company/properties/village-willow-glen
 ---
+url: https://rentnovo.com/
+---
+url: https://www.rentalmaden.com/
+---
 navigate: https://www.rentalmaden.com/Floor-plans.aspx
 ---
 url: https://www.roemcorp.com/project/1st-and-rosemary-family/
@@ -741,18 +775,25 @@ url: https://www.scmrf.org/life-at-our-communities/
 ---
 url: https://www.sgpa.com/projects/fuji-towers-senior-housing/
 ---
+url: https://www.summercrestsenior.com/
+---
 navigate: https://www.summercrestsenior.com/Floor-plans.aspx
 ---
 url: http://townsquaregilroy.com/index.htm
+---
+url: https://thecorecompanies.com/project/market-gateway/
 ---
 url: https://thirtyone50.com/community_listings/00661-crossings-on-monterey/
 ---
 url: https://www.unitycare.org/housing/
 ---
+url: https://www.vidamorganhill.com/
+---
 url: https://valleyvillageretirement.com/
 ---
 url: https://www.villadeguadalupeapts.com/
 ---
+url: https://www.wakelandhdc.com/raintree-apartments.html
 
 # Newly-added experimental jobs.  TODO: alphabetize after testing
 navigate: https://www.hollandresidential.com/ca/san-jose/fountain-plaza
@@ -868,8 +909,6 @@ ssl_no_verify: true
 ---
 url: https://webcache.googleusercontent.com/search?q=cache:https://www.morganranchapartmenthomes.com/
 ---
-url: https://webcache.googleusercontent.com/search?q=cache:https://www.mvapartments.com/
----
 url: https://webcache.googleusercontent.com/search?q=cache:https://www.parksideglen.com/
 ---
 url: https://webcache.googleusercontent.com/search?q=cache:https://www.revereatcampbell.com/
@@ -963,10 +1002,6 @@ navigate: https://housing.sanjoseca.gov/listings
 ---
 
 # PDFs
----
-url: https://www.cityofgilroy.org/DocumentCenter/View/12922/Interest-List-Flyer---Village-at-First-Affordable-Apartments-Flyer---English?bidId=
-filter:
-  - pdf2text
 ---
 url: https://www.cityofgilroy.org/DocumentCenter/View/12529/Glen-Loma-Ranch-Affordable-Apartments-Interest-List-English?bidId=
 filter:
