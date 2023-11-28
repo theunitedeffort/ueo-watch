@@ -18,6 +18,7 @@ job_defaults:
       - html2text:
           method: pyhtml2text
       - re.sub: 'time=\d+'
+      - re.sub: 'BESbswy' # Remove annoying string from hollandresidential.com
   browser:
     wait_until: networkidle2
   shell: {}
