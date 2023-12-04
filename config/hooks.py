@@ -10,6 +10,16 @@ from urlwatch.mailer import SendmailMailer
 
 logger = logging.getLogger(__name__)
 
+class IgnoreNavFilter(filters.RegexMatchFilter):
+    """Same as AutoMatchFilter but matching is done with regexes"""
+    # HouseKeys websites list available properties _only_ in the <nav>; there
+    # is no listing page to use.  Thus, we can't exclude <nav> from those sites.
+    MATCH = {'url': re.compile(r'^((?!housekeys\d+\.com).)*$')}
+
+    def filter(self, data, subfilter):
+        cssFilter = filters.CssFilter(self.job, self.state)
+        return cssFilter.filter(data, {'selector': 'body', 'exclude': 'nav'})
+
 class RegexSuperSub(filters.FilterBase):
     """Replace text with regex; can match within a line or substring."""
 
