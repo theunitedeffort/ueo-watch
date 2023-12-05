@@ -10,11 +10,14 @@ from urlwatch.mailer import SendmailMailer
 
 logger = logging.getLogger(__name__)
 
+# todo: process navigate jobs
 class IgnoreNavFilter(filters.RegexMatchFilter):
     """Same as AutoMatchFilter but matching is done with regexes"""
     # HouseKeys websites list available properties _only_ in the <nav>; there
     # is no listing page to use.  Thus, we can't exclude <nav> from those sites.
-    MATCH = {'url': re.compile(r'^((?!housekeys\d+\.com).)*$')}
+    # relatedcalifornia.com and deanzaproperties.com have HTML errors that cause
+    # the whole page to disappear when <nav> is excluded.
+    MATCH = {'url': re.compile(r'^((?!housekeys\d+\.com|relatedcalifornia\.com|deanzaproperties\.com).)*$')}
 
     def filter(self, data, subfilter):
         cssFilter = filters.CssFilter(self.job, self.state)
