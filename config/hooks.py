@@ -18,8 +18,12 @@ class IgnoreNavFilter(filters.RegexMatchFilter):
     PATTERN = re.compile(r'^((?!housekeys\d+\.com|relatedcalifornia\.com|deanzaproperties\.com).)*$')
 
     def filter(self, data, subfilter):
-        cssFilter = filters.CssFilter(self.job, self.state)
-        return cssFilter.filter(data, {'selector': 'body', 'exclude': 'nav'})
+        if filters.FilterBase.filter_chain_needs_bytes(self.job.filter):
+            # Only apply this auto filter to string data (e.g. not PDFs)
+            return data
+        else:
+            cssFilter = filters.CssFilter(self.job, self.state)
+            return cssFilter.filter(data, {'selector': 'body', 'exclude': 'nav'})
 
 class IgnoreNavUrlFilter(IgnoreNavFilter):
     MATCH = {'url': IgnoreNavFilter.PATTERN}
