@@ -13,9 +13,15 @@ logger = logging.getLogger(__name__)
 class IgnoreNavFilter(filters.RegexMatchFilter):
     # HouseKeys websites list available properties _only_ in the <nav>; there
     # is no listing page to use.  Thus, we can't exclude <nav> from those sites.
-    # relatedcalifornia.com and deanzaproperties.com have HTML errors that cause
-    # the whole page to disappear when <nav> is excluded.
-    PATTERN = re.compile(r'^((?!housekeys\d+\.com|relatedcalifornia\.com|deanzaproperties\.com).)*$')
+    # relatedcalifornia.com, ssa.gov, and deanzaproperties.com have HTML errors
+    # that cause the whole page to disappear when <nav> is excluded.
+    KEEP_NAV_LIST = [
+        r'housekeys\d+\.com',
+        r'relatedcalifornia\.com',
+        r'deanzaproperties\.com',
+        r'ssa\.gov',
+    ]
+    PATTERN = re.compile(r'^((?!%s).)*$' % '|'.join(KEEP_NAV_LIST))
 
     def filter(self, data, subfilter):
         if filters.FilterBase.filter_chain_needs_bytes(self.job.filter):
