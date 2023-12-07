@@ -4,13 +4,15 @@ display:
   unchanged: false
 job_defaults:
   all:
+    max_tries: 5
     ignore_cached: true
     filter:
       - css:
           selector: 'footer,address,.footer,#footer-address,[class*="contact"],[class*="get-in-touch"],[class*="address"],[class*="phone"],[itemprop*="address"],[itemprop*="phone"],a[href^="tel:"],a[href*="maps.google.com"],.app-location,.app-manager'
       - html2text:
           method: pyhtml2text
-  browser: {}
+  browser:
+    wait_until: networkidle2
   shell: {}
   url: {}
 report:
