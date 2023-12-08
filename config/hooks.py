@@ -10,32 +10,34 @@ from urlwatch.mailer import SendmailMailer
 
 logger = logging.getLogger(__name__)
 
-class IgnoreNavFilter(filters.RegexMatchFilter):
-    # HouseKeys websites list available properties _only_ in the <nav>; there
-    # is no listing page to use.  Thus, we can't exclude <nav> from those sites.
-    # relatedcalifornia.com, ssa.gov, and deanzaproperties.com have HTML errors
-    # that cause the whole page to disappear when <nav> is excluded.
-    KEEP_NAV_LIST = [
-        r'housekeys\d+\.com',
-        r'relatedcalifornia\.com',
-        r'deanzaproperties\.com',
-        r'ssa\.gov',
-    ]
-    PATTERN = re.compile(r'^((?!%s).)*$' % '|'.join(KEEP_NAV_LIST))
+class SelectiveFilter(filters.FilterBase):
+    __kind__ = 'selective'
+
+    __supported_subfilters__ = {
+        'filter': 'Name of the filter to be selectively applied',
+        'select_pattern': 'List of patterns defining the selection',
+        'invert_selection': 'Invert the selection made with select_pattern',
+        '<any>': 'Subfilters associated with "filter"',
+    }
 
     def filter(self, data, subfilter):
-        if filters.FilterBase.filter_chain_needs_bytes(self.job.filter):
-            # Only apply this auto filter to string data (e.g. not PDFs)
+        if 'select_pattern' not in subfilter:
+            raise ValueError('{} needs a select_pattern'.format(self.__kind__))
+        subfilter['invert_selection'] = subfilter.get('invert_selection', False)
+        select_pattern = subfilter['select_pattern']
+        if not isinstance(select_pattern, list):
+            select_pattern = [select_pattern]
+        matched = any(re.match(p, self.job.get_location()) for p in select_pattern)
+        do_process = not matched if subfilter['invert_selection'] else matched
+        target_filter_kind = subfilter['filter']
+        target_subfilter = dict(subfilter)
+        for key in self.__supported_subfilters__:
+            if key != '<any>':
+                target_subfilter.pop(key)
+        if not do_process:
+            logger.info('Selectively skipping application of filter %r, subfilter %r to %s', target_filter_kind, target_subfilter, self.job.get_location())
             return data
-        else:
-            cssFilter = filters.CssFilter(self.job, self.state)
-            return cssFilter.filter(data, {'selector': 'body', 'exclude': 'nav'})
-
-class IgnoreNavUrlFilter(IgnoreNavFilter):
-    MATCH = {'url': IgnoreNavFilter.PATTERN}
-
-class IgnoreNavBrowserFilter(IgnoreNavFilter):
-    MATCH = {'navigate': IgnoreNavFilter.PATTERN}
+        return filters.FilterBase.process(target_filter_kind, target_subfilter, self.state, data)
 
 class RegexSuperSub(filters.FilterBase):
     """Replace text with regex; can match within a line or substring."""
