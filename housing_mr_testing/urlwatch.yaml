@@ -7,10 +7,30 @@ job_defaults:
     max_tries: 5
     ignore_cached: true
     filter:
+      - selective:
+          select_pattern:
+            - '.*housekeys\d+\.com'
+            - '.*relatedcalifornia\.com'
+            - '.*deanzaproperties\.com'
+          invert_selection: true
+          filter: css
+          selector: body
+          exclude: nav
       - css:
+          selector: body
+          exclude: 'div.gform_wrapper,a[href^="/cdn-cgi/l/email-protection"],ul[id^="slideshow"],div.slideshow-wrapper,div.orbit,div.ngg-slideshow,div.lazy-community-carousel,div.testimonials-widget,.adtester-container,.today-office-hours,.yelp-reviews,.other-communities,img[src^="https://api.fouanalytics.com"],.search-form,.searchForm,.search_form,.contact-form,.contactForm,.contact_form,.office-hours,#BrochureDateTime,div.latest-news,div.latest-blog-post,div.apartment-reviews,.g-review,.posts-wrapper,#ole_office_hours_status,img[src^="data:"],span.xversion,div[id$="google-cache-hdr"],img[src*="pixel.quantserve.com"],div.vue-google-map,[aria-label="Filter by Move in Date"]'
+      - selective:
+          select_pattern: '.*'
+          filter: css
           selector: 'footer,address,.footer,#footer-address,[class*="contact"],[class*="get-in-touch"],[class*="address"],[class*="phone"],[itemprop*="address"],[itemprop*="phone"],a[href^="tel:"],a[href*="maps.google.com"],.app-location,.app-manager'
+      - re.sub: 'Image Detail [a-z0-9]{32}'
+      - re.sub:
+          pattern: '/x(.*?\.[a-zA-Z]{3,4})(,qitok=[a-zA-Z0-9]{8})?\.pagespeed\.ic\.[a-zA-Z0-9-]{10}\.[a-zA-Z]{3,4}'
+          repl: '/\1'
+      - re.sub: '\?itok=[a-zA-Z0-9]{8}'
       - html2text:
           method: pyhtml2text
+      - re.sub: 'time=\d+'
   browser:
     wait_until: networkidle2
   shell: {}
