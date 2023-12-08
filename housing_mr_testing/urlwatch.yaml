@@ -28,6 +28,7 @@ job_defaults:
           pattern: '/x(.*?\.[a-zA-Z]{3,4})(,qitok=[a-zA-Z0-9]{8})?\.pagespeed\.ic\.[a-zA-Z0-9-]{10}\.[a-zA-Z]{3,4}'
           repl: '/\1'
       - re.sub: '\?itok=[a-zA-Z0-9]{8}'
+      - re.sub: 'GA1\.\d\.\d{10}\.\d{10}'
       - html2text:
           method: pyhtml2text
       - re.sub: 'time=\d+'
