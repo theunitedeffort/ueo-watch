@@ -31,7 +31,7 @@ report:
     enabled: true
     filename: report-{datetime}.html
     bucket: ueo-changes
-    local_dir: ~/projects/ueo-watch/housing_mr_testing/staging
+    local_dir: ~/ueo-watch/housing_mr_testing/staging
     gcs_dir: housing_mr_testing
   html:
     diff: table
