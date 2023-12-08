@@ -26,8 +26,8 @@ job_defaults:
       - re.sub: '\?itok=[a-zA-Z0-9]{8}'
       - re.sub: 'GA1\.\d\.\d{10}\.\d{10}'
       - re.sub:
-          pattern: 'href="tel:(\(|\+1)(\d{3})(\)%20)?(\d{3})-?(\d{4})'
-          repl: 'href="tel:\2\4\5'
+          pattern: 'href="tel:\((\d{3})\)(%20| )(\d{3})-(\d{4})'
+          repl: 'href="tel:+1\1\3\4'
       - html2text:
           method: pyhtml2text
       - re.sub: 'time=\d+'
