@@ -28,7 +28,7 @@ class ErrorOnEmptyData(filters.FilterBase):
                 raise ValueError(msg)
             elif subfilter['action'] == 'warn':
                 logger.warn(msg)
-                return data
+        return data
 
 
 class SelectiveFilter(filters.FilterBase):
