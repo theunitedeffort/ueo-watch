@@ -4,7 +4,7 @@ display:
   unchanged: false
 job_defaults:
   all:
-    max_tries: 5
+    max_tries: 2
     ignore_cached: true
     filter:
       - selective:
@@ -35,6 +35,7 @@ job_defaults:
       - html2text:
           method: pyhtml2text
       - re.sub: 'time=\d+'
+      - if_empty: error
   browser:
     wait_until: networkidle2
   shell: {}

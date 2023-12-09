@@ -4,7 +4,7 @@ display:
   unchanged: false
 job_defaults:
   all:
-    max_tries: 5
+    max_tries: 2
     ignore_cached: true
     filter:
       - selective:
@@ -32,6 +32,7 @@ job_defaults:
           method: pyhtml2text
       - re.sub: 'time=\d+'
       - re.sub: 'BESbswy' # Remove annoying string from hollandresidential.com
+      - if_empty: error
   browser:
     wait_until: networkidle2
   shell: {}

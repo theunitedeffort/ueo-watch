@@ -10,6 +10,27 @@ from urlwatch.mailer import SendmailMailer
 
 logger = logging.getLogger(__name__)
 
+class ErrorOnEmptyData(filters.FilterBase):
+    __kind__ = 'if_empty'
+
+    __supported_subfilters__ = {
+        'action': 'What to do if the input data is empty [error, warn]',
+    }
+
+    __default_subfilter__ = 'action'
+
+    def filter(self, data, subfilter):
+        if subfilter['action'] not in ['error', 'warn']:
+            raise ValueError('Invalid value for "action", must be "error" or "warn"')
+        msg = 'Filter input is empty, no text to process.'
+        if data.strip() == "":
+            if subfilter['action'] == 'error':
+                raise ValueError(msg)
+            elif subfilter['action'] == 'warn':
+                logger.warn(msg)
+                return data
+
+
 class SelectiveFilter(filters.FilterBase):
     __kind__ = 'selective'
 
