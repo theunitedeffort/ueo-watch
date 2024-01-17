@@ -22,7 +22,7 @@ job_defaults:
       - selective:
           select_pattern: '.*'
           filter: css
-          selector: 'footer,address,.footer,#footer-address,[class*="contact"],[class*="get-in-touch"],[class*="address"],[class*="phone"],[itemprop*="address"],[itemprop*="phone"],a[href^="tel:"],a[href*="maps.google.com"],.app-location,.app-manager'
+          selector: 'address,#footer-address,[class*="contact"],[class*="get-in-touch"],[class*="address"],[class*="phone"],[itemprop*="address"],[itemprop*="phone"],a[href^="tel:"],a[href*="maps.google.com"],.app-location,.app-manager'
           exclude: 'form.formbuilder,form[action*="formbuilder"],div.ctas'
       - re.sub: 'Image Detail [a-z0-9]{32}'
       - re.sub:
