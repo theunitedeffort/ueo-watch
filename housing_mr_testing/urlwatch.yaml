@@ -22,8 +22,8 @@ job_defaults:
       - selective:
           select_pattern: '.*'
           filter: css
-          selector: 'address,#footer-address,[class*="contact"],[class*="get-in-touch"],[class*="address"],[class*="phone"],[itemprop*="address"],[itemprop*="phone"],a[href^="tel:"],a[href*="maps.google.com"],.app-location,.app-manager'
-          exclude: 'form.formbuilder,form[action*="formbuilder"],div.ctas'
+          selector: 'address,#footer-address,[class*="contact"],[class*="get-in-touch"],[class*="address"],[class*="phone"],[itemprop*="address"],[itemprop*="phone"],a[href^="tel:"],a[href*="maps.google.com"],a[href^="mailto:"],.app-location,.app-manager,.navigation-widgets'
+          exclude: 'form.formbuilder,form[action*="formbuilder"],div.ctas,.timings_section,#social-media'
       - re.sub: 'Image Detail [a-z0-9]{32}'
       - re.sub:
           pattern: '/x(.*?\.[a-zA-Z]{3,4})(,qitok=[a-zA-Z0-9]{8})?\.pagespeed\.ic\.[a-zA-Z0-9-]{10}\.[a-zA-Z]{3,4}'
