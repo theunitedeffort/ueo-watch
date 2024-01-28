@@ -11,10 +11,10 @@ job_defaults:
           invert_selection: true
           filter: css
           selector: body
-          exclude: nav
+          exclude: 'nav, header'
       - css:
           selector: body
-          exclude: 'header,footer,div.gform_wrapper,a[href^="/cdn-cgi/l/email-protection"],ul[id^="slideshow"],div.slideshow-wrapper,div.orbit,div.ngg-slideshow,.adtester-container,.search-form,.searchForm,.search_form,.contact-form,.contactForm,.contact_form,img[src^="data:"],span.xversion,div[id$="google-cache-hdr"],[role="navigation"],[class*="breadcrumb"]'
+          exclude: 'footer,div.gform_wrapper,a[href^="/cdn-cgi/l/email-protection"],ul[id^="slideshow"],div.slideshow-wrapper,div.orbit,div.ngg-slideshow,.adtester-container,.search-form,.searchForm,.search_form,.contact-form,.contactForm,.contact_form,img[src^="data:"],span.xversion,div[id$="google-cache-hdr"],[role="navigation"],[class*="breadcrumb"]'
       - html2text:
           method: pyhtml2text
       - re.sub: 'time=\d+'
