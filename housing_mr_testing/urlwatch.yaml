@@ -93,7 +93,12 @@ job_defaults:
             [id*="menu-footer"],
             [id*="menu-main-header-nav"],
             [class*="menu-main-header-nav"],
-            .copyright
+            .copyright,
+            .logo,
+            #logo,
+            .site-logo,
+            #site-logo,
+            .elementor-widget-theme-site-logo
       - selective:
           select_pattern: '.*'
           filter: css
