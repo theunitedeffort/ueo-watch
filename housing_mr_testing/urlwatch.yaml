@@ -73,6 +73,7 @@ job_defaults:
             .top_menu,
             #menu-top-bar,
             .top-bar-menu,
+            .top-nav,
             .community-nearby,
             .ecs_components__notification__wrap,
             .book-tour,
@@ -102,7 +103,9 @@ job_defaults:
             #logo,
             .site-logo,
             #site-logo,
-            .elementor-widget-theme-site-logo
+            .elementor-widget-theme-site-logo,
+            .themer-logo,
+            .sidebar-first-wrapper
       - selective:
           select_pattern: '.*'
           filter: css

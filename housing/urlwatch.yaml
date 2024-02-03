@@ -73,6 +73,7 @@ job_defaults:
             .top_menu,
             #menu-top-bar,
             .top-bar-menu,
+            .top-nav,
             .community-nearby,
             .ecs_components__notification__wrap,
             .book-tour,
@@ -102,7 +103,9 @@ job_defaults:
             #logo,
             .site-logo,
             #site-logo,
-            .elementor-widget-theme-site-logo
+            .elementor-widget-theme-site-logo,
+            .themer-logo,
+            .sidebar-first-wrapper
       - re.sub: 'Image Detail [a-z0-9]{32}'
       - re.sub:
           pattern: '/x(.*?\.[a-zA-Z]{3,4})(,qitok=[a-zA-Z0-9]{8})?\.pagespeed\.ic\.[a-zA-Z0-9-]{10}\.[a-zA-Z]{3,4}'
