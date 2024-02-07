@@ -105,6 +105,7 @@ job_defaults:
             #site-logo,
             .elementor-widget-theme-site-logo,
             .themer-logo,
+            .Header-branding-logo,
             .sidebar-first-wrapper
       - re.sub: 'Image Detail [a-z0-9]{32}'
       - re.sub:

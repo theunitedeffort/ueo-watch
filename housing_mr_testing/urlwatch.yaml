@@ -105,6 +105,7 @@ job_defaults:
             #site-logo,
             .elementor-widget-theme-site-logo,
             .themer-logo,
+            .Header-branding-logo,
             .sidebar-first-wrapper
       - selective:
           select_pattern: '.*'
