@@ -28,8 +28,9 @@ cp cache.db cache-backup.db
 
 # Change the email address reports are sent to so that we don't send test
 # reports to a production email list.
-echo "Changing report recipient to $TEST_RECIPIENT"
-cat urlwatch.yaml | sed -E "s/^([[:blank:]]*to: )(.*)/\1'$TEST_RECIPIENT'/" > "$TEMP_FILE"
+# Change the max_tries parameter so that errors are immediately reported.
+echo "Changing report recipient to $TEST_RECIPIENT and max_tries to 1"
+cat urlwatch.yaml | sed -E "s/^([[:blank:]]*to: )(.*)/\1'$TEST_RECIPIENT'/" | sed -E "s/^([[:blank:]]*max_tries: )(.*)/\11/" > "$TEMP_FILE"
 echo "Temporary urlwatch config created at $TEMP_FILE"
 
 echo "Running urlwatch..."
