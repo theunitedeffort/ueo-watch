@@ -20,6 +20,7 @@ job_defaults:
             #navigation,
             #nav,
             .nav,
+            #main-nav,
             #mobile-nav,
             .mobile-nav,
             [class*="nav-menu"],
