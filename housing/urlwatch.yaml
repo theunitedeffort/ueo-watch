@@ -72,6 +72,7 @@ job_defaults:
             .left-menu,
             #top-menu,
             .top_menu,
+            .header-menu,
             #menu-top-bar,
             .top-bar-menu,
             .top-nav,
