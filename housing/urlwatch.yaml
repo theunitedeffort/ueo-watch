@@ -41,6 +41,7 @@ job_defaults:
             div.testimonials-widget,
             .adtester-container,
             .today-office-hours,
+            .contact-hours,
             .yelp-reviews,
             .other-communities,
             img[src^="https://api.fouanalytics.com"],
