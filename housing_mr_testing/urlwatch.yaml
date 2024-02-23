@@ -37,6 +37,7 @@ job_defaults:
             div.orbit,
             div.ngg-slideshow,
             div.lazy-community-carousel,
+            .hubdb-events,
             .flickity-viewport,
             div.testimonials-widget,
             .adtester-container,
