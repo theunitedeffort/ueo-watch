@@ -122,6 +122,55 @@ job_defaults:
             .sidebar-first-wrapper,
             .breadcrumb,
             .breadcrumbs
+      - selective:
+          select_pattern:
+            - '.*300railway\.com/'
+            - '.*aventinoapts\.com/'
+            - '.*balmoral-apts\.com/'
+            - '.*citylineflats\.com/'
+            - '.*colonnadeapt\.com/'
+            - '.*deanzaproperties\.com'
+            - '.*decron\.com/apartments-willow-creek/'
+            - '.*domicilioapts\.com/'
+            - '.*elanmountainview\.com/'
+            - '.*encinalapts\.com/'
+            - '.*essexapartmenthomes\.com'
+            - '.*equityapartments\.com/san-francisco-bay/santa-clara/estancia-at-santa-clara-apartments'
+            - '.*greystar\.com/properties/san-jose-ca/vio'
+            - '.*irvinecompanyapartments\.com'
+            - '.*liveatsantanaterrace\.com/'
+            - '.*livelandsby\.com/'
+            - '.*liveprado\.com/'
+            - '.*liverevela\.com/'
+            - '.*merrillgardens\.com/senior-living/ca/campbell/merrill-gardens-at-campbell/'
+            - '.*milpitascrossing\.com/\?page_id=15'
+            - '.*montereygrove\.com/en/apartments/contactus.html'
+            - '.*morganranchapartmenthomes\.com/'
+            - '.*mvapartments\.com/'
+            - '.*prometheusapartments\.com/'
+            - '.*revereatcampbell\.com/'
+            - '.*sofiaaptliving\.com/'
+            - '.*tamarindsquare\.com/'
+            - '.*udr\.com/san-francisco-bay-area-apartments/san-jose/almaden-lake-village/'
+            - '.*villadelsolsunnyvale\.com/'
+            - '.*villatorinoapts\.com/'
+            - '.*viverelosgatos\.com/'
+          filter: css
+          selector: >-
+            address,
+            #footer-address,
+            [class*="contact"],
+            [class*="get-in-touch"],
+            [class*="address"],
+            [class*="phone"],
+            [itemprop*="address"],
+            [itemprop*="phone"],
+            a[href^="tel:"],
+            a[href*="maps.google.com"],
+            a[href^="mailto:"],
+            .app-location,
+            .app-manager,
+            .navigation-widgets
       - re.sub: 'Image Detail [a-z0-9]{32}'
       - re.sub:
           pattern: '/x(.*?\.[a-zA-Z]{3,4})(,qitok=[a-zA-Z0-9]{8})?\.pagespeed\.ic\.[a-zA-Z0-9-]{10}\.[a-zA-Z]{3,4}'
@@ -136,7 +185,6 @@ job_defaults:
       - re.sub: '©.*?(\d{4}-)?20\d{2}'
       - re.sub: 'Copyright 20\d{2}'
       - re.sub: 'time=\d+'
-      - re.sub: 'BESbswy' # Remove annoying string from hollandresidential.com
       - if_empty: error
   browser:
     wait_until: networkidle2
