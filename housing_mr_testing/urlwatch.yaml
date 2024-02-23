@@ -120,7 +120,8 @@ job_defaults:
             .themer-logo,
             .Header-branding-logo,
             .sidebar-first-wrapper,
-            [class*="breadcrumb"]
+            .breadcrumb,
+            .breadcrumbs
       - selective:
           select_pattern: '.*'
           filter: css
