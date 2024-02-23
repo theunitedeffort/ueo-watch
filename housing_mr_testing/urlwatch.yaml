@@ -25,7 +25,8 @@ job_defaults:
             .mobile-nav,
             [class*="nav-menu"],
             [data-content-field="navigation"],
-            .sub-nav
+            .sub-nav,
+            .subnav
       - css:
           selector: body
           exclude: >-
@@ -38,6 +39,9 @@ job_defaults:
             div.ngg-slideshow,
             div.lazy-community-carousel,
             .hubdb-events,
+            .sponsors_section,
+            .sponsors-block,
+            .ecs_specials_control,
             .flickity-viewport,
             div.testimonials-widget,
             .adtester-container,
@@ -78,6 +82,10 @@ job_defaults:
             #menu-top-bar,
             .top-bar-menu,
             .top-nav,
+            .top_nav,
+            #top_nav,
+            #top-nav,
+            .skipnav,
             .community-nearby,
             .ecs_components__notification__wrap,
             .book-tour,
@@ -102,6 +110,7 @@ job_defaults:
             [id*="menu-footer"],
             [id*="menu-main-header-nav"],
             [class*="menu-main-header-nav"],
+            .footer-nav-secondary,
             .copyright,
             .logo,
             #logo,
@@ -110,7 +119,8 @@ job_defaults:
             .elementor-widget-theme-site-logo,
             .themer-logo,
             .Header-branding-logo,
-            .sidebar-first-wrapper
+            .sidebar-first-wrapper,
+            [class*="breadcrumb"]
       - selective:
           select_pattern: '.*'
           filter: css
