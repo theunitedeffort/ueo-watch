@@ -134,7 +134,7 @@ job_defaults:
             - '.*domicilioapts\.com/'
             - '.*elanmountainview\.com/'
             - '.*encinalapts\.com/'
-            - '.*essexapartmenthomes\.com'
+            - '.*essexapartmenthomes\.com/apartments'
             - '.*equityapartments\.com/san-francisco-bay/santa-clara/estancia-at-santa-clara-apartments'
             - '.*greystar\.com/properties/san-jose-ca/vio'
             - '.*irvinecompanyapartments\.com'
