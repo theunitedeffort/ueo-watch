@@ -80,12 +80,14 @@ job_defaults:
             .top_menu,
             .header-menu,
             #menu-top-bar,
+            #menu-top-primary,
             .top-bar-menu,
             .top-nav,
             .top_nav,
             #top_nav,
             #top-nav,
             .skipnav,
+            #skipnav,
             .community-nearby,
             .ecs_components__notification__wrap,
             .book-tour,
@@ -103,6 +105,7 @@ job_defaults:
             .et-social-icons,
             .bottom-social-icons,
             .social,
+            .social-button,
             [class*="footer-links"],
             #footer-links,
             .widgetQuickLinks,
@@ -111,6 +114,8 @@ job_defaults:
             [id*="menu-main-header-nav"],
             [class*="menu-main-header-nav"],
             .footer-nav-secondary,
+            #footer-menus-md-sm,
+            #footer-menus-lg,
             .copyright,
             .logo,
             #logo,
@@ -180,6 +185,9 @@ job_defaults:
       - re.sub:
           pattern: 'href="tel:\((\d{3})\)(%20| )(\d{3})-(\d{4})'
           repl: 'href="tel:+1\1\3\4'
+      - re.sub:
+          pattern: '(https://maps.googleapis.com/maps/api/js/StaticMapService\.GetMapImage.*?)&token=\d{6}'
+          repl: '\1'
       - html2text:
           method: pyhtml2text
       - re.sub: '©.*?(\d{4}-)?20\d{2}'
