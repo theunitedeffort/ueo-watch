@@ -26,7 +26,9 @@ job_defaults:
             [class*="nav-menu"],
             [data-content-field="navigation"],
             .sub-nav,
-            .subnav
+            .subnav,
+            #navbar,
+            .navbar
       # TODO: try to remove footer from all pages.
       - selective:
           select_pattern:
@@ -96,8 +98,6 @@ job_defaults:
             #top-nav,
             .skipnav,
             #skipnav,
-            #navbar,
-            .navbar,
             .community-nearby,
             .ecs_components__notification__wrap,
             .book-tour,
