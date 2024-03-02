@@ -75,6 +75,7 @@ job_defaults:
             .g-review,
             .posts-wrapper,
             #ole_office_hours_status,
+            #ole_office_hours,
             img[src^="data:"],
             span.xversion,
             div[id$="google-cache-hdr"],
@@ -140,7 +141,8 @@ job_defaults:
             .Header-branding-logo,
             .sidebar-first-wrapper,
             .breadcrumb,
-            .breadcrumbs
+            .breadcrumbs,
+            #alerts_wrapper
       - selective:
           select_pattern:
             - '.*300railway\.com/'
