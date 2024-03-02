@@ -171,6 +171,7 @@ job_defaults:
             - '.*sofiaaptliving\.com/'
             - '.*tamarindsquare\.com/'
             - '.*udr\.com/san-francisco-bay-area-apartments/san-jose/almaden-lake-village/'
+            - '.*vidamorganhill\.com/'
             - '.*villadelsolsunnyvale\.com/'
             - '.*villatorinoapts\.com/'
             - '.*viverelosgatos\.com/'

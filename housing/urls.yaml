@@ -1052,6 +1052,7 @@ navigate: https://housing.sanjoseca.gov/listings
 navigate: https://housingbayarea.mtc.ca.gov/listing/692e1f4d-03cc-4cc3-8e98-f8908b89279e/village_at_santa_teresa_1520_hecker_pass_road_gilroy_ca
 
 # Market-rate apartment websites
+# Remember to also update the regex pattern in urlwatch.yaml for market-rate URLs.
 ---
 url: https://www.300railway.com/
 ---
