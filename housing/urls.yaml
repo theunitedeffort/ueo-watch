@@ -246,7 +246,21 @@ url: https://communityhousingsv.org/tierra-encantada/
 ---
 url: http://corinthianhouse.com/
 ---
-navigate: https://www.courtyardplazaapts.com/
+url: https://www.courtyardplazaapts.com/
+---
+user_visible_url: https://www.courtyardplazaapts.com/floor-plans
+url: https://api.ws.realpage.com/v2/property/9067310/floorplans
+headers:
+  x-ws-authkey: fefd0be9-70fe-411d-b71a-6c7faac4f78a
+filter:
+  - realpage_floorplans
+---
+user_visible_url: https://www.courtyardplazaapts.com/floor-plans#units
+url: https://api.ws.realpage.com/v2/property/9067310/units?available=true&honordisplayorder=true&siteid=9067310&bestprice=true&leaseterm=12
+headers:
+  x-ws-authkey: fefd0be9-70fe-411d-b71a-6c7faac4f78a
+filter:
+  - realpage_units
 ---
 url: https://covia.org/affordable-assisted-living/
 ---
@@ -396,7 +410,21 @@ url: https://edenhousing.org/properties/walnut-grove/
 ---
 url: https://edenhousing.org/properties/wheeler-manor/
 ---
-navigate: https://www.elranchoverdeapts.com/
+url: https://www.elranchoverdeapts.com/
+---
+user_visible_url: https://www.elranchoverdeapts.com/floor-plans
+url: https://api.ws.realpage.com/v2/property/9067308/floorplans
+headers:
+  x-ws-authkey: 9f73b145-1d28-4a8f-bdab-44fb7bd34f21
+filter:
+  - realpage_floorplans
+---
+user_visible_url: https://www.elranchoverdeapts.com/floor-plans#units
+url: https://api.ws.realpage.com/v2/property/9067308/units?available=true&honordisplayorder=true&siteid=9067308&leaseterm=12&bestprice=true
+headers:
+  x-ws-authkey: 9f73b145-1d28-4a8f-bdab-44fb7bd34f21
+filter:
+  - realpage_units
 ---
 url: https://epath.org/ventures/villas-at-4th-street/
 ---
@@ -685,7 +713,21 @@ url: http://www.laspalmashousing.com/summercrest-villas/
 ---
 url: http://www.laspalmashousing.com/the-fairways-of-san-antonio/
 ---
-navigate: https://www.lenzensquare.com/
+url: https://www.lenzensquare.com/
+---
+user_visible_url: https://www.lenzensquare.com/floor-plans
+url: https://api.ws.realpage.com/v2/property/9067306/floorplans
+headers:
+  x-ws-authkey: 4a0927a3-9029-4618-b01a-00eb6a0c864d
+filter:
+  - realpage_floorplans
+---
+user_visible_url: https://www.lenzensquare.com/floor-plans#units
+url: https://api.ws.realpage.com/v2/property/9067306/units?available=true&honordisplayorder=true&siteid=9067306&bestprice=true&leaseterm=12
+headers:
+  x-ws-authkey: 4a0927a3-9029-4618-b01a-00eb6a0c864d
+filter:
+  - realpage_units
 ---
 url: https://webcache.googleusercontent.com/search?q=cache:https://www.liveatvillagefirst.com/
 ---
@@ -815,7 +857,21 @@ url: https://webcache.googleusercontent.com/search?q=cache:https://www.montereyf
 ---
 url: https://webcache.googleusercontent.com/search?q=cache:https://www.montereyfamilyvillage.com/floorplans
 ---
-navigate: https://www.montevistagardens.com/
+url: https://www.montevistagardens.com/
+---
+user_visible_url: https://www.montevistagardens.com/floor-plans
+url: https://api.ws.realpage.com/v2/property/9067309/floorplans
+headers:
+  x-ws-authkey: 8fa1a2bc-ee00-4e50-afc9-ed57748c97ae
+filter:
+  - realpage_floorplans
+---
+user_visible_url: https://www.montevistagardens.com/floor-plans#units
+url: https://api.ws.realpage.com/v2/property/9067309/units?available=true&honordisplayorder=true&siteid=9067309&bestprice=true&leaseterm=12&dateneeded=2024-03-08
+headers:
+  x-ws-authkey: 8fa1a2bc-ee00-4e50-afc9-ed57748c97ae
+filter:
+  - realpage_units
 ---
 url: https://www.morganhill.ca.gov/2082/Royal-Oak-Village-Watsonville-Hordness
 ---
@@ -861,7 +917,15 @@ url: https://rentnovo.com/
 ---
 url: https://www.rentalmaden.com/
 ---
-navigate: https://www.rentalmaden.com/Floor-plans.aspx
+user_visible_url: https://www.rentalmaden.com/Floor-plans.aspx
+url: https://www.rentalmaden.com/CmsSiteManager/callback.aspx?act=Proxy/GetFloorPlans
+filter:
+  - realpage_floorplans
+---
+user_visible_url: https://www.rentalmaden.com/Floor-plans.aspx#units
+url: https://www.rentalmaden.com/CmsSiteManager/callback.aspx?act=Proxy/GetUnits&available=true&honordisplayorder=true&siteid=6437874&bestprice=true&leaseterm=12&leaseterm=13&leaseterm=36
+filter:
+  - realpage_units
 ---
 url: https://www.roemcorp.com/project/1st-and-rosemary-family/
 ---
@@ -905,7 +969,17 @@ url: https://www.scmrf.org/life-at-our-communities/
 ---
 url: https://www.sgpa.com/projects/fuji-towers-senior-housing/
 ---
-navigate: https://www.stantonapts.com/
+url: https://www.stantonapts.com/
+---
+user_visible_url: https://www.stantonapts.com/floor-plans
+url: https://www.stantonapts.com/CmsSiteManager/callback.aspx?act=Proxy/GetFloorPlans
+filter:
+  - realpage_floorplans
+---
+user_visible_url: https://www.stantonapts.com/floor-plans#units
+url: https://www.stantonapts.com/CmsSiteManager/callback.aspx?act=Proxy/GetUnits&available=true&honordisplayorder=true&siteid=8841578&leaseterm=12
+filter:
+  - realpage_units
 ---
 url: http://www.stclaireapts.com/
 ---
@@ -913,8 +987,19 @@ url: https://www.streetsteam.org/index
 ---
 url: https://www.summercrestsenior.com/
 ---
-navigate: https://www.summercrestsenior.com/Floor-plans.aspx
-compared_versions: 2
+user_visible_url: https://www.summercrestsenior.com/Floor-plans.aspx
+url: https://api.ws.realpage.com/v2/property/6437950/floorplans
+headers:
+  x-ws-authkey: e4073a5d-37c4-4044-b174-08b10e68cba2
+filter:
+  - realpage_floorplans
+---
+user_visible_url: https://www.summercrestsenior.com/Floor-plans.aspx#units
+url: https://api.ws.realpage.com/v2/property/6437950/units?available=true&honordisplayorder=true&siteid=6437950&leaseterm=12
+headers:
+  x-ws-authkey: e4073a5d-37c4-4044-b174-08b10e68cba2
+filter:
+  - realpage_units
 ---
 url: https://www.termanapts.com/
 ---
