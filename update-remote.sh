@@ -34,7 +34,7 @@ if [ -z "$lookback" ]
     lookback=1
 fi
 
-new_urls=$(gcloud compute ssh "$1" --command "cd ueo-watch; git diff HEAD~$lookback | grep -E '^\+((url)|(navigate)):|^\+\+\+ b/' | sed -e 's/+\(\(url\)\|\(navigate\)\): //g' | sed -e 's/+++ b\//<FILE> /g'")
+new_urls=$(gcloud compute ssh "$1" --command "cd ueo-watch; git diff HEAD~$lookback | grep -E '^\+((url)|(navigate)|(user_visible_url)):|^\+\+\+ b/' | sed -e 's/+\(\(url\)\|\(navigate\)\|\(user_visible_url\)\): //g' | sed -e 's/+++ b\//<FILE> /g'")
 old_ifs=$IFS
 IFS=$'\n'
 new_urls=($new_urls)
