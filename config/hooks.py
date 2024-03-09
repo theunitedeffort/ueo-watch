@@ -62,6 +62,30 @@ class SelectiveFilter(filters.FilterBase):
     return filters.FilterBase.process(target_filter_kind, target_subfilter, self.state, data)
 
 
+class RealPageBase(filters.FilterBase):
+  def filter(self, data, subfilter):
+    filtered = filters.FilterBase.process('jq', {'query': self.__query__}, self.state, data)
+    filtered = filters.FilterBase.process('remove-duplicate-lines', {}, self.state, filtered)
+    filtered = filters.FilterBase.process('sort', {}, self.state, filtered)
+    filtered = filters.FilterBase.process('re.sub', {'pattern': '"'}, self.state, filtered)
+    filtered = filters.FilterBase.process('re.sub', {'pattern': r'\\n', 'repl': r'\n'}, self.state, filtered)
+    return filtered
+
+
+class RealPageUnits(RealPageBase):
+  """Filter for pretty-printing units JSON data from the realpage API."""
+
+  __kind__ = 'realpage_units'
+  __query__ = r'.response // . | .units[]? | "\(.numberOfBeds) BR\n---\n$\(.rent)/month\n\(.leaseStatus)\n\n"'
+
+
+class RealPageFloorplans(RealPageBase):
+  """Filter for pretty-printing floorplan JSON data from the realpage API."""
+
+  __kind__ = 'realpage_floorplans'
+  __query__ = r'.response // . | .floorplans[]? | "\(.name)\n---\n\(.bedRooms) BR\n\(.rentType)\n\(.rentRange)\n\n"'
+
+
 class RegexSuperSub(filters.FilterBase):
   """Replace text with regex; can match within a line or substring."""
 
