@@ -3,3 +3,4 @@
 staging/
 test/
 __pycache__/
+env/
