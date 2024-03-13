@@ -142,6 +142,7 @@ job_defaults:
             .sidebar-first-wrapper,
             .breadcrumb,
             .breadcrumbs,
+            .breadCrumbs,
             #alerts_wrapper
       - selective:
           select_pattern:
