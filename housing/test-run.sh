@@ -1,7 +1,8 @@
 #!/bin/bash
 set -e
 
-readonly LOG_PATH=/tmp/urlwatch_debug.log
+readonly TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+readonly LOG_PATH="/tmp/urlwatch_debug_$TIMESTAMP.log"
 readonly TEST_RECIPIENT=trevor@theunitedeffort.org
 
 echo "Running test..."
@@ -24,7 +25,7 @@ cd "$ROOT_DIR"
 # during testing that need to be kept out of the database and saved for
 # an actual urlwatch run with proper reporting.
 echo "Backing up database"
-cp cache.db cache-backup.db
+cp cache.db "cache_$TIMESTAMP.db.bak"
 
 # Change the email address reports are sent to so that we don't send test
 # reports to a production email list.
@@ -33,6 +34,7 @@ echo "Changing report recipient to $TEST_RECIPIENT and max_tries to 1"
 cat urlwatch.yaml | sed -E "s/^([[:blank:]]*to: )(.*)/\1'$TEST_RECIPIENT'/" | sed -E "s/^([[:blank:]]*max_tries: )(.*)/\11/" > "$TEMP_FILE"
 echo "Temporary urlwatch config created at $TEMP_FILE"
 
+echo "Logging debug output to $LOG_PATH"
 echo "Running urlwatch..."
 echo
 urlwatch -v --hooks ../config/hooks.py --urls urls.yaml --config "$TEMP_FILE" --cache cache.db 2> "$LOG_PATH"
