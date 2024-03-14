@@ -206,6 +206,9 @@ job_defaults:
       - re.sub:
           pattern: '(src="https://maps.googleapis.com/maps/api/js/StaticMapService\.GetMapImage.*?)&amp;token=.*?"'
           repl: '\1"'
+      - re.sub:
+          pattern: '(src|href)="https://edenhousing.wpenginepowered.com'
+          repl: '\1="https://edenhousing.org'
       - html2text:
           method: pyhtml2text
       - re.sub: '©.*?(\d{4}-)?20\d{2}'
