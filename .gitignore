@@ -1,5 +1,6 @@
 *.log
 *.db
+*.bak
 staging/
 test/
 __pycache__/
