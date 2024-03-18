@@ -143,7 +143,8 @@ job_defaults:
             .breadcrumb,
             .breadcrumbs,
             .breadCrumbs,
-            #alerts_wrapper
+            #alerts_wrapper,
+            .cp-Splash-wrapper
       - selective:
           select_pattern:
             - '.*300railway\.com/'
