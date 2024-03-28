@@ -76,6 +76,7 @@ job_defaults:
             .posts-wrapper,
             #ole_office_hours_status,
             #ole_office_hours,
+            .colrichfooter__hours,
             img[src^="data:"],
             span.xversion,
             div[id$="google-cache-hdr"],
