@@ -144,6 +144,7 @@ job_defaults:
             .breadcrumb,
             .breadcrumbs,
             .breadCrumbs,
+            .es-breadcrumbs,
             #alerts_wrapper,
             .alert_container,
             .cp-Splash-wrapper,
