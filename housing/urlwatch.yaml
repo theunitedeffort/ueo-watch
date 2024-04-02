@@ -148,7 +148,7 @@ job_defaults:
             #alerts_wrapper,
             .alert_container,
             .cp-Splash-wrapper,
-            #acsModal,
+            #acsModal
       - selective:
           select_pattern:
             - '.*300railway\.com/'
