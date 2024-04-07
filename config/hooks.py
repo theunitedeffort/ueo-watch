@@ -1,14 +1,28 @@
+import json  # TODO: remove
 import logging
+import netrc
 import os
+import pprint # TODO: remove
 import re
 import subprocess
+import time
+import urllib.parse
 
+from bs4 import BeautifulSoup
+import requests
 from urlwatch import filters
 from urlwatch import reporters
 from urlwatch.mailer import SMTPMailer
 from urlwatch.mailer import SendmailMailer
 
 logger = logging.getLogger(__name__)
+
+
+# https://stackoverflow.com/questions/312443/how-do-i-split-a-list-into-equally-sized-chunks
+def chunkify(lst, n):
+  """Yield n-sized chunks from the list 'lst'."""
+  for i in range(0, len(lst), n):
+      yield lst[i:i + n]
 
 
 class ErrorOnEmptyData(filters.FilterBase):
@@ -192,3 +206,204 @@ For details, visit %s
       msg = mailer.msg_plain(self.config['from'], self.config['to'], reply_to, subject, body_text)
 
     mailer.send(msg)
+
+
+class JiraReporter(reporters.HtmlReporter):
+
+  __kind__ = 'jira'
+
+  # https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issues/#api-rest-api-3-issue-bulk-post
+  _MAX_BATCH_SIZE = 50
+
+  def submit(self):
+    html_report = '\n'.join(super().submit())
+    self._submit_from_html(html_report)
+
+  def _create_issues(self, issues):
+    # Make sure there's an entry in .netrc matching the host (or default).
+    try:
+      netrc_obj = netrc.netrc()
+    except FileNotFoundError as e:
+      logging.error(f'The {self.__kind__} reporter requires API '
+        'credentials to be stored in a .netrc file, and that file does not '
+        'seem to exist.')
+      raise
+    netloc = urllib.parse.urlparse(self.config['site_url']).netloc
+    if not netrc_obj.authenticators(netloc):
+      raise RuntimeError(f'{netloc} was not found in your '
+        '.netrc file and no default credentials exist in that file.\nAdd Jira '
+        'API credentials to your .netrc file to use this reporter.')
+    for chunk in chunkify(issues, self._MAX_BATCH_SIZE):
+      # Note auth is set by a local .netrc file with an entry for
+      # the value of self.config['site_url']
+      response = requests.post(
+        urllib.parse.urljoin(self.config['site_url'], 'rest/api/3/issue/bulk'),
+        headers={
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+         },
+        json={'issueUpdates': chunk},
+      )
+      print(response.status_code)
+      response.raise_for_status()
+
+  def _submit_from_html(self, html):
+    soup = BeautifulSoup(html, 'lxml')
+    issues = []
+    local_time = time.localtime()
+    for heading in soup.find_all('h2'):
+      verb = heading.find('span', class_='verb')
+      if verb.string not in ['error:', 'changed:']:
+        continue
+      issue = {
+        'fields': {
+          'project': {'id': self.config['project']},
+          'issuetype': {'id': self.config['issuetype']},
+        },
+      }
+      title = verb.next_sibling.next_sibling
+      url = title['href']
+      summary_parts = [str(verb.string.capitalize()), str(title.string)]
+      if url:
+        issue['fields'][self.config['url_field']] = url
+        if url != title.string:
+          summary_parts.append(f'({url})')
+      summary = ' '.join(summary_parts)
+      issue['fields']['summary'] = summary
+      content = heading.next_sibling.next_sibling
+      if content.name == 'table':
+        issue['fields']['description'] = self._format_table(content)
+      else:
+        issue['fields']['description'] = self._format_text(content)
+      issue['fields'][self.config['reported_field']] = time.strftime(
+        '%Y-%m-%d', local_time)
+      issues.append(issue)
+    # print(issues)
+    self._create_issues(issues)
+
+  def _format_table(self, tag):
+    headers = tag.find_all('th', class_='diff_header')
+    adf_headers = []
+    for header in headers:
+      adf_headers.extend([
+        {
+          'type': 'tableHeader',
+          'attrs': {
+            'colwidth': [48]
+          },
+          'content': [
+            {
+              'type': 'paragraph',
+              'content': []
+            }
+          ]
+        },
+        {
+          'type': 'tableHeader',
+          'attrs': {
+            'colwidth': [373]
+          },
+          'content': [
+            {
+              'type': 'paragraph',
+              'content': [
+                {
+                  'type': 'text',
+                  'text': '' if header.string is None else str(header.string),
+                  'marks': [
+                    {
+                      'type': 'strong'
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ])
+    rows = tag.find_all('tr')
+    adf_rows = [
+      {
+        'type': 'tableRow',
+        'content': adf_headers,
+      },
+    ]
+    for row in rows:
+      cells = row.find_all('td')
+      adf_cells = []
+      for cell in cells:
+        if 'diff_next' in cell.get('class', []):
+          continue
+        adf_cells.append(
+          {
+            'type': 'tableCell',
+            'content': [
+              {
+                'type': 'paragraph',
+                'content': [
+                  {
+                    'type': 'text',
+                    'text': '' if cell.string is None else str(cell.string),
+                  }
+                ]
+              }
+            ]
+          }
+        )
+      if not adf_cells:
+        continue
+      adf_rows.append({
+        'type': 'tableRow',
+        'content': adf_cells,
+      })
+
+    ret = {
+      'type': 'doc',
+      'version': 1,
+      'content': [
+        {
+          'type': 'paragraph',
+          'content': [
+            {
+              'type': 'text',
+              'text': 'Link to the original change report',
+              'marks': [
+                {
+                  'type': 'link',
+                  'attrs': {
+                    'href': 'https://example.com'
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          'type': 'table',
+          'attrs': {
+            'isNumberColumnEnabled': False,
+            'layout': 'default',
+          },
+          'content': adf_rows,
+        },
+      ]
+    }
+    print(json.dumps(ret, indent=2))
+    return ret
+
+  def _format_text(self, tag):
+    return {
+      'type': 'doc',
+      'version': 1,
+      'content': [
+        {
+          'type': 'paragraph',
+          'content': [
+            {
+              'text': '' if tag.string is None else str(tag.string),
+              'type': 'text'
+            }
+          ]
+        }
+      ]
+    }
