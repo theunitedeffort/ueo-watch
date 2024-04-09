@@ -226,15 +226,22 @@ class JiraReporter(reporters.ReporterBase):
       }
       pretty_name = job_state.job.pretty_name()
       url = job_state.job.get_location()
-      summary_parts = [f'{job_state.verb.capitalize()}:', pretty_name]
+      if url == 'date':
+        continue
+      summary_parts = [f'{job_state.verb}:', pretty_name]
       if url:
         issue['fields'][self.config['url_field']] = url
         if url != pretty_name:
           summary_parts.append(f'({url})')
       summary = ' '.join(summary_parts)
       issue['fields']['summary'] = summary
+      details_url_args = {
+        'datetime': self.report.start.strftime('%Y-%m-%d-%H%M%S'),
+      }
+      details_url = self.config['details_url'].format(**details_url_args)
+      details_anchor = f'#:~:text={urllib.parse.quote(summary)}'
       description = self._adf_doc()
-      description['content'].append(self._adf_header('https://example.com'))
+      description['content'].extend(self._adf_header(''.join([details_url, details_anchor])))
       if job_state.verb == 'error':
           description['content'].append(self._adf_text(job_state.traceback.strip()))
       elif job_state.verb == 'changed':
@@ -243,6 +250,7 @@ class JiraReporter(reporters.ReporterBase):
       issue['fields'][self.config['reported_field']] = time.strftime(
         '%Y-%m-%d', local_time)
       issues.append(issue)
+    # print(issues)
     self._create_issues(issues)
 
 
@@ -287,23 +295,28 @@ class JiraReporter(reporters.ReporterBase):
     }
 
   def _adf_header(self, url):
-    return {
-      'type': 'paragraph',
-      'content': [
-        {
-          'type': 'text',
-          'text': 'Link to the original change report',
-          'marks': [
-            {
-              'type': 'link',
-              'attrs': {
-                'href': url
+    return [
+      {
+        'type': 'paragraph',
+        'content': [
+          {
+            'type': 'text',
+            'text': 'See full change report here',
+            'marks': [
+              {
+                'type': 'link',
+                'attrs': {
+                  'href': url
+                }
               }
-            }
-          ]
-        }
-      ]
-    }
+            ]
+          },
+        ]
+      },
+      {
+       "type": "rule"
+      },
+    ]
 
   def _adf_diff(self, diff):
     adf = {
@@ -317,7 +330,7 @@ class JiraReporter(reporters.ReporterBase):
     }
     for line in diff.splitlines(keepends=True):
       if line.startswith('@@'):
-        continue
+        line = '\n'
       elif line.startswith('--- @'):
         line = line.replace('--- @', '- old:')
       elif line.startswith('+++ @'):
