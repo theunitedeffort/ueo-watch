@@ -19,6 +19,8 @@ fi
 body="$(grep "ERROR: " housing/urlwatch_debug.log)" && now="$(date)" && printf "Subject: urlwatch housing error [$now]\nFrom: Changebot <changebot@theunitedeffort.org>\nTo: trevor@theunitedeffort.org\n\n$body" | /sbin/sendmail -oi -t
 # Database garbage collection
 urlwatch  --urls housing/urls.yaml --config housing/urlwatch.yaml --cache housing/cache.db --gc-cache 5
+timestamp=$(date +%Y%m%d_%H%M%S)
+gsutil cp housing/cache.db "gs://ueo-changes/housing/cache/cache_$timestamp.db"
 
 # Run eligibility jobs
 cp eligibility/cache.db eligibility/cache_before_latest_run.db.bak
@@ -31,5 +33,7 @@ fi
 body="$(grep "ERROR: " eligibility/urlwatch_debug.log)" && now="$(date)" && printf "Subject: urlwatch eligibility error [$now]\nFrom: Changebot <changebot@theunitedeffort.org>\nTo: trevor@theunitedeffort.org\n\n$body" | /sbin/sendmail -oi -t
 # Database garbage collection
 urlwatch  --urls eligibility/urls.yaml --config eligibility/urlwatch.yaml --cache eligibility/cache.db --gc-cache 5
+timestamp=$(date +%Y%m%d_%H%M%S)
+gsutil cp eligibility/cache.db "gs://ueo-changes/eligibility/cache/cache_$timestamp.db"
 
 echo "Done."
