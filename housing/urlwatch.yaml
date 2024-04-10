@@ -246,16 +246,6 @@ report:
     bucket: ueo-changes
     local_dir: ~/ueo-watch/housing/staging
     gcs_dir: housing
-  jira:
-    enabled: true
-    site_url: https://ueo.atlassian.net
-    project: 10001
-    issuetype: 10005
-    url_field: customfield_10034
-    reported_field: customfield_10035
-    assignees:
-      - 712020:8ad994d4-719d-45fb-b332-ac14adae6a33
-    details_url: https://storage.googleapis.com/ueo-changes/housing/report-{datetime}.html
   html:
     diff: table
     enabled: false
