@@ -251,6 +251,7 @@ class JiraReporter(reporters.ReporterBase):
         '%Y-%m-%d', local_time)
       issues.append(issue)
     # print(issues)
+    logger.debug('Generated %d issues for Jira', len(issues))
     self._create_issues(issues)
 
 
@@ -284,8 +285,10 @@ class JiraReporter(reporters.ReporterBase):
           resp_text = json.dumps(response.json(), indent=2)
         except requests.exceptions.JSONDecodeError:
           resp_text = response.text
-        raise requests.exceptions.HTTPError(
-          f'Error {response.status_code}: {resp_text}')
+        logger.error(
+          f'Error {response.status_code}: {resp_text}\nRequest body:\n{chunk}')
+      else:
+        logger.debug('Uploaded new issues to Jira')
 
   def _adf_doc(self):
     return {
