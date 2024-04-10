@@ -213,11 +213,19 @@ class JiraReporter(reporters.ReporterBase):
   _MAX_BATCH_SIZE = 50
 
   def submit(self):
+    def _do_report(job_state):
+      return (job_state.verb in ['error', 'changed'] and
+        job_state.job.get_location() != 'date')
+
     issues = []
     local_time = time.localtime()
-    for job_state in self.report.get_filtered_job_states(self.job_states):
-      if job_state.verb not in ['error', 'changed']:
-        continue
+    changes = [j for j in
+      self.report.get_filtered_job_states(self.job_states) if _do_report(j)]
+    if not self.config['assignees']:
+      logger.error('At least one assignee is required')
+      return
+    issues_per_assignee = len(changes) / len(self.config['assignees'])
+    for job_state_idx, job_state in enumerate(changes):
       issue = {
         'fields': {
           'project': {'id': self.config['project']},
@@ -225,14 +233,11 @@ class JiraReporter(reporters.ReporterBase):
         },
       }
       pretty_name = job_state.job.pretty_name()
-      url = job_state.job.get_location()
-      if url == 'date':
-        continue
+      loc = job_state.job.get_location()
       summary_parts = [f'{job_state.verb}:', pretty_name]
-      if url:
-        issue['fields'][self.config['url_field']] = url
-        if url != pretty_name:
-          summary_parts.append(f'({url})')
+      issue['fields'][self.config['url_field']] = loc
+      if loc != pretty_name:
+        summary_parts.append(f'({loc})')
       summary = ' '.join(summary_parts)
       issue['fields']['summary'] = summary
       details_url_args = {
@@ -249,8 +254,9 @@ class JiraReporter(reporters.ReporterBase):
       issue['fields']['description'] = description
       issue['fields'][self.config['reported_field']] = time.strftime(
         '%Y-%m-%d', local_time)
+      assignee_idx = int(job_state_idx / issues_per_assignee)
+      issue['fields']['assignee'] = {'id': self.config['assignees'][assignee_idx]}
       issues.append(issue)
-    # print(issues)
     logger.debug('Generated %d issues for Jira', len(issues))
     self._create_issues(issues)
 
@@ -263,12 +269,13 @@ class JiraReporter(reporters.ReporterBase):
       logging.error(f'The {self.__kind__} reporter requires API '
         'credentials to be stored in a .netrc file, and that file does not '
         'seem to exist.')
-      raise
+      return
     netloc = urllib.parse.urlparse(self.config['site_url']).netloc
     if not netrc_obj.authenticators(netloc):
-      raise RuntimeError(f'{netloc} was not found in your '
+      logging.error(f'{netloc} was not found in your '
         '.netrc file and no default credentials exist in that file.\nAdd Jira '
         'API credentials to your .netrc file to use this reporter.')
+      return
     for chunk in chunkify(issues, self._MAX_BATCH_SIZE):
       # Note auth is set by a local .netrc file with an entry for
       # the value of self.config['site_url']
