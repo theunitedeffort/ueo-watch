@@ -244,7 +244,8 @@ class JiraReporter(reporters.ReporterBase):
         'datetime': self.report.start.strftime('%Y-%m-%d-%H%M%S'),
       }
       details_url = self.config['details_url'].format(**details_url_args)
-      details_anchor = f'#:~:text={urllib.parse.quote(summary)}'
+      quoted_find_text = urllib.parse.quote(summary, safe='').replace('-', '%2D')
+      details_anchor = f'#:~:text={quoted_find_text}'
       description = self._adf_doc()
       description['content'].extend(self._adf_header(''.join([details_url, details_anchor])))
       if job_state.verb == 'error':
