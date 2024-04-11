@@ -344,7 +344,7 @@ class JiraReporter(reporters.ReporterBase):
     }
     for line in diff.splitlines(keepends=True):
       if line.startswith('@@'):
-        line = '\n'
+        line = '\n< ... >\n\n'
       elif line.startswith('--- @'):
         line = line.replace('--- @', '- old:')
       elif line.startswith('+++ @'):
