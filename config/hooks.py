@@ -259,6 +259,9 @@ class JiraReporter(reporters.ReporterBase):
       issue['fields']['assignee'] = {'id': self.config['assignees'][assignee_idx]}
       issues.append(issue)
     logger.debug('Generated %d issues for Jira', len(issues))
+    # Reverse the order so that the default sorting order in Jira matches the
+    # order in other reports.
+    issues.reverse()
     self._create_issues(issues)
 
 
