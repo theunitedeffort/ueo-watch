@@ -1,10 +1,10 @@
+import datetime
 import json
 import logging
 import netrc
 import os
 import re
 import subprocess
-import time
 import urllib.parse
 
 import requests
@@ -218,7 +218,6 @@ class JiraReporter(reporters.ReporterBase):
         job_state.job.get_location() != 'date')
 
     issues = []
-    local_time = time.localtime()
     changes = [j for j in
       self.report.get_filtered_job_states(self.job_states) if _do_report(j)]
     if not self.config['assignees']:
@@ -253,10 +252,11 @@ class JiraReporter(reporters.ReporterBase):
       elif job_state.verb == 'changed':
           description['content'].append(self._adf_diff(job_state.get_diff()))
       issue['fields']['description'] = description
-      issue['fields'][self.config['reported_field']] = time.strftime(
-        '%Y-%m-%d', local_time)
+      issue['fields'][self.config['reported_field']] = datetime.date.today().strftime('%Y-%m-%d')
       assignee_idx = int(job_state_idx / issues_per_assignee)
       issue['fields']['assignee'] = {'id': self.config['assignees'][assignee_idx]}
+      issue['fields']['duedate'] = (datetime.date.today() + datetime.timedelta(days=3)).strftime('%Y-%m-%d')
+      # TODO: reviewer
       issues.append(issue)
     logger.debug('Generated %d issues for Jira', len(issues))
     # Reverse the order so that the default sorting order in Jira matches the
