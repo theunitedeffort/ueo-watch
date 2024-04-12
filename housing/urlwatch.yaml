@@ -253,8 +253,11 @@ report:
     issuetype: 10005
     url_field: customfield_10034
     reported_field: customfield_10035
+    reviewer_field: customfield_10036
     assignees:
       - 712020:8ad994d4-719d-45fb-b332-ac14adae6a33
+    reviewers:
+      - 712020:de2f4ffd-31f3-4025-81d7-23e5effa0a72
     details_url: https://storage.googleapis.com/ueo-changes/housing/report-{datetime}.html
   html:
     diff: table

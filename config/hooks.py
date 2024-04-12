@@ -3,6 +3,7 @@ import json
 import logging
 import netrc
 import os
+import random
 import re
 import subprocess
 import urllib.parse
@@ -254,9 +255,12 @@ class JiraReporter(reporters.ReporterBase):
       issue['fields']['description'] = description
       issue['fields'][self.config['reported_field']] = datetime.date.today().strftime('%Y-%m-%d')
       assignee_idx = int(job_state_idx / issues_per_assignee)
-      issue['fields']['assignee'] = {'id': self.config['assignees'][assignee_idx]}
+      assignee = self.config['assignees'][assignee_idx]
+      issue['fields']['assignee'] = {'id': assignee}
       issue['fields']['duedate'] = (datetime.date.today() + datetime.timedelta(days=3)).strftime('%Y-%m-%d')
-      # TODO: reviewer
+      filtered_reviewers = [r for r in self.config['reviewers'] if r != assignee]
+      if (filtered_reviewers):
+        issue['fields'][self.config['reviewer_field']] = [{'id': random.choice(filtered_reviewers)}]
       issues.append(issue)
     logger.debug('Generated %d issues for Jira', len(issues))
     # Reverse the order so that the default sorting order in Jira matches the
