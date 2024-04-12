@@ -5,8 +5,6 @@ readonly TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 readonly LOG_PATH="/tmp/urlwatch_debug_$TIMESTAMP.log"
 readonly TEST_RECIPIENT=trevor@theunitedeffort.org
 
-echo "Jira reporter will remain ENABLED.  Are you sure you want to run? Press Enter to continue."
-read
 echo "Running test..."
 
 readonly TEMP_FILE=$(mktemp)
@@ -33,7 +31,6 @@ cp cache.db "cache_$TIMESTAMP.db.bak"
 # reports to a production email list.
 # Change the max_tries parameter so that errors are immediately reported.
 echo "Changing report recipient to $TEST_RECIPIENT and max_tries to 1"
-# TODO: Disable Jira reporter for test runs.
 cat urlwatch.yaml | \
   sed -E "s/^([[:blank:]]*to: )(.*)/\1'$TEST_RECIPIENT'/" | \
   sed -E "s/^([[:blank:]]*max_tries: )(.*)/\11/" | \
