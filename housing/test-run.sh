@@ -34,7 +34,12 @@ cp cache.db "cache_$TIMESTAMP.db.bak"
 # Change the max_tries parameter so that errors are immediately reported.
 echo "Changing report recipient to $TEST_RECIPIENT and max_tries to 1"
 # TODO: Disable Jira reporter for test runs.
-cat urlwatch.yaml | sed -E "s/^([[:blank:]]*to: )(.*)/\1'$TEST_RECIPIENT'/" | sed -E "s/^([[:blank:]]*max_tries: )(.*)/\11/" > "$TEMP_FILE"
+cat urlwatch.yaml | \
+  sed -E "s/^([[:blank:]]*to: )(.*)/\1'$TEST_RECIPIENT'/" | \
+  sed -E "s/^([[:blank:]]*max_tries: )(.*)/\11/" | \
+  tr '\n' '\r' | \
+  sed -E "s/(\r[[:blank:]]*jira:\r[[:blank:]]*enabled:) true/\1 false/" | \
+  tr '\r' '\n' > "$TEMP_FILE"
 echo "Temporary urlwatch config created at $TEMP_FILE"
 
 echo "Logging debug output to $LOG_PATH"
