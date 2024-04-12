@@ -9,7 +9,7 @@ job_defaults:
     filter:
       - selective:
           select_pattern:
-            - '.*housekeys\d+\.com'
+            - '.*housekeys\d+\.com/?$'
             - '.*relatedcalifornia\.com'
             - '.*deanzaproperties\.com'
           invert_selection: true
