@@ -294,6 +294,7 @@ class JiraReporter(reporters.ReporterBase):
           "Content-Type": "application/json"
          },
         json={'issueUpdates': chunk},
+        params={'notifyUsers': 'false'},
       )
       if not response.ok:
         try:
