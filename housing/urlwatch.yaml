@@ -77,6 +77,10 @@ job_defaults:
             #ole_office_hours_status,
             #ole_office_hours,
             .colrichfooter__hours,
+            .colrichfooter__disclaimers,
+            .colrichfooter__policylinks,
+            .colrichfooter__disclaimernotices,
+            .colrichfooter__siteby,
             img[src^="data:"],
             span.xversion,
             div[id$="google-cache-hdr"],
@@ -218,6 +222,9 @@ job_defaults:
       - re.sub:
           pattern: '(src|href)="https://edenhousing.wpenginepowered.com'
           repl: '\1="https://edenhousing.org'
+      - re.sub:
+          pattern: '(src="https://static\.wixstatic\.com/.+?\.(jpg|jpeg|webp))/v1/.+?"'
+          repl: '\1"'
       - html2text:
           method: pyhtml2text
       - re.sub: '©.*?(\d{4}-)?20\d{2}'
