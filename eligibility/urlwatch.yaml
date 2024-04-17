@@ -33,7 +33,8 @@ job_defaults:
             span.xversion,
             div[id$="google-cache-hdr"],
             [role="navigation"],
-            [class*="breadcrumb"]
+            [class*="breadcrumb"],
+            .alert-bar
       - html2text:
           method: pyhtml2text
       - re.sub: 'time=\d+'
