@@ -1121,8 +1121,7 @@ navigate: https://housing.sanjoseca.gov/listing/5939b047-0b91-4e60-a174-012eb8cf
 navigate: https://housing.sanjoseca.gov/listing/4a27d186-4bcb-4a4d-b731-d457b848abd1/vitalia_apartments_3100_s_bascom_avenue_san_jose_ca
 ---
 navigate: https://housing.sanjoseca.gov/listings
----
-navigate: https://housingbayarea.mtc.ca.gov/listing/692e1f4d-03cc-4cc3-8e98-f8908b89279e/village_at_santa_teresa_1520_hecker_pass_road_gilroy_ca
+
 
 # Market-rate apartment websites
 # Remember to also update the regex pattern in urlwatch.yaml for market-rate URLs.
