@@ -117,6 +117,7 @@ job_defaults:
             #social-links,
             .social-links,
             .social-icons,
+            .social_icons,
             .elementor-widget-social-icons,
             .et-social-icons,
             .bottom-social-icons,
