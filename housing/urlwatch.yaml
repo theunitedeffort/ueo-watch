@@ -104,6 +104,7 @@ job_defaults:
             #top-nav,
             .skipnav,
             #skipnav,
+            .ccrc-header-container,
             .community-nearby,
             .ecs_components__notification__wrap,
             .book-tour,
