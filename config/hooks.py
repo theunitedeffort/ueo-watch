@@ -178,8 +178,10 @@ The following websites have changed.
 
 For details, visit %s
 
+To resolve these changes, visit %s
+
 %s
-""" % (details_url, body_text)
+""" % (details_url, self.config['tasks_url'], body_text)
 
     if self.config['method'] == "smtp":
       smtp_user = self.config['smtp'].get('user', None) or self.config['from']

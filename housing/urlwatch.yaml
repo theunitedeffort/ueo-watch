@@ -251,6 +251,7 @@ report:
       path: /sbin/sendmail
     subject: '{count} housing changes detected ({datetime})'
     details_url: https://storage.googleapis.com/ueo-changes/housing/report-{datetime}.html
+    tasks_url: https://ueo.atlassian.net/jira/core/projects/HC/issues
   gcs:
     enabled: true
     filename: report-{datetime}.html
