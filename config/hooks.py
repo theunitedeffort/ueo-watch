@@ -173,15 +173,15 @@ class CustomTextEmailReporter(reporters.TextReporter):
       'datetime': self.report.start.strftime('%Y-%m-%d-%H%M%S'),
     }
     details_url = self.config['details_url'].format(**details_url_args)
-    body_text = """
-The following websites have changed.
-
-For details, visit %s
-
-To resolve these changes, visit %s
-
-%s
-""" % (details_url, self.config['tasks_url'], body_text)
+    body_sections = [
+      'The following websites have changed.',
+      'For details, visit %s' % details_url,
+    ]
+    tasks_url = self.config.get('tasks_url', '')
+    if tasks_url:
+      body_sections.append('To resolve these changes, visit %s' % tasks_url)
+    body_sections.append(body_text)
+    body_text = '\n\n'.join(body_sections)
 
     if self.config['method'] == "smtp":
       smtp_user = self.config['smtp'].get('user', None) or self.config['from']
