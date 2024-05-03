@@ -1027,6 +1027,11 @@ url: https://www.unitycare.org/housing/
 ---
 url: https://valleyvillageretirement.com/
 ---
+user_visible_url: https://valleyvillageretirement.com/availability
+url: https://valleyvillageretirement.com/rts/collections/public/08a0f8dc/runtime/collection/appfolio-listings/data?page=%7B%22pageSize%22%3A100%2C%22pageNumber%22%3A0%7D&language=ENGLISH_UK
+filter:
+  - appfolio_units
+---
 url: https://www.villadeguadalupeapts.com/
 ---
 url: https://vintagetoweravanath.com/

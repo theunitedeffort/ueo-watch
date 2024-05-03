@@ -74,7 +74,7 @@ class SelectiveFilter(filters.FilterBase):
     return filters.FilterBase.process(target_filter_kind, target_subfilter, self.state, data)
 
 
-class RealPageBase(filters.FilterBase):
+class ListingApiBase(filters.FilterBase):
   def filter(self, data, subfilter):
     filtered = filters.FilterBase.process('jq', {'query': self.__query__}, self.state, data)
     filtered = filters.FilterBase.process('remove-duplicate-lines', {}, self.state, filtered)
@@ -84,18 +84,24 @@ class RealPageBase(filters.FilterBase):
     return filtered
 
 
-class RealPageUnits(RealPageBase):
+class RealPageUnits(ListingApiBase):
   """Filter for pretty-printing units JSON data from the realpage API."""
 
   __kind__ = 'realpage_units'
   __query__ = r'.response // . | .units[]? | "\(.numberOfBeds) BR\n---\n$\(.rent)/month\n\(.leaseStatus)\n\n"'
 
 
-class RealPageFloorplans(RealPageBase):
+class RealPageFloorplans(ListingApiBase):
   """Filter for pretty-printing floorplan JSON data from the realpage API."""
 
   __kind__ = 'realpage_floorplans'
   __query__ = r'.response // . | .floorplans[]? | "\(.name)\n---\n\(.bedRooms) BR\n\(.rentType)\n\(.rentRange)\n\n"'
+
+
+class AppFolioUnits(ListingApiBase):
+
+  __kind__ = 'appfolio_units'
+  __query__ = r'.values[]? | "\(.data.bedrooms) BR\n---\n$\(.data.market_rent)/month\n\(.data.marketing_title)\navailable \(.data.available_date)\n\n"'
 
 
 class RegexSuperSub(filters.FilterBase):
