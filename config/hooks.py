@@ -101,7 +101,7 @@ class RealPageFloorplans(ListingApiBase):
 class AppFolioUnits(ListingApiBase):
 
   __kind__ = 'appfolio_units'
-  __query__ = r'.values[]? | "\(.data.bedrooms) BR\n---\n$\(.data.market_rent)/month\n\(.data.marketing_title)\navailable \(.data.available_date)\n\n"'
+  __query__ = r'.values[]? | "\(.data.bedrooms) BR\n---\n$\(.data.market_rent | floor)/month\n\(.data.marketing_title)\navailable \(if "\(.data.available_date)T00:00:00Z" | fromdate < now then "now" else .data.available_date end)\n\n"'
 
 
 class RegexSuperSub(filters.FilterBase):
