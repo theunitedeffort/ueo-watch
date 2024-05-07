@@ -1171,6 +1171,9 @@ ssl_no_verify: true
 url: https://www.essexapartmenthomes.com/apartments/santa-clara/villa-granada
 ssl_no_verify: true
 ---
+url: https://www.essexapartmenthomes.com/apartments/sunnyvale/maxwell-sunnyvale
+ssl_no_verify: true
+---
 url: https://www.essexapartmenthomes.com/apartments/via
 ssl_no_verify: true
 ---
