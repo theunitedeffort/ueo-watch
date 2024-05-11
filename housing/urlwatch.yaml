@@ -105,6 +105,7 @@ job_defaults:
             #top-nav,
             .skipnav,
             #skipnav,
+            #mobileNavigation,
             .ccrc-header-container,
             .community-nearby,
             .ecs_components__notification__wrap,
