@@ -304,11 +304,11 @@ class JiraReporter(reporters.ReporterBase):
         json={'issueUpdates': chunk},
         params={'notifyUsers': 'false'},
       )
+      try:
+        resp_text = json.dumps(response.json(), indent=2)
+      except requests.exceptions.JSONDecodeError:
+        resp_text = response.text
       if not response.ok:
-        try:
-          resp_text = json.dumps(response.json(), indent=2)
-        except requests.exceptions.JSONDecodeError:
-          resp_text = response.text
         logger.error(
           f'Error {response.status_code}: {resp_text}\nRequest body:\n{chunk}')
       else:
