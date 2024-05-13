@@ -695,8 +695,6 @@ url: http://www.laspalmashousing.com/summercrest-villas/
 ---
 url: http://www.laspalmashousing.com/the-fairways-of-san-antonio/
 ---
-url: https://www.lenzensquare.com/
----
 user_visible_url: https://www.lenzensquare.com/floor-plans
 url: https://api.ws.realpage.com/v2/property/9067306/floorplans
 headers:
