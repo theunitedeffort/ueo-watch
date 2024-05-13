@@ -312,6 +312,7 @@ class JiraReporter(reporters.ReporterBase):
         logger.error(
           f'Error {response.status_code}: {resp_text}\nRequest body:\n{chunk}')
       else:
+        logger.debug(f'Jira API response:\n{resp_text}')
         logger.debug('Uploaded new issues to Jira')
 
   def _adf_doc(self):
