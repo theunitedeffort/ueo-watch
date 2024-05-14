@@ -221,6 +221,8 @@ class JiraReporter(reporters.ReporterBase):
   # https://developer.atlassian.com/cloud/jira/platform/rest/v3/api-group-issues/#api-rest-api-3-issue-bulk-post
   _MAX_BATCH_SIZE = 50
 
+  _MAX_CONTENT_CHARS = 255
+
   def submit(self):
     def _do_report(job_state):
       return (job_state.verb in ['error', 'changed'] and
@@ -243,10 +245,14 @@ class JiraReporter(reporters.ReporterBase):
       pretty_name = job_state.job.pretty_name()
       loc = job_state.job.get_location()
       summary_parts = [f'{job_state.verb}:', pretty_name]
-      issue['fields'][self.config['url_field']] = loc
+      if len(loc) <= self._MAX_CONTENT_CHARS:
+        issue['fields'][self.config['url_field']] = loc
       if loc != pretty_name:
         summary_parts.append(f'({loc})')
       summary = ' '.join(summary_parts)
+      if len(summary) > self._MAX_CONTENT_CHARS:
+        ellipsis = '...'
+        summary = summary[:self._MAX_CONTENT_CHARS - len(ellipsis)] + ellipsis
       issue['fields']['summary'] = summary
       details_url_args = {
         'datetime': self.report.start.strftime('%Y-%m-%d-%H%M%S'),
@@ -255,7 +261,7 @@ class JiraReporter(reporters.ReporterBase):
       quoted_find_text = urllib.parse.quote(summary, safe='').replace('-', '%2D')
       details_anchor = f'#:~:text={quoted_find_text}'
       description = self._adf_doc()
-      description['content'].extend(self._adf_header(''.join([details_url, details_anchor])))
+      description['content'].extend(self._adf_header(''.join([details_url, details_anchor]), loc))
       if job_state.verb == 'error':
           description['content'].append(self._adf_text(job_state.traceback.strip()))
       elif job_state.verb == 'changed':
@@ -305,15 +311,24 @@ class JiraReporter(reporters.ReporterBase):
         params={'notifyUsers': 'false'},
       )
       try:
-        resp_text = json.dumps(response.json(), indent=2)
+        resp_json = response.json()
+        resp_text = json.dumps(resp_json, indent=2)
+        num_uploaded = len(resp_json['issues'])
+        issue_errors = resp_json['errors']
       except requests.exceptions.JSONDecodeError:
         resp_text = response.text
+        num_uploaded = 'new'
+        issue_errors = []
       if not response.ok:
+        # No issues were uploaded
         logger.error(
           f'Error {response.status_code}: {resp_text}\nRequest body:\n{chunk}')
       else:
+        # Some (or all) issues were uploaded
         logger.debug(f'Jira API response:\n{resp_text}')
-        logger.debug('Uploaded new issues to Jira')
+        logger.debug(f'Uploaded {num_uploaded} issues to Jira')
+        if issue_errors:
+          logger.error(f'Not all issues were successfully uploaded to Jira. Errors:\n{issue_errors}')
 
   def _adf_doc(self):
     return {
@@ -322,7 +337,7 @@ class JiraReporter(reporters.ReporterBase):
       'content': []
     }
 
-  def _adf_header(self, url):
+  def _adf_header(self, report_url, watched_url):
     return [
       {
         'type': 'paragraph',
@@ -334,7 +349,24 @@ class JiraReporter(reporters.ReporterBase):
               {
                 'type': 'link',
                 'attrs': {
-                  'href': url
+                  'href': report_url
+                }
+              }
+            ]
+          },
+        ]
+      },
+      {
+        'type': 'paragraph',
+        'content': [
+          {
+            'type': 'text',
+            'text': 'Visit watched URL here',
+            'marks': [
+              {
+                'type': 'link',
+                'attrs': {
+                  'href': watched_url
                 }
               }
             ]
