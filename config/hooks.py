@@ -222,6 +222,8 @@ class JiraReporter(reporters.ReporterBase):
   _MAX_BATCH_SIZE = 50
 
   _MAX_CONTENT_CHARS = 255
+  # https://community.atlassian.com/t5/Jira-questions/Re-ADF-Content-Size-Limit-CONTENT-LIMIT-EXCEEDED-Error/qaq-p/1927334/comment-id/652431#M652431
+  _MAX_MULTILINE_CONTENT_CHARS = 32767
 
   def submit(self):
     def _do_report(job_state):
@@ -266,6 +268,15 @@ class JiraReporter(reporters.ReporterBase):
           description['content'].append(self._adf_text(job_state.traceback.strip()))
       elif job_state.verb == 'changed':
           description['content'].append(self._adf_diff(job_state.get_diff()))
+      # Check that the description is within the character limit by experimentally
+      # converting to a string.
+      desc_str = json.dumps(description, separators=(',', ':'))
+      if len(desc_str) > self._MAX_MULTILINE_CONTENT_CHARS:
+        # Remove main content
+        description['content'] = description['content'][:-1]
+        # Add in a "this is too long" message
+        description['content'].append(self._adf_text(
+          'This change is too large to display.  Visit the full report above to view this change.'))
       issue['fields']['description'] = description
       issue['fields'][self.config['reported_field']] = datetime.date.today().strftime('%Y-%m-%d')
       assignee_idx = int(job_state_idx / issues_per_assignee)
@@ -328,7 +339,7 @@ class JiraReporter(reporters.ReporterBase):
         logger.debug(f'Jira API response:\n{resp_text}')
         logger.debug(f'Uploaded {num_uploaded} issues to Jira')
         if issue_errors:
-          logger.error(f'Not all issues were successfully uploaded to Jira. Errors:\n{issue_errors}')
+          logger.error(f'Not all issues were successfully uploaded to Jira. Errors: {issue_errors}')
 
   def _adf_doc(self):
     return {
