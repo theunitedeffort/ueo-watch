@@ -162,6 +162,7 @@ job_defaults:
             #breadcrumbs-container,
             #alerts_wrapper,
             .alert_container,
+            [class^="application_site-alert-banner-container"],
             .cp-Splash-wrapper,
             #acsModal,
             .be-related-link-container
