@@ -28,7 +28,8 @@ job_defaults:
             .sub-nav,
             .subnav,
             #navbar,
-            .navbar
+            .navbar,
+            [role="navigation"]
       # TODO: try to remove footer from all pages.
       - selective:
           select_pattern:
@@ -132,6 +133,7 @@ job_defaults:
             [class*="footer-links"],
             #footer-links,
             .widgetQuickLinks,
+            .toolbar-quicklinks,
             [class*="menu-footer"],
             [id*="menu-footer"],
             [id*="menu-main-header-nav"],
@@ -157,6 +159,7 @@ job_defaults:
             .breadcrumbs,
             .breadCrumbs,
             .es-breadcrumbs,
+            #breadcrumbs-container,
             #alerts_wrapper,
             .alert_container,
             .cp-Splash-wrapper,
