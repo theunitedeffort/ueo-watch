@@ -181,6 +181,7 @@ job_defaults:
             - '.*essexapartmenthomes\.com/apartments'
             - '.*equityapartments\.com/san-francisco-bay/santa-clara/estancia-at-santa-clara-apartments'
             - '.*greystar\.com/properties/san-jose-ca/vio'
+            - '.*hollandresidential\.com/'
             - '.*irvinecompanyapartments\.com'
             - '.*ivyliving\.com'
             - '.*liveatsantanaterrace\.com/'
