@@ -169,6 +169,9 @@ job_defaults:
       - selective:
           select_pattern:
             - '.*300railway\.com/'
+            - '.*481mathilda\.com/'
+            - '.*alvinscornercampbell\.com/'
+            - '.*avaloncommunities\.com/california/'
             - '.*aventinoapts\.com/'
             - '.*balmoral-apts\.com/'
             - '.*citylineflats\.com/'
@@ -178,6 +181,7 @@ job_defaults:
             - '.*domicilioapts\.com/'
             - '.*elanmountainview\.com/'
             - '.*encinalapts\.com/'
+            - '.*encasaliving\.com/'
             - '.*essexapartmenthomes\.com/apartments'
             - '.*equityapartments\.com/san-francisco-bay/santa-clara/estancia-at-santa-clara-apartments'
             - '.*greystar\.com/properties/san-jose-ca/vio'
