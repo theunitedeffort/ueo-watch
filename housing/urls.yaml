@@ -112,6 +112,8 @@ url: https://www.amcapartments.com/California/SanJose/VilladeGuadalupe/Apartment
 url: http://www.ascentaffordable.com/
 ssl_no_verify: true
 ---
+url: https://www.avaloncommunities.com/affordable-housing/community-list/
+---
 url: https://www.awimc.com/communities/gilroy-garden
 ---
 url: https://www.awimc.com/communities/gilroy-park
@@ -172,6 +174,8 @@ url: https://caremgt.com/sienna/
 ---
 url: https://caremgt.com/terramina-square/
 ---
+url: https://caremgt.com/the-verandas/
+---
 url: https://caremgt.com/villa-solera/
 ---
 url: https://caremgt.com/villa-torre
@@ -222,6 +226,8 @@ url: https://charitieshousing.org/property/stoney-pine-villa/
 ---
 url: https://charitieshousing.org/property/sunset-square-apartments/
 ---
+url: https://charitieshousing.org/property/the-charles/
+---
 url: https://charitieshousing.org/property/the-veranda/
 ---
 url: https://charitieshousing.org/property/westwood-ambassador-apartments/
@@ -233,6 +239,8 @@ url: https://www.chm.org/community-management/our-communities/
 url: http://www.cinnabarcommons.com/
 ---
 url: http://www.cinnabarcommons.com/leasing-information.html
+---
+url: https://colonnadeapartments.stanford.edu/living-here/below-market-rate-program
 ---
 url: https://communityhousingsv.org/applicant-qualification/
 ---
@@ -277,6 +285,8 @@ filter:
   - realpage_units
 ---
 url: https://frontporch.net/affordable-assisted-living-at-lytton-gardens/
+---
+url: https://www.danco-group.com/projects/madrone-place
 ---
 url: https://www.danco-group.com/projects/mariposa-place
 ---
@@ -388,6 +398,8 @@ url: https://edenhousing.org/properties/maple-gardens/
 ---
 url: https://edenhousing.org/properties/mesa-terrace/
 ---
+url: https://edenhousing.org/properties/mitchell-park-place/
+---
 url: https://www.edenhousing.org/properties/monterey-villa
 ---
 url: https://edenhousing.org/properties/monterra-village/
@@ -483,6 +495,8 @@ url: https://www.firstcommunityhousing.org/troy-apartments
 ---
 url: https://griffisresidential.com/property/south-bay/affordable-housing/
 ---
+url: https://hcosta.com/community-portfolio/property/villa-savannah-apts/
+---
 url: https://www.housekeys1.com/
 ---
 url: https://www.housekeys1.com/morgan-ranch-od-528
@@ -572,6 +586,8 @@ url: https://www.housingchoices.org/santa-clara-properties/wilton-court-cx485-et
 url: https://www.humangood.org/lifes-garden
 ---
 url: https://www.humangood.org/morgan-hill
+---
+url: https://www.humangood.org/the-terraces-at-los-altos
 ---
 url: https://www.humangood.org/the-terraces-of-los-gatos
 ---
@@ -873,6 +889,8 @@ filter:
 ---
 url: https://www.morganhill.ca.gov/2082/Royal-Oak-Village-Watsonville-Hordness
 ---
+url: https://www.morganhill.ca.gov/2096/Jemcor-Monterey-Miner
+---
 url: https://www.pacificautism.org/programs/residential-services/
 ---
 url: http://pacificgardens.org/
@@ -923,6 +941,10 @@ url: https://www.rentalmaden.com/CmsSiteManager/callback.aspx?act=Proxy/GetUnits
 filter:
   - realpage_units
 ---
+url: https://www.rentthehuntington.com/
+---
+url: https://www.rentthehuntington.com/floorplans
+---
 url: https://www.roemcorp.com/project/1st-and-rosemary-family/
 ---
 url: https://www.roemcorp.com/project/1st-and-rosemary-senior/
@@ -966,6 +988,10 @@ url: https://www.sanjosegardens.com/Floor-plans.aspx
 url: https://www.scmrf.org/how-do-i-apply/
 ---
 url: https://www.scmrf.org/life-at-our-communities/
+---
+url: https://stanfordwestapartments.stanford.edu/
+---
+url: https://stanfordwestapartments.stanford.edu/living-here/below-market-rate-program
 ---
 url: https://www.stantonapts.com/
 ---
@@ -1012,6 +1038,12 @@ url: https://thecorecompanies.com/project/market-gateway/
 url: https://thegroveaptssanjose.com/
 ---
 url: https://thegroveaptssanjose.com/property/the-grove/
+---
+url: https://www.thelodgeatmorganhillapartments.com/
+---
+url: https://www.thelodgeatmorganhillapartments.com/ca/morgan-hill/floorplans
+---
+url: https://www.thelodgeatmorganhillapartments.com/ca/morgan-hill/incomerestrictions
 ---
 url: https://www.crpaffordable.com/the-meridian
 ---
@@ -1147,6 +1179,12 @@ navigate: https://housing.sanjoseca.gov/listings
 ---
 url: https://www.300railway.com/
 ---
+url: https://www.481mathilda.com/
+---
+url: https://www.alvinscornercampbell.com/
+---
+url: https://www.avaloncommunities.com/california/campbell-apartments/avalon-campbell/
+---
 url: https://webcache.googleusercontent.com/search?q=cache:https://www.aventinoapts.com/
 ---
 url: http://www.balmoral-apts.com/
@@ -1166,6 +1204,8 @@ url: https://www.decron.com/apartments-willow-creek/
 url: https://webcache.googleusercontent.com/search?q=cache:https://www.domicilioapts.com/
 ---
 url: https://elanmountainview.com/
+---
+url: https://www.encasaliving.com/
 ---
 url: https://www.essexapartmenthomes.com/apartments/101-san-fernando
 ssl_no_verify: true
@@ -1227,6 +1267,8 @@ url: https://prometheusapartments.com/ca/santa-clara-apartments/the-benton
 ---
 url: https://prometheusapartments.com/ca/mountain-view-apartments/the-dean/
 ---
+url: https://prometheusapartments.com/ca/sunnyvale-apartments/ironworks
+---
 url: https://webcache.googleusercontent.com/search?q=cache:https://www.revereatcampbell.com/
 ---
 url: https://sofiaaptliving.com/
@@ -1251,6 +1293,10 @@ filter:
   - pdf2text
 ---
 url: https://static1.squarespace.com/static/5dc7476c0941b54dd5f9e7f9/t/5e2e36a1ec0b682714c882d8/1580086949905/SantaClaraCounty_PropertyProfileInfo_1.23.20.pdf
+filter:
+  - pdf2text
+---
+url: https://www.losgatosca.gov/DocumentCenter/View/8037/Los-Gatos-Housing-Resources-Guide
 filter:
   - pdf2text
 ---
