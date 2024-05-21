@@ -899,8 +899,6 @@ url: https://www.pacificautism.org/programs/residential-services/
 ---
 url: http://pacificgardens.org/
 ---
-url: https://webcache.googleusercontent.com/search?q=cache:https://www.parksideglen.com/
----
 url: https://www.parksideterraceapthomes.com/
 ---
 url: https://ppmginc.com/properties/plum-tree-west/
@@ -1234,6 +1232,9 @@ url: https://www.essexapartmenthomes.com/apartments/via
 ssl_no_verify: true
 ---
 url: https://www.essexapartmenthomes.com/apartments/willow-lake
+ssl_no_verify: true
+---
+url: https://www.essexapartmenthomes.com/coming-soon-arlo-mountain-view
 ssl_no_verify: true
 ---
 url: https://www.equityapartments.com/san-francisco-bay/santa-clara/estancia-at-santa-clara-apartments
