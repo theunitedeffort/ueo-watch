@@ -68,7 +68,7 @@ job_defaults:
             .contactForm,
             .contact_form,
             .contact-mobile-form,
-            [class*="office-hours"],
+            .office-hours,
             #BrochureDateTime,
             div.latest-news,
             div.latest-blog-post,
