@@ -517,6 +517,8 @@ url: https://www.housekeys13.com/elan-mountain-view-apts-od-501
 ---
 url: https://www.housekeys13.com/landsby-mountain-view
 ---
+url: https://www.housekeys13.com/madera
+---
 url: https://www.housekeys13.com/the-dean-od-563
 ---
 url: https://www.housekeys13.com/the-tillery-od-564
@@ -526,8 +528,6 @@ url: https://www.housekeys2.com/
 url: https://www.housekeys2.com/alvinscorner
 ---
 url: https://www.housekeys2.com/merrill-gardens
----
-url: https://www.housekeys2.com/revere-od-541
 ---
 url: https://www.housekeys7.com/
 ---
@@ -1174,6 +1174,8 @@ navigate: https://housing.sanjoseca.gov/listing/4a27d186-4bcb-4a4d-b731-d457b848
 navigate: https://housing.sanjoseca.gov/listing/1260b6ad-f065-4667-a051-4be33cf5046e/giovanni_center_apartments_85_south_5_th_street_san_jose_ca
 ---
 navigate: https://housing.sanjoseca.gov/listing/d0b5a49d-80ce-4b28-8793-0ebe50916eb8/village_at_willow_glen_465_willow_glen_way_san_jose_ca
+---
+navigate: https://housing.sanjoseca.gov/listing/65a479dd-e448-402a-ac64-c2f94393400c/museum_park_465_w_san_carlos_st_san_jose_ca
 ---
 navigate: https://housing.sanjoseca.gov/listings
 
