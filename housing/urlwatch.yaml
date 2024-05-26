@@ -76,6 +76,7 @@ job_defaults:
             .menu-office-hours,
             .ebrochure-office-hours,
             .community-contact-info-office-hours,
+            .office-hours-container,
             #BrochureDateTime,
             div.latest-news,
             div.latest-blog-post,
