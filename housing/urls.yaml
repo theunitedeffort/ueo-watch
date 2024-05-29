@@ -1232,7 +1232,7 @@ ssl_no_verify: true
 url: https://www.essexapartmenthomes.com/apartments/willow-lake
 ssl_no_verify: true
 ---
-url: https://www.essexapartmenthomes.com/coming-soon-arlo-mountain-view
+url: https://www.essexapartmenthomes.com/apartments/mountain-view/arlo-mountain-view
 ssl_no_verify: true
 ---
 url: https://www.equityapartments.com/san-francisco-bay/santa-clara/estancia-at-santa-clara-apartments
