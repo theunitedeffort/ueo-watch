@@ -80,6 +80,7 @@ job_defaults:
             #BrochureDateTime,
             div.latest-news,
             div.latest-blog-post,
+            .featured-articles__article-card-group,
             .elementor-widget-wp-widget-recent-posts,
             div.apartment-reviews,
             .g-review,
