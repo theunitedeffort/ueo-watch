@@ -163,7 +163,7 @@ job_defaults:
             .Header-branding-logo,
             .elementor-widget-theme-site-logo,
             .themer-logo,
-            .Header-branding-logo,
+            .Mobile-bar-branding-logo,
             .sidebar-first-wrapper,
             .breadcrumb,
             .breadcrumbs,
