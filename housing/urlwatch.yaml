@@ -222,6 +222,7 @@ job_defaults:
           selector: >-
             address,
             #footer-address,
+            #foot-address,
             [class*="contact"],
             [class*="get-in-touch"],
             [class*="address"],
