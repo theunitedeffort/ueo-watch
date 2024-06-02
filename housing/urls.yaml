@@ -39,6 +39,8 @@ url: https://www.cityofpaloalto.org/Departments/Planning-Development-Services/Ho
 ---
 
 # Sorted alphabetically by domain name
+url: https://www.231grant.org/
+---
 url: https://abode.org/opportunity-center
 ---
 url: https://abode.org/pipeline-projects
@@ -184,6 +186,8 @@ url: https://charitieshousing.org/find-a-home/
 ---
 url: https://charitieshousing.org/property/107-and-220-224-los-gatos-apartments/
 ---
+url: https://charitieshousing.org/property/1860-alum-rock/
+---
 url: https://charitieshousing.org/property/archer-street/
 ---
 url: https://charitieshousing.org/property/belovida/
@@ -214,6 +218,8 @@ url: https://charitieshousing.org/property/san-antonio-place/
 ---
 url: https://charitieshousing.org/property/san-tomas-gardens/
 ---
+url: https://charitieshousing.org/property/senior-group-homes/
+---
 url: https://charitieshousing.org/property/sierra-vista-one/
 ---
 url: https://charitieshousing.org/property/stoney-pine-villa/
@@ -225,6 +231,8 @@ url: https://charitieshousing.org/property/the-charles/
 url: https://charitieshousing.org/property/the-veranda/
 ---
 url: https://charitieshousing.org/property/westwood-ambassador-apartments/
+---
+url: https://charitieshousing.org/senior-group-homes/
 ---
 url: https://charitieshousing.org/under-construction/
 ---
@@ -493,6 +501,8 @@ url: https://www.firstcommunityhousing.org/troy-apartments
 ---
 url: https://griffisresidential.com/property/south-bay/affordable-housing/
 ---
+url: https://www.hohbach-lewin.com/park-plaza/
+---
 url: https://hcosta.com/community-portfolio/property/villa-savannah-apts/
 ---
 url: https://www.housekeys1.com/
@@ -547,9 +557,13 @@ url: https://www.housingchoices.org/santa-clara-properties
 ---
 url: https://www.housingchoices.org/santa-clara-properties/1585-studios-ffxjx-a9cnm
 ---
+url: https://www.housingchoices.org/santa-clara-properties/briarwood-co-op-npmek-t3e4x
+---
 url: https://www.housingchoices.org/santa-clara-properties/casa-feliz-studios-pkr9d-e7gbd
 ---
 url: https://www.housingchoices.org/santa-clara-properties/charlotte-park-and-oak-grove-apartments-9lxt7-ksxr7
+---
+url: https://www.housingchoices.org/santa-clara-properties/de-la-cruz-co-op-tgjhg-ay54j
 ---
 url: https://www.housingchoices.org/santa-clara-properties/edenvale-supportive-housing-jknfe-drbkz
 ---
@@ -983,6 +997,10 @@ url: https://www.scmrf.org/how-do-i-apply/
 ---
 url: https://www.scmrf.org/life-at-our-communities/
 ---
+url: https://www.southwood-apartments.com/
+---
+url: https://www.southwood-apartments.com/floorplans
+---
 url: https://stanfordwestapartments.stanford.edu/
 ---
 url: https://stanfordwestapartments.stanford.edu/below-market-rate-program/bmr-eligibility
@@ -1021,9 +1039,15 @@ headers:
 filter:
   - realpage_units
 ---
+url: https://tamienstationdevelopment.com/
+---
 url: https://www.termanapts.com/
 ---
 url: http://townsquaregilroy.com/index.htm
+---
+url: https://the-mayfield.rentcafewebsite.com/
+---
+url: https://the-mayfield.rentcafewebsite.com/floorplans.aspx
 ---
 url: http://thecanneryapts.com/
 ---
@@ -1083,6 +1107,8 @@ url: https://vitalia-bascom-apts.rentcafewebsite.com/
 url: https://webcache.googleusercontent.com/search?q=cache:https://virginiastreet.usamfm.com/
 ---
 url: https://www.wakelandhdc.com/raintree-apartments.html
+---
+url: https://welchroadapartments.stanford.edu/
 ---
 
 # Browser jobs
@@ -1185,6 +1211,8 @@ url: https://www.300railway.com/
 ---
 url: https://www.481mathilda.com/
 ---
+url: https://www.6teneast.com/
+---
 url: https://www.alvinscornercampbell.com/
 ---
 url: https://www.avaloncommunities.com/california/campbell-apartments/avalon-campbell/
@@ -1242,9 +1270,13 @@ url: https://www.irvinecompanyapartments.com/communities/north-park
 ---
 url: https://www.irvinecompanyapartments.com/locations/northern-california/sunnyvale/cherry-orchard.html
 ---
+url: https://www.irvinecompanyapartments.com/locations/northern-california/sunnyvale/redwood-place.html
+---
 url: https://ivyliving.com/paloalto/
 ---
 url: https://webcache.googleusercontent.com/search?q=cache:https://www.liveatsantanaterrace.com/
+---
+url: https://liveatsavoy.com/
 ---
 url: https://livelandsby.com/
 ---
@@ -1260,6 +1292,8 @@ navigate: https://www.montereygrove.com/en/apartments/contactus.html
 ---
 url: https://webcache.googleusercontent.com/search?q=cache:https://www.morganranchapartmenthomes.com/
 ---
+url: https://www.murphystationapts.com/home
+---
 url: https://www.mvapartments.com/
 ---
 url: https://prometheusapartments.com/ca/mountain-view-apartments/100-moffett/
@@ -1267,6 +1301,10 @@ url: https://prometheusapartments.com/ca/mountain-view-apartments/100-moffett/
 url: https://prometheusapartments.com/ca/mountain-view-apartments/madera/
 ---
 url: https://prometheusapartments.com/ca/mountain-view-apartments/montrose/
+---
+url: https://prometheusapartments.com/ca/palo-alto-apartments/parker-palo-alto
+---
+url: https://prometheusapartments.com/ca/santa-clara-apartments/mansion-grove
 ---
 url: https://prometheusapartments.com/ca/santa-clara-apartments/the-benton
 ---

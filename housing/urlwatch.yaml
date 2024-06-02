@@ -181,6 +181,7 @@ job_defaults:
           select_pattern:
             - '.*300railway\.com/'
             - '.*481mathilda\.com/'
+            - '.*6teneast\.com/'
             - '.*alvinscornercampbell\.com/'
             - '.*avaloncommunities\.com/california/'
             - '.*aventinoapts\.com/'
@@ -198,6 +199,7 @@ job_defaults:
             - '.*irvinecompanyapartments\.com'
             - '.*ivyliving\.com'
             - '.*liveatsantanaterrace\.com/'
+            - '.*liveatsavoy\.com/'
             - '.*livelandsby\.com/'
             - '.*liveprado\.com/'
             - '.*liverevela\.com/'
@@ -205,6 +207,7 @@ job_defaults:
             - '.*milpitascrossing\.com/\?page_id=15'
             - '.*montereygrove\.com/en/apartments/contactus.html'
             - '.*morganranchapartmenthomes\.com/'
+            - '.*murphystationapts\.com'
             - '.*mvapartments\.com/'
             - '.*prometheusapartments\.com/'
             - '.*revereatcampbell\.com/'
