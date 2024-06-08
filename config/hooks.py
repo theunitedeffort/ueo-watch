@@ -104,31 +104,6 @@ class AppFolioUnits(ListingApiBase):
   __query__ = r'.values[]? | "\(.data.bedrooms) BR\n---\n$\(.data.market_rent | floor)/month\n\(.data.marketing_title)\navailable \(if "\(.data.available_date)T00:00:00Z" | fromdate < now then "now" else .data.available_date end)\n\n"'
 
 
-class RegexSuperSub(filters.FilterBase):
-  """Replace text with regex; can match within a line or substring."""
-
-  __kind__ = 're.ssub'
-
-  __supported_subfilters__ = {
-    'substring': 'Regular expression for a substring to find "pattern" within',
-    'pattern': 'Regular expression to search for (required)',
-    'repl': 'Replacement string (default: empty string)',
-  }
-
-  __default_subfilter__ = 'pattern'
-
-  def filter(self, data, subfilter):
-    def replaceWithin(match):
-      return re.sub(subfilter['pattern'], subfilter.get('repl', ''), match[0])
-    if 'pattern' not in subfilter:
-      raise ValueError('{} needs a pattern'.format(self.__kind__))
-    # Default: Replace with empty string if no "repl" value is set
-    if 'substring' in subfilter:
-      return re.sub(subfilter['substring'], replaceWithin, data)
-    else:
-      return re.sub(subfilter['pattern'], subfilter.get('repl', ''), data)
-
-
 class GcsFileReporter(reporters.HtmlReporter):
   """Custom reporter that writes an HTML file to Google Cloud Storage."""
 
