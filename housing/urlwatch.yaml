@@ -121,7 +121,7 @@ job_defaults:
             #mobileNavigation,
             .elementor-nav-menu,
             .uk-nav,
-            .et-secondary-nav,
+            #et-secondary-nav,
             .ccrc-header-container,
             .community-nearby,
             .ecs_components__notification__wrap,
