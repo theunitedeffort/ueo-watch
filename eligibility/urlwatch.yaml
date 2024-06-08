@@ -34,7 +34,9 @@ job_defaults:
             div[id$="google-cache-hdr"],
             [role="navigation"],
             [class*="breadcrumb"],
-            .alert-bar
+            .alert-bar,
+            .block-alert-banner,
+            [aria-label="Site Alert"]
       - html2text:
           method: pyhtml2text
       - re.sub: 'time=\d+'
