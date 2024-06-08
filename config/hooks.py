@@ -104,6 +104,20 @@ class AppFolioUnits(ListingApiBase):
   __query__ = r'.values[]? | "\(.data.bedrooms) BR\n---\n$\(.data.market_rent | floor)/month\n\(.data.marketing_title)\navailable \(if "\(.data.available_date)T00:00:00Z" | fromdate < now then "now" else .data.available_date end)\n\n"'
 
 
+class PdfCompile(filters.FilterBase):
+
+  __kind__ = 'save_pdf_urls'
+
+  def filter(self, data, subfilter):
+    css_filter = filters.CssFilter(None, None)
+    subfilter = {
+      'selector': 'a[href$=".pdf"]'
+    }
+    pdf_urls = css_filter.filter(data, subfilter)
+    print(pdf_urls)
+    # Pass the data through unchanged.
+    return data
+
 class GcsFileReporter(reporters.HtmlReporter):
   """Custom reporter that writes an HTML file to Google Cloud Storage."""
 

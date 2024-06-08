@@ -268,6 +268,7 @@ job_defaults:
       - re.sub:
           pattern: '(src="https://static\.wixstatic\.com/.+?\.(jpg|jpeg|webp))/v1/.+?"'
           repl: '\1"'
+      - save_pdf_urls
       - html2text:
           method: pyhtml2text
       - re.sub: '©.*?(\d{4}-)?20\d{2}'
