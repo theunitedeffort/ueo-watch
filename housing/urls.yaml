@@ -1360,14 +1360,6 @@ url: https://www.losgatosca.gov/DocumentCenter/View/8037/Los-Gatos-Housing-Resou
 filter:
   - pdf2text
 ---
-url: https://www.sunnyvale.ca.gov/home/showpublisheddocument/368/638455089805270000
-filter:
-  - pdf2text
----
-url: https://www.sunnyvale.ca.gov/home/showpublisheddocument/366/638263909569400000
-filter:
-  - pdf2text
----
 
 # This guarantees a detected change on each run.
 ---
