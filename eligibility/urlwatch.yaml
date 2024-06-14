@@ -36,7 +36,8 @@ job_defaults:
             [class*="breadcrumb"],
             .alert-bar,
             .block-alert-banner,
-            [aria-label="Site Alert"]
+            [aria-label="Site Alert"],
+            details.alerts
       - html2text:
           method: pyhtml2text
       - re.sub: 'time=\d+'
