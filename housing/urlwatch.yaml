@@ -253,6 +253,13 @@ job_defaults:
           exclude: >-
             picture,
             img
+      - selective:
+          select_pattern:
+            - '.*jamboreehousing\.com/pages/affordable-housing-in-california-residents'
+          filter: css
+          selector: body
+          exclude: >-
+            #search-inputs + .grid-x > .cell:not([data-county="Santa Clara"])
       - re.sub: 'Image Detail [a-z0-9]{32}'
       - re.sub:
           pattern: '/x(.*?\.[a-zA-Z]{3,4})(,qitok=[a-zA-Z0-9-]{8})?\.pagespeed\.ic\.[a-zA-Z0-9-]{10}\.[a-zA-Z]{3,4}'
