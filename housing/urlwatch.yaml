@@ -193,7 +193,10 @@ job_defaults:
             [href^="https://onlineleasing.force.com"],
             img[alt*="logo"],
             img[alt*="LOGO"],
-            img[alt*="Logo"]
+            img[alt*="Logo"],
+            #myLeaseCostModal.modal,
+            #myContactModal.modal,
+            #PreQualify.modal
       - selective:
           select_pattern:
             - '.*300railway\.com/'
