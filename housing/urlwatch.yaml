@@ -188,6 +188,8 @@ job_defaults:
             #acsModal,
             .be-related-link-container,
             #cmplz-cookiebanner-container,
+            #moove_gdpr_cookie_modal,
+            #moove_gdpr_cookie_info_bar,
             [href^="https://onlineleasing.force.com"],
             img[alt*="logo"],
             img[alt*="LOGO"],
