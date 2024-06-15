@@ -196,7 +196,16 @@ job_defaults:
             img[alt*="Logo"],
             #myLeaseCostModal.modal,
             #myContactModal.modal,
-            #PreQualify.modal
+            #PreQualify.modal,
+            .skip-links,
+            .skip-to-content,
+            .uw-sl,
+            .site-header__skip-link,
+            #skip-nav,
+            #skipnav,
+            .SKIP_TO_CONTENT_BTN,
+            .header-skip-link,
+            .skip-to-pageassist
       - selective:
           select_pattern:
             - '.*300railway\.com/'
