@@ -28,6 +28,12 @@ make altinstall
 git clone https://github.com/trevorshannon/urlwatch.git
 ```
 
+Switch to the `dev` branch which (confusingly) is what's used for our production runs
+
+```
+git checkout dev
+```
+
 The `urlwatch` binary should be added to your path so it can be more easily called from the command line and scripts.
 
 ```
@@ -39,25 +45,6 @@ While the `pdftotext` Python package will be installed in the Installation step 
 
 ```
 sudo apt install build-essential libpoppler-cpp-dev pkg-config python3-dev
-```
-
-### Optional: Pyppeteer
-The `urlwatch` fork used by this project still uses Pyppeteer to run `navigate` jobs.  While the intention is to migrate away from Pyppeteer and towards Playwright, should you want to install Pyppeteer, you can follow these steps.  Note that the default set of Python packages in this project's `requirements.txt` includes Playwright, so that will also be installed unless you modify `requirements.txt`.  This Pyppeteer installation is done outside any [virtual environment](https://www.freecodecamp.org/news/how-to-setup-virtual-environments-in-python/) (because that's how the production system was originally set up), but you can certainly do it within one.
-
-```
-pip3 install pyppeteer
-```
-
-The default Chrome version used by pyppeteer does not work for this project, but you can force it to use a different version with an environment variable:
-
-```
-echo 'export PYPPETEER_CHROMIUM_REVISION=839947' >> ~/.bashrc
-```
-
-Running the Pyppeteer install command will ensure Chrome is downloaded and ready for Pyppeteer to use:
-
-```
-~/.local/bin/pyppeteer-install
 ```
 
 ## Installation
@@ -83,10 +70,18 @@ Install the dependencies:
 pip3 install -r requirements.txt
 ```
 
-And finally, initialize Playwright:
+## Initialization
+The `urlwatch` fork used by this project still uses Pyppeteer to run `navigate` jobs.  While the intention is to migrate away from Pyppeteer and towards Playwright, the production environment still uses Pyppeteer. The default Chrome version used by pyppeteer does not work for this project, but you can force it to use a different version with an environment variable:
 
 ```
-playwright install
+echo 'export PYPPETEER_CHROMIUM_REVISION=839947' >> ~/.bashrc
+```
+
+Running the Pyppeteer install command will ensure Chrome is downloaded and ready for Pyppeteer to use:
+
+```
+source ~/.bashrc
+~/.local/bin/pyppeteer-install
 ```
 
 
