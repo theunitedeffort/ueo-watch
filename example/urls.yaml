@@ -1,0 +1,13 @@
+url: https://setyourwatchby.netlify.app/
+---
+navigate: https://www.time.gov/
+---
+url: https://pdfobject.com/pdf/sample.pdf
+filter:
+  - pdf2text
+---
+url: https://worldtimeapi.org/api/timezone/America/Los_Angeles
+filter:
+  - jq: .datetime
+---
+command: date

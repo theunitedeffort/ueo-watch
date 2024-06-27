@@ -1,0 +1,31 @@
+display:
+  error: true
+  new: true
+  unchanged: false
+job_defaults:
+  all:
+    ignore_cached: true
+    filter:
+      - css:
+          selector: body
+      - html2text:
+          method: pyhtml2text
+  browser:
+    wait_until: networkidle2
+  shell: {}
+  url: {}
+report:
+  html:
+    diff: table
+    enabled: false
+  stdout:
+    color: true
+    enabled: true
+  text:
+    details: true
+    footer: true
+    line_length: 75
+    minimal: false
+    enabled: true
+  markdown:
+    enabled: false
