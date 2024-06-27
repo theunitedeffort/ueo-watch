@@ -12,12 +12,12 @@ jaraco.classes==3.3.1
 jeepney==0.8.0
 jq==1.6.0
 keyring==24.3.1
-lxml==4.3.2
+lxml<5
 minidb==2.0.7
 more-itertools==10.2.0
 pdftotext==2.2.2
 pycparser==2.21
-pyee==11.0.1
+pyee==8.2.2
 pyppeteer==1.0.2
 PyYAML==6.0.1
 requests==2.31.0
