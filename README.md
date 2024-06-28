@@ -22,7 +22,7 @@ make altinstall
 ```
 
 ### urlwatch
-`urlwatch` needs to be present on the machine and in the `PATH` for the various run scripts to work.  Production runs of `ueo-watch` use the `dev` branch of the [trevorshannon/urlwatch](https://github.com/trevorshannon/urlwatch) fork, though you can try another version of `urlwatch` if you wish.
+[urlwatch](https://urlwatch.readthedocs.io/en/latest/index.html) needs to be present on the machine and in the `PATH` for the various run scripts to work.  Production runs of `ueo-watch` use the `dev` branch of the [trevorshannon/urlwatch](https://github.com/trevorshannon/urlwatch) fork, though you can try another version of `urlwatch` if you wish.
 
 ```
 git clone https://github.com/trevorshannon/urlwatch.git
@@ -95,3 +95,61 @@ urlwatch --hooks ../config/hooks.py --urls urls.yaml --config urlwatch.yaml --ca
 
 You should see output with many "NEW" URLs and no "ERROR" URLs.  If you run the above `urlwatch` command again, you should see output with diffs for each URL.
 
+# Reporting Setup
+The production system reports changes via an email reporter, a Google Cloud Storage reporter, and a Jira reporter.  All are custom reporters defined in [hooks.py](https://github.com/theunitedeffort/ueo-watch/blob/main/config/hooks.py).  Some setup needs to be done for those reporters to work correctly.
+
+## Email reporter
+Sendgrid is a convenient tool to automatically send emails from a Google Compute Engine instance.  To set this up, follow the guide published by Google Cloud on [sending email with Sendgrid using Postfix](https://cloud.google.com/compute/docs/tutorials/sending-mail/using-sendgrid#postfixsendgrid). Note you must have a [Sendgrid API key](https://cloud.google.com/compute/docs/tutorials/sending-mail/using-sendgrid#before-you-begin), which is free.
+
+The max message size should be set to match the SendGrid system and it's convenient to set up bounce handling.  Add the following to the end of `/etc/postfix/main.cf`
+
+```
+# size limit from sendgrid server
+message_size_limit = 31457280
+
+# ensure bounces get reported
+notify_classes = bounce, resource, software
+bounce_notice_recipient = you@yourdomain.com
+bounce_template_file = /etc/postfix/bounce.cf
+```
+
+Create `/etc/postfix/bounce.cf` and fill it with:
+
+```
+# This failure template is used for undeliverable mail.
+
+failure_template = <<EOF
+Charset: us-ascii
+From: no-reply@theunitedeffort.org
+Subject: Undelivered Mail Returned to Sender
+Postmaster-Subject: Postmaster Copy: Undelivered Mail
+
+Undeliverable mail!
+
+EOF
+```
+
+## GCS reporter
+The email reports a simply summaries of what changed.  The full change report is in HTML format and gets uploaded to Google Cloud Storage.  This reporter works using the `gsutil` command and a service account.  Set up service account access by following [this helpful guide](https://gist.github.com/ryderdamen/926518ddddd46dd4c8c2e4ef5167243d).
+
+## Jira reporter
+Reported changes generate issues in Jira for better tracking and process visibility.  To use the Jira reporter, a Jira API key is needed.  This API key should be stored in a .netrc file. If no such file exists, create  `~/.netrc` and fill it with something like:
+
+```
+machine ueo.atlassian.net
+login myaccount@theunitedeffort.org
+password MY_API_KEY
+```
+
+# Cronjob Setup
+To have the ueo-watch jobs run daily, edit the cron table with:
+
+```
+crontab -e
+```
+
+And add the following job, replacing `YOUR_USERNAME` with your username on the GCE instance:
+
+```
+0 6 * * * export PATH=$PATH:/home/YOUR_USERNAME/urlwatch; export PYPPETEER_CHROMIUM_REVISION=839947; /home/YOUR_USERNAME/ueo-watch/run.sh > /home/YOUR_USERNAME/ueo-watch/run.log 2>&1
+```
