@@ -162,6 +162,7 @@ job_defaults:
             #footer-menus-lg,
             .footer__menu,
             .footer__social,
+            .footer__social-links,
             .footer__logo,
             #footer-navigation,
             .sitemapFooterDiv,
