@@ -1,6 +1,7 @@
 *.log
 *.db
 *.bak
+*.test.yaml
 staging/
 test/
 __pycache__/
