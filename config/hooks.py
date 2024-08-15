@@ -114,8 +114,10 @@ class GcsFileReporter(reporters.HtmlReporter):
       'datetime': self.report.start.strftime('%Y-%m-%d-%H%M%S'),
     }
     filename = self.config['filename'].format(**filename_args)
-    local_path = os.path.join(os.path.expanduser(self.config['local_dir']), filename)
-    # TODO: make necessary parent directories
+    local_dir = os.path.expanduser(self.config['local_dir'])
+    if not os.path.exists(local_dir):
+      os.makedirs(local_dir)
+    local_path = os.path.join(local_dir, filename)
     with open(local_path, 'w') as file:
       for part in super().submit():
         file.write('%s\n' % part)
