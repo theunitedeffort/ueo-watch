@@ -1,7 +1,7 @@
 # ueo-watch
-This repository contains configuration files to set up URL watching jobs relevant to UEO.  There are also a few convenience scripts for maintaining the system.  Sets of jobs are organized into folders within this project.  At the moment there is a set of housing jobs (`housing` folder) and benefits eligibility jobs (`eligibility` folder).
+This repository contains configuration files to set up URL watching jobs relevant to UEO.  There are also a few convenience scripts for maintaining the system.  Sets of jobs are organized into folders within this project.  At the moment there is a set of housing jobs (`housing` folder), benefits eligibility jobs (`eligibility` folder), and automated affordable housing search jobs (`autohouse` folder).
 
-# Environment Setup
+# Setup
 These configuration files were written to be used on a Google Compute Engine instance running Linux (Debian Buster).  The instructions below are meant to replicate the environment as it currently exists for production runs. 
 
 ## Prerequisites
@@ -46,6 +46,27 @@ While the `pdftotext` Python package will be installed in the Installation step 
 ```
 sudo apt install build-essential libpoppler-cpp-dev pkg-config python3-dev
 ```
+
+## Google Cloud Setup
+The jobs in `autohouse` are meant to search for affordable housing properties matching a given set of search parameters.  These search parameters are stored on Google Drive in a Google Sheet.  A separate script generates the list of jobs for urlwatch from this spreadsheet and therefore needs access to the sheet.
+
+The below assumes the existence of a Google Cloud project.
+
+### Create a Google Cloud service account
+1. Go to Cloud Console [Service Accounts](https://console.cloud.google.com/iam-admin/serviceaccounts).
+1. Create a new service account with no roles.
+1. Clicking on the new service account on the [Service Accounts](https://console.cloud.google.com/iam-admin/serviceaccounts) page and go to the Keys tab.
+1. Add a new JSON key by selecting **Add key > Create new key** and choose the JSON option.
+1. Save the key in a secure location.
+
+### Enable Google Drive API
+1. Go to the [Google Drive API](https://console.developers.google.com/apis/api/drive.googleapis.com/overview) on the APIs & Services page of your Google Cloud project.
+1. Click on Enable API.
+
+### Share search parameters spreadsheet with the service account
+1. Find the spreadsheet containing housing search parameters on Google Drive.
+1. Using the Drive UI, share the spreadsheet with the email address associated with the new service account.  It will likely be of the form `{ID}@{PROJECT}.iam.gserviceaccount.com`.  Provide **view-only** access to this email address.
+
 
 ## Installation
 First, clone this repo:
