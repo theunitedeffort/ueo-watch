@@ -63,7 +63,7 @@ def generate_urls(df):
 
     params['city'] = row['Location Preferences'].split('|')
 
-    logger.debug(f'Raw rent string: {row['Monthly Rent Budget']}')
+    logger.debug(f"Raw rent string: {row['Monthly Rent Budget']}")
     # Blow away dates in case the year is interpreted as a rent value
     rent_max = re.sub(r'(\d{4}|\d{1,2})[/\-]\d{1,2}[/\-](\d{4}|\d{1,2})',
       '[date]', row['Monthly Rent Budget'])
@@ -73,7 +73,7 @@ def generate_urls(df):
     rent_matches = [int(m.replace(',', '')) for m in re.findall(r'\d?,?\d{3,4}', rent_max)]
     if rent_matches:
       params['rentMax'] = max(rent_matches)
-      logger.debug(f'parsed max rent: {params['rentMax']}')
+      logger.debug(f"parsed max rent: {params['rentMax']}")
     else:
       logger.debug('no max rent found')
     params['includeUnknownRent'] = 'on'
