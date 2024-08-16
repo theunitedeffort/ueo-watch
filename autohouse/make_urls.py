@@ -110,6 +110,3 @@ urls = generate_urls(df)
 
 with open('urls.yaml', 'w') as file:
   yaml.dump_all(urls, file)
-
-# You can now run urlwatch with the generated urls.yaml file
-# os.system('urlwatch --urls urls.yaml --config config.yaml')

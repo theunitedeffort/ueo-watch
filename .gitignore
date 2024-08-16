@@ -5,4 +5,7 @@
 staging/
 test/
 __pycache__/
+.env
 env/
+venv/
+autohouse/urls.yaml
