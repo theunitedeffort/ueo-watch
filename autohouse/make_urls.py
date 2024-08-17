@@ -42,8 +42,8 @@ df = pd.read_csv(io.BytesIO(csv_bytes), keep_default_na=False)
 base_url = 'https://www.theunitedeffort.org/data/housing/affordable-housing/filter'
 
 # Function to create URLs based on client data
-def generate_urls(df):
-  urls = {}
+def generate_jobs(df):
+  jobs = {}
   processed_ids = []
   for _, row in df.iterrows():
     logger.info(f'\nProcessing row: {row.to_dict()}')
@@ -105,7 +105,7 @@ def generate_urls(df):
     logger.info(f'final query parameters: {params}')
     req = requests.PreparedRequest()
     req.prepare_url(url, params)
-    urls[client_id] = {
+    jobs[client_id] = {
       'kind': 'url',
       'name': f'Client ID {client_id}',
       'id': client_id,  # Not a urlwatch prop, but useful for our script here.
@@ -115,10 +115,10 @@ def generate_urls(df):
       # database uses as a key.
       'user_visible_url': req.url.replace('/data/', '/')
     }
-  return urls
+  return jobs
 
 # Generate URLs and save to a YAML file
-urls = generate_urls(df)
+jobs = generate_jobs(df)
 
 # It's possible that a client's search preferences will change over time.  When
 # they do, a new search URL will be generated since all preferences are stored
@@ -130,9 +130,9 @@ if os.path.exists(OUTPUT_PATH):
     old_jobs = list(yaml.safe_load_all(file))
   for old_job in old_jobs:
     client_id = old_job['id']
-    if client_id in urls:
+    if client_id in jobs:
       old_url = old_job['user_visible_url']
-      new_url = urls[client_id]['user_visible_url']
+      new_url = jobs[client_id]['user_visible_url']
       if old_url != new_url:
         # The client exists in both the new list of URLs and the old one, but
         # the URLs themselves do not match.
@@ -147,7 +147,7 @@ if os.path.exists(OUTPUT_PATH):
         logger.debug(f"running command: {' '.join(command)}")
         subprocess.run(command)
 
-logger.info(f'Writing {len(urls)} URLs to {OUTPUT_PATH}')
+logger.info(f'Writing {len(jobs)} URLs to {OUTPUT_PATH}')
 with open(OUTPUT_PATH, 'w') as file:
-  yaml.dump_all(urls.values(), file)
+  yaml.dump_all(jobs.values(), file)
 logger.info('All finished!  Goodbye.')
