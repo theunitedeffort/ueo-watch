@@ -16,6 +16,7 @@ import pandas as pd
 import requests
 import yaml
 
+# TODO: Make this relative to script location, not run location.
 OUTPUT_PATH = 'urls.yaml'
 
 load_dotenv()
@@ -31,6 +32,8 @@ credentials = service_account.Credentials.from_service_account_file(
 )
 service = build('drive', 'v3', credentials=credentials)
 
+# TODO: Perhaps grab the most recent file in a given folder?  Multiple filetypes
+# may need to be handled (.csv, .xls, .xlsx)
 csv_bytes = service.files().export_media(fileId="1eRDtHWCFHYPDJQv_QCeqGUmPQJsdv-aQAnGfK8LnMfU", mimeType='text/csv').execute()
 # The loaded CSV should always be relatively small (~100 lines) so we can just
 # load it into pandas directly from memory.
