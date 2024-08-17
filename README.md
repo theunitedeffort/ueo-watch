@@ -169,8 +169,8 @@ To have the ueo-watch jobs run daily, edit the cron table with:
 crontab -e
 ```
 
-And add the following job, replacing `YOUR_USERNAME` with your username on the GCE instance:
+And add the following job, replacing `YOUR_USERNAME` with your username and `YOUR_VENV` with the name of your python virtual environment (which you're definitely using, right??) on the GCE instance:
 
 ```
-0 6 * * * export PATH=$PATH:/home/YOUR_USERNAME/urlwatch; export PYPPETEER_CHROMIUM_REVISION=839947; /home/YOUR_USERNAME/ueo-watch/run.sh > /home/YOUR_USERNAME/ueo-watch/run.log 2>&1
+0 6 * * * export PATH=$PATH:/home/YOUR_USERNAME/urlwatch; export PYPPETEER_CHROMIUM_REVISION=839947; . /home/YOUR_USERNAME/ueo-watch/YOUR_VENV/bin/activate && /home/YOUR_USERNAME/ueo-watch/run.sh > /home/YOUR_USERNAME/ueo-watch/run.log 2>&1
 ```
