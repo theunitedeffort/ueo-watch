@@ -5,7 +5,7 @@ charset-normalizer==3.3.2
 cryptography==42.0.5
 cssselect==1.2.0
 greenlet==3.0.3
-html2text==2024.2.26
+html2text==2020.1.16
 idna==3.6
 importlib_metadata==7.0.2
 jaraco.classes==3.3.1
