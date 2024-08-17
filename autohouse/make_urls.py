@@ -5,6 +5,7 @@ import io
 import logging
 import os
 import re
+import subprocess
 
 from dotenv import load_dotenv
 from google.oauth2 import service_account
@@ -14,6 +15,8 @@ from googleapiclient.errors import HttpError
 import pandas as pd
 import requests
 import yaml
+
+OUTPUT_PATH = 'urls.yaml'
 
 load_dotenv()
 logger = logging.getLogger(__name__)
@@ -40,7 +43,7 @@ base_url = 'https://www.theunitedeffort.org/data/housing/affordable-housing/filt
 
 # Function to create URLs based on client data
 def generate_urls(df):
-  urls = []
+  urls = {}
   processed_ids = []
   for _, row in df.iterrows():
     logger.info(f'\nProcessing row: {row.to_dict()}')
@@ -102,11 +105,49 @@ def generate_urls(df):
     logger.info(f'final query parameters: {params}')
     req = requests.PreparedRequest()
     req.prepare_url(url, params)
-    urls.append({'name': f'Client ID {client_id}', 'url': req.url})
+    urls[client_id] = {
+      'kind': 'url',
+      'name': f'Client ID {client_id}',
+      'id': client_id,  # Not a urlwatch prop, but useful for our script here.
+      'url': req.url,
+      # The user visible URL is not the json data feed, but rather the regular
+      # housing search interface.  Note this is the URL that the urlwatch
+      # database uses as a key.
+      'user_visible_url': req.url.replace('/data/', '/')
+    }
   return urls
 
 # Generate URLs and save to a YAML file
 urls = generate_urls(df)
 
-with open('urls.yaml', 'w') as file:
-  yaml.dump_all(urls, file)
+# It's possible that a client's search preferences will change over time.  When
+# they do, a new search URL will be generated since all preferences are stored
+# in the URL.  To keep the historical snapshots consistent, the URL needs
+# to be updated in the urlwatch history database.
+if os.path.exists(OUTPUT_PATH):
+  # Only need to check for conflicts if there is already a urls.yaml existing.
+  with open(OUTPUT_PATH, 'r') as file:
+    old_jobs = list(yaml.safe_load_all(file))
+  for old_job in old_jobs:
+    client_id = old_job['id']
+    if client_id in urls:
+      old_url = old_job['user_visible_url']
+      new_url = urls[client_id]['user_visible_url']
+      if old_url != new_url:
+        # The client exists in both the new list of URLs and the old one, but
+        # the URLs themselves do not match.
+        logger.info(f"URL for client ID {client_id} needs updating "
+          f"from {old_url} to {new_url}")
+        command = [
+          'urlwatch',
+          '--urls', OUTPUT_PATH,
+          '--cache', 'cache.db',
+          '--change-location', old_url, new_url
+        ]
+        logger.debug(f"running command: {' '.join(command)}")
+        subprocess.run(command)
+
+logger.info(f'Writing {len(urls)} URLs to {OUTPUT_PATH}')
+with open(OUTPUT_PATH, 'w') as file:
+  yaml.dump_all(urls.values(), file)
+logger.info('All finished!  Goodbye.')
