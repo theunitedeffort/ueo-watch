@@ -22,7 +22,7 @@ report:
     subject: '{count} clients with housing search updates ({datetime})'
     details_url: https://storage.googleapis.com/ueo-changes/autohouse/report-{datetime}.html
   gcs:
-    enabled: false
+    enabled: true
     filename: report-{datetime}.html
     bucket: ueo-changes
     local_dir: ~/autohouse/staging
@@ -38,4 +38,6 @@ report:
     footer: true
     line_length: 75
     minimal: false
+    enabled: false
+  markdown:
     enabled: false
