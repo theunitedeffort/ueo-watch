@@ -50,8 +50,10 @@ def generate_jobs(df):
   processed_ids = []
   for _, row in df.iterrows():
     logger.info(f'\nProcessing row: {row.to_dict()}')
-    if 'Affordable Housing' not in row['Housing Options']:
-      logger.info('Affordable housing not specified as a housing option. Skipping.')
+    allowlist = ['Affordable Housing', 'Market Rate Apartment']
+    if all(v not in row['Housing Options'] for v in allowlist):
+      logger.info(
+        f"Housing options do not contain {', '.join(allowlist)}. Skipping.")
       continue
     # There is nothing to prevent duplicate housing plans in our client
     # management system, so just grab the first one here until there is
