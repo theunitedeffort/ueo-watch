@@ -174,3 +174,6 @@ And add the following job, replacing `YOUR_USERNAME` with your username and `YOU
 ```
 0 6 * * * export PATH=$PATH:/home/YOUR_USERNAME/urlwatch; export PYPPETEER_CHROMIUM_REVISION=839947; . /home/YOUR_USERNAME/ueo-watch/YOUR_VENV/bin/activate && /home/YOUR_USERNAME/ueo-watch/run.sh > /home/YOUR_USERNAME/ueo-watch/run.log 2>&1
 ```
+
+# Acknowledgements
+Thanks to [Tang3672](https://github.com/Tang3672) for contributions (outside of GitHub) to the `autohouse` project.
