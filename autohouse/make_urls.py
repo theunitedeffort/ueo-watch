@@ -16,12 +16,16 @@ import pandas as pd
 import requests
 import yaml
 
-# TODO: Make this relative to script location, not run location.
-OUTPUT_PATH = 'urls.yaml'
+OUTPUT_FILENAME = 'urls.yaml'  # Relative to this script's location.
+CACHE_FILENAME = 'cache.db'  # Relative to this script's location.
 
 load_dotenv()
 logger = logging.getLogger(__name__)
 logging.basicConfig(encoding='utf-8', level=logging.DEBUG)
+
+local_dir = os.path.dirname(__file__)
+output_path = os.path.join(local_dir, OUTPUT_FILENAME)
+logger.debug(f'Output file path is {output_path}')
 
 # Google Drive API setup
 scope = ['https://www.googleapis.com/auth/drive']
@@ -129,9 +133,11 @@ jobs = generate_jobs(df)
 # they do, a new search URL will be generated since all preferences are stored
 # in the URL.  To keep the historical snapshots consistent, the URL needs
 # to be updated in the urlwatch history database.
-if os.path.exists(OUTPUT_PATH):
-  # Only need to check for conflicts if there is already a urls.yaml existing.
-  with open(OUTPUT_PATH, 'r') as file:
+cache_path = os.path.join(local_dir, CACHE_FILENAME)
+if os.path.exists(output_path) and os.path.exists(cache_path):
+  # Only need to check for conflicts if there is already a urls.yaml and a
+  # historical database existing.
+  with open(output_path, 'r') as file:
     old_jobs = list(yaml.safe_load_all(file))
   for old_job in old_jobs:
     client_id = old_job['id']
@@ -145,14 +151,14 @@ if os.path.exists(OUTPUT_PATH):
           f"from {old_url} to {new_url}")
         command = [
           'urlwatch',
-          '--urls', OUTPUT_PATH,
-          '--cache', 'cache.db',
+          '--urls', output_path,
+          '--cache', cache_path,
           '--change-location', old_url, new_url
         ]
         logger.debug(f"running command: {' '.join(command)}")
         subprocess.run(command)
 
-logger.info(f'Writing {len(jobs)} URLs to {OUTPUT_PATH}')
-with open(OUTPUT_PATH, 'w') as file:
+logger.info(f'Writing {len(jobs)} URLs to {output_path}')
+with open(output_path, 'w') as file:
   yaml.dump_all(jobs.values(), file)
 logger.info('All finished!  Goodbye.')
