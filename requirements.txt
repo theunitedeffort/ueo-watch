@@ -5,6 +5,7 @@ cffi==1.16.0
 charset-normalizer==3.3.2
 cryptography==42.0.5
 cssselect==1.2.0
+et-xmlfile==1.1.0
 google-api-core==2.19.1
 google-api-python-client==2.141.0
 google-auth==2.33.0
@@ -23,6 +24,7 @@ lxml<5
 minidb==2.0.7
 more-itertools==10.2.0
 numpy==2.0.1
+openpyxl==3.1.5
 packaging==24.1
 pandas==2.2.2
 pdftotext==2.2.2
@@ -48,4 +50,5 @@ tzdata==2024.1
 uritemplate==4.1.1
 urllib3==1.26.13
 websockets==10.4
+xlrd==2.0.1
 zipp==3.17.0
