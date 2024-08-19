@@ -18,6 +18,32 @@ import yaml
 
 OUTPUT_FILENAME = 'urls.yaml'  # Relative to this script's location.
 CACHE_FILENAME = 'cache.db'  # Relative to this script's location.
+GOOGLE_DRIVE_SRC_DIR_ID = '187ydaRH3bi-klu3G_GP66gIMt6j0zHI6'
+
+MIME_GOOGLE_SHEETS = 'application/vnd.google-apps.spreadsheet'
+MIME_XLSX = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+MIME_XLS = 'application/vnd.ms-excel'
+MIME_CSV = 'text/csv'
+
+SUPPORTED_MIME_TYPES = [
+  MIME_GOOGLE_SHEETS,
+  MIME_XLS,
+  MIME_XLSX,
+  MIME_CSV
+]
+
+def read_csv(csv_bytes):
+  return pd.read_csv(io.BytesIO(csv_bytes), keep_default_na=False, dtype='string')
+
+def read_excel(excel_bytes):
+  return pd.read_excel(io.BytesIO(excel_bytes), keep_default_na=False, dtype='string')
+
+def get_sheet_as_csv_bytes(drive_api, file_metadata):
+  return drive_api.files().export_media(fileId=file_metadata['id'], mimeType=MIME_CSV).execute()
+
+def get_file_bytes(drive_api, file_metadata):
+  return drive_api.files().get_media(fileId=file_metadata['id']).execute()
+
 
 load_dotenv()
 logger = logging.getLogger(__name__)
@@ -36,12 +62,38 @@ credentials = service_account.Credentials.from_service_account_file(
 )
 service = build('drive', 'v3', credentials=credentials)
 
-# TODO: Perhaps grab the most recent file in a given folder?  Multiple filetypes
-# may need to be handled (.csv, .xls, .xlsx)
-csv_bytes = service.files().export_media(fileId="1eRDtHWCFHYPDJQv_QCeqGUmPQJsdv-aQAnGfK8LnMfU", mimeType='text/csv').execute()
-# The loaded CSV should always be relatively small (~100 lines) so we can just
-# load it into pandas directly from memory.
-df = pd.read_csv(io.BytesIO(csv_bytes), keep_default_na=False)
+# Call the Drive v3 API
+results = service.files().list(
+  q=f"'{GOOGLE_DRIVE_SRC_DIR_ID}' in parents and trashed = false",
+  orderBy='modifiedTime desc',
+  includeItemsFromAllDrives=True,
+  supportsAllDrives=True,
+  pageSize=100,
+  fields="files(id, name, mimeType, modifiedTime)").execute()
+items = results.get('files', [])
+src_file = None
+# Files are sorted from most recent to oldest, so grab the first (most recent)
+# supported file.
+for item in items:
+  if item['mimeType'] not in SUPPORTED_MIME_TYPES:
+    logger.info(f'Unsupported MIME type: {item} Skipping file.')
+    continue
+  src_file = item
+  logger.info(f'Using source file: {src_file}')
+  break
+
+if not src_file:
+  raise ValueError('No suitable source file found.')
+
+df = pd.DataFrame([])
+# The loaded file should always be relatively small (~100 lines) so we can just
+# load it into pandas directly from memory rather than saving it to disk first.
+if src_file['mimeType'] == MIME_GOOGLE_SHEETS:
+  df = read_csv(get_sheet_as_csv_bytes(service, src_file))
+elif src_file['mimeType'] == MIME_CSV:
+  df = read_csv(get_file_bytes(service, src_file))
+elif src_file['mimeType'] in [MIME_XLS, MIME_XLSX]:
+  df = read_excel(get_file_bytes(service, src_file))
 
 # Base URL for the housing data
 # Include client ID in case there are two clients with exactly the same search
@@ -157,6 +209,9 @@ if os.path.exists(output_path) and os.path.exists(cache_path):
         ]
         logger.debug(f"running command: {' '.join(command)}")
         subprocess.run(command)
+
+if not jobs:
+  raise ValueError('No jobs to write!  Is the source file formatted correctly?')
 
 logger.info(f'Writing {len(jobs)} URLs to {output_path}')
 with open(output_path, 'w') as file:
