@@ -13,8 +13,8 @@ report:
   custom_email:
     enabled: true
     from: 'Changebot <changebot@theunitedeffort.org>'
-    to: 'trevor@theunitedeffort.org'
-    reply_to: 'trevor@theunitedeffort.org'
+    to: 'client-housing-managers@theunitedeffort.org'
+    reply_to: 'client-housing-managers@theunitedeffort.org'
     html: false
     method: sendmail
     sendmail:
