@@ -213,8 +213,17 @@ class JiraReporter(reporters.ReporterBase):
     if not self.config['assignees']:
       logger.error('At least one assignee is required')
       return
-    issues_per_assignee = len(changes) / len(self.config['assignees'])
-    for job_state_idx, job_state in enumerate(changes):
+    num_changed = len([c for c in changes if c.verb == 'changed'])
+    num_errored = len([c for c in changes if c.verb == 'error'])
+    job_pool_size = num_changed
+    error_assignee = self.config.get('error_assignee', '')
+    if not error_assignee:
+      # If there is no error assignee, error jobs get auto-assigned like any
+      # other job.
+      job_pool_size += num_errored
+    issues_per_assignee = job_pool_size / len(self.config['assignees'])
+    job_pool_idx = 0
+    for job_state in changes:
       issue = {
         'fields': {
           'project': {'id': self.config['project']},
@@ -256,9 +265,9 @@ class JiraReporter(reporters.ReporterBase):
           'This change is too large to display.  Visit the full report above to view this change.'))
       issue['fields']['description'] = description
       issue['fields'][self.config['reported_field']] = datetime.date.today().strftime('%Y-%m-%d')
-      assignee_idx = int(job_state_idx / issues_per_assignee)
-      if self.config.get('error_assignee', '') and job_state.verb == 'error':
-        assignee = self.config['error_assignee']
+      assignee_idx = int(job_pool_idx / issues_per_assignee)
+      if error_assignee and job_state.verb == 'error':
+        assignee = error_assignee
         logger.debug('overriding normal assignee to be %s', assignee)
       else:
         assignee = self.config['assignees'][assignee_idx]
@@ -268,6 +277,10 @@ class JiraReporter(reporters.ReporterBase):
       if (filtered_reviewers):
         issue['fields'][self.config['reviewer_field']] = [{'id': random.choice(filtered_reviewers)}]
       issues.append(issue)
+      if not error_assignee:
+        job_pool_idx += 1
+      elif job_state.verb == 'changed':
+        job_pool_idx += 1
     logger.debug('Generated %d issues for Jira', len(issues))
     # Reverse the order so that the default sorting order in Jira matches the
     # order in other reports.
