@@ -311,6 +311,7 @@ job_defaults:
       - re.sub: '©.*?(\d{4}-)?20\d{2}'
       - re.sub: 'Copyright 20\d{2}'
       - re.sub: 'time=\d+'
+      - catch_goog_redirect
       - if_empty: error
   browser:
     wait_until: networkidle2
