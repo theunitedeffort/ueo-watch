@@ -34,6 +34,8 @@ job_defaults:
       - selective:
           select_pattern:
             - '.*housing\.sanjoseca\.gov'
+            - '.*bridgehousing\.com'
+            - '.*housingchoices\.org'
           filter: css
           selector: body
           exclude: >-
@@ -50,6 +52,7 @@ job_defaults:
             div.ngg-slideshow,
             div.lazy-community-carousel,
             .gallery__slider,
+            #gallery,
             .hubdb-events,
             .sponsors_section,
             .sponsors-block,
@@ -140,6 +143,7 @@ job_defaults:
             .social-icons,
             .social_icons,
             .elementor-widget-social-icons,
+            .elementor-widget-share-buttons,
             .et-social-icons,
             .bottom-social-icons,
             .social,
@@ -167,6 +171,8 @@ job_defaults:
             #footer-navigation,
             .sitemapFooterDiv,
             .footer-dre-two,
+            .footer-disclosure,
+            .footer-copyright,
             .copyright,
             #copyright,
             .ysi-copyright,
@@ -211,7 +217,8 @@ job_defaults:
             #skipnav,
             .SKIP_TO_CONTENT_BTN,
             .header-skip-link,
-            .skip-to-pageassist
+            .skip-to-pageassist,
+            #walkscore-div
       - selective:
           select_pattern:
             - '.*300railway\.com/'
