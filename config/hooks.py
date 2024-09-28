@@ -31,6 +31,8 @@ class ScraperJob(jobs.UrlJob):
 
   __kind__ = 'scraper'
 
+  __required__ = ('kind',)
+
   def retrieve(self, job_state):
     self.user_visible_url = self.url
     self.url = f'https://washed-ocelot--super-scraper-api-task.apify.actor?url={self.url}&render_js=false'
