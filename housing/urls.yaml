@@ -132,9 +132,11 @@ url: https://bacxllc.com/properties/569-lassen-st/
 ---
 url: https://www.billwilsoncenter.org/services/peacock_commons.html
 ---
-#url: https://webcache.googleusercontent.com/search?q=cache:https://www.borregascourtliving.com
+kind: scraper
+url: https://www.borregascourtliving.com
 ---
-#url: https://webcache.googleusercontent.com/search?q=cache:https://www.borregascourtliving.com/floorplans
+kind: scraper
+url: https://www.borregascourtliving.com/floorplans
 ---
 url: https://bridgehousing.com/find-housing/apartment-search/?filter=true&county=Santa%20Clara
 ---
@@ -162,9 +164,11 @@ url: https://buckinghampm.com/homes/willow-pointe/
 ---
 url: https://buckinghampm.com/portfolio/county-santa-clara/
 ---
-#url: https://webcache.googleusercontent.com/search?q=cache:https://www.canoasterraceliving.com/
+kind: scraper
+url: https://www.canoasterraceliving.com/
 ---
-#url: https://webcache.googleusercontent.com/search?q=cache:https://www.canoasterraceliving.com/floorplans
+kind: scraper
+url: https://www.canoasterraceliving.com/floorplans
 ---
 url: https://www.caremgt.com/arbor-terraces/
 ---
@@ -901,9 +905,11 @@ url: https://midpen-housing.org/property/vivente-ii/
 ---
 url: https://monroejsco.com/property/monroe-commons/
 ---
-#url: https://webcache.googleusercontent.com/search?q=cache:https://www.montereyfamilyvillage.com/
+kind: scraper
+url: https://www.montereyfamilyvillage.com/
 ---
-#url: https://webcache.googleusercontent.com/search?q=cache:https://www.montereyfamilyvillage.com/floorplans
+kind: scraper
+url: https://www.montereyfamilyvillage.com/floorplans
 ---
 url: https://www.montevistagardens.com/
 ---
@@ -1025,9 +1031,11 @@ url: https://www.scmrf.org/how-do-i-apply/
 ---
 url: https://www.scmrf.org/life-at-our-communities/
 ---
-#url: https://webcache.googleusercontent.com/search?q=cache:https://www.southwood-apartments.com/
+kind: scraper
+url: https://www.southwood-apartments.com/
 ---
-#url: https://webcache.googleusercontent.com/search?q=cache:https://www.southwood-apartments.com/floorplans
+kind: scraper
+url: https://www.southwood-apartments.com/floorplans
 ---
 url: https://stanfordwestapartments.stanford.edu/
 ---
@@ -1087,11 +1095,14 @@ url: https://thegroveaptssanjose.com/
 ---
 url: https://thegroveaptssanjose.com/property/the-grove/
 ---
-#url: https://webcache.googleusercontent.com/search?q=cache:https://www.thelodgeatmorganhillapartments.com/
+kind: scraper
+url: https://www.thelodgeatmorganhillapartments.com/
 ---
-#url: https://webcache.googleusercontent.com/search?q=cache:https://www.thelodgeatmorganhillapartments.com/ca/morgan-hill/floorplans
+kind: scraper
+url: https://www.thelodgeatmorganhillapartments.com/ca/morgan-hill/floorplans
 ---
-#url: https://webcache.googleusercontent.com/search?q=cache:https://www.thelodgeatmorganhillapartments.com/ca/morgan-hill/incomerestrictions
+kind: scraper
+url: https://www.thelodgeatmorganhillapartments.com/ca/morgan-hill/incomerestrictions
 ---
 url: https://www.crpaffordable.com/the-meridian
 ---
@@ -1107,13 +1118,17 @@ url: https://www.thornbridgeapartments.com/
 ---
 url: https://www.thornbridgeapartments.com/floor-plans/#/
 ---
-#url: https://webcache.googleusercontent.com/search?q=cache:https://www.trestles-apts.com
+kind: scraper
+url: https://www.trestles-apts.com
 ---
-#url: https://webcache.googleusercontent.com/search?q=cache:https://www.trestles-apts.com/incomerestrictions
+kind: scraper
+url: https://www.trestles-apts.com/incomerestrictions
 ---
-#url: https://webcache.googleusercontent.com/search?q=cache:https://www.turnleaf-apts.com
+kind: scraper
+url: https://www.turnleaf-apts.com
 ---
-#url: https://webcache.googleusercontent.com/search?q=cache:https://www.turnleaf-apts.com/ca/san-jose/incomerestrictions
+kind: scraper
+url: https://www.turnleaf-apts.com/ca/san-jose/incomerestrictions
 ---
 url: https://www.unitycare.org/housing/
 ---
@@ -1286,7 +1301,8 @@ url: https://www.alvinscornercampbell.com/
 navigate: https://www.avaloncommunities.com/california/campbell-apartments/avalon-campbell/
 wait_until: load
 ---
-#url: https://webcache.googleusercontent.com/search?q=cache:https://www.aventinoapts.com/
+kind: scraper
+url: https://www.aventinoapts.com/
 ---
 url: http://www.balmoral-apts.com/
 ---
@@ -1304,7 +1320,8 @@ url: https://www.deanzaproperties.com/south-bay-area/los-altos-gardens-one/
 ---
 url: https://www.decron.com/apartments-willow-creek/
 ---
-#url: https://webcache.googleusercontent.com/search?q=cache:https://www.domicilioapts.com/
+kind: scraper
+url: https://www.domicilioapts.com/
 ---
 url: https://www.encasaliving.com/
 ---
@@ -1335,8 +1352,9 @@ ssl_no_verify: true
 url: https://www.essexapartmenthomes.com/apartments/mountain-view/arlo-mountain-view
 ssl_no_verify: true
 ---
-#url: https://webcache.googleusercontent.com/search?q=cache:https://www.equityapartments.com/san-francisco-bay/santa-clara/estancia-at-santa-clara-apartments
-#compared_versions: 2
+kind: scraper
+url: https://www.equityapartments.com/san-francisco-bay/santa-clara/estancia-at-santa-clara-apartments
+compared_versions: 2
 ---
 url: https://www.greystar.com/properties/san-jose-ca/vio
 ---
@@ -1350,7 +1368,8 @@ url: https://www.irvinecompanyapartments.com/locations/northern-california/sunny
 ---
 url: https://ivyliving.com/paloalto/
 ---
-#url: https://webcache.googleusercontent.com/search?q=cache:https://www.liveatsantanaterrace.com/
+kind: scraper
+url: https://www.liveatsantanaterrace.com/
 ---
 url: https://liveatsavoy.com/
 ---
@@ -1358,7 +1377,8 @@ url: https://livelandsby.com/
 ---
 url: https://www.liveprado.com/
 ---
-# #url: https://webcache.googleusercontent.com/search?q=cache:https://www.liverevela.com/
+kind: scraper
+url: https://www.liverevela.com/
 ---
 url: https://www.merrillgardens.com/senior-living/ca/campbell/merrill-gardens-at-campbell/
 ---
@@ -1366,39 +1386,52 @@ url: https://milpitascrossing.com/?page_id=15
 ---
 navigate: https://www.montereygrove.com/en/apartments/contactus.html
 ---
-# #url: https://webcache.googleusercontent.com/search?q=cache:https://www.morganranchapartmenthomes.com/
+kind: scraper
+url: https://www.morganranchapartmenthomes.com/
 ---
 url: https://www.murphystationapts.com/home
 ---
 url: https://www.mvapartments.com/
 ---
-#url: https://webcache.googleusercontent.com/search?q=cache:https://www.novomountainview.com/
-# ---
-# url: https://prometheusapartments.com/ca/cupertino-apartments/cupertino-park-center
-# ---
-# url: https://prometheusapartments.com/ca/cupertino-apartments/the-biltmore
-# ---
-# url: https://prometheusapartments.com/ca/mountain-view-apartments/100-moffett/
-# ---
-# url: https://prometheusapartments.com/ca/mountain-view-apartments/madera/
-# ---
-# url: https://prometheusapartments.com/ca/mountain-view-apartments/montrose/
-# ---
-# url: https://prometheusapartments.com/ca/palo-alto-apartments/parker-palo-alto
-# ---
-# url: https://prometheusapartments.com/ca/santa-clara-apartments/mansion-grove
-# ---
-# url: https://prometheusapartments.com/ca/santa-clara-apartments/the-benton
-# ---
-# url: https://prometheusapartments.com/ca/mountain-view-apartments/the-dean/
-# ---
-# url: https://prometheusapartments.com/ca/sunnyvale-apartments/ironworks
+kind: scraper
+url: https://www.novomountainview.com/
+---
+kind: scraper
+url: https://prometheusapartments.com/ca/cupertino-apartments/cupertino-park-center
+---
+kind: scraper
+url: https://prometheusapartments.com/ca/cupertino-apartments/the-biltmore
+---
+kind: scraper
+url: https://prometheusapartments.com/ca/mountain-view-apartments/100-moffett/
+---
+kind: scraper
+url: https://prometheusapartments.com/ca/mountain-view-apartments/madera/
+---
+kind: scraper
+url: https://prometheusapartments.com/ca/mountain-view-apartments/montrose/
+---
+kind: scraper
+url: https://prometheusapartments.com/ca/palo-alto-apartments/parker-palo-alto
+---
+kind: scraper
+url: https://prometheusapartments.com/ca/santa-clara-apartments/mansion-grove
+---
+kind: scraper
+url: https://prometheusapartments.com/ca/santa-clara-apartments/the-benton
+---
+kind: scraper
+url: https://prometheusapartments.com/ca/mountain-view-apartments/the-dean/
+---
+kind: scraper
+url: https://prometheusapartments.com/ca/sunnyvale-apartments/ironworks
 ---
 url: https://www.revereatcampbell.com/
 ---
 url: https://sofiaaptliving.com/
 ---
-# #url: https://webcache.googleusercontent.com/search?q=cache:https://www.tamarindsquare.com/
+kind: scraper
+url: https://www.tamarindsquare.com/
 ---
 url: https://www.udr.com/san-francisco-bay-area-apartments/san-jose/almaden-lake-village/
 ---
