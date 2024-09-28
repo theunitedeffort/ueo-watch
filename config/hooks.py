@@ -8,19 +8,40 @@ import re
 import subprocess
 import urllib.parse
 
+from dotenv import load_dotenv
 import requests
 from urlwatch import filters
+from urlwatch import jobs
 from urlwatch import reporters
 from urlwatch.mailer import SMTPMailer
 from urlwatch.mailer import SendmailMailer
 
 logger = logging.getLogger(__name__)
+load_dotenv()
 
 # https://stackoverflow.com/questions/312443/how-do-i-split-a-list-into-equally-sized-chunks
 def chunkify(lst, n):
   """Yield n-sized chunks from the list 'lst'."""
   for i in range(0, len(lst), n):
       yield lst[i:i + n]
+
+
+class ScraperJob(jobs.UrlJob):
+  """Custom job to call Apify Super Scraper API"""
+
+  __kind__ = 'scraper'
+
+  def retrieve(self, job_state):
+    self.user_visible_url = self.url
+    self.url = f'https://washed-ocelot--super-scraper-api-task.apify.actor?url={self.url}&render_js=false'
+    self.headers = self.headers or {}
+    auth_header = 'Authorization'
+    existing_auth = [h for h in self.headers if h.lower() == auth_header.lower()]
+    for header in existing_auth:
+      self.headers.pop(header, None)
+    apify_token = os.environ['APIFY_TOKEN']
+    self.headers[auth_header] = f'Bearer {apify_token}'
+    return super().retrieve(job_state)
 
 
 class ErrorOnEmptyData(filters.FilterBase):
