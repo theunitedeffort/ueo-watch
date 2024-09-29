@@ -35,7 +35,7 @@ class ScraperJob(jobs.UrlJob):
 
   def retrieve(self, job_state):
     self.user_visible_url = self.url
-    self.url = f'https://washed-ocelot--super-scraper-api-task.apify.actor?url={self.url}&render_js=false'
+    self.url = f'https://washed-ocelot--super-scraper-api-task.apify.actor?url={self.url}&transparent_status_code=true&render_js=false'
     self.headers = self.headers or {}
     auth_header = 'Authorization'
     existing_auth = [h for h in self.headers if h.lower() == auth_header.lower()]
