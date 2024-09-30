@@ -300,11 +300,13 @@ class JiraReporter(reporters.ReporterBase):
           'This change is too large to display.  Visit the full report above to view this change.'))
       issue['fields']['description'] = description
       issue['fields'][self.config['reported_field']] = datetime.date.today().strftime('%Y-%m-%d')
-      assignee_idx = int(job_pool_idx / issues_per_assignee)
       if error_assignee and job_state.verb == 'error':
         assignee = error_assignee
         logger.debug('overriding normal assignee to be %s', assignee)
       else:
+        assignee_idx = 0
+        if issues_per_assignee > 0:
+          assignee_idx = int(job_pool_idx / issues_per_assignee)
         assignee = self.config['assignees'][assignee_idx]
       issue['fields']['assignee'] = {'id': assignee}
       issue['fields']['duedate'] = (datetime.date.today() + datetime.timedelta(days=3)).strftime('%Y-%m-%d')
