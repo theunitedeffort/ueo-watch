@@ -1326,6 +1326,7 @@ url: https://www.merrillgardens.com/senior-living/ca/campbell/merrill-gardens-at
 url: https://milpitascrossing.com/?page_id=15
 ---
 navigate: https://www.montereygrove.com/en/apartments/contactus.html
+wait_until: load
 ---
 url: https://www.murphystationapts.com/home
 ---
