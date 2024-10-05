@@ -36,6 +36,7 @@ job_defaults:
             - '.*housing\.sanjoseca\.gov'
             - '.*bridgehousing\.com'
             - '.*housingchoices\.org'
+            - '.*abode\.org'
           filter: css
           selector: body
           exclude: >-
