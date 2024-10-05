@@ -296,6 +296,12 @@ job_defaults:
           path: '//body'
           #https://stackoverflow.com/questions/43122455/xpath-to-select-all-elements-between-two-headings
           exclude: "//*[following-sibling::h2[. = 'Northern California'] or preceding-sibling::h2[. = 'Southern California']]"
+      - selective:
+          select_pattern:
+            - '.*essexapartmenthomes\.com/affordable-housing-programs'
+          filter: xpath
+          path: '//body'
+          exclude: "//div[contains(@class, 'bmr-communities__container')][h3[not(contains(text(), 'Northern California'))]]"
       - re.sub: 'Image Detail [a-z0-9]{32}'
       - re.sub:
           pattern: '/x(.*?\.[a-zA-Z]{3,4})(,qitok=[a-zA-Z0-9-]{8})?\.pagespeed\.ic\.[a-zA-Z0-9-]{10}\.[a-zA-Z]{3,4}'
