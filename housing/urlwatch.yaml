@@ -170,6 +170,7 @@ job_defaults:
             .footer__social-links,
             .footer__logo,
             #footer-navigation,
+            .navigation--footer,
             .sitemapFooterDiv,
             .footer-dre-two,
             .footer-disclosure,
