@@ -1473,6 +1473,9 @@ url: https://www.losgatosca.gov/DocumentCenter/View/8037/Los-Gatos-Housing-Resou
 filter:
   - pdf2text
 ---
+url: https://www.cityofgilroy.org/DocumentCenter/View/15149
+filter:
+  - pdf2text
 
 # This guarantees a detected change on each run.
 ---
