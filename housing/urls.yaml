@@ -15,6 +15,8 @@ url: https://www.campbellca.gov/635/Below-Market-Rate-Program
 ---
 url: https://www.cupertino.org/our-city/departments/community-development/housing/below-market-rate-housing-program/bmr-rental-program
 ---
+url: https://gis.cupertino.org/bmr_units/units.js
+---
 url: https://www.sunnyvale.ca.gov/homes-streets-and-property/housing/rental-programs
 ---
 url: https://www.sunnyvale.ca.gov/homes-streets-and-property/housing/rental-programs/building-affordable-housing
@@ -1469,14 +1471,54 @@ url: https://static1.squarespace.com/static/5dc7476c0941b54dd5f9e7f9/t/5e2e36a1e
 filter:
   - pdf2text
 ---
-url: https://www.losgatosca.gov/DocumentCenter/View/8037/Los-Gatos-Housing-Resources-Guide
+url: https://www.campbellca.gov/documentcenter/view/5492
+filter:
+  - pdf2text
+---
+url: https://www.campbellca.gov/documentcenter/view/5493
 filter:
   - pdf2text
 ---
 url: https://www.cityofgilroy.org/DocumentCenter/View/15149
 filter:
   - pdf2text
-
+---
+url: https://www.cupertino.org/home/showpublisheddocument/29137/637529558162970000
+filter:
+  - pdf2text
+---
+url: https://www.losgatosca.gov/DocumentCenter/View/8037
+filter:
+  - pdf2text
+---
+url: https://www.morganhill.ca.gov/DocumentCenter/View/19598
+filter:
+  - pdf2text
+---
+url: https://www.mountainview.gov/home/showpublisheddocument/2410/637957425164570000
+filter:
+  - pdf2text
+---
+url: https://www.mountainview.gov/home/showpublisheddocument/8916/638473195816470000
+filter:
+  - pdf2text
+---
+url: https://www.santaclaraca.gov/home/showpublisheddocument/69770/638610506086930000
+filter:
+  - pdf2text
+---
+url: https://www.sunnyvale.ca.gov/home/showpublisheddocument/364/638635655518330000
+filter:
+  - pdf2text
+---
+url: https://www.sunnyvale.ca.gov/home/showpublisheddocument/368/638611400656900000
+filter:
+  - pdf2text
+---
+url: https://www.sunnyvale.ca.gov/home/showpublisheddocument/366/638581259044030000
+filter:
+  - pdf2text
+---
 # This guarantees a detected change on each run.
 ---
 name: "Test change"
