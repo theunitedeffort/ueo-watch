@@ -66,18 +66,6 @@ class ErrorOnEmptyData(filters.FilterBase):
         logger.warn(msg)
     return data
 
-class ErrorOnGoogleRedirect(filters.FilterBase):
-  __kind__ = 'catch_goog_redirect'
-
-  __no_subfilter__ = True
-
-  def filter(self, data, subfilter):
-    if ('if you are not redirected within a few seconds.' in data
-      and 'webcache.googleusercontent.com' in data):
-      raise ValueError('Google web cache redirect detected. '
-        'Page content will not be stored.')
-    return data
-
 
 class SelectiveFilter(filters.FilterBase):
   __kind__ = 'selective'
