@@ -1359,106 +1359,139 @@ url: https://www.viverelosgatos.com/
 ---
 kind: scraper
 url: https://www.borregascourtliving.com
+max_tries: 3
 ---
 kind: scraper
 url: https://www.borregascourtliving.com/floorplans
+max_tries: 3
 ---
 kind: scraper
 url: https://www.canoasterraceliving.com/
+max_tries: 3
 ---
 kind: scraper
 url: https://www.canoasterraceliving.com/floorplans
+max_tries: 3
 ---
 kind: scraper
 url: https://www.thelodgeatmorganhillapartments.com/
+max_tries: 3
 ---
 kind: scraper
 url: https://www.thelodgeatmorganhillapartments.com/ca/morgan-hill/floorplans
+max_tries: 3
 ---
 kind: scraper
 url: https://www.thelodgeatmorganhillapartments.com/ca/morgan-hill/incomerestrictions
+max_tries: 3
 ---
 kind: scraper
 url: https://www.montereyfamilyvillage.com/
+max_tries: 3
 ---
 kind: scraper
 url: https://www.montereyfamilyvillage.com/floorplans
+max_tries: 3
 ---
 kind: scraper
 url: https://www.southwood-apartments.com/
+max_tries: 3
 ---
 kind: scraper
 url: https://www.southwood-apartments.com/floorplans
+max_tries: 3
 ---
 kind: scraper
 url: https://www.trestles-apts.com
+max_tries: 3
 ---
 kind: scraper
 url: https://www.trestles-apts.com/incomerestrictions
+max_tries: 3
 ---
 kind: scraper
 url: https://www.turnleaf-apts.com
+max_tries: 3
 ---
 kind: scraper
 url: https://www.turnleaf-apts.com/ca/san-jose/incomerestrictions
+max_tries: 3
 ---
 # Market rate
 # Remember to also update the regex pattern in urlwatch.yaml for market-rate URLs.
 ---
 kind: scraper
 url: https://www.aventinoapts.com/
+max_tries: 3
 ---
 kind: scraper
 url: https://www.domicilioapts.com/
+max_tries: 3
 ---
 kind: scraper
 url: https://www.equityapartments.com/san-francisco-bay/santa-clara/estancia-at-santa-clara-apartments
 compared_versions: 2
+max_tries: 3
 ---
 kind: scraper
 url: https://www.liveatsantanaterrace.com/
+max_tries: 3
 ---
 kind: scraper
 url: https://www.liverevela.com/
+max_tries: 3
 ---
 kind: scraper
 url: https://www.morganranchapartmenthomes.com/
+max_tries: 3
 ---
 kind: scraper
 url: https://www.novomountainview.com/
+max_tries: 3
 ---
 kind: scraper
 url: https://prometheusapartments.com/ca/cupertino-apartments/cupertino-park-center
+max_tries: 3
 ---
 kind: scraper
 url: https://prometheusapartments.com/ca/cupertino-apartments/the-biltmore
+max_tries: 3
 ---
 kind: scraper
 url: https://prometheusapartments.com/ca/mountain-view-apartments/100-moffett/
+max_tries: 3
 ---
 kind: scraper
 url: https://prometheusapartments.com/ca/mountain-view-apartments/madera/
+max_tries: 3
 ---
 kind: scraper
 url: https://prometheusapartments.com/ca/mountain-view-apartments/montrose/
+max_tries: 3
 ---
 kind: scraper
 url: https://prometheusapartments.com/ca/mountain-view-apartments/the-dean/
+max_tries: 3
 ---
 kind: scraper
 url: https://prometheusapartments.com/ca/palo-alto-apartments/parker-palo-alto
+max_tries: 3
 ---
 kind: scraper
 url: https://prometheusapartments.com/ca/santa-clara-apartments/mansion-grove
+max_tries: 3
 ---
 kind: scraper
 url: https://prometheusapartments.com/ca/santa-clara-apartments/the-benton
+max_tries: 3
 ---
 kind: scraper
 url: https://prometheusapartments.com/ca/sunnyvale-apartments/ironworks
+max_tries: 3
 ---
 kind: scraper
 url: https://www.tamarindsquare.com/
+max_tries: 3
 ---
 
 # PDFs
