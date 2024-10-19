@@ -1011,6 +1011,12 @@ url: https://www.royaloakvillage.com/
 ---
 url: https://www.sahahomes.org/properties/arya
 ---
+url: https://geo.sanjoseca.gov/server/rest/services/OPN/OPN_OpenDataService/MapServer/457/query?where=1%3D1&outFields=*&outSR=4326&f=json
+filter:
+  - jq: '.features'
+  - format-json
+  - if_empty: error
+---
 url: http://www.sanjosegardens.com/
 ---
 url: https://www.sanjosegardens.com/Floor-plans.aspx
