@@ -1009,6 +1009,11 @@ url: http://www.roemcorp.com/projects/shiraz-senior-housing/
 ---
 url: https://www.royaloakvillage.com/
 ---
+user_visible_url: https://www.royaloakvillage.com/floorplans/
+url: https://www.royaloakvillage.com/api/v3/floorplans/all/?api_key=557dce40ad4c291e696cb5090a0c23cb8692efea
+filter:
+  - apartments247_floorplans
+---
 url: https://www.sahahomes.org/properties/arya
 ---
 url: https://geo.sanjoseca.gov/server/rest/services/OPN/OPN_OpenDataService/MapServer/457/query?where=1%3D1&outFields=*&outSR=4326&f=json

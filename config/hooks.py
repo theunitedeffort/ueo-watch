@@ -127,6 +127,12 @@ class AppFolioUnits(ListingApiBase):
   __query__ = r'.values[]? | "\(.data.bedrooms) BR\n---\n$\(.data.market_rent | floor)/month\n\(.data.marketing_title)\navailable \(if "\(.data.available_date)T00:00:00Z" | fromdate < now then "now" else .data.available_date end)\n\n"'
 
 
+class Apartments247Floorplans(ListingApiBase):
+
+  __kind__ = 'apartments247_floorplans'
+  __query__ = r'.[]? | "\(.name)\n---\n\(.bed) BR\n\(.rent)\n\n"'
+
+
 class GcsFileReporter(reporters.HtmlReporter):
   """Custom reporter that writes an HTML file to Google Cloud Storage."""
 
