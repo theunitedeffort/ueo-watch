@@ -80,6 +80,6 @@ do
 done
 
 remote_run "cd ueo-watch/$config_dir && cp cache.db cache-change-url.db.bak"
-remote_run "cd ueo-watch/$config_dir && . ../prod-env/bin/activate && ~/urlwatch/urlwatch --urls urls.yaml --config urlwatch.yaml --cache cache.db --change-location $old_url $new_url"
+remote_run "cd ueo-watch/$config_dir && . ../prod-env/bin/activate && ~/urlwatch/urlwatch --urls urls.yaml --config urlwatch.yaml --cache cache.db --hooks ../config/hooks.py --change-location $old_url $new_url"
 remote_run "cd ueo-watch && git checkout -- $config_dir/urls.yaml && git pull"
 
