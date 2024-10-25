@@ -755,20 +755,6 @@ url: http://www.laspalmashousing.com/summercrest-villas/
 ---
 url: http://www.laspalmashousing.com/the-fairways-of-san-antonio/
 ---
-user_visible_url: https://www.lenzensquare.com/floor-plans
-url: https://api.ws.realpage.com/v2/property/9067306/floorplans
-headers:
-  x-ws-authkey: 4a0927a3-9029-4618-b01a-00eb6a0c864d
-filter:
-  - realpage_floorplans
----
-user_visible_url: https://www.lenzensquare.com/floor-plans#units
-url: https://api.ws.realpage.com/v2/property/9067306/units?available=true&honordisplayorder=true&siteid=9067306&bestprice=true&leaseterm=12
-headers:
-  x-ws-authkey: 4a0927a3-9029-4618-b01a-00eb6a0c864d
-filter:
-  - realpage_units
----
 url: https://www.liveatvillagefirst.com/
 ---
 url: https://www.liveatvillagefirst.com/floorplans
