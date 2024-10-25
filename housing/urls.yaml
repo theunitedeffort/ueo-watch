@@ -909,7 +909,7 @@ filter:
   - realpage_floorplans
 ---
 user_visible_url: https://www.montevistagardens.com/floor-plans#units
-url: https://api.ws.realpage.com/v2/property/9067309/units?available=true&honordisplayorder=true&siteid=9067309&bestprice=true&leaseterm=12&dateneeded=2024-03-08
+url: https://api.ws.realpage.com/v2/property/9067309/units?available=true&honordisplayorder=true&siteid=9067309&bestprice=true&leaseterm=12
 headers:
   x-ws-authkey: 8fa1a2bc-ee00-4e50-afc9-ed57748c97ae
 filter:
