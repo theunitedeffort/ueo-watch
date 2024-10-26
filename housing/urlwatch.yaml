@@ -244,6 +244,7 @@ job_defaults:
             - '.*ivyliving\.com'
             - '.*liveatsantanaterrace\.com/'
             - '.*liveatsavoy\.com/'
+            - '.*liveatvio\.com/'
             - '.*livelandsby\.com/'
             - '.*liveprado\.com/'
             - '.*liverevela\.com/'
