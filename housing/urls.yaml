@@ -1105,7 +1105,10 @@ url: https://vitalia-bascom-apts.rentcafewebsite.com/
 ---
 url: https://virginiastreet.usamfm.com/
 ---
-url: https://virginiastreet.usamfm.com/floorplans/
+user_visible_url: https://virginiastreet.usamfm.com/floorplans/
+url: https://virginiastreet.usamfm.com/floorplans/_fp-renderable/params%3Ainstance%3D20f4d721f54a51b85d9fed8b7f6d8490%26action%3Drender%26type%3Ddetails%26resource%3Dfloorplan%26id%3D1/
+headers:
+  x-requested-with: 'XMLHttpRequest'
 ---
 url: https://virginiastreet.usamfm.com/p/affordable/
 ---
