@@ -1475,10 +1475,6 @@ url: https://prometheusapartments.com/ca/mountain-view-apartments/the-dean/
 max_tries: 3
 ---
 kind: scraper
-url: https://prometheusapartments.com/ca/palo-alto-apartments/parker-palo-alto
-max_tries: 3
----
-kind: scraper
 url: https://prometheusapartments.com/ca/santa-clara-apartments/mansion-grove
 max_tries: 3
 ---
