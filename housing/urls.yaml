@@ -1002,7 +1002,7 @@ filter:
 ---
 url: https://www.sahahomes.org/properties/arya
 ---
-user_visible_url: https://gisdata-csj.opendata.arcgis.com/datasets/CSJ::affordable-rental-housing/explore
+user_visible_url: https://gisdata-csj.opendata.arcgis.com/datasets/CSJ::affordable-rental-housing/explore?showTable=true
 url: https://geo.sanjoseca.gov/server/rest/services/OPN/OPN_OpenDataService/MapServer/457/query?where=1%3D1&outFields=FACILITYID,INTID,DEVELOPMENTNAME,WEBSITE,DEVELOPER,DEVTYPE,PROPERTYMANAGER,PHONE,TENURETYPE,PROJECTTYPE,ADDRESS,CITY,ZIP,PROJDEVSTAGE,POPULATIONTYPE,AREXP,ELIUNITS,VLIUNITS,LIUNITS,MODERATEUNITS,RESTMGRUNITS,TOTALAFFUNITS,HUDUNITS,INCLUSIONARY,BONDTAXCREDITONLY,APN,DATASOURCE,CREATIONDATE,LASTUPDATE,ARSTATUS&returnGeometry=false&outSR=&f=json
 filter:
   - jq: '.features | sort_by(.FACILITYID)'
