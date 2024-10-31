@@ -1521,6 +1521,10 @@ url: https://www.cupertino.org/home/showpublisheddocument/29137/6375295581629700
 filter:
   - pdf2text
 ---
+url: https://www.losaltosca.gov/sites/default/files/fileattachments/housing/page/40891/los_altos_bmr_program.pdf
+filter:
+  - pdf2text
+---
 url: https://www.losgatosca.gov/DocumentCenter/View/8037
 filter:
   - pdf2text
