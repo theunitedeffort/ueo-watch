@@ -531,8 +531,6 @@ url: https://www.housekeys13.com/avelleapartments
 ---
 url: https://www.housekeys13.com/elan-mountain-view-apts-od-501
 ---
-url: https://www.housekeys13.com/landsby-mountain-view
----
 url: https://www.housekeys13.com/novo
 ---
 url: https://www.housekeys13.com/revela-apartments-od-596
@@ -1436,6 +1434,10 @@ max_tries: 3
 kind: scraper
 url: https://www.equityapartments.com/san-francisco-bay/santa-clara/estancia-at-santa-clara-apartments
 compared_versions: 2
+max_tries: 3
+---
+kind: scraper
+url: https://www.equityapartments.com/san-francisco-bay/santa-clara/lorien-apartments
 max_tries: 3
 ---
 kind: scraper
