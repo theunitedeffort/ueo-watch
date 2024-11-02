@@ -49,6 +49,7 @@ job_defaults:
             a[href^="/cdn-cgi/l/email-protection"],
             ul[id^="slideshow"],
             div.slideshow-wrapper,
+            .elementor-image-carousel,
             div.orbit,
             div.ngg-slideshow,
             div.lazy-community-carousel,
@@ -84,6 +85,8 @@ job_defaults:
             .community-contact-info-office-hours,
             .ecs_property_hours,
             .office-hours-container,
+            .office-hours-wrap,
+            [id^="office-hours-content-"],
             #BrochureDateTime,
             div.latest-news,
             #awards-and-news,
@@ -220,7 +223,8 @@ job_defaults:
             .SKIP_TO_CONTENT_BTN,
             .header-skip-link,
             .skip-to-pageassist,
-            #walkscore-div
+            #walkscore-div,
+            .ysi-login-link-widget
       - selective:
           select_pattern:
             - '.*300railway\.com/'
