@@ -911,8 +911,6 @@ url: https://www.pacificautism.org/programs/residential-services/
 ---
 url: http://pacificgardens.org/
 ---
-url: https://www.parkerpaloalto.com/
----
 url: https://www.parksideterraceapthomes.com/
 ---
 url: https://ppmginc.com/properties/plum-tree-west/
@@ -1400,6 +1398,10 @@ max_tries: 3
 ---
 kind: scraper
 url: https://www.montereyfamilyvillage.com/floorplans
+max_tries: 3
+---
+kind: scraper
+url: https://www.parkerpaloalto.com/
 max_tries: 3
 ---
 kind: scraper
