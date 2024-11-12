@@ -1440,15 +1440,6 @@ url: https://www.domicilioapts.com/
 max_tries: 3
 ---
 kind: scraper
-url: https://www.equityapartments.com/san-francisco-bay/santa-clara/estancia-at-santa-clara-apartments
-compared_versions: 2
-max_tries: 3
----
-kind: scraper
-url: https://www.equityapartments.com/san-francisco-bay/santa-clara/lorien-apartments
-max_tries: 3
----
-kind: scraper
 url: https://www.liveatsantanaterrace.com/
 max_tries: 3
 ---
