@@ -1436,7 +1436,7 @@ url: https://www.aventinoapts.com/
 max_tries: 3
 ---
 kind: scraper
-url: http://www.balmoral-apts.com/
+url: https://rentbalmoral.com/
 max_tries: 3
 ---
 kind: scraper
