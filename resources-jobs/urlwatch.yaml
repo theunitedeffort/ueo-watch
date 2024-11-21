@@ -61,6 +61,22 @@ report:
     bucket: ueo-changes
     local_dir: ~/ueo-watch/eligibility/staging
     gcs_dir: eligibility
+  jira:
+    enabled: true
+    site_url: https://ueo.atlassian.net
+    project: 10001
+    issuetype: 10005
+    url_field: customfield_10034
+    reported_field: customfield_10035
+    reviewer_field: customfield_10036
+    assignees:
+      - 712020:8ad994d4-719d-45fb-b332-ac14adae6a33  # Trevor
+      - 712020:bd72b02c-4651-44ef-bd26-418c1738cd14  # Chatanya Sarin
+    reviewers:
+      - 712020:8ad994d4-719d-45fb-b332-ac14adae6a33  # Trevor
+      - 712020:bd72b02c-4651-44ef-bd26-418c1738cd14  # Chatanya Sarin
+    error_assignee: 712020:8ad994d4-719d-45fb-b332-ac14adae6a33  # Trevor
+    details_url: https://storage.googleapis.com/ueo-changes/housing/report-{datetime}.html
   html:
     diff: table
     enabled: false
