@@ -6,12 +6,6 @@ job_defaults:
   all:
     ignore_cached: true
     filter:
-      - selective:
-          select_pattern: '.*ssa\.gov'
-          invert_selection: true
-          filter: css
-          selector: body
-          exclude: 'nav, header'
       - css:
           selector: body
           exclude: >-
@@ -54,13 +48,13 @@ report:
     sendmail:
       path: /sbin/sendmail
     subject: '{count} resource database changes detected ({datetime})'
-    details_url: https://storage.googleapis.com/ueo-changes/eligibility/report-{datetime}.html
+    details_url: https://storage.googleapis.com/ueo-changes/resources/report-{datetime}.html
   gcs:
     enabled: true
     filename: report-{datetime}.html
     bucket: ueo-changes
-    local_dir: ~/ueo-watch/eligibility/staging
-    gcs_dir: eligibility
+    local_dir: ~/ueo-watch/resources/staging
+    gcs_dir: resources
   jira:
     enabled: true
     site_url: https://ueo.atlassian.net
@@ -76,7 +70,7 @@ report:
       - 712020:8ad994d4-719d-45fb-b332-ac14adae6a33  # Trevor
       - 712020:bd72b02c-4651-44ef-bd26-418c1738cd14  # Chatanya Sarin
     error_assignee: 712020:8ad994d4-719d-45fb-b332-ac14adae6a33  # Trevor
-    details_url: https://storage.googleapis.com/ueo-changes/housing/report-{datetime}.html
+    details_url: https://storage.googleapis.com/ueo-changes/resources/report-{datetime}.html
   html:
     diff: table
     enabled: false
