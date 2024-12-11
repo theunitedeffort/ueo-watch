@@ -1004,7 +1004,6 @@ user_visible_url: https://gisdata-csj.opendata.arcgis.com/datasets/CSJ::affordab
 url: https://geo.sanjoseca.gov/server/rest/services/OPN/OPN_OpenDataService/MapServer/457/query?where=1%3D1&outFields=DEVELOPMENTNAME,WEBSITE,DEVELOPER,DEVTYPE,PROPERTYMANAGER,PHONE,TENURETYPE,PROJECTTYPE,ADDRESS,CITY,ZIP,PROJDEVSTAGE,POPULATIONTYPE,ELIUNITS,VLIUNITS,LIUNITS,MODERATEUNITS,RESTMGRUNITS,TOTALAFFUNITS,HUDUNITS,INCLUSIONARY,BONDTAXCREDITONLY,APN,DATASOURCE,ARSTATUS&returnGeometry=false&outSR=&f=json
 filter:
   - jq: '.features | sort_by(.attributes.APN, .attributes.ADDRESS, .attributes.DEVELOPMENTNAME) | .[].attributes | keys[] as $k | "[\(.DEVELOPMENTNAME)] \($k): \(.[$k])"'
-  - format-json
   - if_empty: error
 ---
 url: http://www.sanjosegardens.com/
