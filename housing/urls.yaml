@@ -941,15 +941,7 @@ url: https://www.relatedcalifornia.com/our-company/properties/village-willow-gle
 ---
 url: https://www.rentalmaden.com/
 ---
-user_visible_url: https://www.rentalmaden.com/Floor-plans.aspx
-url: https://www.rentalmaden.com/CmsSiteManager/callback.aspx?act=Proxy/GetFloorPlans
-filter:
-  - realpage_floorplans
----
-user_visible_url: https://www.rentalmaden.com/Floor-plans.aspx#units
-url: https://www.rentalmaden.com/CmsSiteManager/callback.aspx?act=Proxy/GetUnits&available=true&honordisplayorder=true&siteid=6437874&bestprice=true&leaseterm=12&leaseterm=13&leaseterm=36
-filter:
-  - realpage_units
+url: https://www.rentalmaden.com/floor-plans
 ---
 url: https://www.rentthehuntington.com/
 ---
