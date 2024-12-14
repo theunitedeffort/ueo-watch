@@ -245,6 +245,7 @@ job_defaults:
             - '.*greystar\.com/properties/san-jose-ca/vio'
             - '.*irvinecompanyapartments\.com'
             - '.*ivyliving\.com'
+            - '.*laderaapts\.com/'
             - '.*liveatsantanaterrace\.com/'
             - '.*liveatsavoy\.com/'
             - '.*liveatvio\.com/'
