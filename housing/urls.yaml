@@ -1322,8 +1322,6 @@ url: https://www.irvinecompanyapartments.com/locations/northern-california/sunny
 ---
 url: https://ivyliving.com/paloalto/
 ---
-url: https://www.laderaapts.com/
----
 url: https://liveatsavoy.com/
 ---
 url: https://liveatvio.com/
@@ -1439,6 +1437,10 @@ max_tries: 3
 ---
 kind: scraper
 url: https://www.domicilioapts.com/
+max_tries: 3
+---
+kind: scraper
+url: https://www.laderaapts.com/
 max_tries: 3
 ---
 kind: scraper
