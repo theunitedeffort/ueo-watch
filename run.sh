@@ -18,7 +18,7 @@ then
 fi
 body="$(grep "ERROR: " housing/urlwatch_debug.log)" && now="$(date)" && printf "Subject: urlwatch housing error [$now]\nFrom: Changebot <changebot@theunitedeffort.org>\nTo: trevor@theunitedeffort.org\n\n$body" | /sbin/sendmail -oi -t
 # Database garbage collection
-urlwatch  --urls housing/urls.yaml --config housing/urlwatch.yaml --cache housing/cache.db --gc-cache 5
+urlwatch --hooks config/hooks.py --urls housing/urls.yaml --config housing/urlwatch.yaml --cache housing/cache.db --gc-cache 5
 timestamp=$(date +%Y%m%d_%H%M%S)
 gsutil cp housing/cache.db "gs://ueo-changes/housing/cache/cache_$timestamp.db"
 
@@ -32,7 +32,7 @@ then
 fi
 body="$(grep "ERROR: " eligibility/urlwatch_debug.log)" && now="$(date)" && printf "Subject: urlwatch eligibility error [$now]\nFrom: Changebot <changebot@theunitedeffort.org>\nTo: trevor@theunitedeffort.org\n\n$body" | /sbin/sendmail -oi -t
 # Database garbage collection
-urlwatch  --urls eligibility/urls.yaml --config eligibility/urlwatch.yaml --cache eligibility/cache.db --gc-cache 5
+urlwatch --hooks config/hooks.py --urls eligibility/urls.yaml --config eligibility/urlwatch.yaml --cache eligibility/cache.db --gc-cache 5
 timestamp=$(date +%Y%m%d_%H%M%S)
 gsutil cp eligibility/cache.db "gs://ueo-changes/eligibility/cache/cache_$timestamp.db"
 
@@ -51,7 +51,7 @@ then
 fi
 body="$(grep "ERROR: " autohouse/urlwatch_debug.log)" && now="$(date)" && printf "Subject: urlwatch autohouse error [$now]\nFrom: Changebot <changebot@theunitedeffort.org>\nTo: trevor@theunitedeffort.org\n\n$body" | /sbin/sendmail -oi -t
 # Database garbage collection
-urlwatch  --urls autohouse/urls.yaml --config autohouse/urlwatch.yaml --cache autohouse/cache.db --gc-cache 5
+urlwatch --hooks config/hooks.py --urls autohouse/urls.yaml --config autohouse/urlwatch.yaml --cache autohouse/cache.db --gc-cache 5
 timestamp=$(date +%Y%m%d_%H%M%S)
 gsutil cp autohouse/cache.db "gs://ueo-changes/autohouse/cache/cache_$timestamp.db"
 
