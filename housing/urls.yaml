@@ -1522,10 +1522,6 @@ url: https://www.cityofgilroy.org/DocumentCenter/View/15149
 filter:
   - pdf2text
 ---
-url: https://www.cupertino.org/home/showpublisheddocument/29137/637529558162970000
-filter:
-  - pdf2text
----
 url: https://www.losaltosca.gov/sites/default/files/fileattachments/housing/page/40891/los_altos_bmr_program.pdf
 filter:
   - pdf2text
