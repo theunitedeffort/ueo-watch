@@ -150,9 +150,13 @@ url: https://www.ssa.gov/pubs/EN-05-11125.pdf
 filter:
   - pdf2text
 ---
+url: https://www.ssa.gov/ssi/text-disable-ussi.htm
+---
 url: https://www.ssa.gov/ssi/text-resources-ussi.htm
 ---
 url: https://www.ssa.gov/oact/cola/incomexcluded.html
+---
+url: https://www.ssa.gov/oact/cola/sgadet.html
 ---
 url: https://www.ssa.gov/ssi/text-eligibility-ussi.htm
 ---
