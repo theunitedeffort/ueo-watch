@@ -47,10 +47,6 @@ url: https://www.231grant.org/
 ---
 url: https://www.231grant.org/faqs-full
 ---
-url: https://www.alta-torre.com/
----
-url: https://www.alta-torre.com/floorplans
----
 url: https://abode.org/opportunity-center
 ---
 url: https://abode.org/opportunity-center-waitlist-form
@@ -66,10 +62,6 @@ url: https://www.affirmedhousing.com/completed/vela/
 url: https://www.affordablehousingpipeline.com/blogs/california-affordable-housing
 ---
 url: https://www.aflcio-hit.com/project/casa-del-pueblo/
----
-url: https://www.almadenlakeapartments.com/
----
-url: https://www.almadenlakeapartments.com/floorplans
 ---
 url: https://altahousing.org
 ---
@@ -789,10 +781,6 @@ url: https://www.loganpm.com/properties/lilly-gardens/
 ---
 url: https://lmdevpartners.com/projects/el-rancho-verde/
 ---
-url: https://www.mabuhaycourt.com/
----
-url: https://www.mabuhaycourt.com/floorplans
----
 url: https://www.marketgatewayapartments.com/
 ---
 url: https://www.mercyhousing.org/california/plaza-maria/
@@ -924,10 +912,6 @@ url: https://www.montevistaseniorapts.com/
 url: https://www.montevistaseniorapts.com/floor-plans
 ---
 url: https://www.mvapartments.com/apartments/ca/mountain-view/below-market-rates
----
-url: https://www.oakcircleapartments.com/
----
-url: https://www.oakcircleapartments.com/floorplans
 ---
 url: https://www.pacificautism.org/programs/residential-services/
 ---
@@ -1089,10 +1073,6 @@ url: https://thegroveaptssanjose.com/property/the-grove/
 url: https://www.crpaffordable.com/the-meridian
 ---
 url: https://www.crpaffordable.com/the-meridian-interest
----
-url: https://www.themontevistaapartments.com/
----
-url: https://www.themontevistaapartments.com/floorplans
 ---
 url: https://thirtyone50.com/community_listings/00011-horizons-at-morgan-hill/
 ---
@@ -1399,6 +1379,22 @@ url: https://www.viverelosgatos.com/
 # Below market rate
 ---
 kind: scraper
+url: https://www.almadenlakeapartments.com/
+max_tries: 3
+---
+kind: scraper
+url: https://www.almadenlakeapartments.com/floorplans
+max_tries: 3
+---
+kind: scraper
+url: https://www.alta-torre.com/
+max_tries: 3
+---
+kind: scraper
+url: https://www.alta-torre.com/floorplans
+max_tries: 3
+---
+kind: scraper
 url: https://www.borregascourtliving.com
 max_tries: 3
 ---
@@ -1427,11 +1423,35 @@ url: https://www.thelodgeatmorganhillapartments.com/ca/morgan-hill/incomerestric
 max_tries: 3
 ---
 kind: scraper
+url: https://www.mabuhaycourt.com/
+max_tries: 3
+---
+kind: scraper
+url: https://www.mabuhaycourt.com/floorplans
+max_tries: 3
+---
+kind: scraper
 url: https://www.montereyfamilyvillage.com/
 max_tries: 3
 ---
 kind: scraper
 url: https://www.montereyfamilyvillage.com/floorplans
+max_tries: 3
+---
+kind: scraper
+url: https://www.themontevistaapartments.com/
+max_tries: 3
+---
+kind: scraper
+url: https://www.themontevistaapartments.com/floorplans
+max_tries: 3
+---
+kind: scraper
+url: https://www.oakcircleapartments.com/
+max_tries: 3
+---
+kind: scraper
+url: https://www.oakcircleapartments.com/floorplans
 max_tries: 3
 ---
 kind: scraper
