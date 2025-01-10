@@ -1455,6 +1455,14 @@ url: https://www.oakcircleapartments.com/floorplans
 max_tries: 3
 ---
 kind: scraper
+url: https://www.ohlonecourt.com/
+max_tries: 3
+---
+kind: scraper
+url: https://www.ohlonecourt.com/floorplans
+max_tries: 3
+---
+kind: scraper
 url: https://www.parkerpaloalto.com/
 max_tries: 3
 ---
