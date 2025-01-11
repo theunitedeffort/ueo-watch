@@ -290,22 +290,6 @@ url: https://communityhousingsv.org/the-meadows-senior-housing/
 ---
 url: https://communityhousingsv.org/tierra-encantada/
 ---
-url: https://www.courtyardplazaapts.com/
----
-user_visible_url: https://www.courtyardplazaapts.com/floor-plans
-url: https://api.ws.realpage.com/v2/property/9067310/floorplans
-headers:
-  x-ws-authkey: fefd0be9-70fe-411d-b71a-6c7faac4f78a
-filter:
-  - realpage_floorplans
----
-user_visible_url: https://www.courtyardplazaapts.com/floor-plans#units
-url: https://api.ws.realpage.com/v2/property/9067310/units?available=true&honordisplayorder=true&siteid=9067310&bestprice=true&leaseterm=12
-headers:
-  x-ws-authkey: fefd0be9-70fe-411d-b71a-6c7faac4f78a
-filter:
-  - realpage_units
----
 url: https://frontporch.net/affordable-assisted-living-at-lytton-gardens/
 ---
 url: https://www.danco-group.com/projects/madrone-place
