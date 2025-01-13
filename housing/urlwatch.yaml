@@ -375,7 +375,8 @@ report:
     enabled: true
     site_url: https://ueo.atlassian.net
     project: 10001
-    issuetype: 10005
+    update_type: 10005
+    error_type: 10014
     url_field: customfield_10034
     reported_field: customfield_10035
     reviewer_field: customfield_10036

@@ -253,10 +253,13 @@ class JiraReporter(reporters.ReporterBase):
     issues_per_assignee = job_pool_size / len(self.config['assignees'])
     job_pool_idx = 0
     for job_state in changes:
+      issue_type_id = self.config['update_type']
+      if job_state.verb == 'error':
+        issue_type_id = self.config['error_type']
       issue = {
         'fields': {
           'project': {'id': self.config['project']},
-          'issuetype': {'id': self.config['issuetype']},
+          'issuetype': {'id': issue_type_id},
         },
       }
       pretty_name = job_state.job.pretty_name()
