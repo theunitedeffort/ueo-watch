@@ -96,6 +96,24 @@ class SelectiveFilter(filters.FilterBase):
       return data
     return filters.FilterBase.process(target_filter_kind, target_subfilter, self.state, data)
 
+class EmailDecodeFilter(filters.FilterBase):
+  __kind__ = 'decode_email'
+
+  def filter(self, data, subfilter):
+    def decode_email(match):
+      s = match.group(1)
+      # https://gist.github.com/nullableVoidPtr/632583d4e34b4b1bf3b92f5b4f5d0c7d
+      decoded = ""
+      key = int(s[:2], 16)
+      for char in [int(s[i:i+2], 16) for i in range(2, len(s), 2)]:
+        decoded += chr(char ^ key)
+      if '@' not in decoded:
+        return match.group(0)
+      return '<a href="mailto:{decoded}">{decoded}</a>'.format(decoded=decoded)
+    pattern = re.compile(r'<a[^<>]*?href=[\'"]/cdn-cgi/l/email-protection#[^<>]*?[\'"]>.*?data-cfemail=[\'"](.*?)[\'"].*?</a>',
+      re.DOTALL)
+    return re.sub(pattern, decode_email, data)
+
 
 class ListingApiBase(filters.FilterBase):
   def filter(self, data, subfilter):

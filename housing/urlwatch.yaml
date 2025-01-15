@@ -7,6 +7,7 @@ job_defaults:
     max_tries: 2
     ignore_cached: true
     filter:
+      - decode_email
       - selective:
           select_pattern:
             - '.*housekeys\d+\.com/?$'
@@ -46,7 +47,6 @@ job_defaults:
           exclude: >-
             select,
             div.gform_wrapper,
-            a[href^="/cdn-cgi/l/email-protection"],
             ul[id^="slideshow"],
             div.slideshow-wrapper,
             .elementor-image-carousel,
