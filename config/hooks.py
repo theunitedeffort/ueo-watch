@@ -100,16 +100,24 @@ class EmailDecodeFilter(filters.FilterBase):
   __kind__ = 'decode_email'
 
   def filter(self, data, subfilter):
-    def decode_email(match):
-      s = match.group(1)
+    def decode_scraper_shield(s):
       # https://gist.github.com/nullableVoidPtr/632583d4e34b4b1bf3b92f5b4f5d0c7d
       decoded = ""
       key = int(s[:2], 16)
       for char in [int(s[i:i+2], 16) for i in range(2, len(s), 2)]:
         decoded += chr(char ^ key)
-      if '@' not in decoded:
-        return match.group(0)
-      return '<a href="mailto:{decoded}">{decoded}</a>'.format(decoded=decoded)
+      return decoded
+
+    def decode_email(match):
+      link = decode_scraper_shield(match.group(1))
+      text = link
+      # The linked address may be different than the displayed text (in rare
+      # cases)
+      match = re.search(r'data-cfemail=[\'"](.*?)[\'"]', match.group(0))
+      if match:
+        text = decode_scraper_shield(match.group(1))
+      return '<a href="mailto:{link}">{text}</a>'.format(link=link, text=text)
+
     pattern = re.compile(r'<a[^<>]*?href=[\'"]/cdn-cgi/l/email-protection#([a-z0-9]+)[\'"][^<>]*?>.*?</a>',
       re.DOTALL)
     return re.sub(pattern, decode_email, data)
