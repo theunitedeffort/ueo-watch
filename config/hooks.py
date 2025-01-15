@@ -110,7 +110,7 @@ class EmailDecodeFilter(filters.FilterBase):
       if '@' not in decoded:
         return match.group(0)
       return '<a href="mailto:{decoded}">{decoded}</a>'.format(decoded=decoded)
-    pattern = re.compile(r'<a[^<>]*?href=[\'"]/cdn-cgi/l/email-protection#[^<>]*?[\'"]>.*?data-cfemail=[\'"](.*?)[\'"].*?</a>',
+    pattern = re.compile(r'<a[^<>]*?href=[\'"]/cdn-cgi/l/email-protection#([a-z0-9]+)[\'"][^<>]*?>.*?</a>',
       re.DOTALL)
     return re.sub(pattern, decode_email, data)
 
