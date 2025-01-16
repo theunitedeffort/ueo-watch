@@ -210,6 +210,7 @@ job_defaults:
             img[alt*="logo"],
             img[alt*="LOGO"],
             img[alt*="Logo"],
+            img[src*="-logo-"],
             #myLeaseCostModal.modal,
             #myContactModal.modal,
             #PreQualify.modal,
