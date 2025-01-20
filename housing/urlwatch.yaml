@@ -247,6 +247,7 @@ job_defaults:
             - '.*irvinecompanyapartments\.com'
             - '.*ivyliving\.com'
             - '.*laderaapts\.com/'
+            - '.*liveatdomus\.com/'
             - '.*liveatsantanaterrace\.com/'
             - '.*liveatsavoy\.com/'
             - '.*liveatvio\.com/'
