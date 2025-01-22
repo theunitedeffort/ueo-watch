@@ -757,8 +757,6 @@ url: https://jscosccha.com/property/the-willows/
 ---
 url: https://jscosccha.com/property/villa-hermosa/
 ---
-url: http://kdfcommunities.com/
----
 url: https://www.lakevisioncap.com/museum-park/
 ---
 url: https://www.lakevisioncap.com/museum-park/below-market-rate-bmr-affordable-housing/
@@ -779,7 +777,199 @@ url: https://liveatagrihood.com/
 ---
 url: https://liveatagrihood.com/income-limits-unit-amis-rent-limits/
 ---
+url: https://www.liveatcherrycreekapts.com/
+---
+url: https://www.liveatcherrycreekapts.com/apartments/ca/san-jose/income-restrictions
+---
+user_visible_url: https://www.liveatcherrycreekapts.com/apartments/ca/san-jose/floor-plans#/#units
+url: https://inventory.g5marketingcloud.com/graphql
+filter:
+  - graphql_units
+headers:
+  Content-type: application/json
+data: '{
+  "operationName": "apt",
+  "variables": {
+    "locationUrn": "g5-cl-1n733oag2z-kdf-communities-san-jose-ca"
+  },
+  "query": "query apt($locationUrn: String!) {\n apartmentComplex(locationUrn: $locationUrn) {\n apartments {\n prices {\n formattedPrice\n }\n name\n floorplan {\n beds\n name\n }\n }\n }\n}\n"
+}'
+---
+user_visible_url: https://www.liveatcherrycreekapts.com/apartments/ca/san-jose/floor-plans#/
+url: https://inventory.g5marketingcloud.com/graphql
+filter:
+  - graphql_floorplans
+headers:
+  Content-type: application/json
+data: '{
+  "operationName": "apt",
+  "variables": {
+    "locationUrn": "g5-cl-1n733oag2z-kdf-communities-san-jose-ca"
+  },
+  "query": "query apt($locationUrn: String!) {\n apartmentComplex(locationUrn: $locationUrn) {\n floorplans {\n beds\n endingRate\n name\n rateDisplay\n startingRate\n totalAvailableUnits\n floorplanCta {\n actionType\n url\n name\n }\n }\n }\n}\n"
+}'
+---
+url: https://www.liveatdavidavenueapts.com/
+---
+url: https://www.liveatdavidavenueapts.com/apartments/ca/san-jose/income-restrictions
+---
+user_visible_url: https://www.liveatdavidavenueapts.com/apartments/ca/san-jose/floor-plans#/#units
+url: https://inventory.g5marketingcloud.com/graphql
+filter:
+  - graphql_units
+headers:
+  Content-type: application/json
+data: '{
+  "operationName": "apt",
+  "variables": {
+    "locationUrn": "g5-cl-1n733ol5vy-kdf-communities-san-jose-ca"
+  },
+  "query": "query apt($locationUrn: String!) {\n apartmentComplex(locationUrn: $locationUrn) {\n apartments {\n prices {\n formattedPrice\n }\n name\n floorplan {\n beds\n name\n }\n }\n }\n}\n"
+}'
+---
+user_visible_url: https://www.liveatdavidavenueapts.com/apartments/ca/san-jose/floor-plans#/
+url: https://inventory.g5marketingcloud.com/graphql
+filter:
+  - graphql_floorplans
+headers:
+  Content-type: application/json
+data: '{
+  "operationName": "apt",
+  "variables": {
+    "locationUrn": "g5-cl-1n733ol5vy-kdf-communities-san-jose-ca"
+  },
+  "query": "query apt($locationUrn: String!) {\n apartmentComplex(locationUrn: $locationUrn) {\n floorplans {\n beds\n endingRate\n name\n rateDisplay\n startingRate\n totalAvailableUnits\n floorplanCta {\n actionType\n url\n name\n }\n }\n }\n}\n"
+}'
+---
+url: https://www.liveatfoxdale.com/
+---
+url: https://www.liveatfoxdale.com/apartments/ca/san-jose/income-restrictions
+---
+user_visible_url: https://www.liveatfoxdale.com/apartments/ca/san-jose/floor-plans#/#units
+url: https://inventory.g5marketingcloud.com/graphql
+filter:
+  - graphql_units
+headers:
+  Content-type: application/json
+data: '{
+  "operationName": "apt",
+  "variables": {
+    "locationUrn": "g5-cl-1nymx9h8jx-kdf-communities-san-jose-ca"
+  },
+  "query": "query apt($locationUrn: String!) {\n apartmentComplex(locationUrn: $locationUrn) {\n apartments {\n prices {\n formattedPrice\n }\n name\n floorplan {\n beds\n name\n }\n }\n }\n}\n"
+}'
+---
+user_visible_url: https://www.liveatfoxdale.com/apartments/ca/san-jose/floor-plans#/
+url: https://inventory.g5marketingcloud.com/graphql
+filter:
+  - graphql_floorplans
+headers:
+  Content-type: application/json
+data: '{
+  "operationName": "apt",
+  "variables": {
+    "locationUrn": "g5-cl-1nymx9h8jx-kdf-communities-san-jose-ca"
+  },
+  "query": "query apt($locationUrn: String!) {\n apartmentComplex(locationUrn: $locationUrn) {\n floorplans {\n beds\n endingRate\n name\n rateDisplay\n startingRate\n totalAvailableUnits\n floorplanCta {\n actionType\n url\n name\n }\n }\n }\n}\n"
+}'
+---
+url: https://www.liveatlexingtonapts.com/
+---
+url: https://www.liveatlexingtonapts.com/apartments/ca/san-jose/income-restrictions
+---
+user_visible_url: https://www.liveatlexingtonapts.com/apartments/ca/san-jose/floor-plans#/#units
+url: https://inventory.g5marketingcloud.com/graphql
+filter:
+  - graphql_units
+headers:
+  Content-type: application/json
+data: '{
+  "operationName": "apt",
+  "variables": {
+    "locationUrn": "g5-cl-1n733q96e4-kdf-communities-san-jose-ca"
+  },
+  "query": "query apt($locationUrn: String!) {\n apartmentComplex(locationUrn: $locationUrn) {\n apartments {\n prices {\n formattedPrice\n }\n name\n floorplan {\n beds\n name\n }\n }\n }\n}\n"
+}'
+---
+user_visible_url: https://www.liveatlexingtonapts.com/apartments/ca/san-jose/floor-plans#/
+url: https://inventory.g5marketingcloud.com/graphql
+filter:
+  - graphql_floorplans
+headers:
+  Content-type: application/json
+data: '{
+  "operationName": "apt",
+  "variables": {
+    "locationUrn": "g5-cl-1n733q96e4-kdf-communities-san-jose-ca"
+  },
+  "query": "query apt($locationUrn: String!) {\n apartmentComplex(locationUrn: $locationUrn) {\n floorplans {\n beds\n endingRate\n name\n rateDisplay\n startingRate\n totalAvailableUnits\n floorplanCta {\n actionType\n url\n name\n }\n }\n }\n}\n"
+}'
+---
 url: https://www.liveatplumtreewest.com/
+---
+url: https://www.liveatregencysquareapts.com/
+---
+url: https://www.liveatregencysquareapts.com/apartments/ca/san-jose/income-restrictions
+---
+user_visible_url: https://www.liveatregencysquareapts.com/apartments/ca/san-jose/floor-plans#/#units
+url: https://inventory.g5marketingcloud.com/graphql
+filter:
+  - graphql_units
+headers:
+  Content-type: application/json
+data: '{
+  "operationName": "apt",
+  "variables": {
+    "locationUrn": "g5-cl-1n733q0lqy-kdf-communities-san-jose-ca"
+  },
+  "query": "query apt($locationUrn: String!) {\n apartmentComplex(locationUrn: $locationUrn) {\n apartments {\n prices {\n formattedPrice\n }\n name\n floorplan {\n beds\n name\n }\n }\n }\n}\n"
+}'
+---
+user_visible_url: https://www.liveatregencysquareapts.com/apartments/ca/san-jose/floor-plans#/
+url: https://inventory.g5marketingcloud.com/graphql
+filter:
+  - graphql_floorplans
+headers:
+  Content-type: application/json
+data: '{
+  "operationName": "apt",
+  "variables": {
+    "locationUrn": "g5-cl-1n733q0lqy-kdf-communities-san-jose-ca"
+  },
+  "query": "query apt($locationUrn: String!) {\n apartmentComplex(locationUrn: $locationUrn) {\n floorplans {\n beds\n endingRate\n name\n rateDisplay\n startingRate\n totalAvailableUnits\n floorplanCta {\n actionType\n url\n name\n }\n }\n }\n}\n"
+}'
+---
+url: https://www.liveatvalleypalmsapts.com/
+---
+url: https://www.liveatvalleypalmsapts.com/apartments/ca/san-jose/income-restrictions
+---
+user_visible_url: https://www.liveatvalleypalmsapts.com/apartments/ca/san-jose/floor-plans#/#units
+url: https://inventory.g5marketingcloud.com/graphql
+filter:
+  - graphql_units
+headers:
+  Content-type: application/json
+data: '{
+  "operationName": "apt",
+  "variables": {
+    "locationUrn": "g5-cl-1o1r49hkhu-kdf-communities-san-jose-ca"
+  },
+  "query": "query apt($locationUrn: String!) {\n apartmentComplex(locationUrn: $locationUrn) {\n apartments {\n prices {\n formattedPrice\n }\n name\n floorplan {\n beds\n name\n }\n }\n }\n}\n"
+}'
+---
+user_visible_url: https://www.liveatvalleypalmsapts.com/apartments/ca/san-jose/floor-plans#/
+url: https://inventory.g5marketingcloud.com/graphql
+filter:
+  - graphql_floorplans
+headers:
+  Content-type: application/json
+data: '{
+  "operationName": "apt",
+  "variables": {
+    "locationUrn": "g5-cl-1o1r49hkhu-kdf-communities-san-jose-ca"
+  },
+  "query": "query apt($locationUrn: String!) {\n apartmentComplex(locationUrn: $locationUrn) {\n floorplans {\n beds\n endingRate\n name\n rateDisplay\n startingRate\n totalAvailableUnits\n floorplanCta {\n actionType\n url\n name\n }\n }\n }\n}\n"
+}'
 ---
 url: https://www.liveatvillageatsantateresa.com/
 ---
@@ -1109,8 +1299,33 @@ url: https://www.villadeguadalupeapts.com/
 ---
 url: https://www.villageatmadrone.com/
 ---
-url: https://www.villageatmadrone.com/apartments/ca/morgan-hill/floor-plans#/
-
+user_visible_url: https://www.villageatmadrone.com/apartments/ca/morgan-hill/floor-plans#/#units
+url: https://inventory.g5marketingcloud.com/graphql
+filter:
+  - graphql_units
+headers:
+  Content-type: application/json
+data: '{
+  "operationName": "apt",
+  "variables": {
+    "locationUrn": "g5-cl-1oua8m1fec-fpi-management-morgan-hill-ca"
+  },
+  "query": "query apt($locationUrn: String!) {\n apartmentComplex(locationUrn: $locationUrn) {\n apartments {\n prices {\n formattedPrice\n }\n name\n floorplan {\n beds\n name\n }\n }\n }\n}\n"
+}'
+---
+user_visible_url: https://www.villageatmadrone.com/apartments/ca/morgan-hill/floor-plans#/
+url: https://inventory.g5marketingcloud.com/graphql
+filter:
+  - graphql_floorplans
+headers:
+  Content-type: application/json
+data: '{
+  "operationName": "apt",
+  "variables": {
+    "locationUrn": "g5-cl-1oua8m1fec-fpi-management-morgan-hill-ca"
+  },
+  "query": "query apt($locationUrn: String!) {\n apartmentComplex(locationUrn: $locationUrn) {\n floorplans {\n beds\n endingRate\n name\n rateDisplay\n startingRate\n totalAvailableUnits\n floorplanCta {\n actionType\n url\n name\n }\n }\n }\n}\n"
+}'
 ---
 url: https://vintagetoweravanath.com/
 ---

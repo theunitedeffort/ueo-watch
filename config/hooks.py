@@ -159,6 +159,18 @@ class Apartments247Floorplans(ListingApiBase):
   __query__ = r'.[]? | "\(.name)\n---\n\(.bed) BR\n\(.rent)\n\n"'
 
 
+class GraphqlUnits(ListingApiBase):
+
+  __kind__ = 'graphql_units'
+  __query__ = r'.data.apartmentComplex.apartments[] | "\(.floorplan.name)\n---\n\(.floorplan.beds) BR\n\(.prices[].formattedPrice)\n\n"'
+
+
+class GraphqlFloorplans(ListingApiBase):
+
+  __kind__ = 'graphql_floorplans'
+  __query__ = r'.data.apartmentComplex.floorplans[] | "\(.name)\n---\n\(.beds) BR\n\(.rateDisplay // "")\n\(if .totalAvailableUnits > 0 then "\(.totalAvailableUnits) available units\n" else "" end)\(.floorplanCta.name // "")\n\n"'
+
+
 class GcsFileReporter(reporters.HtmlReporter):
   """Custom reporter that writes an HTML file to Google Cloud Storage."""
 
