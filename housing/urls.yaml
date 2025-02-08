@@ -138,6 +138,10 @@ url: https://bacxllc.com/properties/569-lassen-st/
 ---
 url: https://www.billwilsoncenter.org/services/peacock_commons.html
 ---
+url: https://www.blieu.com/properties/crossings-at-morgan-hill
+---
+url: https://www.blieu.com/properties/horizons-at-morgan-hill
+---
 url: https://bridgehousing.com/find-housing/apartment-search/?filter=true&county=Santa%20Clara
 ---
 url: https://bridgehousing.com/properties/almaden-lake/
@@ -305,6 +309,10 @@ headers:
   x-ws-authkey: fefd0be9-70fe-411d-b71a-6c7faac4f78a
 filter:
   - realpage_units
+---
+url: https://www.crossingsonmonterey.com/
+---
+url: https://www.crossingsonmonterey.com/floorplans
 ---
 url: https://frontporch.net/affordable-assisted-living-at-lytton-gardens/
 ---
@@ -1254,6 +1262,12 @@ url: https://tamienstationdevelopment.com/
 ---
 url: https://www.termanapts.com/
 ---
+url: https://terracinamorganhill.usamfm.com/
+---
+url: https://terracinamorganhill.usamfm.com/applynow
+---
+url: https://terracinamorganhill.usamfm.com/floorplans
+---
 url: http://townsquaregilroy.com/index.htm
 ---
 url: https://the-mayfield.rentcafewebsite.com/
@@ -1556,6 +1570,8 @@ ssl_no_verify: true
 ---
 url: https://www.essexapartmenthomes.com/apartments/mountain-view/arlo-mountain-view
 ssl_no_verify: true
+---
+url: https://www.greystar.com/properties/morgan-hill-ca/vida-at-morgan-hill
 ---
 url: https://www.greystar.com/properties/san-jose-ca/vio
 ---
