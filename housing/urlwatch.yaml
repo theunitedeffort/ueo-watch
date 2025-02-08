@@ -243,7 +243,7 @@ job_defaults:
             - '.*encasaliving\.com/'
             - '.*essexapartmenthomes\.com/apartments'
             - '.*equityapartments\.com/san-francisco-bay/'
-            - '.*greystar\.com/properties/san-jose-ca/vio'
+            - '.*greystar\.com/properties/'
             - '.*irvinecompanyapartments\.com'
             - '.*ivyliving\.com'
             - '.*laderaapts\.com/'
