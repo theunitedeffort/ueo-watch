@@ -310,10 +310,6 @@ headers:
 filter:
   - realpage_units
 ---
-url: https://www.crossingsonmonterey.com/
----
-url: https://www.crossingsonmonterey.com/floorplans
----
 url: https://frontporch.net/affordable-assisted-living-at-lytton-gardens/
 ---
 url: https://www.danco-group.com/projects/madrone-place
@@ -1262,12 +1258,6 @@ url: https://tamienstationdevelopment.com/
 ---
 url: https://www.termanapts.com/
 ---
-url: https://terracinamorganhill.usamfm.com/
----
-url: https://terracinamorganhill.usamfm.com/applynow
----
-url: https://terracinamorganhill.usamfm.com/floorplans
----
 url: http://townsquaregilroy.com/index.htm
 ---
 url: https://the-mayfield.rentcafewebsite.com/
@@ -1660,6 +1650,14 @@ url: https://www.canoasterraceliving.com/floorplans
 max_tries: 4
 ---
 kind: scraper
+url: https://www.crossingsonmonterey.com/
+max_tries: 4
+---
+kind: scraper
+url: https://www.crossingsonmonterey.com/floorplans
+max_tries: 4
+---
+kind: scraper
 url: https://www.thelodgeatmorganhillapartments.com/
 max_tries: 4
 ---
@@ -1721,6 +1719,18 @@ max_tries: 4
 ---
 kind: scraper
 url: https://www.southwood-apartments.com/floorplans
+max_tries: 4
+---
+kind: scraper
+url: https://terracinamorganhill.usamfm.com/
+max_tries: 4
+---
+kind: scraper
+url: https://terracinamorganhill.usamfm.com/applynow
+max_tries: 4
+---
+kind: scraper
+url: https://terracinamorganhill.usamfm.com/floorplans
 max_tries: 4
 ---
 kind: scraper
