@@ -96,8 +96,6 @@ elif src_file['mimeType'] in [MIME_XLS, MIME_XLSX]:
   df = read_excel(get_file_bytes(service, src_file))
 
 # Base URL for the housing data
-# Include client ID in case there are two clients with exactly the same search
-# params--outputted URLs must be unique for urlwatch.
 base_url = 'https://www.theunitedeffort.org/data/housing/affordable-housing/filter'
 
 # Function to create URLs based on client data
@@ -120,38 +118,40 @@ def generate_jobs(df):
       continue
     processed_ids.append(client_id)
 
+    # Include client ID in case there are two clients with exactly the same search
+    # params--outputted URLs must be unique for urlwatch.
     url = f'{base_url}#{client_id}'
     params = {}
 
     params['availability'] = ['Available', 'Waitlist Open']
 
+    # Apricot separates selections with | in this field.
     params['city'] = row['Location Preferences'].split('|')
 
-    logger.debug(f"Raw rent string: {row['Monthly Rent Budget']}")
-    # Blow away dates in case the year is interpreted as a rent value
-    rent_max = re.sub(r'(\d{4}|\d{1,2})[/\-]\d{1,2}[/\-](\d{4}|\d{1,2})',
-      '[date]', row['Monthly Rent Budget'])
-    # Numbers may be written as e.g. "1K" so replace that with "1,000"
-    rent_max = re.sub(r'(\d)K', r'\1,000', rent_max)
-    # Get 3 or 4 digit numbers and strip out any comma separators
-    rent_matches = [int(m.replace(',', '')) for m in re.findall(r'\d?,?\d{3,4}', rent_max)]
-    if rent_matches:
-      params['rentMax'] = max(rent_matches)
-      logger.debug(f"parsed max rent: {params['rentMax']}")
-    else:
-      logger.debug('no max rent found')
+    # This field is limited to numerical values by the Apricot form, but
+    # the field may still be empty.
+    rent_max = 0
+    try:
+      rent_max = int(row['Maximum Monthly Rent'])
+    except ValueError:
+      pass
+    if (rent_max > 0):
+      params['rentMax'] = rent_max
     params['includeUnknownRent'] = 'on'
 
-    # Since we only record age in our housing preferences, include all
-    # other populations by default and only add in Senior or Youth when
-    # relevant.  If we start recording disability or veteran status in
-    # housing preferences, then those can instead be conditionally added.
-    params['populationsServed'] = [
-      'General Population',
-      'Developmentally Disabled',
-      'Physically Disabled',
-      'Veterans'
-    ]
+    # This field is limited to numerical values by the Apricot form, but
+    # the field may still be empty.
+    monthly_income = 0
+    try:
+      monthly_income = int(row['Total Gross Monthly Income'])
+    except ValueError:
+      pass
+    if (monthly_income > 0):
+      params['income'] = monthly_income * 12
+    params['includeUnknownIncome'] = 'on'
+
+    params['populationsServed'] = ['General Population']
+    # Use the age value to conditionally add Seniors or Youth
     if row['Age']:
       age = None
       try:
@@ -162,6 +162,16 @@ def generate_jobs(df):
         params['populationsServed'].append('Seniors')
       if age and age <= 18:
         params['populationsServed'].append('Youth')
+
+    # Apricot exports "Yes", "No", or blank
+    is_veteran = row['Are you a veteran?'].lower()
+    if is_veteran == 'yes':
+      params['populationsServed'].append('Veterans')
+
+    # Apricot exports "Yes", "No", or blank
+    is_physically_disabled = row['Do you have a physical disability?'].lower()
+    if is_physically_disabled == 'yes':
+      params['populationsServed'].append('Physically Disabled')
 
     logger.info(f'final query parameters: {params}')
     req = requests.PreparedRequest()
