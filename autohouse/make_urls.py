@@ -128,6 +128,9 @@ def generate_jobs(df):
     # Apricot separates selections with | in this field.
     params['city'] = row['Location Preferences'].split('|')
 
+    # Apricot separates selections with | in this field.
+    params['unitType'] = row['Apartment Type'].split('|')
+
     # This field is limited to numerical values by the Apricot form, but
     # the field may still be empty.
     rent_max = 0
@@ -150,6 +153,9 @@ def generate_jobs(df):
       params['income'] = monthly_income * 12
     params['includeUnknownIncome'] = 'on'
 
+    # TODO: Consider only setting this parameter at all if we have
+    # information about their population.  Some clients have blank ages,
+    # veteran status, and disability status.
     params['populationsServed'] = ['General Population']
     # Use the age value to conditionally add Seniors or Youth
     if row['Age']:
