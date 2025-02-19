@@ -1499,6 +1499,8 @@ navigate: https://housing.sanjoseca.gov/listing/3af7db77-25d2-424c-88db-fb322f92
 ---
 navigate: https://housing.sanjoseca.gov/listing/9a621ae9-3fbe-4a12-beab-297756d3bf14/creekview_inn_965_lundy_ave_san_jose_ca
 ---
+navigate: https://housing.sanjoseca.gov/listing/c49d2a94-a99c-4a71-86d9-67f86c19328c/betty_ann_gardens_945_lundy_avenue_san_jose_ca
+---
 navigate: https://housing.sanjoseca.gov/listings
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/66e34d6f-31f8-4aa5-858c-49865674e9ea/the_acacia_at_231_grant_231_grant_avenue_palo_alto_ca
@@ -1778,6 +1780,10 @@ max_tries: 4
 ---
 kind: scraper
 url: https://www.morganranchapartmenthomes.com/
+max_tries: 4
+---
+kind: scraper
+url: https://www.mresidencesmv.com/
 max_tries: 4
 ---
 kind: scraper

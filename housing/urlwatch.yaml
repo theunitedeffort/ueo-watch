@@ -261,6 +261,7 @@ job_defaults:
             - '.*montereygrove\.com/en/apartments/contactus.html'
             - '.*morganranchapartmenthomes\.com/'
             - '.*murphystationapts\.com'
+            - '.*mresidencesmv\.com/'
             - '.*mvapartments\.com/$'
             - '.*novomountainview\.com/'
             - '.*prometheusapartments\.com/'
