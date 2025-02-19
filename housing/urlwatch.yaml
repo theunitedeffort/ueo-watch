@@ -55,6 +55,7 @@ job_defaults:
             div.lazy-community-carousel,
             .gallery__slider,
             #gallery,
+            .dmPhotoGallery,
             .hubdb-events,
             .sponsors_section,
             .sponsors-block,
