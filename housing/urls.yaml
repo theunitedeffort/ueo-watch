@@ -128,10 +128,6 @@ url: https://www.amcapartments.com/California/SanJose/VilladeGuadalupe/Apartment
 url: http://www.ascentaffordable.com/
 ssl_no_verify: true
 ---
-url: https://www.aspenfamilyapts.com/
----
-url: https://www.aspenfamilyapts.com/floorplans
----
 url: https://www.avaloncommunities.com/affordable-housing/community-list/
 ---
 url: https://www.avaloncommunities.com/california/campbell-apartments/avalon-campbell-affordable-housing/
@@ -482,12 +478,6 @@ headers:
 filter:
   - realpage_units
 ---
-url: https://www.enclaveaffordable.com/
----
-url: https://www.enclaveaffordable.com/floorplans
----
-url: https://www.enclaveaffordable.com/eligibility
----
 url: https://epath.org/ventures/villas-at-4th-street/
 ---
 url: https://www.essexapartmenthomes.com/affordable-housing-programs
@@ -534,8 +524,6 @@ url: https://www.firsthousing.org/sss
 url: https://www.firsthousing.org/troy-apartments
 ---
 url: https://fujitowersinc.com/
----
-url: https://fujitowersinc.com/application/
 ---
 url: https://fujitowersinc.com/property-details/
 ---
@@ -1688,6 +1676,14 @@ url: https://www.alta-torre.com/floorplans
 max_tries: 4
 ---
 kind: scraper
+url: https://www.aspenfamilyapts.com/
+max_tries: 4
+---
+kind: scraper
+url: https://www.aspenfamilyapts.com/floorplans
+max_tries: 4
+---
+kind: scraper
 url: https://www.borregascourtliving.com
 max_tries: 4
 ---
@@ -1709,6 +1705,18 @@ max_tries: 4
 ---
 kind: scraper
 url: https://www.crossingsonmonterey.com/floorplans
+max_tries: 4
+---
+kind: scraper
+url: https://www.enclaveaffordable.com/
+max_tries: 4
+---
+kind: scraper
+url: https://www.enclaveaffordable.com/floorplans
+max_tries: 4
+---
+kind: scraper
+url: https://www.enclaveaffordable.com/eligibility
 max_tries: 4
 ---
 kind: scraper
