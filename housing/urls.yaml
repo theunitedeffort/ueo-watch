@@ -121,6 +121,8 @@ url: https://altahousing.org/properties/wilton-court/
 ---
 url: https://altahousing.org/services/pipeline/
 ---
+url: https://www.amcapartments.com/California/SanJose/Stonegate/Apartments/2593
+---
 url: https://www.amcapartments.com/California/SanJose/VilladeGuadalupe/Apartments/494
 ---
 url: http://www.ascentaffordable.com/
@@ -520,6 +522,12 @@ url: https://www.firsthousing.org/paula-apartments
 url: https://www.firsthousing.org/sss
 ---
 url: https://www.firsthousing.org/troy-apartments
+---
+url: https://fujitowersinc.com/
+---
+url: https://fujitowersinc.com/application/
+---
+url: https://fujitowersinc.com/property-details/
 ---
 url: https://griffisresidential.com/property/south-bay/affordable-housing/
 ---
@@ -1155,6 +1163,10 @@ url: https://www.rentalmaden.com/
 ---
 url: https://www.rentalmaden.com/floor-plans
 ---
+url: https://www.rentatstonegateapts.com/
+---
+url: https://www.rentatstonegateapts.com/floor-plans
+---
 url: https://www.rentthehuntington.com/
 ---
 url: https://www.rentthehuntington.com/floorplans
@@ -1192,6 +1204,36 @@ url: https://www.roemcorp.com/project/rose-gardens/
 url: https://www.roemcorp.com/project/summer-breeze/
 ---
 url: http://www.roemcorp.com/projects/shiraz-senior-housing/
+---
+url: https://www.rooseveltparkapartments.com/
+---
+user_visible_url: https://www.rooseveltparkapartments.com/apartments/ca/san-jose/floor-plans#units
+url: https://inventory.g5marketingcloud.com/graphql
+filter:
+  - graphql_units
+headers:
+  Content-type: application/json
+data: '{
+  "operationName": "apt",
+  "variables": {
+    "locationUrn": "g5-cl-1ol9wrsoqk-fpi-management-san-jose-ca"
+  },
+  "query": "query apt($locationUrn: String!) {\n apartmentComplex(locationUrn: $locationUrn) {\n apartments {\n prices {\n formattedPrice\n }\n name\n floorplan {\n beds\n name\n }\n }\n }\n}\n"
+}'
+---
+user_visible_url: https://www.rooseveltparkapartments.com/apartments/ca/san-jose/floor-plans
+url: https://inventory.g5marketingcloud.com/graphql
+filter:
+  - graphql_floorplans
+headers:
+  Content-type: application/json
+data: '{
+  "operationName": "apt",
+  "variables": {
+    "locationUrn": "g5-cl-1ol9wrsoqk-fpi-management-san-jose-ca"
+  },
+  "query": "query apt($locationUrn: String!) {\n apartmentComplex(locationUrn: $locationUrn) {\n floorplans {\n beds\n endingRate\n name\n rateDisplay\n startingRate\n totalAvailableUnits\n floorplanCta {\n actionType\n url\n name\n }\n }\n }\n}\n"
+}'
 ---
 url: https://www.royaloakvillage.com/
 ---
