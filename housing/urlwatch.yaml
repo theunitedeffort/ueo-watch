@@ -245,6 +245,7 @@ job_defaults:
             - '.*essexapartmenthomes\.com/apartments'
             - '.*equityapartments\.com/san-francisco-bay/'
             - '.*greystar\.com/properties/'
+            - '.*hollandresidential\.com'
             - '.*irvinecompanyapartments\.com'
             - '.*ivyliving\.com'
             - '.*laderaapts\.com/'
