@@ -851,38 +851,6 @@ data: '{
   "query": "query apt($locationUrn: String!) {\n apartmentComplex(locationUrn: $locationUrn) {\n floorplans {\n beds\n endingRate\n name\n rateDisplay\n startingRate\n totalAvailableUnits\n floorplanCta {\n actionType\n url\n name\n }\n }\n }\n}\n"
 }'
 ---
-url: https://www.liveatfoxdale.com/
----
-url: https://www.liveatfoxdale.com/apartments/ca/san-jose/income-restrictions
----
-user_visible_url: https://www.liveatfoxdale.com/apartments/ca/san-jose/floor-plans#/#units
-url: https://inventory.g5marketingcloud.com/graphql
-filter:
-  - graphql_units
-headers:
-  Content-type: application/json
-data: '{
-  "operationName": "apt",
-  "variables": {
-    "locationUrn": "g5-cl-1nymx9h8jx-kdf-communities-san-jose-ca"
-  },
-  "query": "query apt($locationUrn: String!) {\n apartmentComplex(locationUrn: $locationUrn) {\n apartments {\n prices {\n formattedPrice\n }\n name\n floorplan {\n beds\n name\n }\n }\n }\n}\n"
-}'
----
-user_visible_url: https://www.liveatfoxdale.com/apartments/ca/san-jose/floor-plans#/
-url: https://inventory.g5marketingcloud.com/graphql
-filter:
-  - graphql_floorplans
-headers:
-  Content-type: application/json
-data: '{
-  "operationName": "apt",
-  "variables": {
-    "locationUrn": "g5-cl-1nymx9h8jx-kdf-communities-san-jose-ca"
-  },
-  "query": "query apt($locationUrn: String!) {\n apartmentComplex(locationUrn: $locationUrn) {\n floorplans {\n beds\n endingRate\n name\n rateDisplay\n startingRate\n totalAvailableUnits\n floorplanCta {\n actionType\n url\n name\n }\n }\n }\n}\n"
-}'
----
 url: https://www.liveatlexingtonapts.com/
 ---
 url: https://www.liveatlexingtonapts.com/apartments/ca/san-jose/income-restrictions
@@ -1731,6 +1699,14 @@ max_tries: 4
 ---
 kind: scraper
 url: https://www.thelodgeatmorganhillapartments.com/ca/morgan-hill/incomerestrictions
+max_tries: 4
+---
+kind: scraper
+url: https://www.liveatfoxdale.com/
+max_tries: 4
+---
+kind: scraper
+url: https://www.liveatfoxdale.com/floorplans
 max_tries: 4
 ---
 kind: scraper
