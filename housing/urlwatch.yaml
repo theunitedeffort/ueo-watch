@@ -217,6 +217,7 @@ job_defaults:
             #PreQualify.modal,
             .skip-links,
             .skip-link,
+            .pojo-skip-link,
             .skip-to-content,
             .uw-sl,
             .site-header__skip-link,
@@ -341,6 +342,7 @@ job_defaults:
       - re.sub: '©.*?(\d{4}-)?20\d{2}'
       - re.sub: 'Copyright 20\d{2}'
       - re.sub: 'time=\d+'
+      - re.sub: '&MoveInDate=\d{1,2}/\d{1,2}/\d{4}'
       - if_empty: error
   browser:
     wait_until: networkidle2
