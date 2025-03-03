@@ -67,14 +67,6 @@ url: https://www.affordablehousingpipeline.com/blogs/california-affordable-housi
 ---
 url: https://www.aflcio-hit.com/project/casa-del-pueblo/
 ---
-url: https://www.alexanderstationliving.com/
----
-url: https://www.alexanderstationliving.com/applynow
----
-url: https://www.alexanderstationliving.com/floorplans
----
-url: https://www.alexanderstationliving.com/incomelimits
----
 url: https://altahousing.org
 ---
 url: https://altahousing.org/find-housing/
@@ -542,10 +534,6 @@ url: https://fujitowersinc.com/
 url: https://fujitowersinc.com/property-details/
 ---
 url: https://griffisresidential.com/property/south-bay/affordable-housing/
----
-url: https://www.harvestparkliving.com/
----
-url: https://www.harvestparkliving.com/floorplans
 ---
 url: https://www.hohbach-lewin.com/park-plaza/
 ---
@@ -1338,12 +1326,6 @@ url: https://www.unitycare.org/housing/
 ---
 url: https://usamfm.com/communities/mainline-north/
 ---
-url: https://mayfaircourt.usamfm.com/
----
-url: https://mayfaircourt.usamfm.com/applicant
----
-url: https://mayfaircourt.usamfm.com/floorplans
----
 url: https://valleyvillageretirement.com/
 ---
 user_visible_url: https://valleyvillageretirement.com/availability
@@ -1678,6 +1660,22 @@ url: https://www.viverelosgatos.com/
 # Below market rate
 ---
 kind: scraper
+url: https://www.alexanderstationliving.com/
+max_tries: 4
+---
+kind: scraper
+url: https://www.alexanderstationliving.com/applynow
+max_tries: 4
+---
+kind: scraper
+url: https://www.alexanderstationliving.com/floorplans
+max_tries: 4
+---
+kind: scraper
+url: https://www.alexanderstationliving.com/incomelimits
+max_tries: 4
+---
+kind: scraper
 url: https://www.almadenlakeapartments.com/
 max_tries: 4
 ---
@@ -1735,6 +1733,14 @@ max_tries: 4
 ---
 kind: scraper
 url: https://www.enclaveaffordable.com/eligibility
+max_tries: 4
+---
+kind: scraper
+url: https://www.harvestparkliving.com/
+max_tries: 4
+---
+kind: scraper
+url: https://www.harvestparkliving.com/floorplans
 max_tries: 4
 ---
 kind: scraper
@@ -1847,6 +1853,18 @@ max_tries: 4
 ---
 kind: scraper
 url: https://www.turnleaf-apts.com/ca/san-jose/incomerestrictions
+max_tries: 4
+---
+kind: scraper
+url: https://mayfaircourt.usamfm.com/
+max_tries: 4
+---
+kind: scraper
+url: https://mayfaircourt.usamfm.com/applicant
+max_tries: 4
+---
+kind: scraper
+url: https://mayfaircourt.usamfm.com/floorplans
 max_tries: 4
 ---
 # Market rate
