@@ -537,6 +537,8 @@ url: https://hcosta.com/community-portfolio/property/villa-savannah-apts/
 ---
 url: https://www.housekeys1.com/
 ---
+url: https://www.housekeys1.com/morganranch
+---
 url: https://www.housekeys1.com/vida-at-morgan-hill
 ---
 url: https://www.housekeys12.com/
@@ -1726,6 +1728,18 @@ url: https://www.liveatfoxdale.com/floorplans
 max_tries: 4
 ---
 kind: scraper
+url: https://www.liveatsantanaterrace.com/
+max_tries: 4
+---
+kind: scraper
+url: https://www.liveatsantanaterrace.com/bmr
+max_tries: 4
+---
+kind: scraper
+url: https://www.liveatsantanaterrace.com/floorplans
+max_tries: 4
+---
+kind: scraper
 url: https://www.mabuhaycourt.com/
 max_tries: 4
 ---
@@ -1822,10 +1836,6 @@ max_tries: 4
 ---
 kind: scraper
 url: https://www.laderaapts.com/
-max_tries: 4
----
-kind: scraper
-url: https://www.liveatsantanaterrace.com/
 max_tries: 4
 ---
 kind: scraper
