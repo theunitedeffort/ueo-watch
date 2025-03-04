@@ -262,6 +262,36 @@ url: https://charitieshousing.org/senior-group-homes/
 ---
 url: https://charitieshousing.org/under-construction/
 ---
+url: https://www.charlotteparkaptliving.com/
+---
+user_visible_url: https://www.charlotteparkaptliving.com/apartments/ca/san-jose/floor-plans#/#units
+url: https://inventory.g5marketingcloud.com/graphql
+filter:
+  - graphql_units
+headers:
+  Content-type: application/json
+data: '{
+  "operationName": "apt",
+  "variables": {
+    "locationUrn": "g5-cl-1olpi9rg4w-fpi-management-san-jose-ca"
+  },
+  "query": "query apt($locationUrn: String!) {\n apartmentComplex(locationUrn: $locationUrn) {\n apartments {\n prices {\n formattedPrice\n }\n name\n floorplan {\n beds\n name\n }\n }\n }\n}\n"
+}'
+---
+user_visible_url: https://www.charlotteparkaptliving.com/apartments/ca/san-jose/floor-plans#/
+url: https://inventory.g5marketingcloud.com/graphql
+filter:
+  - graphql_floorplans
+headers:
+  Content-type: application/json
+data: '{
+  "operationName": "apt",
+  "variables": {
+    "locationUrn": "g5-cl-1olpi9rg4w-fpi-management-san-jose-ca"
+  },
+  "query": "query apt($locationUrn: String!) {\n apartmentComplex(locationUrn: $locationUrn) {\n floorplans {\n beds\n endingRate\n name\n rateDisplay\n startingRate\n totalAvailableUnits\n floorplanCta {\n actionType\n url\n name\n }\n }\n }\n}\n"
+}'
+---
 url: https://www.chm.org/community-management/our-communities/
 ---
 url: https://chworks.org/property/parkside-terrace/
