@@ -1856,6 +1856,18 @@ url: https://www.turnleaf-apts.com/ca/san-jose/incomerestrictions
 max_tries: 4
 ---
 kind: scraper
+url: https://www.mainlinenorth.com/
+max_tries: 4
+---
+kind: scraper
+url: https://www.mainlinenorth.com/affordablehousing
+max_tries: 4
+---
+kind: scraper
+url: https://www.mainlinenorth.com/floorplans
+max_tries: 4
+---
+kind: scraper
 url: https://mayfaircourt.usamfm.com/
 max_tries: 4
 ---
