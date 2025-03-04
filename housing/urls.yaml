@@ -1586,6 +1586,8 @@ url: https://www.alvinscornercampbell.com/
 navigate: https://www.avaloncommunities.com/california/campbell-apartments/avalon-campbell/
 wait_until: load
 ---
+url: https://www.aviarecupertino.com/
+---
 url: https://citylineflats.com/
 ---
 url: https://www.colonnadeapt.com/
@@ -1950,6 +1952,10 @@ max_tries: 4
 ---
 kind: scraper
 url: https://prometheusapartments.com/ca/cupertino-apartments/the-biltmore
+max_tries: 4
+---
+kind: scraper
+url: https://prometheusapartments.com/ca/cupertino-apartments/the-markham
 max_tries: 4
 ---
 kind: scraper
