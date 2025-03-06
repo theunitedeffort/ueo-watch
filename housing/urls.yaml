@@ -57,6 +57,8 @@ url: https://abode.org/parkmoor-hub
 ---
 url: https://abode.org/pipeline-projects
 ---
+url: https://abode.org/property-management
+---
 url: https://www.affirmedhousing.com/coming-soon/
 ---
 url: https://affirmedhousing.com/completed/fairways/
@@ -1459,6 +1461,8 @@ data: '{
 ---
 url: https://vintagetoweravanath.com/
 ---
+url: https://vintagetoweravanath.com/floor-plans/
+---
 url: https://vitalia-bascom-apts.rentcafewebsite.com/
 ---
 url: https://virginiastreet.usamfm.com/
@@ -1934,6 +1938,10 @@ url: https://www.trestles-apts.com
 max_tries: 4
 ---
 kind: scraper
+url: https://www.trestles-apts.com/ca/san-jose/floorplans
+max_tries: 4
+---
+kind: scraper
 url: https://www.trestles-apts.com/incomerestrictions
 max_tries: 4
 ---
@@ -1943,6 +1951,10 @@ max_tries: 4
 ---
 kind: scraper
 url: https://www.turnleaf-apts.com/ca/san-jose/incomerestrictions
+max_tries: 4
+---
+kind: scraper
+url: https://www.turnleaf-apts.com/ca/san-jose/floorplans
 max_tries: 4
 ---
 kind: scraper
