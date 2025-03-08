@@ -171,6 +171,12 @@ class GraphqlFloorplans(ListingApiBase):
   __query__ = r'.data.apartmentComplex.floorplans[] | "\(.name)\n---\n\(.beds) BR\n\(.rateDisplay // "")\n\(if .totalAvailableUnits > 0 then "\(.totalAvailableUnits) available units\n" else "" end)\(.floorplanCta.name // "")\n\n"'
 
 
+class PrometheusAvailability(ListingApiBase):
+
+  __kind__ = 'prometheus_avail'
+  __query__ = r'group_by(.floorPlanName) | map(.[-1])[] | select(.floorPlanName | test("BMR")) | "\(.floorPlanName)\n---\n\(.bedrooms) BR\n$\(.bestRent)/month\n\n"'
+
+
 class GcsFileReporter(reporters.HtmlReporter):
   """Custom reporter that writes an HTML file to Google Cloud Storage."""
 

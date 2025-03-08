@@ -1203,6 +1203,16 @@ url: http://pacificgardens.org/
 ---
 url: https://www.parksideterraceapthomes.com/
 ---
+user_visible_url: https://prometheusapartments.com/ca/santa-clara-apartments/mansion-grove#pricingAndFloorPlanBox
+url: https://shopping.prometheusapartments-prod-west2.com/1023272/available-units
+filter:
+  - prometheus_avail
+---
+user_visible_url: https://prometheusapartments.com/ca/santa-clara-apartments/the-benton#pricingAndFloorPlanBox
+url: https://shopping.prometheusapartments-prod-west2.com/4774078/available-units
+filter:
+  - prometheus_avail
+---
 url: https://pwapt.com/
 ---
 url: https://pwapt.com/alexanderstation/
