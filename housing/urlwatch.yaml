@@ -30,7 +30,8 @@ job_defaults:
             .subnav,
             #navbar,
             .navbar,
-            [role="navigation"]
+            [role="navigation"],
+            #inside-nav
       # TODO: try to remove footer from all pages.
       - selective:
           select_pattern:
@@ -155,6 +156,7 @@ job_defaults:
             .social-button,
             .social-sharing-wrapper,
             .ecs_socials,
+            [aria-label="Social Bar"],
             .blog-date-archives,
             .fp-blog-sidebar-widget.blog-categories,
             [class*="footer-links"],
@@ -296,7 +298,8 @@ job_defaults:
             .navigation-widgets
           exclude: >-
             picture,
-            img
+            img,
+            .price-container
       - selective:
           select_pattern:
             - '.*jamboreehousing\.com/pages/affordable-housing-in-california-residents'
@@ -337,6 +340,11 @@ job_defaults:
           repl: '\1"'
       - re.sub:
           pattern: '(src=".*?\.jpg)\.webp"'
+          repl: '\1"'
+      # City govt pdfs ony require the first ID to retrieve the document, so
+      # the second long ID is noise.
+      - re.sub:
+          pattern: 'href="(.*?/home/showpublisheddocument/\d+/)\d{18}"'
           repl: '\1"'
       - html2text:
           method: pyhtml2text
