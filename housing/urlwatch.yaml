@@ -22,6 +22,7 @@ job_defaults:
             #nav,
             .nav,
             #main-nav,
+            .main-menu,
             #mobile-nav,
             .mobile-nav,
             [class*="nav-menu"],
@@ -55,6 +56,7 @@ job_defaults:
             div.ngg-slideshow,
             div.lazy-community-carousel,
             .gallery__slider,
+            #acadp-slider-wrapper,
             #gallery,
             .dmPhotoGallery,
             .hubdb-events,
@@ -118,7 +120,6 @@ job_defaults:
             .left-menu,
             #top-menu,
             .top_menu,
-            .main-menu,
             .header-menu,
             .header__mega-menu,
             #menu-top-bar,
@@ -329,7 +330,7 @@ job_defaults:
           repl: '/\1'
       - re.sub: '\?itok=[a-zA-Z0-9-_]{8}'
       - re.sub: 'GA1\.\d\.\d{1,10}\.\d{10}'
-      - re.sub: '\?((fit)|(resize))=\d{2,4}%2C\d{2,4}&(#038;)?ssl=1'
+      - re.sub: '\?((fit)|(resize))=\d{2,4}%2C\d{2,4}&amp;ssl=1'
       - re.sub:
           pattern: 'href="tel:\((\d{3})\)(%20| )(\d{3})-(\d{4})'
           repl: 'href="tel:+1\1\3\4'
