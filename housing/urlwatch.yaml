@@ -344,7 +344,7 @@ job_defaults:
       # City govt pdfs ony require the first ID to retrieve the document, so
       # the second long ID is noise.
       - re.sub:
-          pattern: 'href="(.*?/home/showpublisheddocument/\d+/)\d{18}"'
+          pattern: '(href=".*?/home/showpublisheddocument/\d+)/\d{18}"'
           repl: '\1"'
       - html2text:
           method: pyhtml2text
