@@ -168,7 +168,7 @@ class GraphqlUnits(ListingApiBase):
 class GraphqlFloorplans(ListingApiBase):
 
   __kind__ = 'graphql_floorplans'
-  __query__ = r'.data.apartmentComplex.floorplans[] | "\(.name)\n---\n\(.beds) BR\n\(.rateDisplay // "")\n\(if .totalAvailableUnits > 0 then "\(.totalAvailableUnits) available units\n" else "" end)\(.floorplanCta.name // "")\n\n"'
+  __query__ = r'.data.apartmentComplex.floorplans[] | "\(.name)\n---\n\(.beds) BR\n\(.rateDisplay // "")\n\(if .totalAvailableUnits > 0 then "Available units\n" else "" end)\(.floorplanCta.name // "")\n\n"'
 
 
 class PrometheusAvailability(ListingApiBase):
