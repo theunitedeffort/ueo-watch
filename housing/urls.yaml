@@ -1645,6 +1645,8 @@ navigate: https://housing.sanjoseca.gov/listing/c49d2a94-a99c-4a71-86d9-67f86c19
 ---
 navigate: https://housing.sanjoseca.gov/listing/9f0ae29c-a2e7-454a-8ce7-466221129432/clarendon_apartments_7213_clarendon_st_san_jose_ca
 ---
+navigate: https://housing.sanjoseca.gov/listing/02dfe8e0-263a-4193-8f55-1eba881e37c3/1860_alum_rock_apartments_1860_alum_rock_ave_san_jose_ca
+---
 navigate: https://housing.sanjoseca.gov/listings
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/66e34d6f-31f8-4aa5-858c-49865674e9ea/the_acacia_at_231_grant_231_grant_avenue_palo_alto_ca
@@ -1682,30 +1684,39 @@ url: https://www.encasaliving.com/
 ---
 url: https://www.essexapartmenthomes.com/apartments/101-san-fernando
 ssl_no_verify: true
+compared_versions: 2
 ---
 url: https://www.essexapartmenthomes.com/apartments/lawrence-station
 ssl_no_verify: true
+compared_versions: 2
 ---
 url: https://www.essexapartmenthomes.com/apartments/san-jose/waterford-place
 ssl_no_verify: true
+compared_versions: 2
 ---
 url: https://www.essexapartmenthomes.com/apartments/santa-clara/villa-granada
 ssl_no_verify: true
+compared_versions: 2
 ---
 url: https://www.essexapartmenthomes.com/apartments/sunnyvale/magnolia-square
 ssl_no_verify: true
+compared_versions: 2
 ---
 url: https://www.essexapartmenthomes.com/apartments/sunnyvale/maxwell-sunnyvale
 ssl_no_verify: true
+compared_versions: 2
 ---
 url: https://www.essexapartmenthomes.com/apartments/via
 ssl_no_verify: true
+compared_versions: 2
 ---
 url: https://www.essexapartmenthomes.com/apartments/willow-lake
 ssl_no_verify: true
+compared_versions: 2
 ---
 url: https://www.essexapartmenthomes.com/apartments/mountain-view/arlo-mountain-view
 ssl_no_verify: true
+compared_versions: 2
 ---
 url: https://www.greystar.com/properties/morgan-hill-ca/vida-at-morgan-hill
 ---
