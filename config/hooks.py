@@ -1,4 +1,5 @@
 import datetime
+import itertools
 import json
 import logging
 import netrc
@@ -280,89 +281,97 @@ class JiraReporter(reporters.ReporterBase):
       return (job_state.verb in ['error', 'changed'] and
         job_state.job.get_location() != 'date')
 
+    def _get_domain(job_state):
+      url = job_state.job.get_location()
+      hostname = urllib.parse.urlparse(url).hostname
+      if hostname:
+        return hostname.replace('www.', '')
+      return url
+
     issues = []
-    changes = [j for j in
+    reported_jobs = [j for j in
       self.report.get_filtered_job_states(self.job_states) if _do_report(j)]
     if not self.config['assignees']:
       logger.error('At least one assignee is required')
       return
-    num_changed = len([c for c in changes if c.verb == 'changed'])
-    num_errored = len([c for c in changes if c.verb == 'error'])
-    job_pool_size = num_changed
+
+    # Group jobs by domain
+    sorted_jobs = sorted(reported_jobs, key=_get_domain)
+    grouped_jobs = []
+    for _, g in itertools.groupby(sorted_jobs, _get_domain):
+      grouped_jobs.append(list(g))
+
+    sorted_groups = sorted(grouped_jobs, key=lambda g: len(g), reverse=True)
+    assignments = [
+      {
+        'assignee': assignee,
+        'job_states': []
+      } for assignee in self.config['assignees']]
     error_assignee = self.config.get('error_assignee', '')
-    if not error_assignee:
-      # If there is no error assignee, error jobs get auto-assigned like any
-      # other job.
-      job_pool_size += num_errored
-    issues_per_assignee = job_pool_size / len(self.config['assignees'])
-    job_pool_idx = 0
-    for job_state in changes:
-      issue_type_id = self.config['update_type']
-      if job_state.verb == 'error':
-        issue_type_id = self.config['error_type']
-      issue = {
-        'fields': {
-          'project': {'id': self.config['project']},
-          'issuetype': {'id': issue_type_id},
-        },
-      }
-      pretty_name = job_state.job.pretty_name()
-      loc = job_state.job.get_location()
-      summary_parts = [f'{job_state.verb}:', pretty_name]
-      if len(loc) <= self._MAX_CONTENT_CHARS:
-        issue['fields'][self.config['url_field']] = loc
-      if loc != pretty_name:
-        summary_parts.append(f'({loc})')
-      summary = ' '.join(summary_parts)
-      if len(summary) > self._MAX_CONTENT_CHARS:
-        ellipsis = '...'
-        summary = summary[:self._MAX_CONTENT_CHARS - len(ellipsis)] + ellipsis
-      issue['fields']['summary'] = summary
-      details_url_args = {
-        'datetime': self.report.start.strftime('%Y-%m-%d-%H%M%S'),
-      }
-      details_url = self.config['details_url'].format(**details_url_args)
-      quoted_find_text = urllib.parse.quote(summary, safe='').replace('-', '%2D')
-      details_anchor = f'#:~:text={quoted_find_text}'
-      description = self._adf_doc()
-      description['content'].extend(self._adf_header(''.join([details_url, details_anchor]), loc))
-      if job_state.verb == 'error':
-          description['content'].append(self._adf_text(job_state.traceback.strip()))
-      elif job_state.verb == 'changed':
-          description['content'].append(self._adf_diff(job_state.get_diff()))
-      # Check that the description is within the character limit by experimentally
-      # converting to a string.
-      desc_str = json.dumps(description, separators=(',', ':'))
-      if len(desc_str) > self._MAX_MULTILINE_CONTENT_CHARS:
-        # Remove main content
-        description['content'] = description['content'][:-1]
-        # Add in a "this is too long" message
-        description['content'].append(self._adf_text(
-          'This change is too large to display.  Visit the full report above to view this change.'))
-      issue['fields']['description'] = description
-      issue['fields'][self.config['reported_field']] = datetime.date.today().strftime('%Y-%m-%d')
-      if error_assignee and job_state.verb == 'error':
-        assignee = error_assignee
-        logger.debug('overriding normal assignee to be %s', assignee)
-      else:
-        assignee_idx = 0
-        if issues_per_assignee > 0:
-          assignee_idx = int(job_pool_idx / issues_per_assignee)
-        assignee = self.config['assignees'][assignee_idx]
-      issue['fields']['assignee'] = {'id': assignee}
-      issue['fields']['duedate'] = (datetime.date.today() + datetime.timedelta(days=3)).strftime('%Y-%m-%d')
-      filtered_reviewers = [r for r in self.config['reviewers'] if r != assignee]
-      if (filtered_reviewers):
-        issue['fields'][self.config['reviewer_field']] = [{'id': random.choice(filtered_reviewers)}]
-      issues.append(issue)
-      if not error_assignee:
-        job_pool_idx += 1
-      elif job_state.verb == 'changed':
-        job_pool_idx += 1
+    min_func = lambda x: len(x['job_states'])
+    if error_assignee:
+      min_func = lambda x: len([j for j in x['job_states'] if j.verb == 'changed'])
+    for group in sorted_groups:
+      smallest_bucket = min(assignments, key=min_func)
+      smallest_bucket['job_states'].extend(group)
+
+    for assignment in assignments:
+      for job_state in assignment['job_states']:
+        issue_type_id = self.config['update_type']
+        if job_state.verb == 'error':
+          issue_type_id = self.config['error_type']
+        issue = {
+          'fields': {
+            'project': {'id': self.config['project']},
+            'issuetype': {'id': issue_type_id},
+          },
+        }
+        pretty_name = job_state.job.pretty_name()
+        loc = job_state.job.get_location()
+        summary_parts = [f'{job_state.verb}:', pretty_name]
+        if len(loc) <= self._MAX_CONTENT_CHARS:
+          issue['fields'][self.config['url_field']] = loc
+        if loc != pretty_name:
+          summary_parts.append(f'({loc})')
+        summary = ' '.join(summary_parts)
+        if len(summary) > self._MAX_CONTENT_CHARS:
+          ellipsis = '...'
+          summary = summary[:self._MAX_CONTENT_CHARS - len(ellipsis)] + ellipsis
+        issue['fields']['summary'] = summary
+        details_url_args = {
+          'datetime': self.report.start.strftime('%Y-%m-%d-%H%M%S'),
+        }
+        details_url = self.config['details_url'].format(**details_url_args)
+        quoted_find_text = urllib.parse.quote(summary, safe='').replace('-', '%2D')
+        details_anchor = f'#:~:text={quoted_find_text}'
+        description = self._adf_doc()
+        description['content'].extend(self._adf_header(''.join([details_url, details_anchor]), loc))
+        if job_state.verb == 'error':
+            description['content'].append(self._adf_text(job_state.traceback.strip()))
+        elif job_state.verb == 'changed':
+            description['content'].append(self._adf_diff(job_state.get_diff()))
+        # Check that the description is within the character limit by experimentally
+        # converting to a string.
+        desc_str = json.dumps(description, separators=(',', ':'))
+        if len(desc_str) > self._MAX_MULTILINE_CONTENT_CHARS:
+          # Remove main content
+          description['content'] = description['content'][:-1]
+          # Add in a "this is too long" message
+          description['content'].append(self._adf_text(
+            'This change is too large to display.  Visit the full report above to view this change.'))
+        issue['fields']['description'] = description
+        issue['fields'][self.config['reported_field']] = datetime.date.today().strftime('%Y-%m-%d')
+        assignee = assignment['assignee']
+        if error_assignee and job_state.verb == 'error':
+          assignee = error_assignee
+          logger.debug('overriding normal assignee to be %s', assignee)
+        issue['fields']['assignee'] = {'id': assignee}
+        issue['fields']['duedate'] = (datetime.date.today() + datetime.timedelta(days=3)).strftime('%Y-%m-%d')
+        filtered_reviewers = [r for r in self.config['reviewers'] if r != assignee]
+        if (filtered_reviewers):
+          issue['fields'][self.config['reviewer_field']] = [{'id': random.choice(filtered_reviewers)}]
+        issues.append(issue)
     logger.debug('Generated %d issues for Jira', len(issues))
-    # Reverse the order so that the default sorting order in Jira matches the
-    # order in other reports.
-    issues.reverse()
     self._create_issues(issues)
 
 
