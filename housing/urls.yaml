@@ -362,12 +362,6 @@ url: https://dkdproperties.com/south-bay/
 ---
 url: http://www.domusmc.com/properties/properties%20-%20the%20brooks%20house.html
 ---
-url: https://www.drycreekcrossing.com/
----
-url: https://www.drycreekcrossing.com/floorplans
----
-url: https://www.drycreekcrossing.com/helpfulresources
----
 url: https://www.eahhousing.org/apartment-search-result-never-delete/
 data:
   county: Santa Clara
@@ -1862,6 +1856,18 @@ max_tries: 4
 ---
 kind: scraper
 url: https://www.enclaveaffordable.com/eligibility
+max_tries: 4
+---
+kind: scraper
+url: https://www.drycreekcrossing.com/
+max_tries: 4
+---
+kind: scraper
+url: https://www.drycreekcrossing.com/floorplans
+max_tries: 4
+---
+kind: scraper
+url: https://www.drycreekcrossing.com/helpfulresources
 max_tries: 4
 ---
 kind: scraper
