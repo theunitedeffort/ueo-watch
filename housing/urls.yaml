@@ -1731,6 +1731,7 @@ url: https://www.greystar.com/properties/morgan-hill-ca/vida-at-morgan-hill
 url: https://www.greystar.com/properties/san-jose-ca/vio
 ---
 navigate: https://www.hollandresidential.com/ca/san-jose/fountain-plaza
+wait_until: load
 ---
 url: https://www.irvinecompanyapartments.com/communities/north-park
 ---
