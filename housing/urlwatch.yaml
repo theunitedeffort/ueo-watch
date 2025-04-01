@@ -271,7 +271,7 @@ job_defaults:
             - '.*livethelafayette\.com/'
             - '.*merrillgardens\.com/senior-living/ca/campbell/merrill-gardens-at-campbell/'
             - '.*milpitascrossing\.com/\?page_id=15'
-            - '.*montereygrove\.com/en/apartments/contactus.html'
+            - '.*montereygrove\.com'
             - '.*morganranchapartmenthomes\.com/'
             - '.*murphystationapts\.com'
             - '.*mresidencesmv\.com/'
