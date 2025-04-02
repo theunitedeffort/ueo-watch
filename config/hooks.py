@@ -366,6 +366,7 @@ class JiraReporter(reporters.ReporterBase):
           assignee = error_assignee
           logger.debug('overriding normal assignee to be %s', assignee)
         issue['fields']['assignee'] = {'id': assignee}
+        issue['fields'][self.config['evaluator_field']] = [{'id': assignee}]
         issue['fields']['duedate'] = (datetime.date.today() + datetime.timedelta(days=3)).strftime('%Y-%m-%d')
         filtered_reviewers = [r for r in self.config['reviewers'] if r != assignee]
         if (filtered_reviewers):

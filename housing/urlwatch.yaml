@@ -406,6 +406,7 @@ report:
     url_field: customfield_10034
     reported_field: customfield_10035
     reviewer_field: customfield_10036
+    evaluator_field: customfield_10042
     assignees:
       - 712020:8ad994d4-719d-45fb-b332-ac14adae6a33  # Trevor
       - 712020:85b5e074-0fe2-44bc-9439-764894222c4d  # Marine
