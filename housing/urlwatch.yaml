@@ -136,6 +136,7 @@ job_defaults:
             .skipnav,
             #skipnav,
             #mobileNavigation,
+            .fusion-mobile-navigation,
             .elementor-nav-menu,
             .uk-nav,
             #et-secondary-nav,
@@ -329,6 +330,16 @@ job_defaults:
           filter: xpath
           path: '//body'
           exclude: "//div[contains(@class, 'bmr-communities__container')][h3[not(contains(text(), 'Northern California'))]]"
+      - selective:
+          select_pattern:
+            - '.*danco-group\.com/projects'
+            filter: xpath
+            path: '//body'
+            # huge selector, thanks LLM
+            # It selects the deepest element that has children containing "Eng | Esp"
+            # The Esp link keeps changing to garbate on these sites, and it's
+            # too noisy.
+            exclude: '//*[.//text()[normalize-space(.)="Eng"] and .//text()[normalize-space(.)="Esp"] and .//text()[normalize-space(.)="|"]][not(.//*[.//text()[normalize-space(.)="Eng"] and .//text()[normalize-space(.)="Esp"] and .//text()[normalize-space(.)="|"]])]'
       - re.sub: 'Image Detail [a-z0-9]{32}'
       - re.sub:
           pattern: '/x(.*?\.[a-zA-Z]{3,4})(,qitok=[a-zA-Z0-9-]{8})?\.pagespeed\.ic\.[a-zA-Z0-9-]{10}\.[a-zA-Z]{3,4}'
