@@ -1541,8 +1541,7 @@ url: https://www.6teneast.com/
 ---
 url: https://www.alvinscornercampbell.com/
 ---
-navigate: https://www.avaloncommunities.com/california/campbell-apartments/avalon-campbell/
-wait_until: load
+url: https://www.avaloncommunities.com/california/campbell-apartments/avalon-campbell/
 ---
 url: https://citylineflats.com/
 ---
