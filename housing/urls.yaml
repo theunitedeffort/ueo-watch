@@ -1600,6 +1600,8 @@ url: https://www.greystar.com/properties/morgan-hill-ca/vida-at-morgan-hill
 ---
 url: https://www.greystar.com/properties/san-jose-ca/vio
 ---
+navigate: https://www.hollandresidential.com/ca/san-jose/fountain-plaza
+---
 url: https://www.irvinecompanyapartments.com/communities/north-park
 ---
 url: https://www.irvinecompanyapartments.com/locations/northern-california/cupertino/hamptons-at-cupertino.html
@@ -1910,10 +1912,6 @@ max_tries: 4
 ---
 kind: scraper
 url: https://www.domicilioapts.com/
-max_tries: 4
----
-kind: scraper
-url: https://www.hollandresidential.com/ca/san-jose/fountain-plaza
 max_tries: 4
 ---
 kind: scraper
