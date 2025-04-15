@@ -33,10 +33,12 @@ class ScraperJob(jobs.UrlJob):
   __kind__ = 'scraper'
 
   __required__ = ('kind',)
+  __optional__ = ('render',)
 
   def retrieve(self, job_state):
     self.user_visible_url = self.url
-    self.url = f'https://washed-ocelot--super-scraper-task.apify.actor?url={self.url}&transparent_status_code=true&render_js=false'
+    render_js = self.render or False
+    self.url = f'https://washed-ocelot--super-scraper-task.apify.actor?url={self.url}&transparent_status_code=true&render_js={str(render_js).lower()}'
     self.headers = self.headers or {}
     auth_header = 'Authorization'
     existing_auth = [h for h in self.headers if h.lower() == auth_header.lower()]
