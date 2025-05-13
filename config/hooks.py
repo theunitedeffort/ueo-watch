@@ -433,13 +433,17 @@ class JiraReporter(reporters.ReporterBase):
     }
 
   def _adf_header(self, report_url, watched_url):
+    field_id = self.config['url_field'].replace('customfield_', '')
+    jql_query = urllib.parse.quote(
+      f'cf[{field_id}] = "{watched_url}" ORDER BY created DESC')
+    history_url = f"{self.config['site_url']}/issues/?jql={jql_query}"
     return [
       {
         'type': 'paragraph',
         'content': [
           {
             'type': 'text',
-            'text': 'See full change report here',
+            'text': '📝 See full change report here',
             'marks': [
               {
                 'type': 'link',
@@ -456,12 +460,29 @@ class JiraReporter(reporters.ReporterBase):
         'content': [
           {
             'type': 'text',
-            'text': 'Visit watched URL here',
+            'text': '🌐 Visit watched URL here',
             'marks': [
               {
                 'type': 'link',
                 'attrs': {
                   'href': watched_url
+                }
+              }
+            ]
+          },
+        ]
+      },
+      {
+        'type': 'paragraph',
+        'content': [
+          {
+            'type': 'text',
+            'text': '🔎 See all reports for this URL here',
+            'marks': [
+              {
+                'type': 'link',
+                'attrs': {
+                  'href': history_url
                 }
               }
             ]
