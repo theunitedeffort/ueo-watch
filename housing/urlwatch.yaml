@@ -48,6 +48,7 @@ job_defaults:
           selector: body
           exclude: >-
             select,
+            .staff-block,
             div.gform_wrapper,
             ul[id^="slideshow"],
             div.slideshow-wrapper,
@@ -137,6 +138,7 @@ job_defaults:
             #skipnav,
             #mobileNavigation,
             .fusion-mobile-navigation,
+            .new-mobile-nav,
             .elementor-nav-menu,
             .uk-nav,
             #et-secondary-nav,
