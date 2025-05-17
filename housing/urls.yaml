@@ -1931,6 +1931,7 @@ kind: scraper
 url: https://www.montereygrove.com
 max_tries: 4
 render: true
+block_resource: media
 ---
 kind: scraper
 url: https://www.morganranchapartmenthomes.com/
@@ -1959,18 +1960,22 @@ max_tries: 4
 kind: scraper
 url: https://prometheusapartments.com/ca/mountain-view-apartments/100-moffett/
 max_tries: 4
+premium_proxy: true
 ---
 kind: scraper
 url: https://prometheusapartments.com/ca/mountain-view-apartments/madera/
 max_tries: 4
+premium_proxy: true
 ---
 kind: scraper
 url: https://prometheusapartments.com/ca/mountain-view-apartments/montrose/
 max_tries: 4
+premium_proxy: true
 ---
 kind: scraper
 url: https://prometheusapartments.com/ca/mountain-view-apartments/the-dean/
 max_tries: 4
+premium_proxy: true
 ---
 kind: scraper
 url: https://prometheusapartments.com/ca/santa-clara-apartments/mansion-grove
