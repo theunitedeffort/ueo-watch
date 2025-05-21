@@ -1968,6 +1968,7 @@ render: true
 kind: scraper
 url: https://prometheusapartments.com/ca/mountain-view-apartments/montrose/
 max_tries: 4
+render: true
 ---
 kind: scraper
 url: https://prometheusapartments.com/ca/mountain-view-apartments/the-dean/
