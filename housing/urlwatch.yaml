@@ -131,6 +131,7 @@ job_defaults:
             #menu-top-primary,
             .primary-menu,
             .top-bar-menu,
+            .top-bar,
             .top-nav,
             .top_nav,
             #top_nav,
