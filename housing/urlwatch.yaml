@@ -244,7 +244,8 @@ job_defaults:
             .header-skip-link,
             .skip-to-pageassist,
             #walkscore-div,
-            .ysi-login-link-widget
+            .ysi-login-link-widget,
+            div.wrapper.flex-grid.align-center.cta-wrapper.pt160.pb130.mpt100.mpb80 div[data-aos="fade-in"]
       - selective:
           select_pattern:
             - '.*300railway\.com/'
