@@ -19,6 +19,12 @@ url: https://www.sunnyvale.ca.gov/homes-streets-and-property/housing/rental-prog
 ---
 url: https://www.sunnyvale.ca.gov/homes-streets-and-property/housing/rental-programs/building-affordable-housing
 ---
+user_visible_url: https://gis.sunnyvale.ca.gov/portal/apps/experiencebuilder/experience/?id=d104745334d24d2cacaabd7797487007
+url: https://gis.sunnyvale.ca.gov/arcgis/rest/services/CDD/AffordableHousing/MapServer/0/query?where=1%3D1&outFields=*&f=json
+filter:
+  - jq: '.features | sort_by(.attributes.Address, .attributes.Name) | .[].attributes | keys[] as $k | "[\(.Name)] \($k): \(.[$k])"'
+  - if_empty: error
+---
 url: https://www.housing-group.org/losaltos/
 ---
 url: https://www.losaltosca.gov/housing/page/affordable-housing
