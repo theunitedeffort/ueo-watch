@@ -41,6 +41,8 @@ job_defaults:
       - html2text:
           method: pyhtml2text
       - re.sub: 'time=\d+'
+  browser:
+    wait_until: networkidle2
   shell: {}
   url: {}
 report:
