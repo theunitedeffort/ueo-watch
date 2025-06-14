@@ -1246,19 +1246,7 @@ url: https://stevensonhouse.org/our-community/apply-now/
 ---
 url: https://www.summercrestsenior.com/
 ---
-user_visible_url: https://www.summercrestsenior.com/Floor-plans.aspx
-url: https://api.ws.realpage.com/v2/property/6437950/floorplans
-headers:
-  x-ws-authkey: e4073a5d-37c4-4044-b174-08b10e68cba2
-filter:
-  - realpage_floorplans
----
-user_visible_url: https://www.summercrestsenior.com/Floor-plans.aspx#units
-url: https://api.ws.realpage.com/v2/property/6437950/units?available=true&honordisplayorder=true&siteid=6437950&leaseterm=12
-headers:
-  x-ws-authkey: e4073a5d-37c4-4044-b174-08b10e68cba2
-filter:
-  - realpage_units
+url: https://www.summercrestsenior.com/floor-plans
 ---
 url: https://www.tamienstation.com/
 ---
