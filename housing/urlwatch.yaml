@@ -161,6 +161,7 @@ job_defaults:
             .social-icons,
             .social_icons,
             .social-media-block,
+            .block-social-media,
             .media_links_b,
             .elementor-widget-social-icons,
             .elementor-widget-share-buttons,
