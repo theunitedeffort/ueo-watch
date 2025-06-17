@@ -1844,10 +1844,6 @@ url: https://www.southwood-apartments.com/
 max_tries: 4
 ---
 kind: scraper
-url: https://www.southwood-apartments.com/floorplans
-max_tries: 4
----
-kind: scraper
 url: https://terracinamorganhill.usamfm.com/
 max_tries: 4
 ---
