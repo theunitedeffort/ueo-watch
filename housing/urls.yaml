@@ -561,6 +561,8 @@ url: https://www.firsthousing.org/sss
 ---
 url: https://www.firsthousing.org/troy-apartments
 ---
+url: https://frontporch.net/community/sunny-view/
+---
 url: https://fujitowersinc.com/
 ---
 url: https://fujitowersinc.com/property-details/
@@ -1044,6 +1046,22 @@ filter:
 url: https://www.montevistaseniorapts.com/
 ---
 url: https://www.montevistaseniorapts.com/floor-plans
+---
+url: https://www.morelandapartments.com/
+---
+user_visible_url: https://www.morelandapartments.com/floor-plans.aspx
+url: https://api.ws.realpage.com/v2/property/9106683/floorplans
+headers:
+  x-ws-authkey: 40160b30-cf3f-4fa0-830b-9e09a5759a9a
+filter:
+  - realpage_floorplans
+---
+user_visible_url: https://www.morelandapartments.com/floor-plans.aspx#units
+url: https://api.ws.realpage.com/v2/property/9106683/units?available=true&honordisplayorder=true&siteid=9106683&bestprice=true&leaseterm=12
+headers:
+  x-ws-authkey: 40160b30-cf3f-4fa0-830b-9e09a5759a9a
+filter:
+  - realpage_units
 ---
 url: https://www.mvapartments.com/apartments/ca/mountain-view/below-market-rates
 ---
