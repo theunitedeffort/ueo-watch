@@ -905,6 +905,34 @@ data: '{
 ---
 url: https://www.liveatvillageatsantateresa.com/
 ---
+user_visible_url: https://www.liveatvillageatsantateresa.com/apartments/ca/gilroy/floor-plans#/#units
+url: https://inventory.g5marketingcloud.com/graphql
+filter:
+  - graphql_units
+headers:
+  Content-type: application/json
+data: '{
+  "operationName": "apt",
+  "variables": {
+    "locationUrn": "g5-cl-1oixkq0ljc-fpi-management-gilroy-ca"
+  },
+  "query": "query apt($locationUrn: String!) {\n apartmentComplex(locationUrn: $locationUrn) {\n apartments {\n prices {\n formattedPrice\n }\n name\n floorplan {\n beds\n name\n }\n }\n }\n}\n"
+}'
+---
+user_visible_url: https://www.liveatvillageatsantateresa.com/apartments/ca/gilroy/floor-plans#/
+url: https://inventory.g5marketingcloud.com/graphql
+filter:
+  - graphql_floorplans
+headers:
+  Content-type: application/json
+data: '{
+  "operationName": "apt",
+  "variables": {
+    "locationUrn": "g5-cl-1oixkq0ljc-fpi-management-gilroy-ca"
+  },
+  "query": "query apt($locationUrn: String!) {\n apartmentComplex(locationUrn: $locationUrn) {\n floorplans {\n beds\n endingRate\n name\n rateDisplay\n startingRate\n totalAvailableUnits\n floorplanCta {\n actionType\n url\n name\n }\n }\n }\n}\n"
+}'
+---
 url: https://www.livethekelsey.com/
 ---
 url: https://www.livethekelsey.com/floor-plans/
