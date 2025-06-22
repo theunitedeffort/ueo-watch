@@ -1584,6 +1584,23 @@ navigate: https://housing.sanjoseca.gov/listings
 navigate: https://housingbayarea.mtc.ca.gov/listing/b3450753-25d4-4ea8-aac2-eb065e5f8c27/the_acacia_at_231_grant_waitlist_231_grant_avenue_palo_alto_ca
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/28e10e1b-452a-4f99-9583-a1838ccdf7c8/passero_2230_calle_del_mundo_santa_clara_ca
+---
+navigate: https://housingbayarea.mtc.ca.gov/listing/127e7896-1058-4156-93a2-b6c98073ee57/orchard_gardens_apartments_245_west_wendell_drive_sunnyvale_ca
+---
+navigate: https://housingbayarea.mtc.ca.gov/listing/5e090628-bfe2-4128-9d69-70e361f429ad/belovida_seniors_1820_main_street_santa_clara_ca
+---
+navigate: https://housingbayarea.mtc.ca.gov/listing/c7149941-054a-4e53-8d38-e3db61078165/alma_place_753_alma_street_palo_alto_ca
+---
+navigate: https://housingbayarea.mtc.ca.gov/listing/8093ca40-1a6f-4d67-94aa-ae4b7ab75906/wilton_court_3705_el_camino_real_palo_alto_ca
+---
+navigate: https://housingbayarea.mtc.ca.gov/listing/c6b9d1db-1a1a-47b4-b40c-d99bbca7cbbd/mariposa_club_apartments_660_mariposa_avenue_mountain_view_ca
+---
+navigate: https://housingbayarea.mtc.ca.gov/listing/819308a4-6da3-47b5-8f90-130429865393/luna_vista_950_west_el_camino_real_mountain_view_ca
+---
+navigate: https://housingbayarea.mtc.ca.gov/listing/692e1f4d-03cc-4cc3-8e98-f8908b89279e/village_at_santa_teresa_1520_hecker_pass_road_gilroy_ca
+---
+navigate: https://housingbayarea.mtc.ca.gov/listings?search=counties:Santa%20Clara
+---
 
 # Market rate apartment websites
 # Remember to also update the regex pattern in urlwatch.yaml for market-rate URLs.
