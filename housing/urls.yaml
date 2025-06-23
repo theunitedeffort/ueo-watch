@@ -567,10 +567,6 @@ url: https://fujitowersinc.com/
 ---
 url: https://fujitowersinc.com/property-details/
 ---
-url: https://www.glenlomaapts.com/
----
-url: https://www.glenlomaapts.com/floorplans
----
 url: https://griffisresidential.com/property/south-bay/affordable-housing/
 ---
 url: https://www.hohbach-lewin.com/park-plaza/
@@ -1817,6 +1813,14 @@ max_tries: 4
 ---
 kind: scraper
 url: https://www.drycreekcrossing.com/helpfulresources
+max_tries: 4
+---
+kind: scraper
+url: https://www.glenlomaapts.com/
+max_tries: 4
+---
+kind: scraper
+url: https://www.glenlomaapts.com/floorplans
 max_tries: 4
 ---
 kind: scraper
