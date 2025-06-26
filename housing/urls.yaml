@@ -2002,6 +2002,7 @@ kind: scraper
 url: https://www.hollandresidential.com/ca/san-jose/fountain-plaza
 max_tries: 4
 render: true
+compared_versions: 2
 ---
 kind: scraper
 url: https://www.laderaapts.com/
