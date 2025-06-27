@@ -1325,10 +1325,6 @@ url: https://thecorecompanies.com/project/lenzen-square/
 ---
 url: https://thecorecompanies.com/project/market-gateway/
 ---
-url: https://thegroveaptssanjose.com/
----
-url: https://thegroveaptssanjose.com/property/the-grove/
----
 url: https://www.crpaffordable.com/drycreekcrossing
 ---
 url: https://www.crpaffordable.com/drycreekinterest
@@ -1972,6 +1968,18 @@ max_tries: 4
 ---
 kind: scraper
 url: https://www.mainlinenorth.com/floorplans
+max_tries: 4
+---
+kind: scraper
+url: https://thegroveaptssanjose.com/
+max_tries: 4
+---
+kind: scraper
+url: https://www.thegroveaptssanjose.com/incomelimited
+max_tries: 4
+---
+kind: scraper
+url: https://www.thegroveaptssanjose.com/floorplans
 max_tries: 4
 ---
 kind: scraper
