@@ -169,14 +169,19 @@ url: https://bridgehousing.com/properties/ohlone-court-apartments/
 url: https://bridgehousing.com/properties/the-fountains/
 ---
 url: https://buckinghampm.com/homes/crossings-at-morgan-hill/
+ssl_no_verify: true
 ---
 url: https://buckinghampm.com/homes/horizons-at-morgan-hill/
+ssl_no_verify: true
 ---
 url: https://www.buckinghampm.com/homes/westport/
+ssl_no_verify: true
 ---
 url: https://buckinghampm.com/homes/willow-pointe/
+ssl_no_verify: true
 ---
 url: https://buckinghampm.com/portfolio/county-santa-clara/
+ssl_no_verify: true
 ---
 url: https://www.caremgt.com/arbor-terraces/
 ---
