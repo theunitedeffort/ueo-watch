@@ -115,6 +115,7 @@ job_defaults:
             img[src*="pixel.quantserve.com"],
             div.vue-google-map,
             div.gm-style,
+            div[data-testid="map"],
             [aria-label="Filter by Move in Date"],
             #onetrust-consent-sdk,
             #bottom-menu,
