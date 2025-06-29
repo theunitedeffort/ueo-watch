@@ -1847,6 +1847,14 @@ url: https://www.thelodgeatmorganhillapartments.com/ca/morgan-hill/incomerestric
 max_tries: 4
 ---
 kind: scraper
+url: https://www.liveatdavidavenueapts.com/
+max_tries: 4
+---
+kind: scraper
+url: https://www.liveatdavidavenueapts.com/floorplans
+max_tries: 4
+---
+kind: scraper
 url: https://www.liveatfoxdale.com/
 max_tries: 4
 ---
