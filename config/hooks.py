@@ -130,13 +130,34 @@ class EmailDecodeFilter(filters.FilterBase):
     return re.sub(pattern, decode_email, data)
 
 
-class ListingApiBase(filters.FilterBase):
-  def filter(self, data, subfilter):
+class JqFilterBase(filters.FilterBase):
+  def _pre_filter(self, data):
     filtered = filters.FilterBase.process('jq', {'query': self.__query__}, self.state, data)
+    return filtered
+
+  def _post_filter(self, data):
+    filtered = filters.FilterBase.process('re.sub', {'pattern': '"'}, self.state, data)
+    filtered = filters.FilterBase.process('re.sub', {'pattern': r'\\n', 'repl': r'\n'}, self.state, filtered)
+    return filtered
+
+  def filter(self, data, subfilter):
+    filtered = self._pre_filter(data)
+    filtered = self._post_filter(filtered)
+    return filtered
+
+
+class Doorway(JqFilterBase):
+
+  __kind__ = "doorway"
+  __query__ =  r'.items[] | "\(.name)\nhttps://housingbayarea.mtc.ca.gov/listing/\(if .isExternal == true then "ext/\(.id)" else "\(.id)/\(.urlSlug)" end)\n\n"'
+
+
+class ListingApiBase(JqFilterBase):
+  def filter(self, data, subfilter):
+    filtered = self._pre_filter(data)
     filtered = filters.FilterBase.process('remove-duplicate-lines', {}, self.state, filtered)
     filtered = filters.FilterBase.process('sort', {}, self.state, filtered)
-    filtered = filters.FilterBase.process('re.sub', {'pattern': '"'}, self.state, filtered)
-    filtered = filters.FilterBase.process('re.sub', {'pattern': r'\\n', 'repl': r'\n'}, self.state, filtered)
+    filtered = self._post_filter(filtered)
     return filtered
 
 

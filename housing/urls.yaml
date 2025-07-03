@@ -1602,8 +1602,14 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/819308a4-6da3-47b5-8f90-1304
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/692e1f4d-03cc-4cc3-8e98-f8908b89279e/village_at_santa_teresa_1520_hecker_pass_road_gilroy_ca
 ---
-navigate: https://housingbayarea.mtc.ca.gov/listings?search=counties:Santa%20Clara
-wait_until: networkidle0
+user_visible_url: https://housingbayarea.mtc.ca.gov/listings?search=counties:Santa%20Clara
+url: https://housingbayarea.mtc.ca.gov/api/adapter/listings/combined
+headers:
+  Content-type: application/json
+data: '{"view":"base","limit":200,"page":1,"filter":[{"$comparison":"IN","counties":["Santa Clara"]}],"orderBy":["mostRecentlyPublished"],"orderDir":["desc"]}'
+filter:
+  - doorway
+  - if_empty: error
 ---
 
 # Market rate apartment websites
