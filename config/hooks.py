@@ -1,3 +1,4 @@
+import base64
 import datetime
 import itertools
 import json
@@ -7,6 +8,7 @@ import os
 import random
 import re
 import subprocess
+import time
 import urllib.parse
 
 from dotenv import load_dotenv
@@ -50,6 +52,34 @@ class ScraperJob(jobs.UrlJob):
       self.headers.pop(header, None)
     apify_token = os.environ['APIFY_TOKEN']
     self.headers[auth_header] = f'Bearer {apify_token}'
+    return super().retrieve(job_state)
+
+
+class RpServiceJob(jobs.UrlJob):
+  """Custom job to compute necessary headers for Realpage AppService API"""
+
+  __kind__ = 'rpservice'
+
+  __required__ = ('kind',)
+
+  def _calc_xyz(self):
+    # The token is computed with random characters, plus an encoding of
+    # the property ID (3461849), an encoding of a user agent string, and
+    # an encoding of the current time.  Only the time needs to be updated
+    # for the token to be valid.
+    # The current time is first encoded to base64, then inserted into the
+    # token string. The entire token string also then gets encoded to base64
+    # for transmission.
+    now_str = f'{(time.time() * 1000):.0f}'
+    b64_now = base64.b64encode(b'%b' % now_str.encode('utf-8'))
+    token = (b'Y9FAB159E01436A00536668AA958F6E9FM1j5B2BA492DA1BF8B88F5F71B1615' +
+      b'75820gs6pB%bJkXIfdp' % b64_now)
+    return base64.b64encode(token).decode('utf-8')
+
+  def retrieve(self, job_state):
+    self.headers = self.headers or {}
+    self.headers['xyz'] = self._calc_xyz()
+    self.headers['accept'] = 'application/json'
     return super().retrieve(job_state)
 
 
@@ -203,6 +233,12 @@ class PrometheusAvailability(ListingApiBase):
 
   __kind__ = 'prometheus_avail'
   __query__ = r'group_by(.floorPlanName) | map(.[-1])[] | select(.floorPlanName | test("BMR")) | "\(.floorPlanName)\n---\n\(.bedrooms) BR\n$\(.bestRent)/month\n\n"'
+
+
+class RealPageLeasingServiceUnits(ListingApiBase):
+
+  __kind__ = 'rpservice_units'
+  __query__ =  r'.Workflow.ActivityGroups[] | select(.GroupName == "Search") | .GroupActivities[] | select(.__type == "RP.Applicant.Dto.Workflow.Activities.FloorplanSearchLeaseMgmtActivity, RP.Applicant.Dto") | .Floorplans[] | select(.Name | test("BMR")) | "\(.Name)\n---\n\(.Bedrooms) BR\n\(if .MinPriceRange == .MaxPriceRange then "$\(.MinPriceRange)" else "$\(.MinPriceRange) - $\(.MaxPriceRange)" end)\n\(.AvailableUnits) available\n\(.Description)\n\n"'
 
 
 class GcsFileReporter(reporters.HtmlReporter):

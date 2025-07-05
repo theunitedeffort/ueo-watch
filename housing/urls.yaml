@@ -1386,6 +1386,12 @@ data: '{
   "query": "query apt($locationUrn: String!) {\n apartmentComplex(locationUrn: $locationUrn) {\n floorplans {\n beds\n endingRate\n name\n rateDisplay\n startingRate\n totalAvailableUnits\n floorplanCta {\n actionType\n url\n name\n }\n }\n }\n}\n"
 }'
 ---
+kind: rpservice
+user_visible_url: https://www.villatorinoapts.com/apartments/ca/san-jose/floor-plans
+url: https://leasing.realpage.com/RP.Leasing.AppService.WebHost/workflowstartup/v1/3461849/
+filter:
+  - rpservice_units
+---
 url: https://vintagetoweravanath.com/
 ---
 url: https://vintagetoweravanath.com/floor-plans/

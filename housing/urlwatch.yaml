@@ -297,7 +297,7 @@ job_defaults:
             - '.*udr\.com/san-francisco-bay-area-apartments/'
             - '.*vidamorganhill\.com/'
             - '.*villadelsolsunnyvale\.com/'
-            - '.*villatorinoapts\.com/'
+            - '.*villatorinoapts\.com/$'
             - '.*viverelosgatos\.com/'
           filter: css
           selector: >-
