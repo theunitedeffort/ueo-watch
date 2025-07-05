@@ -31,6 +31,7 @@ git clone https://github.com/trevorshannon/urlwatch.git
 Switch to the `dev` branch which (confusingly) is what's used for our production runs
 
 ```
+cd urlwatch
 git checkout dev
 ```
 
