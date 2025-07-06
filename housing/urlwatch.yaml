@@ -391,6 +391,7 @@ job_defaults:
       - re.sub: 'Copyright 20\d{2}'
       - re.sub: 'time=\d+'
       - re.sub: '&MoveInDate=\d{1,2}/\d{1,2}/\d{4}'
+      - re.sub: '\?lit\$\d+?\$'
       - if_empty: error
   browser:
     wait_until: networkidle2
