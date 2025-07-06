@@ -8,11 +8,13 @@ readonly TEST_RECIPIENT=trevor@theunitedeffort.org
 echo "Running test..."
 
 readonly TEMP_FILE=$(mktemp)
+readonly TEMP_URLS=$(mktemp)
 
 function cleanup {
   echo "Cleaning up"
-  echo "  Removing $TEMP_FILE"
+  echo "  Removing $TEMP_FILE and $TEMP_URLS"
   rm -f "$TEMP_FILE"
+  rm -f "$TEMP_URLS"
 }
 
 trap cleanup EXIT
@@ -38,11 +40,14 @@ cat urlwatch.yaml | \
   sed -E "s/(\r[[:blank:]]*jira:\r[[:blank:]]*enabled:) true/\1 false/" | \
   tr '\r' '\n' > "$TEMP_FILE"
 echo "Temporary urlwatch config created at $TEMP_FILE"
+cat urls.yaml | \
+  sed -E "s/^([[:blank:]]*max_tries: )(.*)/\11/" > "$TEMP_URLS"
+echo "Temporary urls list created at $TEMP_URLS"
 
 echo "Logging debug output to $LOG_PATH"
 echo "Running urlwatch..."
 echo
-urlwatch -v --hooks ../config/hooks.py --urls urls.yaml --config "$TEMP_FILE" --cache cache.db 2> "$LOG_PATH"
+urlwatch -v --hooks ../config/hooks.py --urls "$TEMP_URLS" --config "$TEMP_FILE" --cache cache.db 2> "$LOG_PATH"
 echo
 
 echo "Done! Log is at $LOG_PATH"
