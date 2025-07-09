@@ -395,6 +395,8 @@ job_defaults:
       - if_empty: error
   browser:
     wait_until: networkidle2
+  scraper:
+    max_tries: 4
   shell: {}
   url:
     headers:

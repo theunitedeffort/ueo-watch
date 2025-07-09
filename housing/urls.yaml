@@ -1742,395 +1742,304 @@ url: https://www.viverelosgatos.com/
 ---
 kind: scraper
 url: https://www.alexanderstationliving.com/
-max_tries: 4
 render: true
 ---
 kind: scraper
 url: https://www.alexanderstationliving.com/applynow
-max_tries: 4
 render: true
 ---
 kind: scraper
 url: https://www.alexanderstationliving.com/floorplans
-max_tries: 4
 ---
 kind: scraper
 url: https://www.alexanderstationliving.com/incomelimits
-max_tries: 4
 ---
 kind: scraper
 url: https://www.almadenlakeapartments.com/
-max_tries: 4
 render: true
 ---
 kind: scraper
 url: https://www.almadenlakeapartments.com/floorplans
-max_tries: 4
 ---
 kind: scraper
 url: https://www.alta-torre.com/
-max_tries: 4
 ---
 kind: scraper
 url: https://www.alta-torre.com/floorplans
-max_tries: 4
 render: true
 ---
 kind: scraper
 url: https://www.aspenfamilyapts.com/
-max_tries: 4
 ---
 kind: scraper
 url: https://www.aspenfamilyapts.com/floorplans
-max_tries: 4
 ---
 kind: scraper
 url: https://www.borregascourtliving.com
-max_tries: 4
 render: true
 ---
 kind: scraper
 url: https://www.borregascourtliving.com/floorplans
-max_tries: 4
 ---
 kind: scraper
 url: https://www.canoasterraceliving.com/
-max_tries: 4
 render: true
 ---
 kind: scraper
 url: https://www.canoasterraceliving.com/floorplans
-max_tries: 4
 ---
 kind: scraper
 url: https://www.crossingsonmonterey.com/
-max_tries: 4
 ---
 kind: scraper
 url: https://www.crossingsonmonterey.com/floorplans
-max_tries: 4
 ---
 kind: scraper
 url: https://www.enclaveaffordable.com/
-max_tries: 4
 render: true
 ---
 kind: scraper
 url: https://www.enclaveaffordable.com/floorplans
-max_tries: 4
 ---
 kind: scraper
 url: https://www.enclaveaffordable.com/eligibility
-max_tries: 4
 render: true
 ---
 kind: scraper
 url: https://www.drycreekcrossing.com/
-max_tries: 4
 ---
 kind: scraper
 url: https://www.drycreekcrossing.com/floorplans
-max_tries: 4
 render: true
 ---
 kind: scraper
 url: https://www.drycreekcrossing.com/helpfulresources
-max_tries: 4
 ---
 kind: scraper
 url: https://www.glenlomaapts.com/
-max_tries: 4
 ---
 kind: scraper
 url: https://www.glenlomaapts.com/floorplans
-max_tries: 4
 ---
 kind: scraper
 url: https://www.harvestparkliving.com/
-max_tries: 4
 ---
 kind: scraper
 url: https://www.harvestparkliving.com/floorplans
-max_tries: 4
 ---
 kind: scraper
 url: https://www.thelodgeatmorganhillapartments.com/
-max_tries: 4
 render: true
 ---
 kind: scraper
 url: https://www.thelodgeatmorganhillapartments.com/ca/morgan-hill/floorplans
-max_tries: 4
 render: true
 ---
 kind: scraper
 url: https://www.thelodgeatmorganhillapartments.com/ca/morgan-hill/incomerestrictions
-max_tries: 4
 ---
 kind: scraper
 url: https://www.liveatdavidavenueapts.com/
-max_tries: 4
 ---
 kind: scraper
 url: https://www.liveatdavidavenueapts.com/floorplans
-max_tries: 4
 ---
 kind: scraper
 url: https://www.liveatfoxdale.com/
-max_tries: 4
 ---
 kind: scraper
 url: https://www.liveatfoxdale.com/floorplans
-max_tries: 4
 ---
 kind: scraper
 url: https://www.liveatregencysquareapts.com/
-max_tries: 4
 ---
 kind: scraper
 url: https://www.liveatregencysquareapts.com/floorplans
-max_tries: 4
 ---
 kind: scraper
 url: https://www.liveatsantanaterrace.com/
-max_tries: 4
 ---
 kind: scraper
 url: https://www.liveatsantanaterrace.com/bmr
-max_tries: 4
 render: true
 ---
 kind: scraper
 url: https://www.liveatsantanaterrace.com/floorplans
-max_tries: 4
 ---
 kind: scraper
 url: https://www.mabuhaycourt.com/
-max_tries: 4
 ---
 kind: scraper
 url: https://www.mabuhaycourt.com/floorplans
-max_tries: 4
 ---
 kind: scraper
 url: https://www.montereyfamilyvillage.com/
-max_tries: 4
 render: true
 ---
 kind: scraper
 url: https://www.montereyfamilyvillage.com/floorplans
-max_tries: 4
 ---
 kind: scraper
 url: https://www.themontevistaapartments.com/
-max_tries: 4
 render: true
 ---
 kind: scraper
 url: https://www.themontevistaapartments.com/floorplans
-max_tries: 4
 ---
 kind: scraper
 url: https://www.oakcircleapartments.com/
-max_tries: 4
 render: true
 ---
 kind: scraper
 url: https://www.oakcircleapartments.com/floorplans
-max_tries: 4
 ---
 kind: scraper
 url: https://www.ohlonecourt.com/
-max_tries: 4
 ---
 kind: scraper
 url: https://www.ohlonecourt.com/floorplans
-max_tries: 4
 ---
 kind: scraper
 url: https://www.parkerpaloalto.com/
-max_tries: 4
 ---
 kind: scraper
 url: https://www.southwood-apartments.com/
-max_tries: 4
 ---
 kind: scraper
 url: https://terracinamorganhill.usamfm.com/
-max_tries: 4
 ---
 kind: scraper
 url: https://terracinamorganhill.usamfm.com/applynow
-max_tries: 4
 ---
 kind: scraper
 url: https://terracinamorganhill.usamfm.com/floorplans
-max_tries: 4
 ---
 kind: scraper
 url: https://www.trestles-apts.com
-max_tries: 4
 ---
 kind: scraper
 url: https://www.trestles-apts.com/ca/san-jose/floorplans
-max_tries: 4
 ---
 kind: scraper
 url: https://www.trestles-apts.com/incomerestrictions
-max_tries: 4
 render: true
 ---
 kind: scraper
 url: https://www.turnleaf-apts.com
-max_tries: 4
 render: true
 ---
 kind: scraper
 url: https://www.turnleaf-apts.com/ca/san-jose/incomerestrictions
-max_tries: 4
 ---
 kind: scraper
 url: https://www.turnleaf-apts.com/ca/san-jose/floorplans
-max_tries: 4
 ---
 kind: scraper
 url: https://www.mainlinenorth.com/
-max_tries: 4
 ---
 kind: scraper
 url: https://www.mainlinenorth.com/affordablehousing
-max_tries: 4
 ---
 kind: scraper
 url: https://www.mainlinenorth.com/floorplans
-max_tries: 4
 ---
 kind: scraper
 url: https://thegroveaptssanjose.com/
-max_tries: 4
 ---
 kind: scraper
 url: https://www.thegroveaptssanjose.com/incomelimited
-max_tries: 4
 ---
 kind: scraper
 url: https://www.thegroveaptssanjose.com/floorplans
-max_tries: 4
 ---
 kind: scraper
 url: https://mayfaircourt.usamfm.com/
-max_tries: 4
 render: true
 ---
 kind: scraper
 url: https://mayfaircourt.usamfm.com/applicant
-max_tries: 4
 ---
 kind: scraper
 url: https://mayfaircourt.usamfm.com/floorplans
-max_tries: 4
 ---
 # Market rate
 # Remember to also update the regex pattern in urlwatch.yaml for market rate URLs.
 ---
 kind: scraper
 url: https://www.aventinoapts.com/
-max_tries: 4
 render: true
 ---
 kind: scraper
 url: https://www.aviarecupertino.com/
-max_tries: 4
 render: true
 ---
 kind: scraper
 url: https://rentbalmoral.com/
-max_tries: 4
 ---
 kind: scraper
 url: https://www.domicilioapts.com/
-max_tries: 4
 ---
 kind: scraper
 url: https://www.hollandresidential.com/ca/san-jose/fountain-plaza
-max_tries: 4
 render: true
 compared_versions: 2
 ---
 kind: scraper
 url: https://www.laderaapts.com/
-max_tries: 4
 render: true
 ---
 kind: scraper
 url: https://www.liverevela.com/
-max_tries: 4
 ---
 kind: scraper
 url: https://www.montereygrove.com
-max_tries: 4
 render: true
-block_resource: media
 ---
 kind: scraper
 url: https://www.morganranchapartmenthomes.com/
-max_tries: 4
 ---
 kind: scraper
 url: https://www.mresidencesmv.com/
-max_tries: 4
 ---
 kind: scraper
 url: https://www.novomountainview.com/
-max_tries: 4
 ---
 kind: scraper
 url: https://prometheusapartments.com/ca/cupertino-apartments/cupertino-park-center
-max_tries: 4
 ---
 kind: scraper
 url: https://prometheusapartments.com/ca/cupertino-apartments/the-biltmore
-max_tries: 4
 ---
 kind: scraper
 url: https://prometheusapartments.com/ca/cupertino-apartments/the-markham
-max_tries: 4
 ---
 kind: scraper
 url: https://prometheusapartments.com/ca/mountain-view-apartments/100-moffett/
-max_tries: 4
 render: true
 ---
 kind: scraper
 url: https://prometheusapartments.com/ca/mountain-view-apartments/madera/
-max_tries: 4
 render: true
 ---
 kind: scraper
 url: https://prometheusapartments.com/ca/mountain-view-apartments/montrose/
-max_tries: 4
 render: true
 ---
 kind: scraper
 url: https://prometheusapartments.com/ca/mountain-view-apartments/the-dean/
-max_tries: 4
 render: true
 ---
 kind: scraper
 url: https://prometheusapartments.com/ca/santa-clara-apartments/mansion-grove
-max_tries: 4
 ---
 kind: scraper
 url: https://prometheusapartments.com/ca/santa-clara-apartments/the-benton
-max_tries: 4
 ---
 kind: scraper
 url: https://prometheusapartments.com/ca/sunnyvale-apartments/ironworks
-max_tries: 4
 ---
 kind: scraper
 url: https://www.tamarindsquare.com/
-max_tries: 4
 ---
 
 # PDFs
