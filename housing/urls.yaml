@@ -1814,6 +1814,7 @@ render: true
 ---
 kind: scraper
 url: https://www.drycreekcrossing.com/helpfulresources
+render: true
 ---
 kind: scraper
 url: https://www.glenlomaapts.com/
@@ -1855,6 +1856,7 @@ url: https://www.liveatregencysquareapts.com/
 ---
 kind: scraper
 url: https://www.liveatregencysquareapts.com/floorplans
+render: true
 ---
 kind: scraper
 url: https://www.liveatsantanaterrace.com/
@@ -1898,6 +1900,7 @@ url: https://www.ohlonecourt.com/
 ---
 kind: scraper
 url: https://www.ohlonecourt.com/floorplans
+render: true
 ---
 kind: scraper
 url: https://www.parkerpaloalto.com/
@@ -1945,6 +1948,7 @@ url: https://www.mainlinenorth.com/floorplans
 ---
 kind: scraper
 url: https://thegroveaptssanjose.com/
+render: true
 ---
 kind: scraper
 url: https://www.thegroveaptssanjose.com/incomelimited
