@@ -35,14 +35,17 @@ class ScraperJob(jobs.UrlJob):
   __kind__ = 'scraper'
 
   __required__ = ('kind',)
-  __optional__ = ('render', 'premium_proxy', 'block_resources', 'block_resource')
+  __optional__ = ('render', 'premium_proxy', 'block_resources', 'block_resource', 'return_page_source')
 
   def retrieve(self, job_state):
     self.user_visible_url = self.url
     render_js = self.render or False
     premium_proxy = self.premium_proxy or False
     block_resources = self.block_resources or False
-    self.url = f'https://washed-ocelot--super-scraper-task.apify.actor?url={urllib.parse.quote(self.url)}&transparent_status_code=true&return_page_source=false&block_resources={str(block_resources).lower()}&render_js={str(render_js).lower()}&premium_proxy={str(premium_proxy).lower()}'
+    return_page_source = self.return_page_source
+    if return_page_source == None:
+      return_page_source = True
+    self.url = f'https://washed-ocelot--super-scraper-task.apify.actor?url={urllib.parse.quote(self.url)}&transparent_status_code=true&return_page_source={str(return_page_source).lower()}&block_resources={str(block_resources).lower()}&render_js={str(render_js).lower()}&premium_proxy={str(premium_proxy).lower()}'
     if self.block_resource:
       if not isinstance(self.block_resource, list):
         self.block_resource = [self.block_resource]

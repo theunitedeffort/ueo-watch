@@ -1742,11 +1742,9 @@ url: https://www.viverelosgatos.com/
 ---
 kind: scraper
 url: https://www.alexanderstationliving.com/
-render: true
 ---
 kind: scraper
 url: https://www.alexanderstationliving.com/applynow
-render: true
 ---
 kind: scraper
 url: https://www.alexanderstationliving.com/floorplans
@@ -1756,7 +1754,6 @@ url: https://www.alexanderstationliving.com/incomelimits
 ---
 kind: scraper
 url: https://www.almadenlakeapartments.com/
-render: true
 ---
 kind: scraper
 url: https://www.almadenlakeapartments.com/floorplans
@@ -1766,7 +1763,6 @@ url: https://www.alta-torre.com/
 ---
 kind: scraper
 url: https://www.alta-torre.com/floorplans
-render: true
 ---
 kind: scraper
 url: https://www.aspenfamilyapts.com/
@@ -1776,14 +1772,12 @@ url: https://www.aspenfamilyapts.com/floorplans
 ---
 kind: scraper
 url: https://www.borregascourtliving.com
-render: true
 ---
 kind: scraper
 url: https://www.borregascourtliving.com/floorplans
 ---
 kind: scraper
 url: https://www.canoasterraceliving.com/
-render: true
 ---
 kind: scraper
 url: https://www.canoasterraceliving.com/floorplans
@@ -1796,25 +1790,21 @@ url: https://www.crossingsonmonterey.com/floorplans
 ---
 kind: scraper
 url: https://www.enclaveaffordable.com/
-render: true
 ---
 kind: scraper
 url: https://www.enclaveaffordable.com/floorplans
 ---
 kind: scraper
 url: https://www.enclaveaffordable.com/eligibility
-render: true
 ---
 kind: scraper
 url: https://www.drycreekcrossing.com/
 ---
 kind: scraper
 url: https://www.drycreekcrossing.com/floorplans
-render: true
 ---
 kind: scraper
 url: https://www.drycreekcrossing.com/helpfulresources
-render: true
 ---
 kind: scraper
 url: https://www.glenlomaapts.com/
@@ -1830,11 +1820,9 @@ url: https://www.harvestparkliving.com/floorplans
 ---
 kind: scraper
 url: https://www.thelodgeatmorganhillapartments.com/
-render: true
 ---
 kind: scraper
 url: https://www.thelodgeatmorganhillapartments.com/ca/morgan-hill/floorplans
-render: true
 ---
 kind: scraper
 url: https://www.thelodgeatmorganhillapartments.com/ca/morgan-hill/incomerestrictions
@@ -1856,14 +1844,12 @@ url: https://www.liveatregencysquareapts.com/
 ---
 kind: scraper
 url: https://www.liveatregencysquareapts.com/floorplans
-render: true
 ---
 kind: scraper
 url: https://www.liveatsantanaterrace.com/
 ---
 kind: scraper
 url: https://www.liveatsantanaterrace.com/bmr
-render: true
 ---
 kind: scraper
 url: https://www.liveatsantanaterrace.com/floorplans
@@ -1876,21 +1862,18 @@ url: https://www.mabuhaycourt.com/floorplans
 ---
 kind: scraper
 url: https://www.montereyfamilyvillage.com/
-render: true
 ---
 kind: scraper
 url: https://www.montereyfamilyvillage.com/floorplans
 ---
 kind: scraper
 url: https://www.themontevistaapartments.com/
-render: true
 ---
 kind: scraper
 url: https://www.themontevistaapartments.com/floorplans
 ---
 kind: scraper
 url: https://www.oakcircleapartments.com/
-render: true
 ---
 kind: scraper
 url: https://www.oakcircleapartments.com/floorplans
@@ -1900,7 +1883,6 @@ url: https://www.ohlonecourt.com/
 ---
 kind: scraper
 url: https://www.ohlonecourt.com/floorplans
-render: true
 ---
 kind: scraper
 url: https://www.parkerpaloalto.com/
@@ -1925,11 +1907,9 @@ url: https://www.trestles-apts.com/ca/san-jose/floorplans
 ---
 kind: scraper
 url: https://www.trestles-apts.com/incomerestrictions
-render: true
 ---
 kind: scraper
 url: https://www.turnleaf-apts.com
-render: true
 ---
 kind: scraper
 url: https://www.turnleaf-apts.com/ca/san-jose/incomerestrictions
@@ -1948,7 +1928,6 @@ url: https://www.mainlinenorth.com/floorplans
 ---
 kind: scraper
 url: https://thegroveaptssanjose.com/
-render: true
 ---
 kind: scraper
 url: https://www.thegroveaptssanjose.com/incomelimited
@@ -1958,7 +1937,6 @@ url: https://www.thegroveaptssanjose.com/floorplans
 ---
 kind: scraper
 url: https://mayfaircourt.usamfm.com/
-render: true
 ---
 kind: scraper
 url: https://mayfaircourt.usamfm.com/applicant
@@ -1971,11 +1949,9 @@ url: https://mayfaircourt.usamfm.com/floorplans
 ---
 kind: scraper
 url: https://www.aventinoapts.com/
-render: true
 ---
 kind: scraper
 url: https://www.aviarecupertino.com/
-render: true
 ---
 kind: scraper
 url: https://rentbalmoral.com/
@@ -1985,19 +1961,18 @@ url: https://www.domicilioapts.com/
 ---
 kind: scraper
 url: https://www.hollandresidential.com/ca/san-jose/fountain-plaza
-render: true
+return_page_source: false
 compared_versions: 2
 ---
 kind: scraper
 url: https://www.laderaapts.com/
-render: true
 ---
 kind: scraper
 url: https://www.liverevela.com/
 ---
 kind: scraper
 url: https://www.montereygrove.com
-render: true
+return_page_source: false
 ---
 kind: scraper
 url: https://www.morganranchapartmenthomes.com/
@@ -2019,19 +1994,15 @@ url: https://prometheusapartments.com/ca/cupertino-apartments/the-markham
 ---
 kind: scraper
 url: https://prometheusapartments.com/ca/mountain-view-apartments/100-moffett/
-render: true
 ---
 kind: scraper
 url: https://prometheusapartments.com/ca/mountain-view-apartments/madera/
-render: true
 ---
 kind: scraper
 url: https://prometheusapartments.com/ca/mountain-view-apartments/montrose/
-render: true
 ---
 kind: scraper
 url: https://prometheusapartments.com/ca/mountain-view-apartments/the-dean/
-render: true
 ---
 kind: scraper
 url: https://prometheusapartments.com/ca/santa-clara-apartments/mansion-grove
