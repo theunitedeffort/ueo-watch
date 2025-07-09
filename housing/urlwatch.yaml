@@ -397,6 +397,17 @@ job_defaults:
     wait_until: networkidle2
   scraper:
     max_tries: 4
+    block_resources: true
+    block_resource:
+      - 'scene7.com'
+      - 'gvt1.com'
+      - 'assets.prometheusapartments.com'
+      - 'facebook.com'
+      - 'googletagmanager.com'
+      - 'cookielaw.org'
+      - 'typekit.net'
+      - 'fonts.googleapis.com'
+      - '.woff2'
   shell: {}
   url:
     headers:

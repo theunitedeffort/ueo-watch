@@ -35,16 +35,19 @@ class ScraperJob(jobs.UrlJob):
   __kind__ = 'scraper'
 
   __required__ = ('kind',)
-  __optional__ = ('render', 'premium_proxy', 'block_resource')
+  __optional__ = ('render', 'premium_proxy', 'block_resources', 'block_resource')
 
   def retrieve(self, job_state):
     self.user_visible_url = self.url
     render_js = self.render or False
     premium_proxy = self.premium_proxy or False
-    self.url = f'https://washed-ocelot--super-scraper-task.apify.actor?url={self.url}&transparent_status_code=true&render_js={str(render_js).lower()}&premium_proxy={str(premium_proxy).lower()}'
+    block_resources = self.block_resources or False
+    self.url = f'https://washed-ocelot--super-scraper-task.apify.actor?url={urllib.parse.quote(self.url)}&transparent_status_code=true&return_page_source=false&block_resources={str(block_resources).lower()}&render_js={str(render_js).lower()}&premium_proxy={str(premium_proxy).lower()}'
     if self.block_resource:
-      # Supports just one resource type for now.
-      self.url += f'&block_resource={self.block_resource}'
+      if not isinstance(self.block_resource, list):
+        self.block_resource = [self.block_resource]
+      for res in self.block_resource:
+        self.url += f'&block_resource={urllib.parse.quote(res)}'
     self.headers = self.headers or {}
     auth_header = 'Authorization'
     existing_auth = [h for h in self.headers if h.lower() == auth_header.lower()]
