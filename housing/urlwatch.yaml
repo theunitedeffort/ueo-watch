@@ -407,9 +407,11 @@ job_defaults:
       - 'cookielaw.org'
       - 'typekit.net'
       - 'fonts.googleapis.com'
+      - 'maps.googleapis.com'
       - '.woff2'
       - '.webp'
       - '.jfif'
+      - '.m4a'
     render: true
     return_page_source: true
   shell: {}
