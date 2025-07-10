@@ -408,6 +408,8 @@ job_defaults:
       - 'typekit.net'
       - 'fonts.googleapis.com'
       - '.woff2'
+      - '.webp'
+      - '.jfif'
     render: true
     return_page_source: true
   shell: {}
