@@ -1610,6 +1610,8 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/692e1f4d-03cc-4cc3-8e98-f890
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/29a9a407-b229-4093-9d99-1e5ae2658c95/lorien_apartments_3131_homestead_rd_santa_clara_ca
 ---
+navigate: https://housingbayarea.mtc.ca.gov/listing/5253a8d6-19e0-4bcb-8723-678238566b30/saratoga_court_18855_cox_avenue_saratoga_ca
+---
 user_visible_url: https://housingbayarea.mtc.ca.gov/listings?search=counties:Santa%20Clara
 url: https://housingbayarea.mtc.ca.gov/api/adapter/listings/combined
 headers:
