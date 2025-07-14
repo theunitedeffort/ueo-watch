@@ -1,11 +1,13 @@
 # ADSA
 ---
 url: https://www.cdss.ca.gov/assistance-dogs
+ssl_no_verify: true
 ---
 
 # CalFresh
 ---
 url: https://www.cdss.ca.gov/calfresh
+ssl_no_verify: true
 ---
 url: https://stgenssa.sccgov.org/debs/program_handbooks/charts/assets/2CalFresh/CFMonthAllIncomeElig.htm
 ---
@@ -19,6 +21,7 @@ url: https://stgenssa.sccgov.org/debs/program_handbooks/calfresh/assets/CalFresh
 # CalWORKS
 ---
 url: https://www.cdss.ca.gov/calworks
+ssl_no_verify: true
 ---
 url: https://ca.db101.org/ca/programs/income_support/calworks/program2.htm
 ---
@@ -37,6 +40,7 @@ url: https://stgenssa.sccgov.org/debs/program_handbooks/calworks/assets/27Other_
 url: https://stgenssa.sccgov.org/debs/program_handbooks/calworks/assets/13Age_Student_Immunization/Age_Requirements.htm
 ---
 url: https://www.cdss.ca.gov/cdssweb/entres/forms/english/cw29.pdf
+ssl_no_verify: true
 filter:
   - pdf2text
 ---
@@ -44,6 +48,7 @@ filter:
 # CAPI
 ---
 url: https://www.cdss.ca.gov/capi
+ssl_no_verify: true
 ---
 url: https://ca.db101.org/ca/programs/income_support/capi/program2.htm
 ---
