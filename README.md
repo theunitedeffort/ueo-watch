@@ -153,7 +153,7 @@ EOF
 ```
 
 ## GCS reporter
-The email reports a simply summaries of what changed.  The full change report is in HTML format and gets uploaded to Google Cloud Storage.  This reporter works using the `gsutil` command and a service account.  Set up service account access by following [this helpful guide](https://gist.github.com/ryderdamen/926518ddddd46dd4c8c2e4ef5167243d).
+The email reports a simple summary of what changed.  The full change report is in HTML format and gets uploaded to Google Cloud Storage.  This reporter works using the `gsutil` command and a service account.  Set up service account access by following [this helpful guide](https://gist.github.com/ryderdamen/926518ddddd46dd4c8c2e4ef5167243d).
 
 ## Jira reporter
 Reported changes generate issues in Jira for better tracking and process visibility.  To use the Jira reporter, a Jira API key is needed.  This API key should be stored in a .netrc file. If no such file exists, create  `~/.netrc` and fill it with something like:
