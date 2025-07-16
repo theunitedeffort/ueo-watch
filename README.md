@@ -25,6 +25,7 @@ make altinstall
 [urlwatch](https://urlwatch.readthedocs.io/en/latest/index.html) needs to be present on the machine and in the `PATH` for the various run scripts to work.  Production runs of `ueo-watch` use the `dev` branch of the [trevorshannon/urlwatch](https://github.com/trevorshannon/urlwatch) fork, though you can try another version of `urlwatch` if you wish.
 
 ```
+cd ~
 git clone https://github.com/trevorshannon/urlwatch.git
 ```
 
