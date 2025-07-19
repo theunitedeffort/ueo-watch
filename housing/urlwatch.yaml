@@ -355,6 +355,12 @@ job_defaults:
           # The Esp link keeps changing to garbate on these sites, and it's
           # too noisy.
           exclude: '//*[.//text()[normalize-space(.)="Eng"] and .//text()[normalize-space(.)="Esp"] and .//text()[normalize-space(.)="|"]][not(.//*[.//text()[normalize-space(.)="Eng"] and .//text()[normalize-space(.)="Esp"] and .//text()[normalize-space(.)="|"]])]'
+      - selective:
+          select_pattern:
+            - '.*liveatsantanaterrace\.com/floorplans'
+          filter: xpath
+          path: '//body'
+          exclude: "//div[contains(@class, 'fp-container')][not(.//h2[contains(text(), 'Below Market Rate')])]"
       - re.sub: 'Image Detail [a-z0-9]{32}'
       - re.sub:
           pattern: '/x(.*?\.[a-zA-Z]{3,4})(,qitok=[a-zA-Z0-9-]{8})?\.pagespeed\.ic\.[a-zA-Z0-9-]{10}\.[a-zA-Z]{3,4}'
