@@ -123,10 +123,12 @@ url: https://www.cpuc.ca.gov/consumer-support/financial-assistance-savings-and-d
 ---
 kind: scraper
 url: https://www.californialifeline.com/en/eligibility_requirements
+wait_browser: networkidle
 render: true
 ---
 kind: scraper
 url: https://www.californialifeline.com/en
+wait_browser: networkidle
 render: true
 
 # LIHEAP
