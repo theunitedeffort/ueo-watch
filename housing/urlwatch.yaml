@@ -52,12 +52,14 @@ job_defaults:
             div.gform_wrapper,
             ul[id^="slideshow"],
             div.slideshow-wrapper,
+            .slider_block,
             .elementor-widget-image-carousel,
             div.orbit,
             div.ngg-slideshow,
             div.lazy-community-carousel,
             .gallery__slider,
             #acadp-slider-wrapper,
+            .flexslider,
             #gallery,
             .dmPhotoGallery,
             .hubdb-events,
@@ -361,7 +363,7 @@ job_defaults:
             - '.*liveatsantanaterrace\.com/floorplans'
           filter: xpath
           path: '//body'
-          exclude: "//div[contains(@class, 'fp-container')][not(.//h2[contains(text(), 'Below Market Rate')])]"
+          exclude: "//div[(contains(@class, 'fp-container') or starts-with(@id, 'modal-content-'))][not(.//h2[contains(text(), 'Below Market Rate')])]"
       - re.sub: 'Image Detail [a-z0-9]{32}'
       - re.sub:
           pattern: '/x(.*?\.[a-zA-Z]{3,4})(,qitok=[a-zA-Z0-9-]{8})?\.pagespeed\.ic\.[a-zA-Z0-9-]{10}\.[a-zA-Z]{3,4}'
