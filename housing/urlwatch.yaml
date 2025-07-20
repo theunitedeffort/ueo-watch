@@ -279,6 +279,7 @@ job_defaults:
             - '.*liveatdomus\.com/'
             - '.*liveatsavoy\.com/'
             - '.*liveatvio\.com/'
+            - '.*liveavelle\.com/'
             - '.*livelandsby\.com/'
             - '.*livepassero\.com/'
             - '.*liveprado\.com/'
