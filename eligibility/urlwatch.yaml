@@ -43,6 +43,26 @@ job_defaults:
       - re.sub: 'time=\d+'
   browser:
     wait_until: networkidle2
+  scraper:
+    max_tries: 4
+    block_resources: true
+    block_resource:
+      - 'facebook.com'
+      - 'googletagmanager.com'
+      - 'cookielaw.org'
+      - 'typekit.net'
+      - 'gstatic.com/_/translate_http'
+      - 'fonts.googleapis.com'
+      - 'maps.googleapis.com'
+      - 'api.mapbox.com'
+      - '.woff2'
+      - '.ttf'
+      - '.webp'
+      - '.jfif'
+      - '.m4a'
+      - '.mp4'
+    render: true
+    return_page_source: true
   shell: {}
   url:
     headers:

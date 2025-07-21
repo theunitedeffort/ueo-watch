@@ -69,13 +69,9 @@ url: https://www.cpuc.ca.gov/consumer-support/financial-assistance-savings-and-d
 ---
 kind: scraper
 url: https://socialservices.sccgov.org/financial-assistance/financial-assistance-adults-without-dependent-children-general-assistance
-max_tries: 4
-render: true
 ---
 kind: scraper
 url: https://socialservices.sccgov.org/how-do-i/apply-for-benefits
-max_tries: 4
-render: true
 ---
 url: https://stgenssa.sccgov.org/debs/program_handbooks/charts/assets/4GA/NeedStnds.htm
 ---
@@ -111,8 +107,6 @@ filter:
 ---
 kind: scraper
 url: https://socialservices.sccgov.org/other-services/in-home-supportive-services/in-home-supportive-services-recipients
-max_tries: 4
-render: true
 ---
 url: https://ca.db101.org/ca/programs/health_coverage/medi_cal/ihss/program2.htm
 ---
@@ -123,13 +117,11 @@ url: https://www.cpuc.ca.gov/consumer-support/financial-assistance-savings-and-d
 ---
 kind: scraper
 url: https://www.californialifeline.com/en/eligibility_requirements
-wait_browser: networkidle
-render: true
+return_page_source: false
 ---
 kind: scraper
 url: https://www.californialifeline.com/en
-wait_browser: networkidle
-render: true
+return_page_source: false
 
 # LIHEAP
 ---
