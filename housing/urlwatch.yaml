@@ -53,6 +53,7 @@ job_defaults:
             ul[id^="slideshow"],
             div.slideshow-wrapper,
             .slider_block,
+            .slick-slider,
             .elementor-widget-image-carousel,
             div.orbit,
             div.ngg-slideshow,
