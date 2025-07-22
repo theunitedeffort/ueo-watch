@@ -1403,8 +1403,6 @@ url: https://vintagetoweravanath.com/
 ---
 url: https://vintagetoweravanath.com/floor-plans/
 ---
-url: https://vintagetoweravanath.securecafe.com/onlineleasing/vintage-tower/availableunits.aspx
----
 url: https://vitalia-bascom-apts.rentcafewebsite.com/
 ---
 url: https://virginiastreet.usamfm.com/
@@ -1896,6 +1894,9 @@ kind: scraper
 url: https://www.southwood-apartments.com/
 ---
 kind: scraper
+url: https://vintagetoweravanath.securecafe.com/onlineleasing/vintage-tower/availableunits.aspx
+---
+kind: scraper
 url: https://terracinamorganhill.usamfm.com/
 ---
 kind: scraper
@@ -1949,6 +1950,7 @@ url: https://mayfaircourt.usamfm.com/applicant
 kind: scraper
 url: https://mayfaircourt.usamfm.com/floorplans
 ---
+
 # Market rate
 # Remember to also update the regex pattern in urlwatch.yaml for market rate URLs.
 ---
