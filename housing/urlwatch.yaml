@@ -166,6 +166,7 @@ job_defaults:
             #socialLinks,
             .social-media-links,
             .social-links,
+            .social-links-v2,
             .social-icons,
             .social_icons,
             .social-media-block,
