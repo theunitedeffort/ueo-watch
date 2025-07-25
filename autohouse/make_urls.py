@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+from datetime import datetime, date
 import io
 import logging
 import os
@@ -44,6 +45,12 @@ def get_sheet_as_csv_bytes(drive_api, file_metadata):
 def get_file_bytes(drive_api, file_metadata):
   return drive_api.files().get_media(fileId=file_metadata['id']).execute()
 
+def calc_age(birthdate, as_of=date.today()):
+  age = as_of.year - birthdate.year - 1
+  if (as_of.month > birthdate.month) or (as_of.month == birthdate.month and as_of.day >= birthdate.day):
+    # happy birthday!
+    age += 1
+  return age
 
 load_dotenv()
 logger = logging.getLogger(__name__)
@@ -158,16 +165,19 @@ def generate_jobs(df):
     # veteran status, and disability status.
     params['populationsServed'] = ['General Population']
     # Use the age value to conditionally add Seniors or Youth
-    if row['Age']:
-      age = None
+    age = None
+    if row['Date of Birth']:
+      dob = None
       try:
-       age = int(row['Age'])
+        dob = datetime.strptime(row['Date of Birth'], '%m/%d/%Y').date()
       except ValueError:
         pass
-      if age and age >= 55:
-        params['populationsServed'].append('Seniors')
-      if age and age <= 18:
-        params['populationsServed'].append('Youth')
+      if dob:
+        age = calc_age(dob)
+    if age and age >= 55:
+      params['populationsServed'].append('Seniors')
+    if age and age <= 18:
+      params['populationsServed'].append('Youth')
 
     # Apricot exports "Yes", "No", or blank
     is_veteran = row['Are you a veteran?'].lower()
