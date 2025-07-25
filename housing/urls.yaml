@@ -1744,6 +1744,12 @@ url: https://www.viverelosgatos.com/
 # Below market rate
 ---
 kind: scraper
+url: https://www.787thealameda.com/
+---
+kind: scraper
+url: https://www.787thealameda.com/san-jose/787-the-alameda/conventional/
+---
+kind: scraper
 url: https://www.alexanderstationliving.com/
 ---
 kind: scraper

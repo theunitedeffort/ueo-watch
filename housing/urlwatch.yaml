@@ -13,6 +13,7 @@ job_defaults:
             - '.*housekeys\d+\.com/?$'
             - '.*relatedcalifornia\.com'
             - '.*deanzaproperties\.com'
+            - '.*787thealameda\.com/?$'
           invert_selection: true
           filter: css
           selector: body
@@ -193,6 +194,7 @@ job_defaults:
             [class*="menu-main-header-nav"],
             .footer-wrapper .menu,
             .footer-nav-secondary,
+            .footer-nav-list,
             #footer-menus-md-sm,
             #footer-menus-lg,
             .footer-container .menu-section,
@@ -417,12 +419,14 @@ job_defaults:
       - 'scene7.com'
       - 'gvt1.com'
       - 'assets.prometheusapartments.com'
+      - 'media.canva.com'
       - 'facebook.com'
       - 'googletagmanager.com'
       - 'cookielaw.org'
       - 'typekit.net'
       - 'gstatic.com/_/translate_http'
       - 'fonts.googleapis.com'
+      - 'font-public.canva.com'
       - 'maps.googleapis.com'
       - 'api.mapbox.com'
       - '.woff2'
