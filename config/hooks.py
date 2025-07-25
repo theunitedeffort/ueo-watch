@@ -215,6 +215,12 @@ class RealPageFloorplans(ListingApiBase):
   __query__ = r'.response // . | .floorplans[]? | "\(.name)\n---\n\(.bedRooms) BR\n\(.rentType)\n\(.rentRange)\n\n"'
 
 
+class KnockUnits(ListingApiBase):
+
+  __kind__ = 'knock_units'
+  __query__ = r'.units_data.units[] | "\(.bedrooms) BR\n---\n$\(.displayPrice)/month\navailable \(if "\(.availableOn)T00:00:00Z" | fromdate < now then "now" else .availableOn end)\n\n"'
+
+
 class AppFolioUnits(ListingApiBase):
 
   __kind__ = 'appfolio_units'
