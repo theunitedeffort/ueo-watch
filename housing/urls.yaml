@@ -1638,6 +1638,8 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/81bc0d99-5bd2-4dd7-8211-ef5f
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/63e3e2f7-1378-4d9e-a364-2795177647d8/ira_d_hall_square_1178_sonora_court_sunnyvale_ca
 ---
+navigate: https://housingbayarea.mtc.ca.gov/listing/ce3b2679-57f7-4694-b960-b5700456dccd/orlo_1200_rickabaugh_way_santa_clara_ca
+---
 user_visible_url: https://housingbayarea.mtc.ca.gov/listings?search=counties:Santa%20Clara
 url: https://housingbayarea.mtc.ca.gov/api/adapter/listings/combined
 headers:
