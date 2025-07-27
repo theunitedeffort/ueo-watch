@@ -2010,6 +2010,12 @@ wait_browser: networkidle
 compared_versions: 2
 ---
 kind: scraper
+url: https://www.hollandresidential.com/ca/santa-clara/orlo
+return_page_source: false
+wait_browser: networkidle
+compared_versions: 2
+---
+kind: scraper
 url: https://www.laderaapts.com/
 ---
 kind: scraper
