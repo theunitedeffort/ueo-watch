@@ -1644,6 +1644,8 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/ce3b2679-57f7-4694-b960-b570
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/fa6c5e4a-e1fb-4ce0-ba50-da76a9bf2115/posolmi_place_183_acalanes_drive_sunnyvale_ca
 ---
+navigate: https://housingbayarea.mtc.ca.gov/listing/b72e875d-d512-4728-9a0a-d6bc02a3a75d/sango_court_355_sango_ct_milpitas_ca
+---
 user_visible_url: https://housingbayarea.mtc.ca.gov/listings?search=counties:Santa%20Clara
 url: https://housingbayarea.mtc.ca.gov/api/adapter/listings/combined
 headers:
