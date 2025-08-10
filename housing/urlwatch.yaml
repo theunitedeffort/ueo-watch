@@ -42,6 +42,7 @@ job_defaults:
             - '.*bridgehousing\.com'
             - '.*housingchoices\.org'
             - '.*abode\.org'
+            - '.*irvinecompanyapartments\.com'
           filter: css
           selector: body
           exclude: >-
@@ -284,7 +285,7 @@ job_defaults:
             - '.*equityapartments\.com/san-francisco-bay/'
             - '.*greystar\.com/properties/'
             - '.*hollandresidential\.com'
-            - '.*irvinecompanyapartments\.com'
+            - '.*irvinecompanyapartments\.com/locations'
             - '.*ivyliving\.com'
             - '.*laderaapts\.com/'
             - '.*liveatdomus\.com/'

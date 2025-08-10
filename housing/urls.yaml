@@ -691,6 +691,20 @@ url: https://www.humangood.org/the-terraces-of-los-gatos
 ---
 url: http://www.impactdevgroup.com/properties-canoas-terrace.php
 ---
+url: https://www.irvinecompanyapartments.com/affordable-housing.html
+---
+url: https://www.irvinecompanyapartments.com/affordable-housing.html#table
+# All scripts are usually filtered out, but in this case the data we need is
+# stored in a <script type="text/x-template">
+filter:
+  - css:
+      selector: 'script#affordable-housing-tpl'
+  # The next css filter can only parse the nodes when they are not in a <script>
+  # template, so remove that surrounding tag.
+  - re.sub: '</?script.*?>'
+  - css:
+      selector: 'li[data-market="Northern California"]'
+---
 url: https://www.jamboreehousing.com/blogs/affordable-housing-developer-partner/hillview-court-milpitas-santa-clara-county
 ---
 url: https://www.jamboreehousing.com/blogs/affordable-housing-resident/monte-vista-gardens-san-jose
