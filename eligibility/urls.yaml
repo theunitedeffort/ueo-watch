@@ -60,6 +60,25 @@ url: https://www.cpuc.ca.gov/consumer-support/financial-assistance-savings-and-d
 url: https://www.cpuc.ca.gov/industries-and-topics/electrical-energy/electric-costs/care-fera-program
 ---
 
+# Clipper START
+---
+# currently giving errors about page.evaluate: Execution context was destroyed
+# kind: scraper
+# url: https://www.clipperstartcard.com/s/
+# return_page_source: false
+# ---
+user_visible_url: https://www.clipperstartcard.com/s/#income-limits
+url: https://www.clipperstartcard.com/s/sfsites/aura?r=1&other.HouseHoldIncome.getHouseHoldIncomes=4
+data:
+  message: '{"actions":[{"id":"106;a","descriptor":"apex://HouseHoldIncomeController/ACTION$getHouseHoldIncomes","callingDescriptor":"markup://c:meansHomeBody","params":{}}]}'
+  aura.context: '{"mode":"PROD","fwuid":"eE5UbjZPdVlRT3M0d0xtOXc5MzVOQWg5TGxiTHU3MEQ5RnBMM0VzVXc1cmcxMi42MjkxNDU2LjE2Nzc3MjE2","app":"siteforce:communityApp","loaded":{"APPLICATION@markup://siteforce:communityApp":"1304_mrTwQgpga20ubVtg_n_l_A"},"dn":[],"globals":{},"uad":true}'
+  aura.pageURI: '/s/'
+  aura.token: 'null'
+filter:
+  - jq: '.actions[0].returnValue[] | "\(.Label): $\(.Income__c)"'
+  - if_empty: error
+---
+
 # FERA
 ---
 url: https://www.cpuc.ca.gov/consumer-support/financial-assistance-savings-and-discounts/family-electric-rate-assistance-program

@@ -4,6 +4,7 @@ display:
   unchanged: false
 job_defaults:
   all:
+    timeout: 90
     ignore_cached: true
     filter:
       - selective:
@@ -55,6 +56,9 @@ job_defaults:
       - 'fonts.googleapis.com'
       - 'maps.googleapis.com'
       - 'api.mapbox.com'
+      - 'clipperstartcard.com/resource'
+      - 'clipperstartcard.com/sfsites/c/resource'
+      - 'clipperstartcard.com/s/sfsites/c/resource'
       - '.woff2'
       - '.ttf'
       - '.webp'
