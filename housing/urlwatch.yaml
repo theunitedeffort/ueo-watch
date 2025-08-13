@@ -264,7 +264,8 @@ job_defaults:
             .ysi-login-link-widget,
             #google_translate_element,
             #goog-gt-tt,
-            div.wrapper.flex-grid.align-center.cta-wrapper.pt160.pb130.mpt100.mpb80 div[data-aos="fade-in"]
+            div.wrapper.flex-grid.align-center.cta-wrapper.pt160.pb130.mpt100.mpb80 div[data-aos="fade-in"],
+            similar_models_section
       - selective:
           select_pattern:
             - '.*300railway\.com/'
