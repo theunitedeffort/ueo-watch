@@ -713,7 +713,7 @@ filter:
   - css:
       selector: 'li[data-market="Northern California"]'
 ---
-url: https://www.jamboreehousing.com/blogs/affordable-housing-developer-partner/hillview-court-milpitas-santa-clara-county
+url: https://www.jamboreehousing.com/blogs/affordable-housing-resident/mosaic-court-milpitas
 ---
 url: https://www.jamboreehousing.com/blogs/affordable-housing-resident/monte-vista-gardens-san-jose
 ---
