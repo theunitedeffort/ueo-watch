@@ -15,6 +15,7 @@ job_defaults:
             - '.*relatedcalifornia\.com'
             - '.*deanzaproperties\.com'
             - '.*787thealameda\.com/?$'
+            - '.*tamienstation\.com'
           invert_selection: true
           filter: css
           selector: body
