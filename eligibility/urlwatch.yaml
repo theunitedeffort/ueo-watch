@@ -4,7 +4,8 @@ display:
   unchanged: false
 job_defaults:
   all:
-    timeout: 90
+    timeout: 120
+    max_tries: 2
     ignore_cached: true
     filter:
       - selective:
