@@ -426,6 +426,7 @@ job_defaults:
       - 'media.canva.com'
       - 'facebook.com'
       - 'googletagmanager.com'
+      - 'google-analytics.com'
       - 'cookielaw.org'
       - 'typekit.net'
       - 'gstatic.com/_/translate_http'
@@ -433,12 +434,15 @@ job_defaults:
       - 'font-public.canva.com'
       - 'maps.googleapis.com'
       - 'api.mapbox.com'
+      - 'aceai.leasehawk.com'
+      - 'clarity.ms/collect'
       - '.woff2'
       - '.ttf'
       - '.webp'
       - '.jfif'
       - '.m4a'
       - '.mp4'
+      - '.svg'
     render: true
     return_page_source: true
   shell: {}
