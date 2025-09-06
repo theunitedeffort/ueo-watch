@@ -144,6 +144,7 @@ return_page_source: false
 kind: scraper
 url: https://www.californialifeline.com/en
 return_page_source: false
+compared_versions: 2
 
 # LIHEAP
 ---
