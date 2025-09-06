@@ -1313,8 +1313,6 @@ url: https://www.royaloakvillage.com/api/v3/floorplans/all/?api_key=557dce40ad4c
 filter:
   - apartments247_floorplans
 ---
-url: https://www.sahahomes.org/properties/arya
----
 user_visible_url: https://gisdata-csj.opendata.arcgis.com/datasets/CSJ::affordable-rental-housing/explore?showTable=true
 url: https://geo.sanjoseca.gov/server/rest/services/OPN/OPN_OpenDataService/MapServer/457/query?where=1%3D1&outFields=DEVELOPMENTNAME,WEBSITE,DEVELOPER,DEVTYPE,PROPERTYMANAGER,PHONE,TENURETYPE,PROJECTTYPE,ADDRESS,CITY,ZIP,PROJDEVSTAGE,POPULATIONTYPE,ELIUNITS,VLIUNITS,LIUNITS,MODERATEUNITS,RESTMGRUNITS,TOTALAFFUNITS,HUDUNITS,INCLUSIONARY,BONDTAXCREDITONLY,APN,DATASOURCE,ARSTATUS&returnGeometry=false&outSR=&f=json
 filter:
@@ -1958,6 +1956,9 @@ url: https://www.ohlonecourt.com/floorplans
 ---
 kind: scraper
 url: https://www.parkerpaloalto.com/
+---
+kind: scraper
+url: https://www.sahahomes.org/properties/arya
 ---
 kind: scraper
 url: https://www.southwood-apartments.com/
