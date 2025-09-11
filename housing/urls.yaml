@@ -1668,6 +1668,8 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/fa6c5e4a-e1fb-4ce0-ba50-da76
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/b72e875d-d512-4728-9a0a-d6bc02a3a75d/sango_court_355_sango_ct_milpitas_ca
 ---
+navigate: https://housingbayarea.mtc.ca.gov/listing/ca6e6305-a0b9-47f1-8194-c83439d07fc6/the_fountains_2005_san_ramon_ave_mountain_view_ca
+---
 user_visible_url: https://housingbayarea.mtc.ca.gov/listings?search=counties:Santa%20Clara
 url: https://housingbayarea.mtc.ca.gov/api/adapter/listings/combined
 headers:
