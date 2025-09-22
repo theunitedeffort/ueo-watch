@@ -53,6 +53,11 @@ url: https://www.231grant.org/
 ---
 url: https://www.231grant.org/faqs-full
 ---
+user_visible_url: https://www.787thealameda.com/san-jose/787-the-alameda/conventional/
+url: https://sightmap.com/app/api/v1/nrkwn3zevd2/sightmaps/20118
+filter:
+  - sightmap_units
+---
 url: https://abode.org/alma-garden-waitlist-form
 ---
 url: https://abode.org/opportunity-center
@@ -1810,9 +1815,6 @@ url: https://www.viverelosgatos.com/
 ---
 kind: scraper
 url: https://www.787thealameda.com/
----
-kind: scraper
-url: https://www.787thealameda.com/san-jose/787-the-alameda/conventional/
 ---
 kind: scraper
 url: https://www.alexanderstationliving.com/
