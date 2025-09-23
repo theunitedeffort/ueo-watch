@@ -341,6 +341,15 @@ job_defaults:
             picture,
             img,
             .price-container
+      # Link for address in footer appears and disappears, causing noise
+      # Remove the surrounding <a> from the address so it never shows up.
+      # We need to keep the innerHTML of the <a>
+      - selective:
+          select_pattern:
+            - '.*787thealameda\.com/'
+          filter: re.sub
+          pattern: ' <a class="property-primary-address" .*?>(.*?)</a> '
+          repl: '\1'
       - selective:
           select_pattern:
             - '.*jamboreehousing\.com/pages/affordable-housing-in-california-residents'
