@@ -698,20 +698,6 @@ url: https://www.humangood.org/the-terraces-of-los-gatos
 ---
 url: http://www.impactdevgroup.com/properties-canoas-terrace.php
 ---
-url: https://www.irvinecompanyapartments.com/affordable-housing.html
----
-url: https://www.irvinecompanyapartments.com/affordable-housing.html#table
-# All scripts are usually filtered out, but in this case the data we need is
-# stored in a <script type="text/x-template">
-filter:
-  - css:
-      selector: 'script#affordable-housing-tpl'
-  # The next css filter can only parse the nodes when they are not in a <script>
-  # template, so remove that surrounding tag.
-  - re.sub: '</?script.*?>'
-  - css:
-      selector: 'li[data-market="Northern California"]'
----
 url: https://www.jamboreehousing.com/blogs/affordable-housing-resident/mosaic-court-milpitas
 ---
 url: https://www.jamboreehousing.com/blogs/affordable-housing-resident/monte-vista-gardens-san-jose
@@ -1762,12 +1748,6 @@ url: https://www.greystar.com/properties/san-jose-ca/vio
 ---
 url: https://www.greystar.com/properties/santa-clara-ca/sofia
 ---
-url: https://www.irvinecompanyapartments.com/locations/northern-california/san-jose/north-park.html
----
-url: https://www.irvinecompanyapartments.com/locations/northern-california/cupertino/hamptons-at-cupertino.html
----
-url: https://www.irvinecompanyapartments.com/locations/northern-california/sunnyvale/redwood-place.html
----
 url: https://ivyliving.com/paloalto/
 ---
 url: https://www.liveatdomus.com/
@@ -1897,6 +1877,22 @@ url: https://www.harvestparkliving.com/
 ---
 kind: scraper
 url: https://www.harvestparkliving.com/floorplans
+---
+kind: scraper
+url: https://www.irvinecompanyapartments.com/affordable-housing.html
+---
+kind: scraper
+url: https://www.irvinecompanyapartments.com/affordable-housing.html#table
+# All scripts are usually filtered out, but in this case the data we need is
+# stored in a <script type="text/x-template">
+filter:
+  - css:
+      selector: 'script#affordable-housing-tpl'
+  # The next css filter can only parse the nodes when they are not in a <script>
+  # template, so remove that surrounding tag.
+  - re.sub: '</?script.*?>'
+  - css:
+      selector: 'li[data-market="Northern California"]'
 ---
 kind: scraper
 url: https://www.thelodgeatmorganhillapartments.com/
@@ -2051,6 +2047,15 @@ url: https://www.hollandresidential.com/ca/santa-clara/orlo
 return_page_source: false
 wait_browser: networkidle
 compared_versions: 2
+---
+kind: scraper
+url: https://www.irvinecompanyapartments.com/locations/northern-california/san-jose/north-park.html
+---
+kind: scraper
+url: https://www.irvinecompanyapartments.com/locations/northern-california/cupertino/hamptons-at-cupertino.html
+---
+kind: scraper
+url: https://www.irvinecompanyapartments.com/locations/northern-california/sunnyvale/redwood-place.html
 ---
 kind: scraper
 url: https://www.laderaapts.com/
