@@ -1440,6 +1440,7 @@ user_visible_url: https://www.villatorinoapts.com/apartments/ca/san-jose/floor-p
 url: https://leasing.realpage.com/RP.Leasing.AppService.WebHost/workflowstartup/v1/3461849/
 filter:
   - rpservice_units
+  - if_empty: error
 ---
 url: https://vintagetoweravanath.com/
 ---
