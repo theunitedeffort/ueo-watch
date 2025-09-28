@@ -64,6 +64,40 @@ class ScraperJob(jobs.UrlJob):
     self.headers[auth_header] = f'Bearer {apify_token}'
     return super().retrieve(job_state)
 
+class GraphqlJob(jobs.UrlJob):
+  """Custom job to set query parameters for graphql-based property pages."""
+
+  __kind__ = 'graphql'
+
+  __required__ = ('kind', 'location_urn')
+
+  def retrieve(self, job_state):
+    self.user_visible_url = self.url
+    self.url = 'https://inventory.g5marketingcloud.com/graphql'
+    self.data = r"""{
+      "operationName": "apt",
+      "variables": {
+        "locationUrn": "%s"
+      },
+      "query": "%s"
+      }
+    """ % (self.location_urn, self.__query__)
+    self.headers = self.headers or {}
+    self.headers['Content-type'] = 'application/json'
+    return super().retrieve(job_state)
+
+
+class GraphqlUnitsJob(GraphqlJob):
+
+  __kind__ = 'graphql_units'
+  __query__ = r'query apt($locationUrn: String!) {\n apartmentComplex(locationUrn: $locationUrn) {\n apartments {\n prices {\n formattedPrice\n priceType\n }\n name\n floorplan {\n beds\n name\n }\n }\n }\n}\n'
+
+
+class GraphqlFloorplansJob(GraphqlJob):
+
+  __kind__ = 'graphql_floorplans'
+  __query__ = r'query apt($locationUrn: String!) {\n apartmentComplex(locationUrn: $locationUrn) {\n floorplans {\n beds\n endingRate\n name\n rateDisplay\n startingRate\n totalAvailableUnits\n floorplanCta {\n actionType\n url\n name\n }\n }\n }\n}\n'
+
 
 class RpServiceJob(jobs.UrlJob):
   """Custom job to compute necessary headers for Realpage AppService API"""
@@ -242,7 +276,7 @@ class Apartments247Floorplans(ListingApiBase):
 class GraphqlUnits(ListingApiBase):
 
   __kind__ = 'graphql_units'
-  __query__ = r'.data.apartmentComplex.apartments[] | "\(.floorplan.name)\n---\n\(.floorplan.beds) BR\n\(.prices[].formattedPrice)\n\n"'
+  __query__ = r'.data.apartmentComplex.apartments[] | "\(.floorplan.name)\n---\n\(.floorplan.beds) BR\n\(.prices[] | select(.priceType == "rate") | .formattedPrice)\n\n"'
 
 
 class GraphqlFloorplans(ListingApiBase):
