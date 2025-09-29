@@ -47,6 +47,8 @@ class ScraperJob(jobs.UrlJob):
     return_page_source = self.return_page_source
     if return_page_source == None:
       return_page_source = True
+    if return_page_source:
+      self.block_resource.append('.js')
     self.url = f'{base_url}?url={urllib.parse.quote(self.url)}&transparent_status_code=true&return_page_source={str(return_page_source).lower()}&block_resources={str(block_resources).lower()}&render_js={str(render_js).lower()}&premium_proxy={str(premium_proxy).lower()}'
     if self.block_resource:
       if not isinstance(self.block_resource, list):
