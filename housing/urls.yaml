@@ -1932,6 +1932,9 @@ wait_browser: networkidle
 compared_versions: 2
 ---
 kind: scraper
+url: https://www.ilaraapartments.com/
+---
+kind: scraper
 url: https://www.irvinecompanyapartments.com/locations/northern-california/san-jose/north-park.html
 ---
 kind: scraper
