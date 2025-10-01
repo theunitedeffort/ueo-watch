@@ -387,6 +387,12 @@ job_defaults:
           filter: xpath
           path: '//body'
           exclude: "//div[(contains(@class, 'fp-container') or starts-with(@id, 'modal-content-'))][not(.//h2[contains(text(), 'Below Market Rate')])]"
+      - selective:
+          select_pattern:
+            - '.*irvinecompanyapartments.com/affordable-housing/affordable-housing-income-limits'
+          filter: xpath
+          path: '//body'
+          exclude: "//div[normalize-space(.)='Orange County' or normalize-space(.)='San Diego']/following::div[contains(@class,'table')][2]//table"
       - re.sub: 'Image Detail [a-z0-9]{32}'
       - re.sub:
           pattern: '/x(.*?\.[a-zA-Z]{3,4})(,qitok=[a-zA-Z0-9-]{8})?\.pagespeed\.ic\.[a-zA-Z0-9-]{10}\.[a-zA-Z]{3,4}'

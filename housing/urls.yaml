@@ -1785,6 +1785,9 @@ filter:
       selector: 'li[data-market="Northern California"]'
 ---
 kind: scraper
+url: https://www.irvinecompanyapartments.com/affordable-housing/affordable-housing-income-limits.html
+---
+kind: scraper
 url: https://www.thelodgeatmorganhillapartments.com/
 ---
 kind: scraper
