@@ -241,7 +241,7 @@ class SightmapUnits(ListingApiBase):
   """Filter for pretty-printing units JSON data from the Sightmap API."""
 
   __kind__ = 'sightmap_units'
-  __query__ = r'.data | .floor_plans as $fp | .units[]? | "\(.floor_plan_id as $fpId | $fp[] | select(.id == $fpId) | .bedroom_count) BR\n---\n$\(.price)/month\n\n"'
+  __query__ = r'.data | .floor_plans as $fp | .units[]? | "\(.floor_plan_id as $fpId | $fp[] | select(.id == $fpId) | .bedroom_count) BR\n---\n$\(.price)/month\nAvailable\n\n"'
 
 
 class RealPageUnits(ListingApiBase):

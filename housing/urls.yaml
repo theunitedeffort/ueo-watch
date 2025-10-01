@@ -1270,6 +1270,11 @@ url: https://thecorecompanies.com/project/lenzen-square/
 ---
 url: https://thecorecompanies.com/project/market-gateway/
 ---
+user_visible_url: https://www.thegroveaptssanjose.com/floorplans
+url: https://sightmap.com/app/api/v1/27vqgojkwox/sightmaps/106870
+filter:
+  - sightmap_units
+---
 url: https://www.crpaffordable.com/drycreekcrossing
 ---
 url: https://www.crpaffordable.com/drycreekinterest
@@ -1898,9 +1903,6 @@ url: https://thegroveaptssanjose.com/
 ---
 kind: scraper
 url: https://www.thegroveaptssanjose.com/incomelimited
----
-kind: scraper
-url: https://www.thegroveaptssanjose.com/floorplans
 ---
 kind: scraper
 url: https://mayfaircourt.usamfm.com/
