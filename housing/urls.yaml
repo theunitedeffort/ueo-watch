@@ -1555,6 +1555,10 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/aae9d6ec-7d2f-4580-9d9b-5a09
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/fd996f3b-9bcf-4d18-8216-a4a7447a2ad8/paulson_park_ii_111_montebello_avenue_mountain_view_ca
 ---
+navigate: https://housingbayarea.mtc.ca.gov/listing/a82353da-2011-4d40-b99b-9ffe316d450b/300_railway_apartments_300_railway_ave_campbell_ca
+---
+navigate: https://housingbayarea.mtc.ca.gov/listing/fad0b129-9c42-4641-b2a9-708f72e93ddf/garland_plaza_662_garland_avenue_sunnyvale_ca
+---
 user_visible_url: https://housingbayarea.mtc.ca.gov/listings?search=counties:Santa%20Clara
 url: https://housingbayarea.mtc.ca.gov/api/adapter/listings/combined
 headers:
@@ -1606,6 +1610,10 @@ url: https://www.essexapartmenthomes.com/apartments/san-jose/waterford-place
 ssl_no_verify: true
 compared_versions: 2
 ---
+url: https://www.essexapartmenthomes.com/apartments/san-jose/vio
+ssl_no_verify: true
+compared_versions: 2
+---
 url: https://www.essexapartmenthomes.com/apartments/santa-clara/villa-granada
 ssl_no_verify: true
 compared_versions: 2
@@ -1641,8 +1649,6 @@ url: https://ivyliving.com/paloalto/
 url: https://www.liveatdomus.com/
 ---
 url: https://liveatsavoy.com/
----
-url: https://liveatvio.com/
 ---
 url: https://liveavelle.com/
 ---
