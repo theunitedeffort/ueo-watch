@@ -1788,6 +1788,12 @@ kind: scraper
 url: https://www.irvinecompanyapartments.com/affordable-housing/affordable-housing-income-limits.html
 ---
 kind: scraper
+url: https://www.lasventanasapts.com/
+---
+kind: scraper
+url: https://www.lasventanasapts.com/floorplans
+---
+kind: scraper
 url: https://www.thelodgeatmorganhillapartments.com/
 ---
 kind: scraper
@@ -1915,6 +1921,12 @@ url: https://mayfaircourt.usamfm.com/applicant
 ---
 kind: scraper
 url: https://mayfaircourt.usamfm.com/floorplans
+---
+kind: scraper
+url: https://www.villasoleraapts.com/
+---
+kind: scraper
+url: https://www.villasoleraapts.com/floorplans
 ---
 
 # Market rate
