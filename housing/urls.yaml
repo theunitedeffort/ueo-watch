@@ -1555,6 +1555,8 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/a82353da-2011-4d40-b99b-9ffe
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/fad0b129-9c42-4641-b2a9-708f72e93ddf/garland_plaza_662_garland_avenue_sunnyvale_ca
 ---
+navigate: https://housingbayarea.mtc.ca.gov/listing/fd4b19d6-42a6-4fa4-90f5-3c4cf987185e/aster_park_1059_reed_avenue_sunnyvale_ca
+---
 user_visible_url: https://housingbayarea.mtc.ca.gov/listings?search=counties:Santa%20Clara
 url: https://housingbayarea.mtc.ca.gov/api/adapter/listings/combined
 headers:
