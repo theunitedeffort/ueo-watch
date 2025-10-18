@@ -400,6 +400,7 @@ job_defaults:
       - re.sub: '\?itok=[a-zA-Z0-9-_]{8}'
       - re.sub: 'GA1\.\d\.\d{1,10}\.\d{10}'
       - re.sub: '\?((fit)|(resize))=\d{2,4}%2C\d{2,4}&amp;ssl=1'
+      # Normalize phone links
       - re.sub:
           pattern: 'href="tel:(?:\+1(?: |(?:%20))?)?\\?\(?(\d{3})\\?\)? ?(?:[ \.\-]|(?:%20))? ?(\d{3}) ?(?:[ \.\-]|(?:%20))? ?(\d{4})'
           repl: 'href="tel:+1\1\2\3'
@@ -425,6 +426,7 @@ job_defaults:
           repl: '\1"'
       - html2text:
           method: pyhtml2text
+      # Normalize phone numbers
       - re.sub:
           pattern: '(?:\+1[ \.\-]?)?\(?(\d{3})\)? ?[ \.\-] ?(\d{3}) ?[ \.\-] ?(\d{4})'
           repl: '\1-\2-\3'
