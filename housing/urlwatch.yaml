@@ -402,7 +402,7 @@ job_defaults:
       - re.sub: '\?((fit)|(resize))=\d{2,4}%2C\d{2,4}&amp;ssl=1'
       # Normalize phone links
       - re.sub:
-          pattern: 'href="tel:(?:\+1(?: |(?:%20))?)?\\?\(?(\d{3})\\?\)? ?(?:[ \.\-]|(?:%20))? ?(\d{3}) ?(?:[ \.\-]|(?:%20))? ?(\d{4})'
+          pattern: 'href="tel:(?:[Cc]all)?(?:%20)?(?:\+1(?: |(?:%20))?)?\\?\(?(\d{3})\\?\)? ?(?:[ \.\-]|(?:%20))? ?(\d{3}) ?(?:[ \.\-]|(?:%20))? ?(\d{4})'
           repl: 'href="tel:+1\1\2\3'
       - re.sub:
           pattern: '(src="https://maps.googleapis.com/maps/api/js/StaticMapService\.GetMapImage.*?)&amp;token=.*?"'
@@ -428,7 +428,7 @@ job_defaults:
           method: pyhtml2text
       # Normalize phone numbers
       - re.sub:
-          pattern: '(?:\+1[ \.\-]?)?\(?(\d{3})\)? ?[ \.\-] ?(\d{3}) ?[ \.\-] ?(\d{4})'
+          pattern: '(?:\+?1[ \.\-]?)?\(?(\d{3})\)? ?[ \.\-] ?(\d{3}) ?[ \.\-] ?(\d{4})'
           repl: '\1-\2-\3'
       - re.sub: '©.*?(\d{4}-)?20\d{2}'
       - re.sub: 'Copyright 20\d{2}'
