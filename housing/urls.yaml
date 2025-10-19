@@ -1559,6 +1559,8 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/fd4b19d6-42a6-4fa4-90f5-3c4c
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/a49f9afd-ab11-4495-a31a-fe002e626383/mainline_north_2310_calle_del_mundo_santa_clara_ca
 ---
+navigate: https://housingbayarea.mtc.ca.gov/listing/02efac80-88bd-4d92-ab2b-2a1e14a6c99e/alba_350_chastain_pl_santa_clara_ca
+---
 user_visible_url: https://housingbayarea.mtc.ca.gov/listings?search=counties:Santa%20Clara
 url: https://housingbayarea.mtc.ca.gov/api/adapter/listings/combined
 headers:
@@ -1947,6 +1949,12 @@ url: https://rentbalmoral.com/
 ---
 kind: scraper
 url: https://www.domicilioapts.com/
+---
+kind: scraper
+url: https://www.hollandresidential.com/ca/santa-clara/alba
+return_page_source: false
+wait_browser: networkidle
+compared_versions: 2
 ---
 kind: scraper
 url: https://www.hollandresidential.com/ca/santa-clara/orlo
