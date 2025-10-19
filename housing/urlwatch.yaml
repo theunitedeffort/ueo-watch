@@ -402,7 +402,7 @@ job_defaults:
       - re.sub: '\?((fit)|(resize))=\d{2,4}%2C\d{2,4}&amp;ssl=1'
       # Normalize phone links
       - re.sub:
-          pattern: 'href="tel:(?:[Cc]all)?(?:%20)?(?:\+1(?: |(?:%20))?)?\\?\(?(\d{3})\\?\)? ?(?:[ \.\-]|(?:%20))? ?(\d{3}) ?(?:[ \.\-]|(?:%20))? ?(\d{4})'
+          pattern: 'href="tel:(?:[Cc]all)?(?:%20)?(?:\+?1(?:[ \.\-]|(?:%20))?)?\\?\(?(\d{3})\\?\)? ?(?:[ \.\-]|(?:%20))? ?(\d{3}) ?(?:[ \.\-]|(?:%20))? ?(\d{4})'
           repl: 'href="tel:+1\1\2\3'
       - re.sub:
           pattern: '(src="https://maps.googleapis.com/maps/api/js/StaticMapService\.GetMapImage.*?)&amp;token=.*?"'
