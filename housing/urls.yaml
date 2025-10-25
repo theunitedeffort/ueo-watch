@@ -1559,6 +1559,8 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/a49f9afd-ab11-4495-a31a-fe00
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/02efac80-88bd-4d92-ab2b-2a1e14a6c99e/alba_350_chastain_pl_santa_clara_ca
 ---
+navigate: https://housingbayarea.mtc.ca.gov/listing/5503798a-47ae-42ac-8e1d-0e63c8e57e38/agrihood_senior_76_n_winchester_blvd_santa_clara_ca
+---
 user_visible_url: https://housingbayarea.mtc.ca.gov/listings?search=counties:Santa%20Clara
 url: https://housingbayarea.mtc.ca.gov/api/adapter/listings/combined
 headers:
