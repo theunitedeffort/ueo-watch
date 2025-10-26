@@ -351,6 +351,13 @@ job_defaults:
           filter: re.sub
           pattern: '\s<a class="property-primary-address" (?s:.)*?>((?s:.)*?)</a>\s'
           repl: '\1'
+      # Map on Doorway pages seems to appear and disappear in our reports.
+      - selective:
+          select_pattern:
+            - '.*housingbayarea.mtc.ca.gov'
+          filter: css
+          selector: body
+          exclude: 'div.listing-detail-panel > a[href*="google.com/maps"]'
       - selective:
           select_pattern:
             - '.*jamboreehousing\.com/pages/affordable-housing-in-california-residents'
