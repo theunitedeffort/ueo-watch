@@ -1559,6 +1559,8 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/5503798a-47ae-42ac-8e1d-0e63
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/1110f614-85bb-41da-b6ba-54346b6fd183/sharmon_palms_lane_967_sharmon_palms_lane_campbell_ca
 ---
+navigate: https://housingbayarea.mtc.ca.gov/listing/b9060076-48ff-439c-bf0b-2ab7c8a202ef/308_sango_court_308_sango_court_san_jose_ca
+---
 user_visible_url: https://housingbayarea.mtc.ca.gov/listings?search=counties:Santa%20Clara
 url: https://housingbayarea.mtc.ca.gov/api/adapter/listings/combined
 headers:
