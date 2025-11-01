@@ -610,6 +610,23 @@ class JiraReporter(reporters.ReporterBase):
         ]
       },
       {
+        'type': 'paragraph',
+        'content': [
+          {
+            'type': 'text',
+            'text': '⭐️ Tips at ueo.link/hdb-tips',
+            'marks': [
+              {
+                'type': 'link',
+                'attrs': {
+                  'href': 'https://ueo.link/hdb-tips'
+                }
+              }
+            ]
+          },
+        ]
+      },
+      {
        "type": "rule"
       },
     ]
