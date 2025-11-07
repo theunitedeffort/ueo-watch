@@ -1343,8 +1343,6 @@ url: https://www.wvcommunityservices.org/housing
 
 # Browser jobs
 ---
-navigate: https://housing.sanjoseca.gov/listing/b7869b77-ad7c-47e4-8e9f-1d5003e4807e/virginia_street_studios_295_east_virginia_street_san_jose_ca
----
 navigate: https://housing.sanjoseca.gov/listing/2023af19-65b2-4724-8d37-199f982291f2/el_paseo_studios_4980_hamilton_avenue_san_jose_ca
 ---
 navigate: https://housing.sanjoseca.gov/listing/416dc55d-f387-452e-8b53-7521618ec43a/arya_500_almaden_blvd_san_jose_ca
@@ -1508,6 +1506,8 @@ navigate: https://housing.sanjoseca.gov/listing/4d587af6-19a2-4e62-ac73-fe686335
 navigate: https://housing.sanjoseca.gov/listing/e18f461f-403c-439b-90d5-99ce670bf881/linq_apartments_1700_newbury_park_dr_san_jose_ca
 ---
 navigate: https://housing.sanjoseca.gov/listing/c6f46b0b-c9e5-4148-aedb-19d8ea63163e/1_st_and_rosemary_senior_apartments_30_e_rosemary_street_san_jose_ca
+---
+navigate: https://housing.sanjoseca.gov/listing/7fd2aa21-8a94-46d2-8719-d38d0051baee/parkside_terrace_apartments_463_wooster_avenue_san_jose_ca
 ---
 navigate: https://housing.sanjoseca.gov/listings
 ---
