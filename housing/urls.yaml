@@ -1561,6 +1561,8 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/1110f614-85bb-41da-b6ba-5434
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/b9060076-48ff-439c-bf0b-2ab7c8a202ef/308_sango_court_308_sango_court_san_jose_ca
 ---
+navigate: https://housingbayarea.mtc.ca.gov/listing/46c3c209-ff8e-4970-89df-c3fe27aea7e8/open_doors_634_w_parr_avenue_los_gatos_ca
+---
 user_visible_url: https://housingbayarea.mtc.ca.gov/listings?search=counties:Santa%20Clara
 url: https://housingbayarea.mtc.ca.gov/api/adapter/listings/combined
 headers:
