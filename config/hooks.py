@@ -456,16 +456,19 @@ class JiraReporter(reporters.ReporterBase):
         if loc != pretty_name:
           summary_parts.append(f'({loc})')
         summary = ' '.join(summary_parts)
-        if len(summary) > self._MAX_CONTENT_CHARS:
-          ellipsis = '...'
-          summary = summary[:self._MAX_CONTENT_CHARS - len(ellipsis)] + ellipsis
-        issue['fields']['summary'] = summary
         details_url_args = {
           'datetime': self.report.start.strftime('%Y-%m-%d-%H%M%S'),
         }
         details_url = self.config['details_url'].format(**details_url_args)
-        quoted_find_text = urllib.parse.quote(summary, safe='').replace('-', '%2D')
+        # Percent-encoded strings in the actual target text searched for seems to
+        # break the text fragment URL.  The best we can do is match up to the first %
+        # character.
+        quoted_find_text = urllib.parse.quote(summary.split('%')[0], safe='').replace('-', '%2D')
         details_anchor = f'#:~:text={quoted_find_text}'
+        if len(summary) > self._MAX_CONTENT_CHARS:
+          ellipsis = '...'
+          summary = summary[:self._MAX_CONTENT_CHARS - len(ellipsis)] + ellipsis
+        issue['fields']['summary'] = summary
         description = self._adf_doc()
         description['content'].extend(self._adf_header(''.join([details_url, details_anchor]), loc))
         if job_state.verb == 'error':
