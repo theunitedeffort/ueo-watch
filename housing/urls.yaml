@@ -1298,8 +1298,6 @@ url: https://valleyvillageretirement.com/rts/collections/public/08a0f8dc/runtime
 filter:
   - appfolio_units
 ---
-url: https://www.viewatblossomhill.com/
----
 url: https://www.viewatblossomhill.com/apartments/ca/san-jose/floor-plans#/#units
 kind: graphql_units
 location_urn: g5-cl-1q0lwefhwi-fpi-management-san-jose-ca
@@ -1952,6 +1950,9 @@ url: https://mayfaircourt.usamfm.com/applicant
 ---
 kind: scraper
 url: https://mayfaircourt.usamfm.com/floorplans
+---
+kind: scraper
+url: https://www.viewatblossomhill.com/
 ---
 kind: scraper
 url: https://www.villasoleraapts.com/
