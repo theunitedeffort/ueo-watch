@@ -901,6 +901,22 @@ url: https://doorway-api.knockrentals.com/v1/property/2028835/units
 filter:
   - knock_units
 ---
+url: https://livemvwsd.com/
+---
+user_visible_url: https://livemvwsd.com/floor-plans.aspx
+url: https://api.ws.realpage.com/v2/property/9134426/floorplans
+headers:
+  x-ws-authkey: ea175685-9232-48d8-a3ed-83ee3084b316
+filter:
+  - realpage_floorplans
+---
+user_visible_url: https://livemvwsd.com/floor-plans.aspx#units
+url: https://api.ws.realpage.com/v2/property/9134426/units?available=true&honordisplayorder=true&siteid=9134426&leaseterm=12
+headers:
+  x-ws-authkey: ea175685-9232-48d8-a3ed-83ee3084b316
+filter:
+  - realpage_units
+---
 url: https://www.livethekelsey.com/
 ---
 url: https://www.livethekelsey.com/floor-plans/
