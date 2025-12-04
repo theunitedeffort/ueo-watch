@@ -1349,6 +1349,11 @@ location_urn: g5-cl-1oua8m1fec-fpi-management-morgan-hill-ca
 filter:
   - graphql_floorplans
 ---
+user_visible_url: https://www.villageatmadrone.com/apartments/ca/morgan-hill/floor-plans#/#knock
+url: https://doorway-api.knockrentals.com/v1/property/2028065/units
+filter:
+  - knock_units
+---
 kind: rpservice
 user_visible_url: https://www.villatorinoapts.com/apartments/ca/san-jose/floor-plans
 url: https://leasing.realpage.com/RP.Leasing.AppService.WebHost/workflowstartup/v1/3461849/
