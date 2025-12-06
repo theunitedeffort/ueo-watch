@@ -850,6 +850,11 @@ location_urn: g5-cl-1n733oag2z-kdf-communities-san-jose-ca
 filter:
   - graphql_floorplans
 ---
+user_visible_url: https://www.liveatfoxdale.com/floorplans#knock
+url: https://doorway-api.knockrentals.com/v1/property/2029138/units
+filter:
+  - knock_units
+---
 url: https://www.liveatplumtreewest.com/
 ---
 url: https://www.liveatvalleypalmsapts.com/
