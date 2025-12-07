@@ -887,6 +887,11 @@ location_urn: g5-cl-1oixkq0ljc-fpi-management-gilroy-ca
 filter:
   - graphql_floorplans
 ---
+user_visible_url: https://www.liveatvillageatsantateresa.com/apartments/ca/gilroy/floor-plans#/#knock
+url: https://doorway-api.knockrentals.com/v1/property/2028838/units
+filter:
+  - knock_units
+---
 url: https://www.liveatvillagefirst.com/
 ---
 url: https://www.liveatvillagefirst.com/apartments/ca/gilroy/floor-plans#/#units
