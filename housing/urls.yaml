@@ -1319,18 +1319,6 @@ url: https://valleyvillageretirement.com/rts/collections/public/08a0f8dc/runtime
 filter:
   - appfolio_units
 ---
-url: https://www.viewatblossomhill.com/apartments/ca/san-jose/floor-plans#/#units
-kind: graphql_units
-location_urn: g5-cl-1q0lwefhwi-fpi-management-san-jose-ca
-filter:
-  - graphql_units
----
-url: https://www.viewatblossomhill.com/apartments/ca/san-jose/floor-plans#/#floorplans
-kind: graphql_floorplans
-location_urn: g5-cl-1q0lwefhwi-fpi-management-san-jose-ca
-filter:
-  - graphql_floorplans
----
 user_visible_url: https://www.viewatblossomhill.com/apartments/ca/san-jose/floor-plans#/#knock
 url: https://doorway-api.knockrentals.com/v1/property/2029221/units
 filter:
