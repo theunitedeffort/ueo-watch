@@ -261,7 +261,7 @@ class RealPageFloorplans(ListingApiBase):
 class KnockUnits(ListingApiBase):
 
   __kind__ = 'knock_units'
-  __query__ = r'.units_data.units[] | "\(.bedrooms) BR\n---\n$\(.displayPrice)/month\navailable \(if "\(.availableOn)T00:00:00Z" | fromdate < now then "now" else .availableOn end)\n\n"'
+  __query__ = r'.units_data.units[] | "\(.bedrooms) BR\n---\n$\(.displayPrice)/month\n\n"'
 
 
 class AppFolioUnits(ListingApiBase):
