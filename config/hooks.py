@@ -67,6 +67,18 @@ class ScraperJob(jobs.UrlJob):
     self.headers[auth_header] = f'Bearer {apify_token}'
     return super().retrieve(job_state)
 
+
+class CloudscraperJob(jobs.UrlJob):
+  """Custom job to use cloudscraper lib instead of requests lib."""
+
+  __kind__ = 'cloudscraper'
+
+  __required__ = ('kind',)
+  __optional__ = ('render', 'premium_proxy', 'block_resources',
+    'block_resource', 'return_page_source', 'wait_browser')
+
+  def retrieve(self, job_state):
+
 class GraphqlJob(jobs.UrlJob):
   """Custom job to set query parameters for graphql-based property pages."""
 
