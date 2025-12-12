@@ -67,6 +67,7 @@ job_defaults:
             #gallery,
             .dmPhotoGallery,
             .elementor-gallery__container,
+            .pro-gallery-parent-container,
             .fancybox3,
             .hubdb-events,
             .sponsors_section,
