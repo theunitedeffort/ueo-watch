@@ -917,6 +917,22 @@ url: https://doorway-api.knockrentals.com/v1/property/2028835/units
 filter:
   - knock_units
 ---
+url: https://acacia.liveinhope.org/
+---
+url: https://acacia.liveinhope.org/apartments/ca/palo-alto/do-i-qualify
+---
+url: https://acacia.liveinhope.org/apartments/ca/palo-alto/floor-plans#/#units
+kind: graphql_units
+location_urn: g5-cl-1pmqg7wm3c-mercy-housing-palo-alto-ca
+filter:
+  - graphql_units
+---
+url: https://acacia.liveinhope.org/apartments/ca/palo-alto/floor-plans#/
+kind: graphql_floorplans
+location_urn: g5-cl-1pmqg7wm3c-mercy-housing-palo-alto-ca
+filter:
+  - graphql_floorplans
+---
 url: https://livemvwsd.com/
 ---
 user_visible_url: https://livemvwsd.com/floor-plans.aspx
