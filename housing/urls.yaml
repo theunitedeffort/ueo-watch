@@ -1184,40 +1184,42 @@ url: https://www.rentatstonegateapts.com/floor-plans
 url: https://www.rentthehuntington.com/
 ---
 url: https://www.rentthehuntington.com/floorplans
----
-url: https://www.roemcorp.com/community/1st-and-rosemary-family/
----
-url: https://www.roemcorp.com/community/1st-and-rosemary-senior/
----
-url: https://www.roemcorp.com/community/bella-castello/
----
-url: https://www.roemcorp.com/community/brookwood-terrace/
----
-url: https://www.roemcorp.com/community/camino-del-rey/
----
-url: https://www.roemcorp.com/community/charlotte-park-apartments/
----
-url: https://www.roemcorp.com/community/corde-terra-senior/
----
-url: https://www.roemcorp.com/community/corde-terra-village/
----
-url: https://www.roemcorp.com/community/evelyn-avenue-family-apartments/
----
-url: https://www.roemcorp.com/community/gadberry-courts/
----
-url: https://www.roemcorp.com/community/hacienda-creek/
----
-url: https://www.roemcorp.com/community/oak-grove-apartments/
----
-url: https://www.roemcorp.com/community/oaks-of-almaden/
----
-url: https://www.roemcorp.com/community/orvieto-family-apartments/
----
-url: https://www.roemcorp.com/community/rose-gardens/
----
-url: https://www.roemcorp.com/community/summer-breeze/
----
-url: https://www.roemcorp.com/community/shiraz-senior-housing/
+# Temporarily removing ROEM URLs because their website is broken and
+# keeps reporting noisy changes.
+# ---
+# url: https://www.roemcorp.com/community/1st-and-rosemary-family/
+# ---
+# url: https://www.roemcorp.com/community/1st-and-rosemary-senior/
+# ---
+# url: https://www.roemcorp.com/community/bella-castello/
+# ---
+# url: https://www.roemcorp.com/community/brookwood-terrace/
+# ---
+# url: https://www.roemcorp.com/community/camino-del-rey/
+# ---
+# url: https://www.roemcorp.com/community/charlotte-park-apartments/
+# ---
+# url: https://www.roemcorp.com/community/corde-terra-senior/
+# ---
+# url: https://www.roemcorp.com/community/corde-terra-village/
+# ---
+# url: https://www.roemcorp.com/community/evelyn-avenue-family-apartments/
+# ---
+# url: https://www.roemcorp.com/community/gadberry-courts/
+# ---
+# url: https://www.roemcorp.com/community/hacienda-creek/
+# ---
+# url: https://www.roemcorp.com/community/oak-grove-apartments/
+# ---
+# url: https://www.roemcorp.com/community/oaks-of-almaden/
+# ---
+# url: https://www.roemcorp.com/community/orvieto-family-apartments/
+# ---
+# url: https://www.roemcorp.com/community/rose-gardens/
+# ---
+# url: https://www.roemcorp.com/community/summer-breeze/
+# ---
+# url: https://www.roemcorp.com/community/shiraz-senior-housing/
 ---
 url: https://www.rooseveltparkapartments.com/
 ---
