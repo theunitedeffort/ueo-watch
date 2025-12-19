@@ -1350,7 +1350,7 @@ url: https://valleyvillageretirement.com/rts/collections/public/08a0f8dc/runtime
 filter:
   - appfolio_units
 ---
-user_visible_url: https://www.viewatblossomhill.com/apartments/ca/san-jose/floor-plans#/#knock
+user_visible_url: https://www.viewatblossomhill.com#knock
 url: https://doorway-api.knockrentals.com/v1/property/2029221/units
 filter:
   - knock_units
