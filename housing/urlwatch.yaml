@@ -273,6 +273,7 @@ job_defaults:
             - '.*481mathilda\.com/'
             - '.*6teneast\.com/'
             - '.*alvinscornercampbell\.com/$'
+            - '.*ascentsanjose\.com/'
             - '.*avaloncommunities\.com/california/campbell-apartments/avalon-campbell/'
             - '.*aventinoapts\.com/'
             - '.*aviarecupertino\.com/'
