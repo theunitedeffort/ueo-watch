@@ -1641,6 +1641,8 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/fd900115-8d9f-424e-9794-af6c
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/a3136873-5434-44b1-a8a3-bc34a6a240f3/palo_alto_gardens_650_san_antonio_road_palo_alto_ca
 ---
+navigate: https://housingbayarea.mtc.ca.gov/listing/b31365b9-6e79-48c8-9997-579d1039c442/shorebreeze_ii_460_n_shoreline_boulevard_mountain_view_ca
+---
 user_visible_url: https://housingbayarea.mtc.ca.gov/listings?search=counties:Santa%20Clara
 url: https://housingbayarea.mtc.ca.gov/api/adapter/listings/combined
 headers:
