@@ -932,16 +932,12 @@ filter:
 url: https://livemvwsd.com/
 ---
 user_visible_url: https://livemvwsd.com/floor-plans.aspx
-url: https://api.ws.realpage.com/v2/property/9134426/floorplans
-headers:
-  x-ws-authkey: ea175685-9232-48d8-a3ed-83ee3084b316
+url: https://livemvwsd.com/CmsSiteManager/callback.aspx?act=Proxy/GetFloorPlans
 filter:
   - realpage_floorplans
 ---
 user_visible_url: https://livemvwsd.com/floor-plans.aspx#units
-url: https://api.ws.realpage.com/v2/property/9134426/units?available=true&honordisplayorder=true&siteid=9134426&leaseterm=12
-headers:
-  x-ws-authkey: ea175685-9232-48d8-a3ed-83ee3084b316
+url: https://www.stantonapts.com/CmsSiteManager/callback.aspx?act=Proxy/GetUnits&available=true&honordisplayorder=true&siteid=9134426&leaseterm=12
 filter:
   - realpage_units
 ---
