@@ -856,6 +856,11 @@ filter:
 ---
 url: https://www.liveatplumtreewest.com/
 ---
+user_visible_url: https://www.liveatregencysquareapts.com/floorplans#knock
+url: https://doorway-api.knockrentals.com/v1/property/2028738/units
+filter:
+  - knock_units
+---
 url: https://www.liveatvalleypalmsapts.com/
 ---
 url: https://www.liveatvalleypalmsapts.com/apartments/ca/san-jose/income-restrictions
