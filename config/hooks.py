@@ -11,6 +11,7 @@ import subprocess
 import time
 import urllib.parse
 
+import cloudscraper
 from dotenv import load_dotenv
 import requests
 from urlwatch import filters
@@ -66,6 +67,19 @@ class ScraperJob(jobs.UrlJob):
     apify_token = os.environ['APIFY_TOKEN']
     self.headers[auth_header] = f'Bearer {apify_token}'
     return super().retrieve(job_state)
+
+
+class CloudscraperJob(jobs.UrlJob):
+  """Custom job to use cloudscraper lib instead of requests lib."""
+
+  __kind__ = 'cloudscraper'
+
+  __required__ = ('kind',)
+
+  def retrieve(self, job_state):
+    scraper = cloudscraper.create_scraper()
+    return super().retrieve(job_state, request_lib=scraper)
+
 
 class GraphqlJob(jobs.UrlJob):
   """Custom job to set query parameters for graphql-based property pages."""

@@ -4,6 +4,7 @@ cachetools==5.4.0
 certifi==2025.10.5
 cffi==1.16.0
 charset-normalizer==3.3.2
+cloudscraper==1.2.71
 cryptography==42.0.5
 cssselect==1.2.0
 et-xmlfile==1.1.0
@@ -42,6 +43,7 @@ python-dotenv==1.0.1
 pytz==2024.1
 PyYAML==6.0.1
 requests==2.31.0
+requests-toolbelt==1.0.0
 rsa==4.9
 SecretStorage==3.3.3
 six==1.16.0

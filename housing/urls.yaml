@@ -570,6 +570,7 @@ url: https://griffisresidential.com/property/south-bay/affordable-housing/
 ---
 url: https://www.hohbach-lewin.com/park-plaza/
 ---
+kind: cloudscraper
 url: https://hcosta.com/community-portfolio/property/villa-savannah-apts/
 ---
 url: https://www.housekeys1.com/
@@ -1262,6 +1263,7 @@ url: https://www.scmrf.org/how-do-i-apply/
 ---
 url: https://www.scmrf.org/life-at-our-communities/
 ---
+kind: cloudscraper
 url: https://scmrfwaitlist.com/
 ---
 url: https://stanfordwestapartments.stanford.edu/
@@ -1668,6 +1670,9 @@ url: https://www.alvinscornercampbell.com/
 ---
 url: https://www.avaloncommunities.com/california/campbell-apartments/avalon-campbell/
 ---
+kind: cloudscraper
+url: https://www.catalystmountainviewapartments.com/
+---
 url: https://citylineflats.com/
 ---
 url: https://www.deanzaproperties.com/south-bay-area/buckingham-place-apartments/
@@ -2029,9 +2034,6 @@ url: https://www.aviarecupertino.com/
 ---
 kind: scraper
 url: https://rentbalmoral.com/
----
-kind: scraper
-url: https://www.catalystmountainviewapartments.com/
 ---
 kind: scraper
 url: https://www.domicilioapts.com/
