@@ -2031,6 +2031,9 @@ kind: scraper
 url: https://rentbalmoral.com/
 ---
 kind: scraper
+url: https://www.catalystmountainviewapartments.com/
+---
+kind: scraper
 url: https://www.domicilioapts.com/
 ---
 kind: scraper
@@ -2069,9 +2072,6 @@ return_page_source: false
 ---
 kind: scraper
 url: https://www.morganranchapartmenthomes.com/
----
-kind: scraper
-url: https://www.mresidencesmv.com/
 ---
 kind: scraper
 url: https://www.novomountainview.com/
