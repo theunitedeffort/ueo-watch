@@ -27,6 +27,8 @@ filter:
 ---
 url: https://housing-group.org/campbell
 ---
+url: https://housing-group.org/campbell/rentals.html
+---
 url: https://www.housing-group.org/losaltos/
 ---
 url: https://www.losaltosca.gov/212/Affordable-Housing
@@ -1639,11 +1641,13 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/46c3c209-ff8e-4970-89df-c3fe
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/e1b0c620-b5a3-4481-b741-a85eeb53ef79/harvest_park_31_cohansey_avenue_gilroy_ca
 ---
-navigate: https://housingbayarea.mtc.ca.gov/listing/fd900115-8d9f-424e-9794-af6c501b252a/alvin_s_corner_at_penny_lane_651_w_hamilton_avenue_campbell_ca
+navigate: https://housingbayarea.mtc.ca.gov/listing/8be52ad2-8e97-43ad-9fc7-3a3410381afe/alvin_s_corner_at_penny_lane_651_w_hamilton_avenue_campbell_ca
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/a3136873-5434-44b1-a8a3-bc34a6a240f3/palo_alto_gardens_650_san_antonio_road_palo_alto_ca
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/b31365b9-6e79-48c8-9997-579d1039c442/shorebreeze_ii_460_n_shoreline_boulevard_mountain_view_ca
+---
+navigate: https://housingbayarea.mtc.ca.gov/listing/82d21712-87d5-46a1-89de-cc0de7790d30/los_gatos_four_plex_221_227_nicholson_avenue_los_gatos_ca
 ---
 user_visible_url: https://housingbayarea.mtc.ca.gov/listings?search=counties:Santa%20Clara
 url: https://housingbayarea.mtc.ca.gov/api/adapter/listings/combined
