@@ -57,7 +57,7 @@ then
     else
       echo "Press Enter to verify $url"
       read
-      gcloud compute ssh "$1" --command "cd /home/trevor/ueo-watch/$basepath; /home/trevor/urlwatch/urlwatch --urls urls.yaml --config urlwatch.yaml --cache cache.db --hooks ../config/hooks.py --test-filter \"$url\"" | less
+      gcloud compute ssh "$1" --command "cd /home/trevor/ueo-watch/$basepath; . ../prod-env/bin/activate; /home/trevor/urlwatch/urlwatch --urls urls.yaml --config urlwatch.yaml --cache cache.db --hooks ../config/hooks.py --test-filter \"$url\"" | less
     fi
   done
 fi
