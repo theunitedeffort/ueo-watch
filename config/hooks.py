@@ -77,6 +77,8 @@ class CloudscraperJob(jobs.UrlJob):
   __required__ = ('kind',)
 
   def retrieve(self, job_state):
+    self.http_proxy = 'http://auto:%s@proxy.apify.com:8000' % (os.environ['PROXY_PASSWORD'])
+    self.https_proxy = self.http_proxy
     scraper = cloudscraper.create_scraper()
     return super().retrieve(job_state, request_lib=scraper)
 
