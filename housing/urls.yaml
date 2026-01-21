@@ -1355,6 +1355,9 @@ url: https://doorway-api.knockrentals.com/v1/property/2029221/units
 filter:
   - knock_units
 ---
+kind: cloudscraper
+url: https://www.viewatblossomhill.com/affordablehousing
+---
 url: https://www.villadeguadalupeapts.com/
 ---
 url: https://www.villadeguadalupeapts.com/floor-plans
