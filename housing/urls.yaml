@@ -1438,9 +1438,14 @@ filter:
   - rpservice_units
   - if_empty: error
 ---
-url: https://vintagetoweravanath.com/
+kind: cloudscraper
+url: https://www.vintagetowerbrighthaven.com/
 ---
-url: https://vintagetoweravanath.com/floor-plans/
+kind: cloudscraper
+url: https://www.vintagetowerbrighthaven.com/floorplans
+---
+kind: cloudscraper
+url: https://vintagetowerbrighthaven.securecafe.com/onlineleasing/vintage-tower/availableunits.aspx
 ---
 url: https://vitalia-bascom-apts.rentcafewebsite.com/
 ---
@@ -2019,9 +2024,6 @@ url: https://www.sahahomes.org/properties/arya
 ---
 kind: scraper
 url: https://www.southwood-apartments.com/
----
-kind: scraper
-url: https://vintagetoweravanath.securecafe.com/onlineleasing/vintage-tower/availableunits.aspx
 ---
 kind: scraper
 url: https://terracinamorganhill.usamfm.com/
