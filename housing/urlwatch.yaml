@@ -103,6 +103,7 @@ job_defaults:
             .office-hours-container,
             .office-hours-wrap,
             [id^="office-hours-content-"],
+            .office-hours + .info,
             #BrochureDateTime,
             div.latest-news,
             #awards-and-news,
