@@ -64,7 +64,6 @@ job_defaults:
             .gallery__slider,
             #acadp-slider-wrapper,
             .swiper-wrapper,
-            .ysi-picture-widget,
             .flexslider,
             #gallery,
             .dmPhotoGallery,
