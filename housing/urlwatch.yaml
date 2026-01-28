@@ -275,7 +275,8 @@ job_defaults:
             #goog-gt-tt,
             div.wrapper.flex-grid.align-center.cta-wrapper.pt160.pb130.mpt100.mpb80 div[data-aos="fade-in"],
             .similar_models_section,
-            .toolbar-language
+            .toolbar-language,
+            .post-pagination
       - selective:
           select_pattern:
             - '.*300railway\.com/'
