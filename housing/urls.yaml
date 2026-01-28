@@ -27,6 +27,8 @@ filter:
 ---
 url: https://housing-group.org/campbell
 ---
+url: https://housing-group.org/campbell/rentals.html
+---
 url: https://www.housing-group.org/losaltos/
 ---
 url: https://www.losaltosca.gov/212/Affordable-Housing
@@ -136,11 +138,6 @@ url: https://altahousing.org/properties/webster-wood-apartments/
 ---
 url: https://altahousing.org/properties/wilton-court/
 ---
-url: https://www.alvinscornercampbell.com/apartments/ca/campbell/affordable-apartments
----
-url: https://www.sheaapartments.com/affordable-apartments/ascent-1/
-ssl_no_verify: true
----
 url: https://www.avaloncommunities.com/affordable-housing/community-list/
 ---
 url: https://www.avaloncommunities.com/california/campbell-apartments/avalon-campbell-affordable-housing/
@@ -180,6 +177,9 @@ url: https://buckinghampm.com/homes/crossings-at-morgan-hill/
 compared_versions: 2
 ---
 url: https://buckinghampm.com/homes/horizons-at-morgan-hill/
+compared_versions: 2
+---
+url: https://www.buckinghampm.com/homes/308-sango-court/
 compared_versions: 2
 ---
 url: https://www.buckinghampm.com/homes/westport/
@@ -572,6 +572,7 @@ url: https://griffisresidential.com/property/south-bay/affordable-housing/
 ---
 url: https://www.hohbach-lewin.com/park-plaza/
 ---
+kind: cloudscraper
 url: https://hcosta.com/community-portfolio/property/villa-savannah-apts/
 ---
 url: https://www.housekeys1.com/
@@ -591,8 +592,6 @@ url: https://www.housekeys13.com/777middlefield
 url: https://www.housekeys13.com/avelleapartments
 ---
 url: https://www.housekeys13.com/ladera
----
-url: https://www.housekeys13.com/landsby-mountain-view
 ---
 url: https://www.housekeys13.com/mvapartments
 ---
@@ -706,27 +705,77 @@ url: https://jsco.net/property/casa-feliz-studios/
 ---
 url: https://jsco.net/property/craig-gardens-senior-housing/
 ---
+url: https://jsco.net/property/creekview-inn/
+---
+url: https://jsco.net/property/curtner-studios/
+---
+url: https://jsco.net/property/cypress-gardens/
+---
+url: https://jsco.net/property/deborah-drive-apartments/
+---
+url: https://jsco.net/property/eklund-gardens-i/
+---
+url: https://jsco.net/property/eklund-gardens-ii/
+---
 url: https://jsco.net/property/el-paseo-studios/
+---
+url: https://jsco.net/property/fourth-street-apartments/
 ---
 url: https://jsco.net/property/giovanni-center/
 ---
+url: https://jsco.net/property/gish-apartments/
+---
+url: https://jsco.net/property/helzer-courts/
+---
 url: https://jsco.net/property/homebase-homes/
+---
+url: https://jsco.net/property/huff-gardens/
+---
+url: https://jsco.net/property/japantown-apartments/
 ---
 url: https://jsco.net/property/jeanne-darc-manor/
 ---
+url: https://jsco.net/property/john-burns-gardens/
+---
+url: https://jsco.net/property/julian-gardens/
+---
 url: https://jsco.net/property/kelsey-ayer-station/
 ---
+url: https://jsco.net/property/klamath-gardens/
+---
+url: https://jsco.net/property/laurel-grove/
+---
+url: https://jsco.net/property/lenzen-gardens/
+---
+url: https://jsco.net/property/lucretia-gardens/
+---
+url: https://jsco.net/property/miramar-way-apartments/
+---
 url: http://jsco.net/property/monte-alban-apartments/
+---
+url: https://jsco.net/property/morrone-gardens/
+---
+url: https://jsco.net/property/park-avenue-senior/
+---
+url: https://jsco.net/property/poco-way/
 ---
 url: https://jsco.net/property/renascent-place/
 ---
 url: https://jsco.net/property/rincon-de-los-esteros/
 ---
+url: https://jsco.net/property/rincon-gardens/
+---
 url: https://jsco.net/property/second-street-studios/
 ---
 url: https://jsco.net/property/stevenson-house/
 ---
+url: https://jsco.net/property/sunset-gardens/
+---
 url: https://jsco.net/property/terrace-gardens/
+---
+url: https://jsco.net/property/the-willows/
+---
+url: https://jsco.net/property/villa-garcia/
 ---
 url: https://jsco.net/property/villa-san-pedro/
 ---
@@ -858,7 +907,21 @@ url: https://doorway-api.knockrentals.com/v1/property/2029138/units
 filter:
   - knock_units
 ---
+kind: cloudscraper
+url: https://www.liveatorchardglen.com/
+---
+kind: cloudscraper
+url: https://www.liveatorchardglen.com/floorplans
+---
+kind: cloudscraper
+url: https://www.liveatorchardglen.com/incomelimits
+---
 url: https://www.liveatplumtreewest.com/
+---
+user_visible_url: https://www.liveatregencysquareapts.com/floorplans#knock
+url: https://doorway-api.knockrentals.com/v1/property/2028738/units
+filter:
+  - knock_units
 ---
 url: https://www.liveatvalleypalmsapts.com/
 ---
@@ -914,19 +977,31 @@ url: https://doorway-api.knockrentals.com/v1/property/2028835/units
 filter:
   - knock_units
 ---
+url: https://acacia.liveinhope.org/
+---
+url: https://acacia.liveinhope.org/apartments/ca/palo-alto/do-i-qualify
+---
+url: https://acacia.liveinhope.org/apartments/ca/palo-alto/floor-plans#/#units
+kind: graphql_units
+location_urn: g5-cl-1pmqg7wm3c-mercy-housing-palo-alto-ca
+filter:
+  - graphql_units
+---
+url: https://acacia.liveinhope.org/apartments/ca/palo-alto/floor-plans#/
+kind: graphql_floorplans
+location_urn: g5-cl-1pmqg7wm3c-mercy-housing-palo-alto-ca
+filter:
+  - graphql_floorplans
+---
 url: https://livemvwsd.com/
 ---
 user_visible_url: https://livemvwsd.com/floor-plans.aspx
-url: https://api.ws.realpage.com/v2/property/9134426/floorplans
-headers:
-  x-ws-authkey: ea175685-9232-48d8-a3ed-83ee3084b316
+url: https://livemvwsd.com/CmsSiteManager/callback.aspx?act=Proxy/GetFloorPlans
 filter:
   - realpage_floorplans
 ---
 user_visible_url: https://livemvwsd.com/floor-plans.aspx#units
-url: https://api.ws.realpage.com/v2/property/9134426/units?available=true&honordisplayorder=true&siteid=9134426&leaseterm=12
-headers:
-  x-ws-authkey: ea175685-9232-48d8-a3ed-83ee3084b316
+url: https://www.stantonapts.com/CmsSiteManager/callback.aspx?act=Proxy/GetUnits&available=true&honordisplayorder=true&siteid=9134426&leaseterm=12
 filter:
   - realpage_units
 ---
@@ -955,8 +1030,6 @@ url: https://metahousing.com/project/the-cannery-at-lewis-street/
 url: https://midpen-housing.org/find-housing/?p_asid=1&p_asp_data=1&current_page_id=23&qtranslate_lang=0&filters_changed=1&filters_initial=0&aspf%5Bleasing_status__1%5D=&aspf%5Btype__2%5D=&aspf%5Bcity__3%5D=&aspf%5Bcounty__4%5D=Santa%20Clara&asp_gen%5B%5D=title&customset%5B%5D=properties&asp_ls=
 ---
 url: https://midpen-housing.org/find-housing/2/?p_asid=1&p_asp_data=1&current_page_id=23&qtranslate_lang=0&filters_changed=1&filters_initial=0&aspf%5Bleasing_status__1%5D&aspf%5Btype__2%5D&aspf%5Bcity__3%5D&aspf%5Bcounty__4%5D=Santa%20Clara&asp_gen%5B0%5D=title&customset%5B0%5D=properties&asp_ls
----
-url: https://www.midpen-housing.org/news-and-happenings/press-releases/immanuel-sobrato-affordable-housing-development-breaks-ground-in-san-jose/
 ---
 url: https://midpen-housing.org/property/arbor-park/
 ---
@@ -989,6 +1062,8 @@ url: https://www.midpen-housing.org/property/hillsdale-townhouses/
 url: https://midpen-housing.org/property/homeport/
 ---
 url: https://midpen-housing.org/property/homestead-park/
+---
+url: https://www.midpen-housing.org/property/immanuel-sobrato-community/
 ---
 url: https://www.midpen-housing.org/property/ira-d-hall-square/
 ---
@@ -1090,6 +1165,8 @@ headers:
 filter:
   - realpage_units
 ---
+url: https://www.mountainviewlot12.org/
+---
 url: https://www.mvapartments.com/apartments/ca/mountain-view/below-market-rates
 ---
 url: https://www.mvwsd.org/district_business/facilities/staff_housing
@@ -1148,6 +1225,8 @@ compared_versions: 2
 ---
 url: https://www.redwoodseniors.com/
 ---
+url: https://www.redwoodseniors.com/floorplan/
+---
 url: https://www.relatedcalifornia.com/our-company/properties/mayfield-place
 ---
 url: https://www.relatedcalifornia.com/our-company/properties/village-willow-glen
@@ -1163,40 +1242,42 @@ url: https://www.rentatstonegateapts.com/floor-plans
 url: https://www.rentthehuntington.com/
 ---
 url: https://www.rentthehuntington.com/floorplans
----
-url: https://www.roemcorp.com/community/1st-and-rosemary-family/
----
-url: https://www.roemcorp.com/community/1st-and-rosemary-senior/
----
-url: https://www.roemcorp.com/community/bella-castello/
----
-url: https://www.roemcorp.com/community/brookwood-terrace/
----
-url: https://www.roemcorp.com/community/camino-del-rey/
----
-url: https://www.roemcorp.com/community/charlotte-park-apartments/
----
-url: https://www.roemcorp.com/community/corde-terra-senior/
----
-url: https://www.roemcorp.com/community/corde-terra-village/
----
-url: https://www.roemcorp.com/community/evelyn-avenue-family-apartments/
----
-url: https://www.roemcorp.com/community/gadberry-courts/
----
-url: https://www.roemcorp.com/community/hacienda-creek/
----
-url: https://www.roemcorp.com/community/oak-grove-apartments/
----
-url: https://www.roemcorp.com/community/oaks-of-almaden/
----
-url: https://www.roemcorp.com/community/orvieto-family-apartments/
----
-url: https://www.roemcorp.com/community/rose-gardens/
----
-url: https://www.roemcorp.com/community/summer-breeze/
----
-url: https://www.roemcorp.com/community/shiraz-senior-housing/
+# Temporarily removing ROEM URLs because their website is broken and
+# keeps reporting noisy changes.
+# ---
+# url: https://www.roemcorp.com/community/1st-and-rosemary-family/
+# ---
+# url: https://www.roemcorp.com/community/1st-and-rosemary-senior/
+# ---
+# url: https://www.roemcorp.com/community/bella-castello/
+# ---
+# url: https://www.roemcorp.com/community/brookwood-terrace/
+# ---
+# url: https://www.roemcorp.com/community/camino-del-rey/
+# ---
+# url: https://www.roemcorp.com/community/charlotte-park-apartments/
+# ---
+# url: https://www.roemcorp.com/community/corde-terra-senior/
+# ---
+# url: https://www.roemcorp.com/community/corde-terra-village/
+# ---
+# url: https://www.roemcorp.com/community/evelyn-avenue-family-apartments/
+# ---
+# url: https://www.roemcorp.com/community/gadberry-courts/
+# ---
+# url: https://www.roemcorp.com/community/hacienda-creek/
+# ---
+# url: https://www.roemcorp.com/community/oak-grove-apartments/
+# ---
+# url: https://www.roemcorp.com/community/oaks-of-almaden/
+# ---
+# url: https://www.roemcorp.com/community/orvieto-family-apartments/
+# ---
+# url: https://www.roemcorp.com/community/rose-gardens/
+# ---
+# url: https://www.roemcorp.com/community/summer-breeze/
+# ---
+# url: https://www.roemcorp.com/community/shiraz-senior-housing/
 ---
 url: https://www.rooseveltparkapartments.com/
 ---
@@ -1243,6 +1324,7 @@ url: https://www.scmrf.org/how-do-i-apply/
 ---
 url: https://www.scmrf.org/life-at-our-communities/
 ---
+kind: cloudscraper
 url: https://scmrfwaitlist.com/
 ---
 url: https://stanfordwestapartments.stanford.edu/
@@ -1327,10 +1409,13 @@ url: https://valleyvillageretirement.com/rts/collections/public/08a0f8dc/runtime
 filter:
   - appfolio_units
 ---
-user_visible_url: https://www.viewatblossomhill.com/apartments/ca/san-jose/floor-plans#/#knock
+user_visible_url: https://www.viewatblossomhill.com#knock
 url: https://doorway-api.knockrentals.com/v1/property/2029221/units
 filter:
   - knock_units
+---
+kind: cloudscraper
+url: https://www.viewatblossomhill.com/incomequalification
 ---
 url: https://www.villadeguadalupeapts.com/
 ---
@@ -1362,9 +1447,14 @@ filter:
   - rpservice_units
   - if_empty: error
 ---
-url: https://vintagetoweravanath.com/
+kind: cloudscraper
+url: https://www.vintagetowerbrighthaven.com/
 ---
-url: https://vintagetoweravanath.com/floor-plans/
+kind: cloudscraper
+url: https://www.vintagetowerbrighthaven.com/floorplans
+---
+kind: cloudscraper
+url: https://vintagetowerbrighthaven.securecafe.com/onlineleasing/vintage-tower/availableunits.aspx
 ---
 url: https://vitalia-bascom-apts.rentcafewebsite.com/
 ---
@@ -1436,7 +1526,7 @@ navigate: https://housing.sanjoseca.gov/listing/3f3c56e7-7981-4d06-a6c4-48e8c296
 ---
 navigate: https://housing.sanjoseca.gov/listing/29ab03dc-b5b8-4d50-bd48-47cbe0036a83/parkside_glen_apartments_810_hillsdale_avenue_san_jose_ca
 ---
-navigate: https://housing.sanjoseca.gov/listing/9ac02403-51f6-423f-9185-35a0632988f9/david_avenue_apartments_3080_david_ave_san_jose_ca
+navigate: https://housing.sanjoseca.gov/listing/9ac02403-51f6-423f-9185-35a0632988f9/david_avenue_apartments_3080_david_ave_6_san_jose_ca
 ---
 navigate: https://housing.sanjoseca.gov/listing/825cd62c-66ea-487f-b96a-8033410acf52/cherry_creek_apartments_2020_southwest_expy_san_jose_ca
 ---
@@ -1504,8 +1594,6 @@ navigate: https://housing.sanjoseca.gov/listing/1775bb54-4290-41df-b095-69b698b9
 ---
 navigate: https://housing.sanjoseca.gov/listing/96dc9d06-811f-4cf8-8b70-95f5c491f446/vista_park_i_3955_vistapark_drive_san_jose_ca
 ---
-navigate: https://housing.sanjoseca.gov/listing/3af7db77-25d2-424c-88db-fb322f92acca/blossom_river_apartments_1000_blossom_river_way_san_jose_ca
----
 navigate: https://housing.sanjoseca.gov/listing/9a621ae9-3fbe-4a12-beab-297756d3bf14/creekview_inn_965_lundy_ave_san_jose_ca
 ---
 navigate: https://housing.sanjoseca.gov/listing/c49d2a94-a99c-4a71-86d9-67f86c19328c/betty_ann_gardens_945_lundy_avenue_san_jose_ca
@@ -1556,6 +1644,22 @@ navigate: https://housing.sanjoseca.gov/listing/6c7bfdc2-f365-41be-8d14-15ec5403
 ---
 navigate: https://housing.sanjoseca.gov/listing/6c42b0cc-021f-4b62-941f-c72092638c87/foxdale_village_apartments_1250_foxdale_loop_san_jose_ca
 ---
+navigate: https://housing.sanjoseca.gov/listing/c2616cf5-786e-47a2-9b3b-d03dbd855c76/bendorf_drive_apartments_282_danze_drive_san_jose_ca
+---
+navigate: https://housing.sanjoseca.gov/listing/2f4afb81-926d-43d3-ace9-01aecfc94205/country_hills_124_rancho_drive_san_jose_ca
+---
+navigate: https://housing.sanjoseca.gov/listing/72ee0f92-c85f-4dd0-901a-fa442601a515/italian_gardens_1516_almaden_road_san_jos_ca
+---
+navigate: https://housingbayarea.mtc.ca.gov/listing/17124f39-d5b6-411c-88e6-cf0bcdce2ee4/alexander_station_200_east_10_th_street_gilroy_ca
+---
+navigate: https://housing.sanjoseca.gov/listing/2e40d3c3-202f-4791-86b1-ec0326aa52ad/donner_lofts_158_e_st_john_st_san_jos_ca
+---
+navigate: https://housing.sanjoseca.gov/listing/c1ba44b7-7fc5-4390-b216-bcdb17c89cca/23_fifty_south_bascom_2350_south_bascom_san_jose_ca
+---
+navigate: https://housing.sanjoseca.gov/listing/a17c1559-cefb-4fa7-bd39-307e32f75d43/1_st_rosemary_family_60_e_rosemary_st_san_jose_ca
+---
+navigate: https://housing.sanjoseca.gov/listing/61ae457a-ea5e-4c82-9e5d-8e3b014ded60/delmas_park_ii_350_barack_obama_blvd_san_jose_ca
+---
 navigate: https://housing.sanjoseca.gov/listings
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/b3450753-25d4-4ea8-aac2-eb065e5f8c27/the_acacia_at_231_grant_waitlist_231_grant_avenue_palo_alto_ca
@@ -1600,13 +1704,23 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/d454d34b-5b21-420e-b9c6-10b3
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/02efac80-88bd-4d92-ab2b-2a1e14a6c99e/alba_350_chastain_pl_santa_clara_ca
 ---
-navigate: https://housingbayarea.mtc.ca.gov/listing/5503798a-47ae-42ac-8e1d-0e63c8e57e38/agrihood_senior_76_n_winchester_blvd_santa_clara_ca
+navigate: https://housingbayarea.mtc.ca.gov/listing/469acbdb-9caa-42ef-b647-4ce16bfc3366/agrihood_senior_76_n_winchester_blvd_santa_clara_ca
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/1110f614-85bb-41da-b6ba-54346b6fd183/sharmon_palms_lane_967_sharmon_palms_lane_campbell_ca
 ---
-navigate: https://housingbayarea.mtc.ca.gov/listing/b9060076-48ff-439c-bf0b-2ab7c8a202ef/308_sango_court_308_sango_court_san_jose_ca
+navigate: https://housingbayarea.mtc.ca.gov/listing/d56a22fe-0a18-4505-af1d-4353cef2d140/308_sango_court_308_sango_court_milpitas_ca
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/46c3c209-ff8e-4970-89df-c3fe27aea7e8/open_doors_634_w_parr_avenue_los_gatos_ca
+---
+navigate: https://housingbayarea.mtc.ca.gov/listing/e1b0c620-b5a3-4481-b741-a85eeb53ef79/harvest_park_31_cohansey_avenue_gilroy_ca
+---
+navigate: https://housingbayarea.mtc.ca.gov/listing/8be52ad2-8e97-43ad-9fc7-3a3410381afe/alvin_s_corner_at_penny_lane_651_w_hamilton_avenue_campbell_ca
+---
+navigate: https://housingbayarea.mtc.ca.gov/listing/a3136873-5434-44b1-a8a3-bc34a6a240f3/palo_alto_gardens_650_san_antonio_road_palo_alto_ca
+---
+navigate: https://housingbayarea.mtc.ca.gov/listing/b31365b9-6e79-48c8-9997-579d1039c442/shorebreeze_ii_460_n_shoreline_boulevard_mountain_view_ca
+---
+navigate: https://housingbayarea.mtc.ca.gov/listing/82d21712-87d5-46a1-89de-cc0de7790d30/los_gatos_four_plex_221_227_nicholson_avenue_los_gatos_ca
 ---
 user_visible_url: https://housingbayarea.mtc.ca.gov/listings?search=counties:Santa%20Clara
 url: https://housingbayarea.mtc.ca.gov/api/adapter/listings/combined
@@ -1627,13 +1741,16 @@ url: https://www.481mathilda.com/
 ---
 url: https://www.6teneast.com/
 ---
+url: https://ascentsanjose.com/
+---
 url: https://www.alvinscornercampbell.com/
 ---
 url: https://www.avaloncommunities.com/california/campbell-apartments/avalon-campbell/
 ---
-url: https://citylineflats.com/
+kind: cloudscraper
+url: https://www.catalystmountainviewapartments.com/
 ---
-url: https://www.colonnadeapt.com/
+url: https://citylineflats.com/
 ---
 url: https://www.deanzaproperties.com/south-bay-area/buckingham-place-apartments/
 ---
@@ -1645,7 +1762,7 @@ url: https://www.deanzaproperties.com/south-bay-area/los-altos-gardens-one/
 ---
 url: https://www.decron.com/apartments-willow-creek/
 ---
-url: https://www.encasaliving.com/
+url: https://encasaliving.com/
 ---
 url: https://www.essexapartmenthomes.com/apartments/101-san-fernando
 ssl_no_verify: true
@@ -1690,8 +1807,6 @@ compared_versions: 2
 url: https://www.fountainplazaapartments.com/
 ---
 url: https://www.greystar.com/properties/morgan-hill-ca/vida-at-morgan-hill
----
-url: https://www.greystar.com/properties/santa-clara-ca/sofia
 ---
 url: https://ivyliving.com/paloalto/
 ---
@@ -1922,9 +2037,6 @@ kind: scraper
 url: https://www.southwood-apartments.com/
 ---
 kind: scraper
-url: https://vintagetoweravanath.securecafe.com/onlineleasing/vintage-tower/availableunits.aspx
----
-kind: scraper
 url: https://terracinamorganhill.usamfm.com/
 ---
 kind: scraper
@@ -2036,9 +2148,6 @@ return_page_source: false
 ---
 kind: scraper
 url: https://www.morganranchapartmenthomes.com/
----
-kind: scraper
-url: https://www.mresidencesmv.com/
 ---
 kind: scraper
 url: https://www.novomountainview.com/

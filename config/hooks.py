@@ -11,6 +11,7 @@ import subprocess
 import time
 import urllib.parse
 
+import cloudscraper
 from dotenv import load_dotenv
 import requests
 from urlwatch import filters
@@ -66,6 +67,21 @@ class ScraperJob(jobs.UrlJob):
     apify_token = os.environ['APIFY_TOKEN']
     self.headers[auth_header] = f'Bearer {apify_token}'
     return super().retrieve(job_state)
+
+
+class CloudscraperJob(jobs.UrlJob):
+  """Custom job to use cloudscraper lib instead of requests lib."""
+
+  __kind__ = 'cloudscraper'
+
+  __required__ = ('kind',)
+
+  def retrieve(self, job_state):
+    self.http_proxy = 'http://auto:%s@proxy.apify.com:8000' % (os.environ['PROXY_PASSWORD'])
+    self.https_proxy = self.http_proxy
+    scraper = cloudscraper.create_scraper()
+    return super().retrieve(job_state, request_lib=scraper)
+
 
 class GraphqlJob(jobs.UrlJob):
   """Custom job to set query parameters for graphql-based property pages."""
@@ -261,7 +277,7 @@ class RealPageFloorplans(ListingApiBase):
 class KnockUnits(ListingApiBase):
 
   __kind__ = 'knock_units'
-  __query__ = r'.units_data.units[] | "\(.bedrooms) BR\n---\n$\(.displayPrice)/month\navailable \(if "\(.availableOn)T00:00:00Z" | fromdate < now then "now" else .availableOn end)\n\n"'
+  __query__ = r'.units_data.units[] | "\(.bedrooms) BR\n---\n$\(.displayPrice)/month\n\n"'
 
 
 class AppFolioUnits(ListingApiBase):
