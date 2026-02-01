@@ -63,7 +63,7 @@ url: https://www.cpuc.ca.gov/industries-and-topics/electrical-energy/electric-co
 # Clipper START
 ---
 # currently giving errors about page.evaluate: Execution context was destroyed
-# kind: scraper
+# kind: cloudscraper
 # url: https://www.clipperstartcard.com/s/
 # return_page_source: false
 # ---
@@ -86,10 +86,10 @@ url: https://www.cpuc.ca.gov/consumer-support/financial-assistance-savings-and-d
 
 # GA
 ---
-kind: scraper
+kind: cloudscraper
 url: https://ssa.santaclaracounty.gov/financial-assistance/get-financial-assistance-adults-without-dependent-children-general-assistance
 ---
-kind: scraper
+kind: cloudscraper
 url: https://ssa.santaclaracounty.gov/apply-public-benefits
 ---
 url: https://stgenssa.sccgov.org/debs/program_handbooks/charts/assets/4GA/NeedStnds.htm
@@ -129,10 +129,10 @@ filter:
 
 # IHSS
 ---
-kind: scraper
+kind: cloudscraper
 url: https://ssa.santaclaracounty.gov/supportive-services/in-home-supportive-services/apply-home-supportive-services
 ---
-kind: scraper
+kind: cloudscraper
 url: https://ssa.santaclaracounty.gov/supportive-services/in-home-supportive-services
 ---
 url: https://ca.db101.org/ca/programs/health_coverage/medi_cal/ihss/program2.htm
@@ -142,11 +142,11 @@ url: https://ca.db101.org/ca/programs/health_coverage/medi_cal/ihss/program2.htm
 ---
 url: https://www.cpuc.ca.gov/consumer-support/financial-assistance-savings-and-discounts/lifeline/california-lifeline-eligibility#qualify
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.californialifeline.com/en/eligibility_requirements
 return_page_source: false
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.californialifeline.com/en
 return_page_source: false
 compared_versions: 2
