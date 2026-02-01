@@ -236,14 +236,17 @@ filter:
       method: pyhtml2text
 ---
 url: https://www.cdph.ca.gov/Programs/CFH/DWICSN/Pages/HowCanIGetWIC.aspx
+ssl_no_verify: true
 ---
 url: https://www.cdph.ca.gov/Programs/CFH/DWICSN/CDPH%20Document%20Library/LocalAgencies/WPPM/980-1060WICIncomeGuidelinesTable.pdf
+ssl_no_verify: true
 filter:
   - pdf2text
 ---
 url: https://myfamily.wic.ca.gov/Home/HowCanIGetWIC
 ---
 url: https://www.cdph.ca.gov/Programs/CFH/DWICSN/Pages/Program-Landing1.aspx
+ssl_no_verify: true
 
 ---
 name: "Test change"
