@@ -142,11 +142,11 @@ url: https://ca.db101.org/ca/programs/health_coverage/medi_cal/ihss/program2.htm
 ---
 url: https://www.cpuc.ca.gov/consumer-support/financial-assistance-savings-and-discounts/lifeline/california-lifeline-eligibility#qualify
 ---
-kind: cloudscraper
+kind: scraper
 url: https://www.californialifeline.com/en/eligibility_requirements
 return_page_source: false
 ---
-kind: cloudscraper
+kind: scraper
 url: https://www.californialifeline.com/en
 return_page_source: false
 compared_versions: 2
