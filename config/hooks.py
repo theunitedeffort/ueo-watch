@@ -242,7 +242,7 @@ class JqFilterBase(filters.FilterBase):
 class Doorway(JqFilterBase):
 
   __kind__ = "doorway"
-  __query__ =  r'.items[] | select(.isExternal == false) | "\(.name)\nhttps://housingbayarea.mtc.ca.gov/listing/\(if .isExternal == true then "ext/\(.id)" else "\(.id)/\(.urlSlug)" end)\n\n"'
+  __query__ =  r'.items[] | "\(.name)\nhttps://housingbayarea.mtc.ca.gov/listing/\(if .isExternal == true then "ext/\(.id)" else "\(.id)/\(.urlSlug)" end)\n\n"'
 
 
 class ListingApiBase(JqFilterBase):
