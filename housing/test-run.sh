@@ -1,4 +1,18 @@
 #!/bin/bash
+# Executes a test run by fetching live website data & updating the production
+# cache, but does not alert the entire team and files no Jira issues. All
+# jobs are set to display errors immediately rather than suppress them over
+# N retries as is typical.
+#
+# The cache is backed up before this script runs urlwatch.
+#
+# usage:
+#   test-run.sh <job_id>...
+#
+#   <job_id>: Job ID to run (can be repeated for mulitple job IDs).
+#             If omitted, all jobs are run.
+#
+
 set -e
 
 readonly TIMESTAMP=$(date +%Y%m%d_%H%M%S)
@@ -47,7 +61,7 @@ echo "Temporary urls list created at $TEMP_URLS"
 echo "Logging debug output to $LOG_PATH"
 echo "Running urlwatch..."
 echo
-urlwatch -v --hooks ../config/hooks.py --urls "$TEMP_URLS" --config "$TEMP_FILE" --cache cache.db 2> "$LOG_PATH"
+urlwatch -v --hooks ../config/hooks.py --urls "$TEMP_URLS" --config "$TEMP_FILE" --cache cache.db $@ 2> "$LOG_PATH"
 echo
 
 echo "Done! Log is at $LOG_PATH"
