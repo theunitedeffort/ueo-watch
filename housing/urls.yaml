@@ -501,16 +501,16 @@ url: https://edenhousing.org/properties/walnut-grove/
 ---
 url: https://edenhousing.org/properties/wheeler-manor/
 ---
-url: https://www.elranchoverdeapts.com/
+url: https://elranchoverdeapts.com/
 ---
-user_visible_url: https://www.elranchoverdeapts.com/floor-plans
+user_visible_url: https://elranchoverdeapts.com/floor-plans
 url: https://api.ws.realpage.com/v2/property/9067308/floorplans
 headers:
   x-ws-authkey: 9f73b145-1d28-4a8f-bdab-44fb7bd34f21
 filter:
   - realpage_floorplans
 ---
-user_visible_url: https://www.elranchoverdeapts.com/floor-plans#units
+user_visible_url: https://elranchoverdeapts.com/floor-plans#units
 url: https://api.ws.realpage.com/v2/property/9067308/units?available=true&honordisplayorder=true&siteid=9067308&leaseterm=12&bestprice=true
 headers:
   x-ws-authkey: 9f73b145-1d28-4a8f-bdab-44fb7bd34f21
