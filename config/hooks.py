@@ -313,7 +313,7 @@ class PrometheusAvailability(ListingApiBase):
 class RealPageLeasingServiceUnits(ListingApiBase):
 
   __kind__ = 'rpservice_units'
-  __query__ =  r'.Workflow.ActivityGroups[] | select(.GroupName == "Search") | .GroupActivities[] | select(.__type == "RP.Applicant.Dto.Workflow.Activities.FloorplanSearchLeaseMgmtActivity, RP.Applicant.Dto") | .Floorplans[] | select(.Name | test("BMR")) | "\(.Name)\n---\n\(.Bedrooms) BR\n\(if .MinPriceRange == .MaxPriceRange then "$\(.MinPriceRange)" else "$\(.MinPriceRange) - $\(.MaxPriceRange)" end)\n\(.AvailableUnits) available\n\(.Description)\n\n"'
+  __query__ =  r'.Workflow.ActivityGroups[] | select(.GroupName == "Search") | .GroupActivities[] | select(.__type == "RP.Applicant.Dto.Workflow.Activities.FloorplanSearchLeaseMgmtActivity, RP.Applicant.Dto") | .Floorplans[] | select(.Name | test("BMR")) | "\(.Name)\n---\n\(.Bedrooms) BR\nfrom $\(.MinPriceRange)\n\(.AvailableUnits) available\n\(.Description)\n\n"'
 
 
 class GcsFileReporter(reporters.HtmlReporter):
