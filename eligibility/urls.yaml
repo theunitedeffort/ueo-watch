@@ -53,9 +53,7 @@ ssl_no_verify: true
 url: https://ca.db101.org/ca/programs/income_support/capi/program2.htm
 ---
 
-# CARE
----
-url: https://www.cpuc.ca.gov/consumer-support/financial-assistance-savings-and-discounts/california-alternate-rates-for-energy
+# CARE/FERA
 ---
 url: https://www.cpuc.ca.gov/industries-and-topics/electrical-energy/electric-costs/care-fera-program
 ---
@@ -77,11 +75,6 @@ data:
 filter:
   - jq: '.actions[0].returnValue[] | "\(.Label): $\(.Income__c)"'
   - if_empty: error
----
-
-# FERA
----
-url: https://www.cpuc.ca.gov/consumer-support/financial-assistance-savings-and-discounts/family-electric-rate-assistance-program
 ---
 
 # GA
