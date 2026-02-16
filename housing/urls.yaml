@@ -2148,6 +2148,8 @@ url: https://www.liverevela.com/
 ---
 kind: scraper
 url: https://www.montereygrove.com
+# Phone number switches back and forth between two values.
+compared_versions: 2
 return_page_source: false
 ---
 kind: scraper
