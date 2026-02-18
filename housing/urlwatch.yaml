@@ -444,6 +444,8 @@ job_defaults:
       - re.sub:
           pattern: '(src=".*?\.jpg)\.webp"'
           repl: '\1"'
+      # This string appears and disappears on the Doorway portal.
+      - re.sub: 'BESbswy\n\n'
       # City govt pdfs ony require the first ID to retrieve the document, so
       # the second long ID is noise.
       - re.sub:
