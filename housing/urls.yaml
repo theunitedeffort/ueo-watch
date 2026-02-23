@@ -60,6 +60,15 @@ url: https://sightmap.com/app/api/v1/nrkwn3zevd2/sightmaps/20118
 filter:
   - sightmap_units
 ---
+url: https://www.88saratoga.com/
+---
+url: https://www.88saratoga.com/floorplans/#eligibility
+---
+user_visible_url: https://www.88saratoga.com/floorplans/
+url: https://www.88saratoga.com/api/v3/floorplans/all/?api_key=591ad39e330e913b4ad1ed7ca19e4f7540a69363
+filter:
+  - apartments247_floorplans
+---
 url: https://abode.org/alma-garden-waitlist-form
 ---
 url: https://abode.org/opportunity-center
