@@ -57,7 +57,7 @@ if [ -z "$url_match" ]; then
 fi
 
 echo "Updating $local_config_path with new URL $new_url"
-sed -i '' "s|$old_url|$new_url|" "$local_config_path"
+sed -i '' "s|$old_url$|$new_url|" "$local_config_path"
 
 git commit -a -m "Automated update of $old_url to $new_url"
 git push
