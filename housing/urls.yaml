@@ -1732,6 +1732,8 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/ext/db96e799-4ebe-4375-9e58-
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/ext/4831016d-9309-44cf-9569-d5926e73b470
 ---
+navigate: https://housingbayarea.mtc.ca.gov/listing/a2a63f1c-36f8-4bb6-9fa4-f4f6a381caa5/ginzton_terrace_375_oaktree_drive_mountain_view_ca
+---
 user_visible_url: https://housingbayarea.mtc.ca.gov/listings?search=counties:Santa%20Clara
 url: https://housingbayarea.mtc.ca.gov/api/adapter/listings/combined
 headers:
