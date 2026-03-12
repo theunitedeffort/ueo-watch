@@ -1445,6 +1445,9 @@ filter:
   - appfolio_units
 ---
 kind: cloudscraper
+url: https://www.viewatblossomhill.com/floorplans
+---
+kind: cloudscraper
 url: https://www.viewatblossomhill.com/incomequalification
 ---
 url: https://www.villadeguadalupeapts.com/
@@ -2072,6 +2075,10 @@ url: https://www.parkerpaloalto.com/
 ---
 kind: scraper
 url: https://www.sahahomes.org/properties/arya
+---
+kind: scraper
+url: https://www.sahahomes.org/properties/?city=san-jose&data-page=1
+return_page_source: false
 ---
 kind: scraper
 url: https://www.southwood-apartments.com/
