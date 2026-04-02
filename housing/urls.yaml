@@ -1769,6 +1769,10 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/ext/2efb8eca-53ba-49eb-85d3-
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/ext/1212f99f-8e3d-478c-8067-d45eb21ac836
 ---
+navigate: https://housingbayarea.mtc.ca.gov/listing/ee925c61-b3be-4683-96c6-6cf3bd9f6e02/88_saratoga_avenue_apartments_88_saratoga_avenue_santa_clara_ca
+---
+navigate: https://housingbayarea.mtc.ca.gov/listing/394ef99f-afae-42ba-a1c3-732af1100970/estancia_at_santa_clara_1650_hope_drive_santa_clara_ca
+---
 user_visible_url: https://housingbayarea.mtc.ca.gov/listings?search=counties:Santa%20Clara
 url: https://housingbayarea.mtc.ca.gov/api/adapter/listings/combined
 headers:
