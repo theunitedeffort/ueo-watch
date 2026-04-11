@@ -531,44 +531,64 @@ url: https://epath.org/ventures/villas-at-4th-street/
 url: https://www.essexapartmenthomes.com/affordable-housing-programs
 ssl_no_verify: true
 ---
+kind: cloudscraper
 url: https://www.firsthousing.org/portfolio
 ---
+kind: cloudscraper
 url: https://www.firsthousing.org/1585-studios
 ---
+kind: cloudscraper
 url: https://www.firsthousing.org/betty-ann-gardens
 ---
+kind: cloudscraper
 url: https://www.firsthousing.org/casa-feliz-studios
 ---
+kind: cloudscraper
 url: https://www.firsthousing.org/craig-gardens
 ---
+kind: cloudscraper
 url: https://www.firsthousing.org/creekview-inn
 ---
+kind: cloudscraper
 url: https://www.firsthousing.org/curtner-studios
 ---
+kind: cloudscraper
 url: https://www.firsthousing.org/el-paseo-studios
 ---
+kind: cloudscraper
 url: https://www.firsthousing.org/fourth-street-apartments
 ---
+kind: cloudscraper
 url: https://www.firsthousing.org/gish-apartments
 ---
+kind: cloudscraper
 url: https://www.firsthousing.org/guadalupe-apartments
 ---
+kind: cloudscraper
 url: https://www.firsthousing.org/iamesi-village
 ---
+kind: cloudscraper
 url: https://www.firsthousing.org/japan-town-senior-apartments
 ---
+kind: cloudscraper
 url: https://www.firsthousing.org/leigh-avenue-senior-apartments
 ---
+kind: cloudscraper
 url: https://www.firsthousing.org/rincon-de-los-esteros-family-apartments
 ---
+kind: cloudscraper
 url: https://www.firsthousing.org/murphy-ranch
 ---
+kind: cloudscraper
 url: https://www.firsthousing.org/orchard-gardens
 ---
+kind: cloudscraper
 url: https://www.firsthousing.org/paula-apartments
 ---
+kind: cloudscraper
 url: https://www.firsthousing.org/sss
 ---
+kind: cloudscraper
 url: https://www.firsthousing.org/troy-apartments
 ---
 url: https://frontporch.net/community/sunny-view/
