@@ -159,8 +159,10 @@ url: https://bacxllc.com/properties/569-lassen-st/
 ---
 url: https://www.billwilsoncenter.org/services/peacock_commons.html
 ---
+kind: cloudscraper
 url: https://www.blieu.com/properties/crossings-at-morgan-hill
 ---
+kind: cloudscraper
 url: https://www.blieu.com/properties/horizons-at-morgan-hill
 ---
 url: https://bridgehousing.com/find-housing/apartment-search/?filter=true&county=Santa%20Clara
@@ -1220,6 +1222,7 @@ headers:
 filter:
   - realpage_units
 ---
+kind: cloudscraper
 url: https://www.mountainviewlot12.org/
 ---
 url: https://www.mvapartments.com/apartments/ca/mountain-view/below-market-rates
@@ -1526,6 +1529,7 @@ url: https://www.wakelandhdc.com/raintree-apartments.html
 ---
 url: https://welchroadapartments.stanford.edu/
 ---
+kind: cloudscraper
 url: https://www.wvcommunityservices.org/housing
 ---
 
