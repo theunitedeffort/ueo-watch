@@ -620,8 +620,6 @@ url: https://www.housekeys13.com/777middlefield
 ---
 url: https://www.housekeys13.com/avelleapartments
 ---
-url: https://www.housekeys13.com/ladera
----
 url: https://www.housekeys13.com/landsby-mountain-view
 ---
 url: https://www.housekeys13.com/montrose
@@ -951,11 +949,6 @@ url: https://www.liveatcherrycreekapts.com/
 ---
 kind: cloudscraper
 url: https://www.liveatcherrycreekapts.com/floorplans
----
-user_visible_url: https://www.liveatdavidavenueapts.com/floorplans#knock
-url: https://doorway-api.knockrentals.com/v1/property/2028750/units
-filter:
-  - knock_units
 ---
 user_visible_url: https://www.liveatfoxdale.com/floorplans#knock
 url: https://doorway-api.knockrentals.com/v1/property/2029138/units
@@ -1545,7 +1538,7 @@ navigate: https://housing.sanjoseca.gov/listing/007cbc75-6f5c-4188-bce0-31389070
 ---
 navigate: https://housing.sanjoseca.gov/listing/a068e33f-1daa-41f7-9c85-7e9c62429e77/23_fifty_south_bascom_2350_south_bascom_san_jose_ca
 ---
-navigate: https://housing.sanjoseca.gov/listing/2584a46a-c0d0-478c-96cb-1282d36e88d9/hawthorne_senior_apartments_715_e_st_john_street_san_jose_ca
+navigate: https://housing.sanjoseca.gov/listing/7326bf57-cd1f-4fd6-93f9-fa0094bf9522/hawthorne_senior_apartments_715_e_st_john_street_san_jose_ca
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/ext/2023af19-65b2-4724-8d37-199f982291f2
 ---
