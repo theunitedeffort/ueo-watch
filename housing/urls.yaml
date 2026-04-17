@@ -165,6 +165,11 @@ url: https://www.blieu.com/properties/crossings-at-morgan-hill
 kind: cloudscraper
 url: https://www.blieu.com/properties/horizons-at-morgan-hill
 ---
+user_visible_url: https://www.borregascourtliving.com/floorplans#knock
+url: https://doorway-api.knockrentals.com/v1/property/2014260/units
+filter:
+  - knock_units
+---
 url: https://bridgehousing.com/find-housing/apartment-search/?filter=true&county=Santa%20Clara
 ---
 url: https://bridgehousing.com/properties/almaden-lake/
