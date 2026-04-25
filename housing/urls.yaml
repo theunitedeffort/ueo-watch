@@ -1792,6 +1792,8 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/394ef99f-afae-42ba-a1c3-732a
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/a209dd02-755d-4477-ad2a-54bee57ef7c0/308_sango_court_apartments_308_sango_court_milpitas_ca
 ---
+navigate: https://housingbayarea.mtc.ca.gov/listing/c0bed484-4c42-42e4-8d4d-615de75e304f/craig_gardens_2580_south_bascom_ave_campbell_ca
+---
 user_visible_url: https://housingbayarea.mtc.ca.gov/listings?search=counties:Santa%20Clara
 url: https://housingbayarea.mtc.ca.gov/api/adapter/listings/combined
 headers:
