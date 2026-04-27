@@ -1798,6 +1798,8 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/a209dd02-755d-4477-ad2a-54be
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/c0bed484-4c42-42e4-8d4d-615de75e304f/craig_gardens_2580_south_bascom_ave_campbell_ca
 ---
+navigate: https://housingbayarea.mtc.ca.gov/listing/b2e07b30-a4ce-4e5d-868b-2d455639da2b/cupertino_senior_home_19935_price_ave_cupertino_ca
+---
 user_visible_url: https://housingbayarea.mtc.ca.gov/listings?search=counties:Santa%20Clara
 url: https://housingbayarea.mtc.ca.gov/api/adapter/listings/combined
 headers:
