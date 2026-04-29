@@ -2113,7 +2113,6 @@ url: https://www.sahahomes.org/properties/arya
 ---
 kind: scraper
 url: https://www.sahahomes.org/properties/?city=san-jose&data-page=1
-return_page_source: false
 ---
 kind: scraper
 url: https://www.southwood-apartments.com/
