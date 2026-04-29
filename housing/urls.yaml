@@ -1937,91 +1937,91 @@ url: https://www.viverelosgatos.com/
 # Apify standby actor.
 # Below market rate
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.787thealameda.com/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.alexanderstationliving.com/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.alexanderstationliving.com/applynow
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.alexanderstationliving.com/floorplans
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.alexanderstationliving.com/incomelimits
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.almadenlakebrighthaven.com/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.almadenlakebrighthaven.com/floorplans
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.altatorrebrighthaven.com/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.altatorrebrighthaven.com/floorplans
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.aspenfamilyapts.com/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.aspenfamilyapts.com/floorplans
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.borregascourtliving.com
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.borregascourtliving.com/floorplans
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.canoasterraceliving.com/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.canoasterraceliving.com/floorplans
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.crossingsonmonterey.com/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.crossingsonmonterey.com/floorplans
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.enclaveaffordable.com/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.enclaveaffordable.com/floorplans
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.enclaveaffordable.com/eligibility
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.drycreekcrossing.com/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.drycreekcrossing.com/floorplans
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.drycreekcrossing.com/helpfulresources
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.glenlomaapts.com/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.glenlomaapts.com/floorplans
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.harvestparkliving.com/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.harvestparkliving.com/floorplans
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.irvinecompanyapartments.com/affordable-housing.html
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.irvinecompanyapartments.com/affordable-housing.html#table
 # All scripts are usually filtered out, but in this case the data we need is
 # stored in a <script type="text/x-template">
@@ -2034,151 +2034,151 @@ filter:
   - css:
       selector: 'li[data-market="Northern California"]'
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.irvinecompanyapartments.com/affordable-housing/affordable-housing-income-limits.html
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.lasventanasapts.com/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.lasventanasapts.com/floorplans
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.thelodgeatmorganhillapartments.com/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.thelodgeatmorganhillapartments.com/ca/morgan-hill/floorplans
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.thelodgeatmorganhillapartments.com/ca/morgan-hill/incomerestrictions
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.liveatdavidavenueapts.com/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.liveatdavidavenueapts.com/floorplans
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.liveatfoxdale.com/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.liveatfoxdale.com/floorplans
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.liveatregencysquareapts.com/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.liveatregencysquareapts.com/floorplans
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.liveatsantanaterrace.com/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.liveatsantanaterrace.com/bmr
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.liveatsantanaterrace.com/floorplans
 ---
-kind: scraper
+kind: cloudscraper
 url: http://www.mabuhaycourtbrighthaven.com/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.mabuhaycourtbrighthaven.com/floorplans
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.montereyfamilyvillage.com/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.montereyfamilyvillage.com/floorplans
 ---
-kind: scraper
+kind: cloudscraper
 url: https://montevistabrighthaven.com
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.montevistabrighthaven.com/floorplans
 ---
-kind: scraper
+kind: cloudscraper
 url: http://www.oakcirclebrighthaven.com/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.oakcirclebrighthaven.com/floorplans
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.ohlonecourtbrighthaven.com/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.ohlonecourtbrighthaven.com/floorplans
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.parkerpaloalto.com/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.sahahomes.org/properties/arya
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.sahahomes.org/properties/?city=san-jose&data-page=1
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.southwood-apartments.com/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://terracinamorganhill.usamfm.com/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://terracinamorganhill.usamfm.com/applynow
 ---
-kind: scraper
+kind: cloudscraper
 url: https://terracinamorganhill.usamfm.com/floorplans
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.trestles-apts.com
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.trestles-apts.com/ca/san-jose/floorplans
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.trestles-apts.com/incomerestrictions
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.turnleaf-apts.com
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.turnleaf-apts.com/ca/san-jose/incomerestrictions
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.turnleaf-apts.com/ca/san-jose/floorplans
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.mainlinenorth.com/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.mainlinenorth.com/affordablehousing
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.mainlinenorth.com/floorplans
 ---
-kind: scraper
+kind: cloudscraper
 url: https://thegroveaptssanjose.com/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.thegroveaptssanjose.com/incomelimited
 ---
-kind: scraper
+kind: cloudscraper
 url: https://mayfaircourt.usamfm.com/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://mayfaircourt.usamfm.com/applicant
 ---
-kind: scraper
+kind: cloudscraper
 url: https://mayfaircourt.usamfm.com/floorplans
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.viewatblossomhill.com/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.villasoleraapts.com/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.villasoleraapts.com/floorplans
 ---
 
