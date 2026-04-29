@@ -2035,9 +2035,6 @@ filter:
       selector: 'li[data-market="Northern California"]'
 ---
 kind: cloudscraper
-url: https://www.irvinecompanyapartments.com/affordable-housing/affordable-housing-income-limits.html
----
-kind: cloudscraper
 url: https://www.lasventanasapts.com/
 ---
 kind: cloudscraper
@@ -2180,6 +2177,9 @@ url: https://www.villasoleraapts.com/
 ---
 kind: cloudscraper
 url: https://www.villasoleraapts.com/floorplans
+---
+kind: scraper
+url: https://www.irvinecompanyapartments.com/affordable-housing/affordable-housing-income-limits.html
 ---
 
 # Market rate
