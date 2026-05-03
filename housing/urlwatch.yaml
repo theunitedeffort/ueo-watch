@@ -112,6 +112,7 @@ job_defaults:
             div.latest-blog-post,
             .elementor-widget-wp-widget-recent-posts,
             #related-posts,
+            #related-properties,
             div.apartment-reviews,
             .g-review,
             .posts-wrapper,
