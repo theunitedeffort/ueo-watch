@@ -10,11 +10,13 @@ import re
 import subprocess
 import time
 import urllib.parse
+import yaml
 
 import cloudscraper
 from dotenv import load_dotenv
 import requests
 from urlwatch import filters
+from urlwatch import handler
 from urlwatch import jobs
 from urlwatch import reporters
 from urlwatch.mailer import SMTPMailer
@@ -83,6 +85,79 @@ class CloudscraperJob(jobs.UrlJob):
     return super().retrieve(job_state, request_lib=scraper)
 
 
+class MultistageJob(jobs.UrlJob):
+  """First gets values from a setup job before running the actual job.
+
+  This is useful when cookies or temporary values like a nonce are required
+  for the job to succeed.
+
+  The setup job should return the desired values separate by newlines. Those
+  values can then be referenced in the actual job's configuration using {{$1}}
+  for the first value, {{$2}} for the second value, and so on.
+  """
+
+  __kind__ = 'multistage'
+
+  __required__ = ('kind', 'setup_job')
+
+  def retrieve(self, job_state):
+    # Create a one-time job from the setup_job data & run it
+    setup_job = jobs.JobBase.unserialize(self.setup_job)
+    setup_job_state = handler.JobState(job_state.cache_storage, setup_job)
+    setup_job_state.process()
+    # Collect the values returned by the setup job
+    values = setup_job_state.new_data.split('\n')
+    # Replace placeholders of the form {{$n}} with the appropriate setup value.
+    # This job's attributes are dumped to YAML first to make it easy to find &
+    # replace even inside lists, nested dicts, etc.
+    dict_str = yaml.dump(self.__dict__)
+    matches = re.findall(r'\{\{\$(\d+)\}\}', dict_str)
+    for match in matches:
+      dict_str = dict_str.replace('{{$%s}}' % match, values[int(match) - 1])
+    new_dict = yaml.load(dict_str, Loader=yaml.SafeLoader)
+    for attr in new_dict:
+      setattr(self, attr, new_dict[attr])
+    return super().retrieve(job_state)
+
+
+class JscoPropertiesJob(MultistageJob):
+  """Custom job to make the pagination of jsco.net easier to deal with."""
+
+  __kind__ = 'jscoproperties'
+
+  __required__ = ('kind', 'page')
+
+  def __init__(self, **kwargs):
+    # Required key 'setup_job' will be populated in retrieve()
+    kwargs['setup_job'] = {}
+    super().__init__(**kwargs)
+
+  def retrieve(self, job_state):
+    self.user_visible_url = self.url
+    self.url = 'https://jsco.net/wp-admin/admin-ajax.php'
+    self.setup_job = {
+      'url': self.user_visible_url,
+      'filter': [
+        {'re.findall': {
+            'pattern': r'(?:"|(?:&quot;))nonce(?:"|(?:&quot;)):(?:"|(?:&quot;))([a-z0-9]{10})(?:"|(?:&quot;))',
+            'repl': r'\1',
+          },
+        },
+      ],
+    }
+    self.data = {
+      'action': 'vcex_ajax_action',
+      'nonce': '{{$2}}',
+      'shortcodeClass': 'Wpex_Post_Cards_Shortcode',
+      'shortcodeAtts': '{"card_style":"template_15421","entry_count":0,"link_type":"none","order":"ASC","orderby":"title","pagination":"numbered_ajax","post_types":"property","posts_per_page":"30","running_count":30,"unique_id":"properties-grid","nonce":"{{$1}}"}',
+      'actionType': 'filter',
+      'filterData': '{"selection":{"region":"222"},"multiple":1}',
+      'paged': self.page,
+    }
+    self.filter.insert(0, {'jq': '.data.html'})
+    return super().retrieve(job_state)
+
+
 class GraphqlJob(jobs.UrlJob):
   """Custom job to set query parameters for graphql-based property pages."""
 
@@ -144,6 +219,27 @@ class RpServiceJob(jobs.UrlJob):
     self.headers['xyz'] = self._calc_xyz()
     self.headers['accept'] = 'application/json'
     return super().retrieve(job_state)
+
+
+# Pulled in from a later version of urlwatch
+class RegexFindall(filters.FilterBase):
+    """Pick out regular expressions using Python's re.findall"""
+
+    __kind__ = 're.findall'
+
+    __supported_subfilters__ = {
+        'pattern': 'Regular expression to search for (required)',
+        'repl': 'Replacement string (default: full match)',
+    }
+
+    __default_subfilter__ = 'pattern'
+
+    def filter(self, data, subfilter):
+        if 'pattern' not in subfilter:
+            raise ValueError('{} needs a pattern'.format(self.__kind__))
+
+        # Default: Replace with full match if no "repl" value is set
+        return "\n".join(match.expand(subfilter.get('repl', '\\g<0>')) for match in re.finditer(subfilter['pattern'], data))
 
 
 class ErrorOnEmptyData(filters.FilterBase):
