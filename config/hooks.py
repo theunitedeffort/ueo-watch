@@ -105,6 +105,8 @@ class MultistageJob(jobs.UrlJob):
     setup_job = jobs.JobBase.unserialize(self.setup_job)
     setup_job_state = handler.JobState(job_state.cache_storage, setup_job)
     setup_job_state.process()
+    if setup_job_state.exception:
+      raise setup_job_state.exception
     # Collect the values returned by the setup job
     values = setup_job_state.new_data.split('\n')
     # Replace placeholders of the form {{$n}} with the appropriate setup value.
@@ -143,6 +145,7 @@ class JscoPropertiesJob(MultistageJob):
             'repl': r'\1',
           },
         },
+        {'if_empty': 'error'},
       ],
     }
     self.data = {
@@ -154,7 +157,7 @@ class JscoPropertiesJob(MultistageJob):
       'filterData': '{"selection":{"region":"222"},"multiple":1}',
       'paged': self.page,
     }
-    self.filter.insert(0, {'jq': '.data.html'})
+    self.filter.insert(0, {'jq': '.data.html // empty'})
     return super().retrieve(job_state)
 
 
