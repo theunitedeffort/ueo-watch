@@ -860,7 +860,18 @@ url: https://jsco.net/property/villa-garcia/
 url: https://jsco.net/property/villa-san-pedro/
 ---
 url: https://jsco.net/property/villas-on-the-park/
-# todo: replace jsco.net/properties once it's working again.
+---
+kind: jscoproperties
+url: https://jsco.net/properties#page1
+page: 1
+---
+kind: jscoproperties
+url: https://jsco.net/properties#page2
+page: 2
+---
+kind: jscoproperties
+url: https://jsco.net/properties#page3
+page: 3
 ---
 url: https://jscoabode.com/properties/
 ---
