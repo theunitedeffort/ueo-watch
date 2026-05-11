@@ -157,6 +157,9 @@ class JscoPropertiesJob(MultistageJob):
       'filterData': '{"selection":{"region":"222"},"multiple":1}',
       'paged': self.page,
     }
+    # Modifying the filter property here will modify the default filters for all
+    # future jobs if this job uses default filters.  So, we make a copy.
+    self.filter = self.filter.copy()
     self.filter.insert(0, {'jq': '.data.html // empty'})
     return super().retrieve(job_state)
 
