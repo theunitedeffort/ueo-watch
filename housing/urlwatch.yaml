@@ -487,6 +487,8 @@ job_defaults:
       - 'api.mapbox.com'
       - 'aceai.leasehawk.com'
       - 'ace-chat.leasehawk.com'
+      - 'app.meetelise.com'
+      - 'cdn.eliseai.com'
       - 'clarity.ms/collect'
       - '.woff2'
       - '.ttf'
