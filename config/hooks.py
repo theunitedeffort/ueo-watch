@@ -39,7 +39,7 @@ class ScraperJob(jobs.UrlJob):
 
   __required__ = ('kind',)
   __optional__ = ('render', 'premium_proxy', 'block_resources',
-    'block_resource', 'return_page_source', 'wait_browser')
+    'block_resource', 'return_page_source', 'wait_browser', 'wait_ms')
 
   def retrieve(self, job_state):
     base_url = 'https://washed-ocelot--super-scraper-task.apify.actor'
