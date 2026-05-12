@@ -359,7 +359,8 @@ job_defaults:
           exclude: >-
             picture,
             img,
-            .price-container
+            .price-container,
+            [class*="price-container"]
       # Link for address in footer appears and disappears, causing noise
       # Remove the surrounding <a> from the address so it never shows up.
       # We need to keep the innerHTML of the <a>
