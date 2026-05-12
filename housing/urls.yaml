@@ -545,9 +545,6 @@ filter:
 ---
 url: https://epath.org/ventures/villas-at-4th-street/
 ---
-url: https://www.essexapartmenthomes.com/affordable-housing-programs
-ssl_no_verify: true
----
 kind: cloudscraper
 url: https://www.firsthousing.org/portfolio
 ---
@@ -2150,69 +2147,87 @@ kind: scraper
 url: https://rentbalmoral.com/
 ---
 kind: scraper
+url: https://www.essexapartmenthomes.com/affordable-housing-programs
+return_page_source: false
+wait_ms: 10000
+premium_proxy: true
+compared_versions: 2
+---
+kind: scraper
 url: https://www.essexapartmenthomes.com/apartments/101-san-fernando
 return_page_source: false
-wait_browser: networkidle
+wait_ms: 10000
+premium_proxy: true
 compared_versions: 2
 ---
 kind: scraper
 url: https://www.essexapartmenthomes.com/apartments/campbell/revere-campbell
 return_page_source: false
-wait_browser: networkidle
+wait_ms: 10000
+premium_proxy: true
 compared_versions: 2
 ---
 kind: scraper
 url: https://www.essexapartmenthomes.com/apartments/lawrence-station
 return_page_source: false
-wait_browser: networkidle
+wait_ms: 10000
+premium_proxy: true
 compared_versions: 2
 ---
 kind: scraper
 url: https://www.essexapartmenthomes.com/apartments/san-jose/waterford-place
 return_page_source: false
-wait_browser: networkidle
+wait_ms: 10000
+premium_proxy: true
 compared_versions: 2
 ---
 kind: scraper
 url: https://www.essexapartmenthomes.com/apartments/san-jose/vio
 return_page_source: false
-wait_browser: networkidle
+wait_ms: 10000
+premium_proxy: true
 compared_versions: 2
 ---
 kind: scraper
 url: https://www.essexapartmenthomes.com/apartments/santa-clara/villa-granada
 return_page_source: false
-wait_browser: networkidle
+wait_ms: 10000
+premium_proxy: true
 compared_versions: 2
 ---
 kind: scraper
 url: https://www.essexapartmenthomes.com/apartments/sunnyvale/magnolia-square
 return_page_source: false
-wait_browser: networkidle
+wait_ms: 10000
+premium_proxy: true
 compared_versions: 2
 ---
 kind: scraper
 url: https://www.essexapartmenthomes.com/apartments/sunnyvale/maxwell-sunnyvale
 return_page_source: false
-wait_browser: networkidle
+wait_ms: 10000
+premium_proxy: true
 compared_versions: 2
 ---
 kind: scraper
 url: https://www.essexapartmenthomes.com/apartments/via
 return_page_source: false
-wait_browser: networkidle
+wait_ms: 10000
+premium_proxy: true
 compared_versions: 2
 ---
 kind: scraper
 url: https://www.essexapartmenthomes.com/apartments/willow-lake
 return_page_source: false
-wait_browser: networkidle
+wait_ms: 10000
+premium_proxy: true
 compared_versions: 2
 ---
 kind: scraper
 url: https://www.essexapartmenthomes.com/apartments/mountain-view/arlo-mountain-view
 return_page_source: false
-wait_browser: networkidle
+wait_ms: 10000
+premium_proxy: true
 compared_versions: 2
 ---
 kind: scraper

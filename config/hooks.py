@@ -61,6 +61,8 @@ class ScraperJob(jobs.UrlJob):
         self.url += f'&block_resource={urllib.parse.quote(res)}'
     if self.wait_browser:
       self.url += f'&wait_browser={self.wait_browser}'
+    if self.wait_ms:
+      self.url += f'&wait={self.wait_ms}'
     self.headers = self.headers or {}
     auth_header = 'Authorization'
     existing_auth = [h for h in self.headers if h.lower() == auth_header.lower()]
