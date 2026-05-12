@@ -219,6 +219,7 @@ url: https://www.va.gov/pension/
 # VTA Paratransit
 ---
 url: https://www.vta.org/go/paratransit#accordion-applying-for-vta-access-paratransit-service
+compared_versions: 2 # switches between .gov and .org domains in the content.
 ---
 
 # WIC
