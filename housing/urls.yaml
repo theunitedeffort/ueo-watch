@@ -1858,6 +1858,10 @@ url: https://www.essexapartmenthomes.com/apartments/101-san-fernando
 ssl_no_verify: true
 compared_versions: 2
 ---
+url: https://www.essexapartmenthomes.com/apartments/campbell/revere-campbell
+ssl_no_verify: true
+compared_versions: 2
+---
 url: https://www.essexapartmenthomes.com/apartments/lawrence-station
 ssl_no_verify: true
 compared_versions: 2
@@ -1921,8 +1925,6 @@ url: https://milpitascrossing.com/?page_id=15
 url: https://www.murphystationapts.com/home
 ---
 url: https://www.mvapartments.com/
----
-url: https://www.essexapartmenthomes.com/apartments/campbell/revere-campbell
 ---
 url: https://sevensmv.com/
 ---
