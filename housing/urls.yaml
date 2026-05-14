@@ -1984,9 +1984,11 @@ url: https://www.harvestparkliving.com/floorplans
 ---
 kind: cloudscraper
 url: https://www.irvinecompanyapartments.com/affordable-housing.html
+max_tries: 4
 ---
 kind: cloudscraper
 url: https://www.irvinecompanyapartments.com/affordable-housing.html#table
+max_tries: 4
 # All scripts are usually filtered out, but in this case the data we need is
 # stored in a <script type="text/x-template">
 filter:
