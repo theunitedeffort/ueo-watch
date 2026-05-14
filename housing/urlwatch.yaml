@@ -404,10 +404,8 @@ job_defaults:
           filter: css
           selector: body
           # The images on this page change URL all the time and so it's easiest
-          # to just filter them out completely.  We do not filter this out of
-          # all pages because this could conceivably be a class for an image
-          # of income limits on some other website.
-          exclude: '[class*="bmr-communities__image-container"]'
+          # to just filter them out completely.
+          exclude: 'img'
       - selective:
           select_pattern:
             - '.*danco-group\.com/projects'
