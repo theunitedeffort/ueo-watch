@@ -400,6 +400,16 @@ job_defaults:
           exclude: "//div[contains(@class, 'bmr-communities__container')][h3[not(contains(text(), 'Northern California'))]]"
       - selective:
           select_pattern:
+            - '.*essexapartmenthomes\.com/affordable-housing-programs'
+          filter: css
+          selector: body
+          # The images on this page change URL all the time and so it's easiest
+          # to just filter them out completely.  We do not filter this out of
+          # all pages because this could conceivably be a class for an image
+          # of income limits on some other website.
+          exclude: '[class*="bmr-communities__image-container"]'
+      - selective:
+          select_pattern:
             - '.*danco-group\.com/projects'
           filter: xpath
           path: '//body'
