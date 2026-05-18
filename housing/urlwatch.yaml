@@ -16,6 +16,7 @@ job_defaults:
             - '.*deanzaproperties\.com'
             - '.*787thealameda\.com/?$'
             - '.*tamienstation\.com'
+            - '.*oakgroveaptliving\.com/floor-plans$' # income restrictions are in <nav>
           invert_selection: true
           filter: css
           selector: body
@@ -199,6 +200,7 @@ job_defaults:
             .fp-blog-sidebar-widget.blog-categories,
             [class*="footer-links"],
             #footer-links,
+            .footer_link-list,
             .widgetQuickLinks,
             .toolbar-quicklinks,
             [class*="menu-footer"],
