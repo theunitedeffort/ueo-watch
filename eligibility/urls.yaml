@@ -6,8 +6,7 @@ ssl_no_verify: true
 
 # CalFresh
 ---
-url: https://www.cdss.ca.gov/calfresh
-ssl_no_verify: true
+url: https://www.getcalfresh.org/en/howtoapply/
 ---
 url: https://stgenssa.sccgov.org/debs/program_handbooks/charts/assets/2CalFresh/CFMonthAllIncomeElig.htm
 ---
