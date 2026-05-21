@@ -1811,6 +1811,8 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/b2e07b30-a4ce-4e5d-868b-2d45
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/8d91f098-bc49-4140-b346-0c7e39f5ae34/mi_la_330_distel_circle_los_altos_ca
 ---
+navigate: https://housingbayarea.mtc.ca.gov/listing/19093dff-3a54-4d84-a124-28cb9b2d143b/montecito_apartments_3765_tamarack_ln_santa_clara_ca
+---
 user_visible_url: https://housingbayarea.mtc.ca.gov/listings?search=counties:Santa%20Clara
 url: https://housingbayarea.mtc.ca.gov/api/adapter/listings/combined
 headers:
@@ -1876,6 +1878,9 @@ url: https://www.livethelafayette.com/
 url: https://www.merrillgardens.com/senior-living/ca/campbell/merrill-gardens-at-campbell/
 ---
 url: https://milpitascrossing.com/?page_id=15
+---
+kind: cloudscraper
+url: https://www.montecitosantaclaraapts.com/
 ---
 url: https://www.murphystationapts.com/home
 ---
