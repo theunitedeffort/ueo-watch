@@ -309,17 +309,7 @@ url: https://charitieshousing.org/under-construction/
 ---
 url: https://www.charlotteparkaptliving.com/
 ---
-url: https://www.charlotteparkaptliving.com/apartments/ca/san-jose/floor-plans#/#units
-kind: graphql_units
-location_urn: g5-cl-1olpi9rg4w-fpi-management-san-jose-ca
-filter:
-  - graphql_units
----
-url: https://www.charlotteparkaptliving.com/apartments/ca/san-jose/floor-plans#/
-kind: graphql_floorplans
-location_urn: g5-cl-1olpi9rg4w-fpi-management-san-jose-ca
-filter:
-  - graphql_floorplans
+url: https://www.charlotteparkaptliving.com/floor-plans
 ---
 url: https://www.chm.org/community-management/our-communities/
 ---

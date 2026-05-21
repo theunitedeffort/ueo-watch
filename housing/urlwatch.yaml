@@ -17,6 +17,7 @@ job_defaults:
             - '.*787thealameda\.com/?$'
             - '.*tamienstation\.com'
             - '.*oakgroveaptliving\.com/floor-plans$' # income restrictions are in <nav>
+            - '.*charlotteparkaptliving\.com/floor-plans$' # income restrictions are in <nav>
           invert_selection: true
           filter: css
           selector: body
