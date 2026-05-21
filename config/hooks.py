@@ -11,6 +11,7 @@ import subprocess
 import time
 import urllib.parse
 import yaml
+import pprint
 
 import cloudscraper
 from dotenv import load_dotenv
@@ -550,13 +551,15 @@ class JiraReporter(reporters.ReporterBase):
         'job_states': []
       } for assignee in self.config['assignees']]
     error_assignee = self.config.get('error_assignee', '')
-    min_func = lambda x: len(x['job_states'])
+    min_func = lambda x: len(x['job_states']) / x['assignee'].get('weight', 1.0)
     if error_assignee:
-      min_func = lambda x: len([j for j in x['job_states'] if j.verb == 'changed'])
+      min_func = lambda x: len([j for j in x['job_states'] if j.verb == 'changed']) / x['assignee'].get('weight', 1.0)
     for group in sorted_groups:
       smallest_bucket = min(assignments, key=min_func)
+      print(smallest_bucket['assignee']['id'])
       smallest_bucket['job_states'].extend(group)
 
+    pprint.pprint(assignments)
     for assignment in assignments:
       for job_state in assignment['job_states']:
         issue_type_id = self.config['update_type']
@@ -606,7 +609,7 @@ class JiraReporter(reporters.ReporterBase):
             'This change is too large to display.  Visit the full report above to view this change.'))
         issue['fields']['description'] = description
         issue['fields'][self.config['reported_field']] = datetime.date.today().strftime('%Y-%m-%d')
-        assignee = assignment['assignee']
+        assignee = assignment['assignee']['id']
         if error_assignee and job_state.verb == 'error':
           assignee = error_assignee
           logger.debug('overriding normal assignee to be %s', assignee)
@@ -615,10 +618,13 @@ class JiraReporter(reporters.ReporterBase):
         issue['fields']['duedate'] = (datetime.date.today() + datetime.timedelta(days=3)).strftime('%Y-%m-%d')
         filtered_reviewers = [r for r in self.config['reviewers'] if r != assignee]
         if (filtered_reviewers):
-          issue['fields'][self.config['reviewer_field']] = [{'id': random.choice(filtered_reviewers)}]
+          weights = [r.get('weight', 1.0) for r in filtered_reviewers]
+          print(weights)
+          issue['fields'][self.config['reviewer_field']] = [{'id': random.choices(filtered_reviewers, weights)[0]['id']}]
         issues.append(issue)
+    pprint.pprint(sorted([i['fields'][self.config['reviewer_field']][0]['id'] for i in issues]))
     logger.debug('Generated %d issues for Jira', len(issues))
-    self._create_issues(issues)
+    # self._create_issues(issues)
 
 
   def _create_issues(self, issues):
