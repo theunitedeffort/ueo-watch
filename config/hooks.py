@@ -226,6 +226,7 @@ class RpServiceJob(jobs.UrlJob):
     self.headers = self.headers or {}
     self.headers['xyz'] = self._calc_xyz()
     self.headers['accept'] = 'application/json'
+    self.headers['accept-language'] = 'en-US,en;q=0.9,vi;q=0.8,es;q=0.7'
     return super().retrieve(job_state)
 
 
