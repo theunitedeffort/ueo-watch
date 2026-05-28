@@ -1452,7 +1452,10 @@ url: https://thirtyone50.com/community_listings/00661-crossings-on-monterey/
 ---
 url: https://www.thornbridgeapartments.com/
 ---
-url: https://www.thornbridgeapartments.com/floor-plans/#/
+user_visible_url: https://www.thornbridgeapartments.com/floor-plans/#/
+url: https://sightmap.com/app/api/v1/yzvgq0g1pln/sightmaps/120584
+filter:
+  - sightmap_units
 ---
 url: https://www.unitycare.org/housing/
 ---
