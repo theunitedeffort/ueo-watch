@@ -330,6 +330,7 @@ job_defaults:
             - '.*montereygrove\.com'
             - '.*morganranchapartmenthomes\.com/'
             - '.*murphystationapts\.com'
+            - '.*museumparksanjose\.com/$'
             - '.*mvapartments\.com/$'
             - '.*novomountainview\.com/'
             - '.*prometheusapartments\.com/'
