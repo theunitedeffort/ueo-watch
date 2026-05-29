@@ -555,7 +555,6 @@ class JiraReporter(reporters.ReporterBase):
       min_func = lambda x: len([j for j in x['job_states'] if j.verb == 'changed']) / x['assignee'].get('weight', 1.0)
     for group in sorted_groups:
       smallest_bucket = min(assignments, key=min_func)
-      print(smallest_bucket['assignee']['id'])
       smallest_bucket['job_states'].extend(group)
 
     for assignment in assignments:
@@ -617,7 +616,6 @@ class JiraReporter(reporters.ReporterBase):
         filtered_reviewers = [r for r in self.config['reviewers'] if r != assignee]
         if (filtered_reviewers):
           weights = [r.get('weight', 1.0) for r in filtered_reviewers]
-          print(weights)
           issue['fields'][self.config['reviewer_field']] = [{'id': random.choices(filtered_reviewers, weights)[0]['id']}]
         issues.append(issue)
     logger.debug('Generated %d issues for Jira', len(issues))
