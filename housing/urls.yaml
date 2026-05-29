@@ -2162,13 +2162,13 @@ url: https://www.irvinecompanyapartments.com/affordable-housing/affordable-housi
 # Market rate
 # Remember to also update the regex pattern in urlwatch.yaml for market rate URLs.
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.aventinoapts.com/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.aviarecupertino.com/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://rentbalmoral.com/
 ---
 kind: scraper
@@ -2178,7 +2178,7 @@ wait_ms: 10000
 compared_versions: 2
 # TODO: replace essex urls after figuring out how to stabilize the content.
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.domicilioapts.com/
 ---
 kind: scraper
@@ -2193,7 +2193,7 @@ return_page_source: false
 wait_browser: networkidle
 compared_versions: 2
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.ilaraapartments.com/
 ---
 kind: scraper
@@ -2205,10 +2205,10 @@ url: https://www.irvinecompanyapartments.com/locations/northern-california/cuper
 kind: scraper
 url: https://www.irvinecompanyapartments.com/locations/northern-california/sunnyvale/redwood-place.html
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.laderaapts.com/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.liverevela.com/
 ---
 kind: scraper
@@ -2217,43 +2217,43 @@ url: https://www.montereygrove.com
 compared_versions: 2
 return_page_source: false
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.morganranchapartmenthomes.com/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.novomountainview.com/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://prometheusapartments.com/ca/cupertino-apartments/cupertino-park-center
 ---
-kind: scraper
+kind: cloudscraper
 url: https://prometheusapartments.com/ca/cupertino-apartments/the-biltmore
 ---
-kind: scraper
+kind: cloudscraper
 url: https://prometheusapartments.com/ca/cupertino-apartments/the-markham
 ---
-kind: scraper
+kind: cloudscraper
 url: https://prometheusapartments.com/ca/mountain-view-apartments/100-moffett/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://prometheusapartments.com/ca/mountain-view-apartments/madera/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://prometheusapartments.com/ca/mountain-view-apartments/montrose/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://prometheusapartments.com/ca/mountain-view-apartments/the-dean/
 ---
-kind: scraper
+kind: cloudscraper
 url: https://prometheusapartments.com/ca/santa-clara-apartments/mansion-grove
 ---
-kind: scraper
+kind: cloudscraper
 url: https://prometheusapartments.com/ca/santa-clara-apartments/the-benton
 ---
-kind: scraper
+kind: cloudscraper
 url: https://prometheusapartments.com/ca/sunnyvale-apartments/ironworks
 ---
-kind: scraper
+kind: cloudscraper
 url: https://www.tamarindsquare.com/
 ---
 
