@@ -401,7 +401,7 @@ job_defaults:
             - '.*essexapartmenthomes\.com/affordable-housing-programs'
           filter: xpath
           path: '//body'
-          exclude: "//div[contains(@class, 'bmr-communities__container')][h3[not(contains(text(), 'Northern California'))]]"
+          exclude: "//div[substring(@class, string-length(@class) - string-length('bmr-communities') + 1)  = 'bmr-communities'][.//h2[not(contains(text(), 'Northern California'))]]"
       - selective:
           select_pattern:
             - '.*essexapartmenthomes\.com/affordable-housing-programs'
