@@ -327,7 +327,6 @@ job_defaults:
             - '.*livethelafayette\.com/'
             - '.*merrillgardens\.com/senior-living/ca/campbell/merrill-gardens-at-campbell/'
             - '.*milpitascrossing\.com/\?page_id=15'
-            - '.*montecitosantaclaraapts\.com'
             - '.*montereygrove\.com'
             - '.*morganranchapartmenthomes\.com/'
             - '.*murphystationapts\.com'
@@ -556,16 +555,11 @@ report:
     evaluator_field: customfield_10042
     assignees:
       - id: 712020:8ad994d4-719d-45fb-b332-ac14adae6a33  # Trevor
-      - id: 712020:85b5e074-0fe2-44bc-9439-764894222c4d  # Marine
-        weight: 0.5
-      - id: 712020:4b126702-9248-4640-9a92-2293b6c99b4d  # Allen
       - id: 712020:c06385c5-5924-49ab-91ae-a4a832b69d23  # JF
       - id: 712020:89ef25b5-e5cf-4beb-925e-628779e764c5  # AA
       - id: 712020:3e481b27-a57c-4cec-a429-c6679f68c793  # SC
     reviewers:
       - id: 712020:8ad994d4-719d-45fb-b332-ac14adae6a33  # Trevor
-      - id: 712020:85b5e074-0fe2-44bc-9439-764894222c4d  # Marine
-        weight: 0.5
       - id: 712020:4b126702-9248-4640-9a92-2293b6c99b4d  # Allen
     error_assignee: 712020:8ad994d4-719d-45fb-b332-ac14adae6a33  # Trevor
     details_url: https://storage.googleapis.com/ueo-changes/housing/report-{datetime}.html
