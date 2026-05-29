@@ -619,7 +619,7 @@ class JiraReporter(reporters.ReporterBase):
           issue['fields'][self.config['reviewer_field']] = [{'id': random.choices(filtered_reviewers, weights)[0]['id']}]
         issues.append(issue)
     logger.debug('Generated %d issues for Jira', len(issues))
-    # self._create_issues(issues)
+    self._create_issues(issues)
 
 
   def _create_issues(self, issues):
