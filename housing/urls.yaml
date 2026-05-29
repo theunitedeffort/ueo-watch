@@ -1536,23 +1536,21 @@ url: https://www.wvcommunityservices.org/housing
 ---
 navigate: https://housing.sanjoseca.gov/listings
 ---
-navigate: https://housing.sanjoseca.gov/listing/0d199b2b-c6f7-4724-beec-ba15d9487346/kings_crossing_apartments_678_n_king_rd_san_jose_ca
----
 navigate: https://housing.sanjoseca.gov/listing/ca878a78-7a8f-4c60-a837-5f0f973d4ff2/solaire_apartments_427_auzerais_ave_san_jose_ca
----
-navigate: https://housing.sanjoseca.gov/listing/68ae0b63-cb64-4f74-9353-c394fb4453b6/almaden_family_apartments_1501_almaden_expressway_san_jose_ca
----
-navigate: https://housing.sanjoseca.gov/listing/72a14f96-9c42-4d8b-93fb-fa86bce74bc7/blossom_river_apartments_1000_blossom_river_way_san_jose_ca
----
-navigate: https://housing.sanjoseca.gov/listing/4f0a9ae1-eb73-40a2-bd02-8ee677945803/23_fifty_south_bascom_2350_south_bascom_san_jose_ca
 ---
 navigate: https://housing.sanjoseca.gov/listing/7326bf57-cd1f-4fd6-93f9-fa0094bf9522/hawthorne_senior_apartments_715_e_st_john_street_san_jose_ca
 ---
-navigate: https://housing.sanjoseca.gov/listing/e140503c-1b4c-4b7e-ad40-b54a2a7ff16b/art_ark_apartments_1058_south_fifth_street_san_jose_ca
+navigate: https://housingbayarea.mtc.ca.gov/listing/c3fe1552-c3a5-4028-b9bc-414c0bcb5e8e/monroe_commons_2330_monroe_st_santa_clara_ca
 ---
-navigate: https://housing.sanjoseca.gov/listing/3317c867-8670-415e-8a93-f4b10d79181e/villa_monterey_apartments_2898_villa_monterey_road_san_jose_ca
+navigate: https://housingbayarea.mtc.ca.gov/listing/ext/0d199b2b-c6f7-4724-beec-ba15d9487346
 ---
-navigate: https://housingbayarea.mtc.ca.gov/listing/ext/2023af19-65b2-4724-8d37-199f982291f2
+navigate: https://housingbayarea.mtc.ca.gov/listing/ext/68ae0b63-cb64-4f74-9353-c394fb4453b6
+---
+navigate: https://housingbayarea.mtc.ca.gov/listing/ext/4f0a9ae1-eb73-40a2-bd02-8ee677945803
+---
+navigate: https://housingbayarea.mtc.ca.gov/listing/ext/e140503c-1b4c-4b7e-ad40-b54a2a7ff16b
+---
+navigate: https://housingbayarea.mtc.ca.gov/listing/ext/72a14f96-9c42-4d8b-93fb-fa86bce74bc7
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/ext/51bc9c3e-e896-4730-80d4-36420b995db9
 ---
@@ -1592,15 +1590,9 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/ext/215f9a7d-416d-40ad-8af1-
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/ext/4afa53bc-b938-434f-b102-860be5ccacab
 ---
-navigate: https://housingbayarea.mtc.ca.gov/listing/ext/3f3c56e7-7981-4d06-a6c4-48e8c296e8ea
----
 navigate: https://housingbayarea.mtc.ca.gov/listing/ext/29ab03dc-b5b8-4d50-bd48-47cbe0036a83
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/ext/9ac02403-51f6-423f-9185-35a0632988f9
----
-navigate: https://housingbayarea.mtc.ca.gov/listing/ext/825cd62c-66ea-487f-b96a-8033410acf52
----
-navigate: https://housingbayarea.mtc.ca.gov/listing/ext/22931c06-12ff-42f1-808a-36eb67834853
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/ext/04387ab3-ffed-4c47-a19a-07f70cb865ed
 ---
@@ -1654,7 +1646,7 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/ext/0aa5c924-3cd5-4d9e-81ae-
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/ext/6cd66480-5ae7-47fd-8000-f4a09fcb1171
 ---
-navigate: https://housingbayarea.mtc.ca.gov/listing/ext/f6adbd8c-bcb4-4ad3-b375-cbe8b0fb3ac7
+navigate: https://housingbayarea.mtc.ca.gov/listing/ext/b165d484-2ba3-4847-9095-250b306bbbe1
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/ext/9f6bb067-65c0-4fa5-8717-edd32b4eea10
 ---
@@ -1702,8 +1694,6 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/ext/7fd2aa21-8a94-46d2-8719-
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/ext/79128832-f4e6-430e-857c-dbcbf3af6b16
 ---
-navigate: https://housingbayarea.mtc.ca.gov/listing/ext/f423c424-17d5-420a-880e-eb1a9d717d95
----
 navigate: https://housingbayarea.mtc.ca.gov/listing/ext/82ebb6ce-f352-4a77-afd0-9b3785247abb
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/ext/6c7bfdc2-f365-41be-8d14-15ec54036230
@@ -1719,8 +1709,6 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/ext/72ee0f92-c85f-4dd0-901a-
 navigate: https://housingbayarea.mtc.ca.gov/listing/ext/2e40d3c3-202f-4791-86b1-ec0326aa52ad
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/ext/a17c1559-cefb-4fa7-bd39-307e32f75d43
----
-navigate: https://housingbayarea.mtc.ca.gov/listing/ext/61ae457a-ea5e-4c82-9e5d-8e3b014ded60
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/17124f39-d5b6-411c-88e6-cf0bcdce2ee4/alexander_station_200_east_10_th_street_gilroy_ca
 ---
@@ -1752,7 +1740,7 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/0e5e2cd2-6d2b-43bb-a62c-1ab0
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/2f3cbdee-2267-4946-b75a-20fb0172d37b/the_fountains_2005_san_ramon_ave_mountain_view_ca
 ---
-navigate: https://housingbayarea.mtc.ca.gov/listing/aae9d6ec-7d2f-4580-9d9b-5a099857ed86/paulson_park_i_111_montebello_avenue_mountain_view_ca
+navigate: https://housingbayarea.mtc.ca.gov/listing/95213fc3-d235-488f-93da-0c4eaa4595e6/paulson_park_i_111_montebello_avenue_mountain_view_ca
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/fd996f3b-9bcf-4d18-8216-a4a7447a2ad8/paulson_park_ii_111_montebello_avenue_mountain_view_ca
 ---
@@ -1770,7 +1758,7 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/469acbdb-9caa-42ef-b647-4ce1
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/1110f614-85bb-41da-b6ba-54346b6fd183/sharmon_palms_lane_967_sharmon_palms_lane_campbell_ca
 ---
-navigate: https://housingbayarea.mtc.ca.gov/listing/46c3c209-ff8e-4970-89df-c3fe27aea7e8/open_doors_634_w_parr_avenue_los_gatos_ca
+navigate: https://housingbayarea.mtc.ca.gov/listing/caf65b46-6aae-4285-be3b-89a7178b9c5d/open_doors_634_w_parr_avenue_los_gatos_ca
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/e1b0c620-b5a3-4481-b741-a85eeb53ef79/harvest_park_31_cohansey_avenue_gilroy_ca
 ---
@@ -1807,6 +1795,14 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/8d91f098-bc49-4140-b346-0c7e
 navigate: https://housingbayarea.mtc.ca.gov/listing/19093dff-3a54-4d84-a124-28cb9b2d143b/montecito_apartments_3765_tamarack_ln_santa_clara_ca
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/ext/70e62705-a8e8-4be0-b5a1-4b59ea950755
+---
+navigate: https://housingbayarea.mtc.ca.gov/listing/ext/3317c867-8670-415e-8a93-f4b10d79181e
+---
+navigate: https://housingbayarea.mtc.ca.gov/listing/4cb0110c-d1f7-42e2-bb59-d8ffaa9ab635/fair_oaks_plaza_690_south_fair_oaks_avenue_sunnyvale_ca
+---
+navigate: https://housingbayarea.mtc.ca.gov/listing/195eac2c-e679-47a2-873f-d2a5ea4731e9/riverwood_grove_2150_tasman_drive_santa_clara_ca
+---
+navigate: https://housingbayarea.mtc.ca.gov/listing/5e55e6b2-a167-49b3-b82d-6a955a71f430/de_vries_place_163_n_main_street_milpitas_ca
 ---
 user_visible_url: https://housingbayarea.mtc.ca.gov/listings?search=counties:Santa%20Clara
 url: https://housingbayarea.mtc.ca.gov/api/adapter/listings/combined
