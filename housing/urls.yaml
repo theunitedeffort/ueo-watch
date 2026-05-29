@@ -2090,6 +2090,12 @@ url: https://www.alvinscornercampbell.com/
 url: https://www.avaloncommunities.com/california/campbell-apartments/avalon-campbell/
 ---
 kind: cloudscraper
+url: https://www.aventinoapts.com/
+---
+kind: cloudscraper
+url: https://www.aviarecupertino.com/
+---
+kind: cloudscraper
 url: https://www.catalystmountainviewapartments.com/
 ---
 url: https://citylineflats.com/
@@ -2104,13 +2110,22 @@ url: https://www.deanzaproperties.com/south-bay-area/los-altos-gardens-one/
 ---
 url: https://www.decron.com/apartments-willow-creek/
 ---
+kind: cloudscraper
+url: https://www.domicilioapts.com/
+---
 url: https://encasaliving.com/
 ---
 url: https://www.fountainplazaapartments.com/
 ---
 url: https://www.greystar.com/properties/morgan-hill-ca/vida-at-morgan-hill
 ---
+kind: cloudscraper
+url: https://www.ilaraapartments.com/
+---
 url: https://ivyliving.com/paloalto/
+---
+kind: cloudscraper
+url: https://www.laderaapts.com/
 ---
 url: https://www.liveatdomus.com/
 ---
@@ -2124,101 +2139,21 @@ url: https://livepassero.com/
 ---
 url: https://www.liveprado.com/
 ---
+kind: cloudscraper
+url: https://www.liverevela.com/
+---
 url: https://www.livethelafayette.com/
 ---
 url: https://www.merrillgardens.com/senior-living/ca/campbell/merrill-gardens-at-campbell/
 ---
 url: https://milpitascrossing.com/?page_id=15
 ---
+kind: cloudscraper
+url: https://www.morganranchapartmenthomes.com/
+---
 url: https://www.murphystationapts.com/home
 ---
 url: https://www.mvapartments.com/
----
-url: https://sevensmv.com/
----
-url: https://sofiaaptliving.com/
----
-url: https://www.udr.com/san-francisco-bay-area-apartments/san-jose/almaden-lake-village/
----
-url: https://www.udr.com/san-francisco-bay-area-apartments/mountain-view/verve/
----
-url: https://www.vidamorganhill.com/
----
-url: https://www.villadelsolsunnyvale.com/
----
-url: http://www.villatorinoapts.com/
----
-url: https://www.viverelosgatos.com/
----
-
-# Scraper jobs, placed together so that they run sequentially on the same
-# Apify standby actor.
-# Below market rate
----
-kind: scraper
-url: https://www.irvinecompanyapartments.com/affordable-housing/affordable-housing-income-limits.html
----
-
-# Market rate
-# Remember to also update the regex pattern in urlwatch.yaml for market rate URLs.
----
-kind: cloudscraper
-url: https://www.aventinoapts.com/
----
-kind: cloudscraper
-url: https://www.aviarecupertino.com/
----
-kind: cloudscraper
-url: https://rentbalmoral.com/
----
-kind: scraper
-url: https://www.essexapartmenthomes.com/affordable-housing-programs
-return_page_source: false
-wait_ms: 10000
-compared_versions: 2
-# TODO: replace essex urls after figuring out how to stabilize the content.
----
-kind: cloudscraper
-url: https://www.domicilioapts.com/
----
-kind: scraper
-url: https://www.hollandresidential.com/ca/santa-clara/alba
-return_page_source: false
-wait_browser: networkidle
-compared_versions: 2
----
-kind: scraper
-url: https://www.hollandresidential.com/ca/santa-clara/orlo
-return_page_source: false
-wait_browser: networkidle
-compared_versions: 2
----
-kind: cloudscraper
-url: https://www.ilaraapartments.com/
----
-kind: scraper
-url: https://www.irvinecompanyapartments.com/locations/northern-california/san-jose/north-park.html
----
-kind: scraper
-url: https://www.irvinecompanyapartments.com/locations/northern-california/cupertino/hamptons-at-cupertino.html
----
-kind: scraper
-url: https://www.irvinecompanyapartments.com/locations/northern-california/sunnyvale/redwood-place.html
----
-kind: cloudscraper
-url: https://www.laderaapts.com/
----
-kind: cloudscraper
-url: https://www.liverevela.com/
----
-kind: scraper
-url: https://www.montereygrove.com
-# Phone number switches back and forth between two values.
-compared_versions: 2
-return_page_source: false
----
-kind: cloudscraper
-url: https://www.morganranchapartmenthomes.com/
 ---
 kind: cloudscraper
 url: https://www.novomountainview.com/
@@ -2254,10 +2189,79 @@ kind: cloudscraper
 url: https://prometheusapartments.com/ca/sunnyvale-apartments/ironworks
 ---
 kind: cloudscraper
+url: https://rentbalmoral.com/
+---
+url: https://sevensmv.com/
+---
+url: https://sofiaaptliving.com/
+---
+kind: cloudscraper
 url: https://www.tamarindsquare.com/
 ---
+url: https://www.udr.com/san-francisco-bay-area-apartments/san-jose/almaden-lake-village/
+---
+url: https://www.udr.com/san-francisco-bay-area-apartments/mountain-view/verve/
+---
+url: https://www.vidamorganhill.com/
+---
+url: https://www.villadelsolsunnyvale.com/
+---
+url: http://www.villatorinoapts.com/
+---
+url: https://www.viverelosgatos.com/
+---
 
-# PDFs
+###########################################################################
+# Scraper jobs, placed together so that they run sequentially on the same #
+# Apify standby actor.                                                    #
+###########################################################################
+## Below market rate
+---
+kind: scraper
+url: https://www.irvinecompanyapartments.com/affordable-housing/affordable-housing-income-limits.html
+---
+
+## Market rate
+## Remember to also update the regex pattern in urlwatch.yaml for market rate URLs.
+---
+kind: scraper
+url: https://www.essexapartmenthomes.com/affordable-housing-programs
+return_page_source: false
+wait_ms: 10000
+compared_versions: 2
+# TODO: replace essex urls after figuring out how to stabilize the content.
+---
+kind: scraper
+url: https://www.hollandresidential.com/ca/santa-clara/alba
+return_page_source: false
+wait_browser: networkidle
+compared_versions: 2
+---
+kind: scraper
+url: https://www.hollandresidential.com/ca/santa-clara/orlo
+return_page_source: false
+wait_browser: networkidle
+compared_versions: 2
+---
+kind: scraper
+url: https://www.irvinecompanyapartments.com/locations/northern-california/san-jose/north-park.html
+---
+kind: scraper
+url: https://www.irvinecompanyapartments.com/locations/northern-california/cupertino/hamptons-at-cupertino.html
+---
+kind: scraper
+url: https://www.irvinecompanyapartments.com/locations/northern-california/sunnyvale/redwood-place.html
+---
+kind: scraper
+url: https://www.montereygrove.com
+# Phone number switches back and forth between two values.
+compared_versions: 2
+return_page_source: false
+---
+
+############
+# PDF jobs #
+############
 ---
 url: https://static1.squarespace.com/static/5dc7476c0941b54dd5f9e7f9/t/5e2e36a1ec0b682714c882d8/1580086949905/SantaClaraCounty_PropertyProfileInfo_1.23.20.pdf
 filter:
