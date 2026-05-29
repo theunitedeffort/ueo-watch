@@ -11,7 +11,6 @@ import subprocess
 import time
 import urllib.parse
 import yaml
-import pprint
 
 import cloudscraper
 from dotenv import load_dotenv
@@ -559,7 +558,6 @@ class JiraReporter(reporters.ReporterBase):
       print(smallest_bucket['assignee']['id'])
       smallest_bucket['job_states'].extend(group)
 
-    pprint.pprint(assignments)
     for assignment in assignments:
       for job_state in assignment['job_states']:
         issue_type_id = self.config['update_type']
@@ -622,7 +620,6 @@ class JiraReporter(reporters.ReporterBase):
           print(weights)
           issue['fields'][self.config['reviewer_field']] = [{'id': random.choices(filtered_reviewers, weights)[0]['id']}]
         issues.append(issue)
-    pprint.pprint(sorted([i['fields'][self.config['reviewer_field']][0]['id'] for i in issues]))
     logger.debug('Generated %d issues for Jira', len(issues))
     # self._create_issues(issues)
 
