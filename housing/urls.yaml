@@ -2068,6 +2068,8 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/195eac2c-e679-47a2-873f-d2a5
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/5e55e6b2-a167-49b3-b82d-6a955a71f430/de_vries_place_163_n_main_street_milpitas_ca
 ---
+navigate: https://housingbayarea.mtc.ca.gov/listing/ext/87490ae0-c45c-4d82-936f-732d346b07a9
+---
 user_visible_url: https://housingbayarea.mtc.ca.gov/listings?search=counties:Santa%20Clara
 url: https://housingbayarea.mtc.ca.gov/api/adapter/listings/combined
 headers:
