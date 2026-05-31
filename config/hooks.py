@@ -614,7 +614,7 @@ class JiraReporter(reporters.ReporterBase):
         issue['fields']['assignee'] = {'id': assignee}
         issue['fields'][self.config['evaluator_field']] = [{'id': assignee}]
         issue['fields']['duedate'] = (datetime.date.today() + datetime.timedelta(days=3)).strftime('%Y-%m-%d')
-        filtered_reviewers = [r for r in self.config['reviewers'] if r != assignee]
+        filtered_reviewers = [r for r in self.config['reviewers'] if r['id'] != assignee]
         if (filtered_reviewers):
           weights = [r.get('weight', 1.0) for r in filtered_reviewers]
           issue['fields'][self.config['reviewer_field']] = [{'id': random.choices(filtered_reviewers, weights)[0]['id']}]
