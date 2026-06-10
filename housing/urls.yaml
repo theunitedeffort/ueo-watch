@@ -604,6 +604,46 @@ url: https://www.enclaveaffordable.com/floorplans
 kind: cloudscraper
 url: https://www.enclaveaffordable.com/eligibility
 ---
+kind: cloudscraper
+url: https://www.enclaveaffordable.com/floorplans/a2mod
+filter:
+  - css: '#request-verification-token'
+  - re.findall:
+      pattern: 'value="(.*?)"'
+      repl: '\1'
+---
+kind: multistage
+setup_job:
+  kind: cloudscraper
+  url: https://www.enclaveaffordable.com/floorplans/a2mod
+  filter:
+    - css: '#request-verification-token'
+    - re.findall:
+        pattern: 'value="(.*?)"'
+        repl: '\1'
+url: https://example.com
+filter:
+  - html2text:
+      method: pyhtml2text
+
+---
+kind: cloudscraper
+user_visible_url: https://www.enclaveaffordable.com/floorplans#availability
+url: https://www.enclaveaffordable.com/floorplans/availableunits?handler=Filter
+cookies:
+  .AspNetCore.Antiforgery.-rXc1S2HjzU: CfDJ8CtwjdPBESBMu9DVKc5_ZZ0gnk7McYxx2fOhOqDi1pWkoaTMUAgHEl1l_x-2pkUxdbzR4oCJst_m8AnfTeXGsZXhHYXy1dM0oT1c00XXEW5ZUx7-CbyOs8Ti4Pmaq7a-PBzVrx6uWuFmH7BmGTXe2so
+data: 'rent=&move-in-date=&showAvailability=0&__RequestVerificationToken=CfDJ8CtwjdPBESBMu9DVKc5_ZZ16LnsXO--vBePisuEN9rfgysu7gj0lXwm4IO4RqWwht3g1-mSj3Y890LAwxNzd0E-5K7bIDpGg1CzDg6JkQFXMivD6oABSP25j0gNiB5pcpmaR9CmnAf31VzHgVm94eqk'
+  # request-verification-token: CfDJ8CtwjdPBESBMu9DVKc5_ZZ3E6IDPeGtdUwquQVHw5XmcacLE_Uf9V1Xqg4hxQjX7EE2xuWUDdTJ0bVc6vBp4MsDM8gyawi8YzpSVBu1EFmtbs0PutlvxCYqQ0e0t7hjge4ltPMszRvAHiDeTbdK77ak
+  # rent: ""
+  # move-in-date: ""
+  # showAvailability: 0
+  # __RequestVerificationToken: CfDJ8CtwjdPBESBMu9DVKc5_ZZ3E6IDPeGtdUwquQVHw5XmcacLE_Uf9V1Xqg4hxQjX7EE2xuWUDdTJ0bVc6vBp4MsDM8gyawi8YzpSVBu1EFmtbs0PutlvxCYqQ0e0t7hjge4ltPMszRvAHiDeTbdK77ak
+headers:
+  # Origin: https://www.enclaveaffordable.com
+  # Referer: https://www.enclaveaffordable.com/floorplans/a1-mod
+  # Requestverificationtoken: CfDJ8CtwjdPBESBMu9DVKc5_ZZ3E6IDPeGtdUwquQVHw5XmcacLE_Uf9V1Xqg4hxQjX7EE2xuWUDdTJ0bVc6vBp4MsDM8gyawi8YzpSVBu1EFmtbs0PutlvxCYqQ0e0t7hjge4ltPMszRvAHiDeTbdK77ak
+  Content-Type: application/x-www-form-urlencoded
+---
 url: https://epath.org/ventures/villas-at-4th-street/
 ---
 kind: cloudscraper
