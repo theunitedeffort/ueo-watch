@@ -1844,8 +1844,6 @@ navigate: https://housing.sanjoseca.gov/listings
 ---
 navigate: https://housing.sanjoseca.gov/listing/ca878a78-7a8f-4c60-a837-5f0f973d4ff2/solaire_apartments_427_auzerais_ave_san_jose_ca
 ---
-navigate: https://housing.sanjoseca.gov/listing/7326bf57-cd1f-4fd6-93f9-fa0094bf9522/hawthorne_senior_apartments_715_e_st_john_street_san_jose_ca
----
 navigate: https://housingbayarea.mtc.ca.gov/listing/c3fe1552-c3a5-4028-b9bc-414c0bcb5e8e/monroe_commons_2330_monroe_st_santa_clara_ca
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/ext/0d199b2b-c6f7-4724-beec-ba15d9487346
@@ -2111,6 +2109,8 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/195eac2c-e679-47a2-873f-d2a5
 navigate: https://housingbayarea.mtc.ca.gov/listing/5e55e6b2-a167-49b3-b82d-6a955a71f430/de_vries_place_163_n_main_street_milpitas_ca
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/ext/87490ae0-c45c-4d82-936f-732d346b07a9
+---
+navigate: https://housingbayarea.mtc.ca.gov/listing/ext/9c17e619-fce0-4c53-8772-4314bfa00149
 ---
 user_visible_url: https://housingbayarea.mtc.ca.gov/listings?search=counties:Santa%20Clara
 url: https://housingbayarea.mtc.ca.gov/api/adapter/listings/combined
