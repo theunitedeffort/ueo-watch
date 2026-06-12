@@ -80,11 +80,27 @@ class CloudscraperJob(jobs.UrlJob):
 
   __required__ = ('kind',)
 
-  def retrieve(self, job_state):
+  def setup(self):
     self.http_proxy = 'http://auto:%s@proxy.apify.com:8000' % (os.environ['PROXY_PASSWORD'])
     self.https_proxy = self.http_proxy
-    scraper = cloudscraper.create_scraper()
-    return super().retrieve(job_state, request_lib=scraper)
+    self.scraper = cloudscraper.create_scraper()
+
+  def retrieve(self, job_state):
+    self.setup()
+    return super().retrieve(job_state, request_lib=self.scraper)
+
+
+class CookiesJob(CloudscraperJob):
+  """Returns page cookies instead of page content.  Always uses cloudscraper."""
+
+  __kind__ = 'cookies'
+
+  __required__ = ('kind',)
+
+  def retrieve(self, job_state):
+    self.setup()
+    super().retrieve(job_state)
+    return json.dumps(dict(self.response.cookies))
 
 
 class MultistageJob(jobs.UrlJob):
@@ -100,17 +116,19 @@ class MultistageJob(jobs.UrlJob):
 
   __kind__ = 'multistage'
 
-  __required__ = ('kind', 'setup_job')
+  __required__ = ('kind', 'setup_jobs')
 
   def retrieve(self, job_state):
-    # Create a one-time job from the setup_job data & run it
-    setup_job = jobs.JobBase.unserialize(self.setup_job)
-    setup_job_state = handler.JobState(job_state.cache_storage, setup_job)
-    setup_job_state.process()
-    if setup_job_state.exception:
-      raise setup_job_state.exception
-    # Collect the values returned by the setup job
-    values = setup_job_state.new_data.split('\n')
+    # Create one-time jobs from the setup_job data & run them
+    values = []
+    for serialized_setup_job in self.setup_jobs:
+      setup_job = jobs.JobBase.unserialize(serialized_setup_job)
+      setup_job_state = handler.JobState(job_state.cache_storage, setup_job)
+      setup_job_state.process()
+      if setup_job_state.exception:
+        raise setup_job_state.exception
+        # Collect the values returned by the setup job
+      values.extend(setup_job_state.new_data.split('\n'))
     # Replace placeholders of the form {{$n}} with the appropriate setup value.
     # This job's attributes are dumped to YAML first to make it easy to find &
     # replace even inside lists, nested dicts, etc.
@@ -132,14 +150,14 @@ class JscoPropertiesJob(MultistageJob):
   __required__ = ('kind', 'page')
 
   def __init__(self, **kwargs):
-    # Required key 'setup_job' will be populated in retrieve()
-    kwargs['setup_job'] = {}
+    # Required key 'setup_jobs' will be populated in retrieve()
+    kwargs['setup_jobs'] = {}
     super().__init__(**kwargs)
 
   def retrieve(self, job_state):
     self.user_visible_url = self.url
     self.url = 'https://jsco.net/wp-admin/admin-ajax.php'
-    self.setup_job = {
+    self.setup_jobs = [{
       'url': self.user_visible_url,
       'filter': [
         {'re.findall': {
@@ -149,7 +167,7 @@ class JscoPropertiesJob(MultistageJob):
         },
         {'if_empty': 'error'},
       ],
-    }
+    }]
     self.data = {
       'action': 'vcex_ajax_action',
       'nonce': '{{$2}}',

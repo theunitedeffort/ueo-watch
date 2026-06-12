@@ -604,6 +604,12 @@ url: https://www.enclaveaffordable.com/floorplans
 kind: cloudscraper
 url: https://www.enclaveaffordable.com/eligibility
 ---
+kind: cookies
+url: https://www.enclaveaffordable.com/floorplans/a2mod#cookies
+filter:
+  - jq: '.".AspNetCore.Antiforgery.-rXc1S2HjzU"'
+  - re.sub: '"'
+---
 kind: cloudscraper
 url: https://www.enclaveaffordable.com/floorplans/a2mod
 filter:
@@ -613,19 +619,23 @@ filter:
       repl: '\1'
 ---
 kind: multistage
-setup_job:
-  kind: cloudscraper
-  url: https://www.enclaveaffordable.com/floorplans/a2mod
-  filter:
-    - css: '#request-verification-token'
-    - re.findall:
-        pattern: 'value="(.*?)"'
-        repl: '\1'
+setup_jobs:
+  - kind: cookies
+    url: https://www.enclaveaffordable.com/floorplans/a2mod#cookies
+    filter:
+      - jq: '.".AspNetCore.Antiforgery.-rXc1S2HjzU"'
+      - re.sub: '"'
+  - kind: cloudscraper
+    url: https://www.enclaveaffordable.com/floorplans/a2mod
+    filter:
+      - css: '#request-verification-token'
+      - re.findall:
+          pattern: 'value="(.*?)"'
+          repl: '\1'
 url: https://example.com
 filter:
   - html2text:
       method: pyhtml2text
-
 ---
 kind: cloudscraper
 user_visible_url: https://www.enclaveaffordable.com/floorplans#availability
