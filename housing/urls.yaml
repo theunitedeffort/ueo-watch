@@ -72,6 +72,9 @@ url: https://www.88saratoga.com/api/v3/floorplans/all/?api_key=591ad39e330e913b4
 filter:
   - apartments247_floorplans
 ---
+kind: cloudscraper
+url: https://www.969meridian.com/
+---
 url: https://abode.org/alma-garden-waitlist-form
 ---
 url: https://abode.org/completed-developments
@@ -2058,7 +2061,7 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/b2e07b30-a4ce-4e5d-868b-2d45
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/8d91f098-bc49-4140-b346-0c7e39f5ae34/mi_la_330_distel_circle_los_altos_ca
 ---
-navigate: https://housingbayarea.mtc.ca.gov/listing/19093dff-3a54-4d84-a124-28cb9b2d143b/montecito_apartments_3765_tamarack_ln_santa_clara_ca
+navigate: https://housingbayarea.mtc.ca.gov/listing/55880b8e-e817-4f1f-89b9-f20413cab58d/montecito_apartments_3765_tamarack_ln_santa_clara_ca
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/ext/70e62705-a8e8-4be0-b5a1-4b59ea950755
 ---
@@ -2073,6 +2076,8 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/5e55e6b2-a167-49b3-b82d-6a95
 navigate: https://housingbayarea.mtc.ca.gov/listing/ext/87490ae0-c45c-4d82-936f-732d346b07a9
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/ext/9c17e619-fce0-4c53-8772-4314bfa00149
+---
+navigate: https://housingbayarea.mtc.ca.gov/listing/ext/0a4d4495-8659-4b72-a3c8-363eb8577bdf
 ---
 user_visible_url: https://housingbayarea.mtc.ca.gov/listings?search=counties:Santa%20Clara
 url: https://housingbayarea.mtc.ca.gov/api/adapter/listings/combined
