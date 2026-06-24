@@ -478,6 +478,7 @@ job_defaults:
           repl: '\1"'
       - html2text:
           method: pyhtml2text
+          wrap_links: false
       # Normalize phone numbers
       - re.sub:
           pattern: '(?:\+?1[ \.\-]?)?\(?(\d{3})\)? ?[ \.\-] ?(\d{3}) ?[ \.\-] ?(\d{4})'
