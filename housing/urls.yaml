@@ -1594,9 +1594,6 @@ url: https://www.scmrf.org/how-do-i-apply/
 url: https://www.scmrf.org/life-at-our-communities/
 ---
 kind: cloudscraper
-url: https://scmrfwaitlist.com/
----
-kind: cloudscraper
 url: https://www.southwood-apartments.com/
 ---
 url: https://stanfordwestapartments.stanford.edu/
