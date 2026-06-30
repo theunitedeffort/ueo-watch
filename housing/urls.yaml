@@ -1126,11 +1126,6 @@ url: https://www.liveatfoxdale.com/
 kind: cloudscraper
 url: https://www.liveatfoxdale.com/floorplans
 ---
-user_visible_url: https://www.liveatfoxdale.com/floorplans#knock
-url: https://doorway-api.knockrentals.com/v1/property/2029138/units
-filter:
-  - knock_units
----
 kind: cloudscraper
 url: https://www.liveatorchardglen.com/
 ---
