@@ -2099,6 +2099,10 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/ext/0a4d4495-8659-4b72-a3c8-
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/ext/cfecf44f-b845-4e73-a76a-4e425d83e274
 ---
+navigate: https://housingbayarea.mtc.ca.gov/listing/ext/012245fa-e914-437b-9088-b30742a3551c
+---
+navigate: https://housingbayarea.mtc.ca.gov/listing/ext/50c33fd4-1a96-4cce-ae21-7c0979a89d64
+---
 user_visible_url: https://housingbayarea.mtc.ca.gov/listings?search=counties:Santa%20Clara
 url: https://housingbayarea.mtc.ca.gov/api/adapter/listings/combined
 headers:
