@@ -1891,7 +1891,7 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/ext/4a27d186-4bcb-4a4d-b731-
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/ext/d0b5a49d-80ce-4b28-8793-0ebe50916eb8
 ---
-navigate: https://housingbayarea.mtc.ca.gov/listing/ext/65a479dd-e448-402a-ac64-c2f94393400c
+navigate: https://housingbayarea.mtc.ca.gov/listing/ext/8effedf2-255d-48b4-b77a-f91e3a4915ac
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/ext/3c26073d-2062-4c1f-bc54-404740a3f1dd
 ---
@@ -1999,7 +1999,7 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/ext/a17c1559-cefb-4fa7-bd39-
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/17124f39-d5b6-411c-88e6-cf0bcdce2ee4/alexander_station_200_east_10_th_street_gilroy_ca
 ---
-navigate: https://housingbayarea.mtc.ca.gov/listing/b3450753-25d4-4ea8-aac2-eb065e5f8c27/the_acacia_at_231_grant_waitlist_231_grant_avenue_palo_alto_ca
+navigate: https://housingbayarea.mtc.ca.gov/listing/26585271-17b4-4732-9ff7-1a9af09e949e/the_acacia_at_231_grant_educator_housing_units_available_now_231_grant_avenue_palo_alto_ca
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/ea45f6a3-82fb-4ca3-943b-80e25fccb5d5/passero_2230_calle_del_mundo_santa_clara_ca
 ---
@@ -2103,6 +2103,9 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/ext/012245fa-e914-437b-9088-
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/ext/50c33fd4-1a96-4cce-ae21-7c0979a89d64
 ---
+navigate: https://housingbayarea.mtc.ca.gov/listing/04419b95-3652-49fa-a052-d3f0019d2dbe/revere_campbell_apartments_1725_s_bascom_ave_campbell_ca
+---
+navigate: https://housingbayarea.mtc.ca.gov/listing/c006e0b5-504d-4f45-9400-dc91ee905705/page_mill_court_2700_ash_palo_alto_ca
 user_visible_url: https://housingbayarea.mtc.ca.gov/listings?search=counties:Santa%20Clara
 url: https://housingbayarea.mtc.ca.gov/api/adapter/listings/combined
 headers:
