@@ -1170,17 +1170,7 @@ filter:
 ---
 url: https://www.liveatvillageatsantateresa.com/
 ---
-url: https://www.liveatvillageatsantateresa.com/apartments/ca/gilroy/floor-plans#/#units
-kind: graphql_units
-location_urn: g5-cl-1oixkq0ljc-fpi-management-gilroy-ca
-filter:
-  - graphql_units
----
-url: https://www.liveatvillageatsantateresa.com/apartments/ca/gilroy/floor-plans#/
-kind: graphql_floorplans
-location_urn: g5-cl-1oixkq0ljc-fpi-management-gilroy-ca
-filter:
-  - graphql_floorplans
+url: https://www.liveatvillageatsantateresa.com/floor-plans
 ---
 user_visible_url: https://www.liveatvillageatsantateresa.com/apartments/ca/gilroy/floor-plans#/#knock
 url: https://doorway-api.knockrentals.com/v1/property/2028838/units
