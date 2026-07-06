@@ -2258,12 +2258,7 @@ url: https://www.irvinecompanyapartments.com/affordable-housing/affordable-housi
 
 ## Market rate
 ## Remember to also update the regex pattern in urlwatch.yaml for market rate URLs.
----
-kind: scraper
-url: https://www.essexapartmenthomes.com/affordable-housing-programs
-return_page_source: false
-wait_ms: 10000
-compared_versions: 2
+
 # TODO: replace essex urls after figuring out how to stabilize the content.
 ---
 kind: scraper
