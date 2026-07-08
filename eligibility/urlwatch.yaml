@@ -45,6 +45,8 @@ job_defaults:
       - re.sub: 'time=\d+'
   browser:
     wait_until: networkidle2
+  cloudscraper:
+    max_tries: 4
   scraper:
     max_tries: 4
     block_resources: true
