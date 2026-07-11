@@ -159,10 +159,8 @@ url: https://www.dmv.ca.gov/portal/driver-licenses-identification-cards/identifi
 
 # SSDI
 ---
-kind: cloudscraper
 url: https://www.ssa.gov/benefits/retirement/planner/agereduction.html
 ---
-kind: cloudscraper
 url: https://www.ssa.gov/disability/eligibility
 ---
 url: https://ca.db101.org/ca/programs/income_support/ssdi2/program.htm
@@ -170,7 +168,6 @@ url: https://ca.db101.org/ca/programs/income_support/ssdi2/program.htm
 
 # SSI
 ---
-kind: cloudscraper
 url: https://www.ssa.gov/ssi/
 # Note we don't use the standard filter here because of HTML issues with the
 # page that makes the main content be read as part of the <header> and gets
@@ -181,27 +178,20 @@ filter:
   - html2text:
       method: pyhtml2text
 ---
-kind: cloudscraper
 url: https://www.ssa.gov/oact/cola/sga.html
 ---
-kind: cloudscraper
 url: https://www.ssa.gov/pubs/EN-05-11125.pdf
 filter:
   - pdf2text
 ---
-kind: cloudscraper
 url: https://www.ssa.gov/ssi/text-disable-ussi.htm
 ---
-kind: cloudscraper
 url: https://www.ssa.gov/ssi/text-resources-ussi.htm
 ---
-kind: cloudscraper
 url: https://www.ssa.gov/oact/cola/incomexcluded.html
 ---
-kind: cloudscraper
 url: https://www.ssa.gov/oact/cola/sgadet.html
 ---
-kind: cloudscraper
 url: https://www.ssa.gov/ssi/text-eligibility-ussi.htm
 ---
 url: https://ca.db101.org/ca/programs/income_support/ssi/program2.htm
