@@ -764,8 +764,6 @@ url: https://www.housekeys7.com/sofia
 ---
 url: https://www.housekeys7.com/the-lafayette
 ---
-url: https://housingapartments.org/rental_detail/7384
----
 url: https://www.housingchoices.org/properties-accepting-interests
 ---
 url: https://www.housingchoices.org/future-partner-properties
@@ -2090,6 +2088,8 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/04419b95-3652-49fa-a052-d3f0
 navigate: https://housingbayarea.mtc.ca.gov/listing/c006e0b5-504d-4f45-9400-dc91ee905705/page_mill_court_2700_ash_palo_alto_ca
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/ext/3f3c56e7-7981-4d06-a6c4-48e8c296e8ea
+---
+navigate: https://housingbayarea.mtc.ca.gov/listing/dcb29c1b-fd0c-4358-98ed-3e7a7e545acf/moulton_plaza_1601_tenaka_place_sunnyvale_ca
 ---
 user_visible_url: https://housingbayarea.mtc.ca.gov/listings?search=counties:Santa%20Clara
 url: https://housingbayarea.mtc.ca.gov/api/adapter/listings/combined
