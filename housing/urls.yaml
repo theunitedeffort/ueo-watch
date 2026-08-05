@@ -2071,6 +2071,8 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/ext/3f3c56e7-7981-4d06-a6c4-
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/dcb29c1b-fd0c-4358-98ed-3e7a7e545acf/moulton_plaza_1601_tenaka_place_sunnyvale_ca
 ---
+navigate: https://housingbayarea.mtc.ca.gov/listing/6ae80c69-7f3a-4429-8436-c4dce420c7ba/sofia_apartments_3580_rambla_place_santa_clara_ca
+---
 user_visible_url: https://housingbayarea.mtc.ca.gov/listings?search=counties:Santa%20Clara
 url: https://housingbayarea.mtc.ca.gov/api/adapter/listings/combined
 headers:
