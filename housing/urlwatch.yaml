@@ -63,6 +63,7 @@ job_defaults:
             div.orbit,
             div.ngg-slideshow,
             div.lazy-community-carousel,
+            .carousel,
             .gallery__slider,
             #acadp-slider-wrapper,
             .swiper-wrapper,
@@ -75,6 +76,7 @@ job_defaults:
             .pro-gallery-parent-container,
             .sqs-gallery-container,
             .sqs-gallery-thumbnails,
+            .gallery-social-widget,
             .fancybox3,
             .hubdb-events,
             .sponsors_section,
@@ -275,6 +277,8 @@ job_defaults:
             #myLeaseCostModal.modal,
             #myContactModal.modal,
             #PreQualify.modal,
+            #floorplans-video-modal,
+            #floorplans-3dtour-modal,
             .skip-links,
             .skip-link,
             .pojo-skip-link,
@@ -482,11 +486,14 @@ job_defaults:
       - re.sub:
           pattern: '(?:\+?1[ \.\-]?)?\(?(\d{3})\)? ?[ \.\-] ?(\d{3}) ?[ \.\-] ?(\d{4})'
           repl: '\1-\2-\3'
-      - re.sub: '©.*?(\d{4}-)?20\d{2}'
+      - re.sub: '(Ⓒ|©).*?(\d{4}-)?20\d{2}'
       - re.sub: 'Copyright 20\d{2}'
       - re.sub: 'time=\d+'
       - re.sub: '&MoveInDate=\d{1,2}/\d{1,2}/\d{4}'
       - re.sub: '\?lit\$\d+?\$'
+      - re.sub:
+          pattern: ' {2,}'
+          repl: ' '
       - if_empty: error
   browser:
     wait_until: networkidle2
