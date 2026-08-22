@@ -1383,20 +1383,6 @@ url: https://www.morelandapartments.com/
 ---
 url: https://www.morelandapartments.com/Floor-plans.aspx#links
 ---
-user_visible_url: https://www.morelandapartments.com/floor-plans.aspx
-url: https://api.ws.realpage.com/v2/property/9106683/floorplans
-headers:
-  x-ws-authkey: 40160b30-cf3f-4fa0-830b-9e09a5759a9a
-filter:
-  - realpage_floorplans
----
-user_visible_url: https://www.morelandapartments.com/floor-plans.aspx#units
-url: https://api.ws.realpage.com/v2/property/9106683/units?available=true&honordisplayorder=true&siteid=9106683&bestprice=true&leaseterm=12
-headers:
-  x-ws-authkey: 40160b30-cf3f-4fa0-830b-9e09a5759a9a
-filter:
-  - realpage_units
----
 kind: cloudscraper
 url: https://www.mountainviewlot12.org/
 ---
