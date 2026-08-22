@@ -1774,7 +1774,6 @@ headers:
 kind: cloudscraper
 url: https://virginiastreet.usamfm.com/p/affordable/
 ---
-kind: cloudscraper
 url: https://welchroadapartments.stanford.edu/
 ---
 kind: cloudscraper
@@ -2159,6 +2158,7 @@ url: https://www.morganranchapartmenthomes.com/
 ---
 url: https://www.murphystationapts.com/home
 ---
+kind: cloudscraper
 url: https://museumparksanjose.com/
 ---
 url: https://www.mvapartments.com/
