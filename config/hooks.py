@@ -369,7 +369,7 @@ class RealPageUnits(ListingApiBase):
   """Filter for pretty-printing units JSON data from the realpage API."""
 
   __kind__ = 'realpage_units'
-  __query__ = r'.response // . | .units[]? | "\(.numberOfBeds) BR\n---\n$\(.rent)/month\n\(.leaseStatus)\n\n"'
+  __query__ = r'.response // . | .units[]? | "\(.numberOfBeds) BR\n---\n$\(.rent)/month\n\(.unitLeasedStatus)\n\n"'
 
 
 class RealPageFloorplans(ListingApiBase):
