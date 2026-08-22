@@ -1209,8 +1209,10 @@ url: https://www.livethekelsey.com/
 ---
 url: https://www.livethekelsey.com/floor-plans/
 ---
+kind: cloudscraper
 url: https://www.loganpm.com/properties/lilly-gardens/
 ---
+kind: cloudscraper
 url: https://lmdevpartners.com/projects/el-rancho-verde/
 ---
 kind: cloudscraper
@@ -1399,6 +1401,7 @@ url: https://www.morelandapartments.com/Floor-plans.aspx#links
 kind: cloudscraper
 url: https://www.mountainviewlot12.org/
 ---
+kind: cloudscraper
 url: https://museumparksanjose.com/p/below-market-homes/
 ---
 url: https://www.mvapartments.com/apartments/ca/mountain-view/below-market-rates
@@ -1592,8 +1595,10 @@ url: https://www.stantonapts.com/CmsSiteManager/callback.aspx?act=Proxy/GetUnits
 filter:
   - realpage_units
 ---
+kind: cloudscraper
 url: http://www.stclaireapts.com/
 ---
+kind: cloudscraper
 url: https://www.stclaireapts.com/availability/
 ---
 url: https://stevensonhouse.org/
@@ -1757,6 +1762,7 @@ url: https://vintagetowerbrighthaven.securecafe.com/onlineleasing/vintage-tower/
 ---
 url: https://vitalia-bascom-apts.rentcafewebsite.com/
 ---
+kind: cloudscraper
 url: https://virginiastreet.usamfm.com/
 ---
 user_visible_url: https://virginiastreet.usamfm.com/floorplans/
@@ -1764,8 +1770,10 @@ url: https://virginiastreet.usamfm.com/floorplans/_fp-renderable/params%3Ainstan
 headers:
   x-requested-with: 'XMLHttpRequest'
 ---
+kind: cloudscraper
 url: https://virginiastreet.usamfm.com/p/affordable/
 ---
+kind: cloudscraper
 url: https://welchroadapartments.stanford.edu/
 ---
 kind: cloudscraper
