@@ -2066,6 +2066,8 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/dcb29c1b-fd0c-4358-98ed-3e7a
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/6ae80c69-7f3a-4429-8436-c4dce420c7ba/sofia_apartments_3580_rambla_place_santa_clara_ca
 ---
+navigate: https://housingbayarea.mtc.ca.gov/listing/1228fbbe-251d-41a9-b1b3-25194240e50c/gateway_santa_clara_apartments_1000_el_camino_real_santa_clara_ca
+---
 user_visible_url: https://housingbayarea.mtc.ca.gov/listings?search=counties:Santa%20Clara
 url: https://housingbayarea.mtc.ca.gov/api/adapter/listings/combined
 headers:
