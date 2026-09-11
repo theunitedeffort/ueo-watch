@@ -65,6 +65,9 @@ url: https://www.cityofpaloalto.org/City-Hall/Housing/Affordable-Housing
 ---
 url: https://www.cityofpaloalto.org/Departments/Planning-Development-Services/Housing-Policies-Projects
 ---
+kind: cloudscraper
+url: https://osh.santaclaracounty.gov/affordable-housing/affordable-housing-development/projects-under-construction
+---
 
 # Sorted alphabetically by domain name
 user_visible_url: https://www.787thealameda.com/san-jose/787-the-alameda/conventional/
@@ -106,6 +109,8 @@ url: https://www.affirmedhousing.com/coming-soon/
 url: https://affirmedhousing.com/completed/fairways/
 ---
 url: https://www.affirmedhousing.com/completed/vela/
+---
+url: https://affirmedhousing.com/completed/vitalia/
 ---
 url: https://www.affordablehousingpipeline.com/blogs/california-affordable-housing
 ---
@@ -303,6 +308,8 @@ url: https://caremgt.com/villaggio/
 ---
 url: https://wearecch.org/locations/plaza-de-las-flores/
 ---
+url: https://www.catalyzesiliconvalley.org/pac-dynamic-projects/julian-street-studios
+---
 url: https://charitieshousing.org/completed/
 ---
 url: https://charitieshousing.org/development/
@@ -354,6 +361,8 @@ url: https://charitieshousing.org/property/san-antonio-place/
 url: https://charitieshousing.org/property/san-tomas-gardens/
 ---
 url: https://charitieshousing.org/property/santa-clara-senior-homes/
+---
+url: https://charitieshousing.org/property/santa-teresa-apartments/
 ---
 url: https://charitieshousing.org/property/sierra-vista-one/
 ---
@@ -546,6 +555,8 @@ url: https://edenhousing.org/properties/connell-apartments/
 url: https://www.edenhousing.org/properties/crest-avenue-apartments
 ---
 url: https://edenhousing.org/properties/depot-willows/
+---
+url: https://edenhousing.org/properties/east-santa-clara-senior/
 ---
 url: https://www.edenhousing.org/properties/eden-palms
 ---
@@ -1089,6 +1100,8 @@ url: https://www.liveatalmaden1930apts.com/
 kind: cloudscraper
 url: https://www.liveatalmaden1930apts.com/floorplans
 ---
+url: https://www.liveatberryessa.com/home
+---
 kind: cloudscraper
 url: https://www.liveatcherrycreekapts.com/
 ---
@@ -1431,6 +1444,12 @@ url: http://pacificgardens.org/
 kind: cloudscraper
 url: https://www.parkerpaloalto.com/
 ---
+kind: cloudscraper
+url: https://www.parksideglen.com/
+---
+kind: cloudscraper
+url: https://www.parksideglen.com/san-jose/parkside-glen/conventional/
+---
 url: https://www.parksideterraceapthomes.com/
 ---
 user_visible_url: https://prometheusapartments.com/ca/santa-clara-apartments/mansion-grove#pricingAndFloorPlanBox
@@ -1458,6 +1477,9 @@ url: https://pwapt.com/virginiastreet/
 url: https://pwapt.com/westportsenior/
 ---
 url: https://pwapt.com/willowpointe/
+---
+url: https://rcdhousing.org/lupina/
+compared_versions: 2
 ---
 url: https://rcdhousing.org/quetzal-gardens/
 compared_versions: 2
@@ -1657,6 +1679,8 @@ filter:
   - sightmap_units
 ---
 url: https://thekelsey.org/projects/ayer-station/
+---
+url: https://www.crpaffordable.com/drycreekcrossing
 ---
 url: https://www.crpaffordable.com/the-meridian
 ---
