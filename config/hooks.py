@@ -349,6 +349,10 @@ class Doorway(JqFilterBase):
   __kind__ = "doorway"
   __query__ =  r'.items[] | "\(.name)\nhttps://housingbayarea.mtc.ca.gov/listing/\(if .isExternal == true then "ext/\(.id)" else "\(.id)/\(.urlSlug)" end)\n\n"'
 
+class SpokeHs(JqFilterBase):
+
+  __kind__ = "spokehs"
+  __query__ = r'.[] | "\(.title)\n\(.address)\nhttps://www.spokehs.com/FCFS/\(.id)\n\n"'
 
 class ListingApiBase(JqFilterBase):
   def filter(self, data, subfilter):

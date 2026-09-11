@@ -2075,8 +2075,11 @@ filter:
   - doorway
   - if_empty: error
 ---
-navigate: https://www.spokehs.com/FCFS/6aa041415bf550f346b3ea08
----
+user_visible_url: https://www.spokehs.com/listings
+url: https://prod-api-spokehs.herokuapp.com/master/api/open-lotteries?section=available
+filter:
+  - spokehs
+
 
 # Market rate apartment websites
 # Remember to also update the regex pattern in urlwatch.yaml for market-rate URLs.
