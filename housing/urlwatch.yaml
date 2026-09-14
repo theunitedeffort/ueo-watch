@@ -446,6 +446,13 @@ job_defaults:
             - '.*griffisresidential\.com/property/south-bay/pricing-availability'
           filter: css
           selector: article.tag-affordable-home
+      - selective:
+          select_pattern:
+            - '.*abode\.org/what-we-do/abode-housing-development/gallery'
+            - '.*abode\.org/what-we-do/abode-property-management/gallery'
+          filter: css
+          selector: '[data-county="Santa Clara"]'
+          exclude: '.property-bedroom-data'
       - re.sub: 'Image Detail [a-z0-9]{32}'
       - re.sub:
           pattern: '/x(.*?\.[a-zA-Z]{3,4})(,qitok=[a-zA-Z0-9-]{8})?\.pagespeed\.ic\.[a-zA-Z0-9-]{10}\.[a-zA-Z]{3,4}'
