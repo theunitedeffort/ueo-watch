@@ -90,20 +90,6 @@ filter:
 kind: cloudscraper
 url: https://www.969meridian.com/
 ---
-url: https://abode.org/alma-garden-waitlist-form
----
-url: https://abode.org/completed-developments
----
-url: https://abode.org/opportunity-center
----
-url: https://abode.org/opportunity-center-waitlist-form
----
-url: https://abode.org/parkmoor-hub
----
-url: https://abode.org/pipeline-projects
----
-url: https://abode.org/property-management
----
 url: https://www.affirmedhousing.com/coming-soon/
 ---
 url: https://affirmedhousing.com/completed/fairways/
