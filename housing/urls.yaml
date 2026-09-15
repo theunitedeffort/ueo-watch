@@ -2024,7 +2024,7 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/600bb54a-6b0f-4ee3-98f0-c38c
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/fa6c5e4a-e1fb-4ce0-ba50-da76a9bf2115/posolmi_place_183_acalanes_drive_sunnyvale_ca
 ---
-navigate: https://housingbayarea.mtc.ca.gov/listing/0e5e2cd2-6d2b-43bb-a62c-1ab00abf4e95/sango_court_355_sango_ct_milpitas_ca
+navigate: https://housingbayarea.mtc.ca.gov/listing/8a4368b0-e37d-4db6-8755-e3a2b095bf77/sango_court_355_sango_ct_milpitas_ca
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/7645aa1d-98ee-41a5-91f1-e9d75a36cc04/the_fountains_2005_san_ramon_ave_mountain_view_ca
 ---
@@ -2117,6 +2117,8 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/6ae80c69-7f3a-4429-8436-c4dc
 navigate: https://housingbayarea.mtc.ca.gov/listing/1228fbbe-251d-41a9-b1b3-25194240e50c/gateway_santa_clara_apartments_1000_el_camino_real_santa_clara_ca
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/7e4c61c7-820b-4703-8fa5-d9b534ffa9b7/the_harken_apartments_5150_el_camino_real_los_altos_ca
+---
+navigate: https://housingbayarea.mtc.ca.gov/listing/ext/81474597-d2d8-4c55-b215-3928816d3661
 ---
 user_visible_url: https://housingbayarea.mtc.ca.gov/listings?search=counties:Santa%20Clara
 url: https://housingbayarea.mtc.ca.gov/api/adapter/listings/combined
