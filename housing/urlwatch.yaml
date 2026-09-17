@@ -18,6 +18,7 @@ job_defaults:
             - '.*tamienstation\.com'
             - '.*oakgroveaptliving\.com/floor-plans$' # income restrictions are in <nav>
             - '.*charlotteparkaptliving\.com/floor-plans$' # income restrictions are in <nav>
+            - '.*sofiaaptliving\.com' # phone number is in .navbar
           invert_selection: true
           filter: css
           selector: body
