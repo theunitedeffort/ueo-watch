@@ -14,6 +14,7 @@ import yaml
 
 import cloudscraper
 from dotenv import load_dotenv
+import gspread
 import requests
 from urlwatch import filters
 from urlwatch import handler
@@ -523,6 +524,37 @@ class JiraReporter(reporters.ReporterBase):
   # https://community.atlassian.com/t5/Jira-questions/Re-ADF-Content-Size-Limit-CONTENT-LIMIT-EXCEEDED-Error/qaq-p/1927334/comment-id/652431#M652431
   _MAX_MULTILINE_CONTENT_CHARS = 32767
 
+  _SCHEDULE_SHEET_KEY = '1u3sYy2n3ZtKYe18IQmajwsJyj57GKSBL-fcVVWDDxGY'
+  _SCHEDULE_START_COL = 2  # column C
+  _SCHEDULE_END_COL = 5  # column F
+  _SCHEDULE_ID_COL = 0  # column A
+  _SCHEDULE_HEADER_ROWS = 3
+
+  def _get_assignee_unavailability(self):
+
+    def format_date(str):
+      try:
+        return datetime.datetime.strptime(str, '%m/%d/%Y').date()
+      except ValueError:
+        return None
+
+    try:
+      service = gspread.service_account(filename=os.environ['SERVICE_ACCOUNT_CREDENTIAL_FILE'])
+      spreadsheet = service.open_by_key(self._SCHEDULE_SHEET_KEY)
+      sheet = spreadsheet.get_worksheet(0)
+      rows = sheet.get_all_values()[self._SCHEDULE_HEADER_ROWS:]
+      lookup = {}
+      for row in rows:
+        time_blocks = [
+          {'start': format_date(row[i]), 'end': format_date(row[i + 1])} for i in
+          range(self._SCHEDULE_START_COL, self._SCHEDULE_END_COL + 1, 2)]
+        lookup[row[self._SCHEDULE_ID_COL]] = time_blocks
+      logger.debug(lookup)
+      return lookup
+    except Exception as e:
+      logger.error(e)
+      return {}
+
   def submit(self):
     def _do_report(job_state):
       return (job_state.verb in ['error', 'changed'] and
@@ -541,6 +573,38 @@ class JiraReporter(reporters.ReporterBase):
     if not self.config['assignees']:
       logger.error('At least one assignee is required')
       return
+    if not self.config['reviewers']:
+      logger.error('At least one reviewer is required')
+      return
+
+    unavail_data = self._get_assignee_unavailability()
+    today = datetime.date.today()
+
+    def is_available(person):
+      unavails = unavail_data.get(person['id'], [])
+      for unavail in unavails:
+        if not unavail['start'] and not unavail['end']:
+          continue
+        if unavail['start'] > unavail['end']:
+          continue
+        if unavail['start'] <= today <= unavail['end']:
+          logger.debug(
+            'user %s is unavailable %s to %s. Removing them from the list.' %
+            (person['id'], unavail['start'], unavail['end']))
+          return False
+      return True
+
+    assignees = list(filter(is_available, self.config['assignees']))
+    reviewers = list(filter(is_available, self.config['reviewers']))
+
+    # If nobody is available, just ignore availability & they will handle it
+    # when they are available.
+    if not assignees:
+      logger.debug('No available assignees. Ignoring availability.')
+      assignees = self.config['assignees']
+    if not reviewers:
+      logger.debug('No available reviewers. Ignoring availability.')
+      reviewers = self.config['reviewers']
 
     # Group jobs by domain
     sorted_jobs = sorted(reported_jobs, key=_get_domain)
@@ -553,7 +617,7 @@ class JiraReporter(reporters.ReporterBase):
       {
         'assignee': assignee,
         'job_states': []
-      } for assignee in self.config['assignees']]
+      } for assignee in assignees]
     error_assignee = self.config.get('error_assignee', '')
     min_func = lambda x: len(x['job_states']) / x['assignee'].get('weight', 1.0)
     if error_assignee:
@@ -618,7 +682,7 @@ class JiraReporter(reporters.ReporterBase):
         issue['fields']['assignee'] = {'id': assignee}
         issue['fields'][self.config['evaluator_field']] = [{'id': assignee}]
         issue['fields']['duedate'] = (datetime.date.today() + datetime.timedelta(days=3)).strftime('%Y-%m-%d')
-        filtered_reviewers = [r for r in self.config['reviewers'] if r['id'] != assignee]
+        filtered_reviewers = [r for r in reviewers if r['id'] != assignee]
         if (filtered_reviewers):
           weights = [r.get('weight', 1.0) for r in filtered_reviewers]
           issue['fields'][self.config['reviewer_field']] = [{'id': random.choices(filtered_reviewers, weights)[0]['id']}]
