@@ -2,6 +2,7 @@
 *.db
 *.bak
 *.test.yaml
+.DS_Store
 staging/
 test/
 __pycache__/
