@@ -12,8 +12,6 @@ import time
 import urllib.parse
 import yaml
 
-import pprint
-
 import cloudscraper
 from dotenv import load_dotenv
 import gspread
@@ -526,7 +524,11 @@ class JiraReporter(reporters.ReporterBase):
   # https://community.atlassian.com/t5/Jira-questions/Re-ADF-Content-Size-Limit-CONTENT-LIMIT-EXCEEDED-Error/qaq-p/1927334/comment-id/652431#M652431
   _MAX_MULTILINE_CONTENT_CHARS = 32767
 
-  SCHEDULE_SHEET_KEY = '1u3sYy2n3ZtKYe18IQmajwsJyj57GKSBL-fcVVWDDxGY'
+  _SCHEDULE_SHEET_KEY = '1u3sYy2n3ZtKYe18IQmajwsJyj57GKSBL-fcVVWDDxGY'
+  _SCHEDULE_START_COL = 2  # column C
+  _SCHEDULE_END_COL = 5  # column F
+  _SCHEDULE_ID_COL = 0  # column A
+  _SCHEDULE_HEADER_ROWS = 3
 
   def _get_assignee_unavailability(self):
 
@@ -538,14 +540,19 @@ class JiraReporter(reporters.ReporterBase):
 
     try:
       service = gspread.service_account(filename=os.environ['SERVICE_ACCOUNT_CREDENTIAL_FILE'])
-      spreadsheet = service.open_by_key(self.SCHEDULE_SHEET_KEY)
+      spreadsheet = service.open_by_key(self._SCHEDULE_SHEET_KEY)
       sheet = spreadsheet.get_worksheet(0)
-      rows = sheet.get_all_values()[3:]
-      lookup = {r[0]: [{'start': format_date(r[2]), 'end': format_date(r[3])}, {'start': format_date(r[4]), 'end': format_date(r[5])}] for r in rows}
-      for key in lookup:
-        print('%s: %s to %s' % (key, lookup[key][0]['start'], lookup[key][0]['end']))
+      rows = sheet.get_all_values()[self._SCHEDULE_HEADER_ROWS:]
+      lookup = {}
+      for row in rows:
+        time_blocks = [
+          {'start': format_date(row[i]), 'end': format_date(row[i + 1])} for i in
+          range(self._SCHEDULE_START_COL, self._SCHEDULE_END_COL + 1, 2)]
+        lookup[row[self._SCHEDULE_ID_COL]] = time_blocks
+      logger.debug(lookup)
       return lookup
-    except:
+    except Exception as e:
+      logger.error(e)
       return {}
 
   def submit(self):
@@ -576,19 +583,27 @@ class JiraReporter(reporters.ReporterBase):
     def is_available(person):
       unavails = unavail_data.get(person['id'], [])
       for unavail in unavails:
-        if unavail['start'] and unavail['end'] and unavail['start'] <= today <= unavail['end']:
+        if not unavail['start'] and not unavail['end']:
+          continue
+        if unavail['start'] > unavail['end']:
+          continue
+        if unavail['start'] <= today <= unavail['end']:
+          logger.debug(
+            'user %s is unavailable %s to %s. Removing them from the list.' %
+            (person['id'], unavail['start'], unavail['end']))
           return False
       return True
 
     assignees = list(filter(is_available, self.config['assignees']))
     reviewers = list(filter(is_available, self.config['reviewers']))
-    pprint.pp(assignees)
 
-    # If nobody is available, just assign equally & they will handle it when
-    # they are available.
+    # If nobody is available, just ignore availability & they will handle it
+    # when they are available.
     if not assignees:
+      logger.debug('No available assignees. Ignoring availability.')
       assignees = self.config['assignees']
     if not reviewers:
+      logger.debug('No available reviewers. Ignoring availability.')
       reviewers = self.config['reviewers']
 
     # Group jobs by domain
