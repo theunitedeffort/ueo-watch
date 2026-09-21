@@ -503,6 +503,8 @@ job_defaults:
           pattern: ' {2,}'
           repl: ' '
       - if_empty: error
+      - error_on:
+          - 'Please wait while your request is being verified'
   browser:
     wait_until: networkidle2
   cloudscraper:

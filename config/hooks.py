@@ -273,6 +273,26 @@ class ErrorOnEmptyData(filters.FilterBase):
     return data
 
 
+class ErrorOnText(filters.FilterBase):
+  # Raises an error when certain text is detected. (e.g anti-bot verification)
+  __kind__ = 'error_on'
+
+  __supported_subfilters__ = {
+    'regex': 'Regex that will raise an error if detected',
+  }
+
+  __default_subfilter__ = 'regex'
+
+  def filter(self, data, subfilter):
+    needles = []
+    needles.extend(subfilter['regex'])
+    for needle in needles:
+      match = re.search(needle, data)
+      if match:
+        raise ValueError('Text contains "%s"' % (match.group(0)))
+    return data
+
+
 class SelectiveFilter(filters.FilterBase):
   __kind__ = 'selective'
 
