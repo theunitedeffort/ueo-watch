@@ -47,6 +47,7 @@ url: https://housing-group.org/campbell/rentals.html
 ---
 url: https://www.housing-group.org/losaltos/
 ---
+kind: cloudscraper
 url: https://www.losaltosca.gov/212/Affordable-Housing
 ---
 url: https://www.losgatosca.gov/345/Housing-Programs
