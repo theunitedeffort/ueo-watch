@@ -49,6 +49,15 @@ While the `pdftotext` Python package will be installed in the Installation step 
 sudo apt install build-essential libpoppler-cpp-dev pkg-config python3-dev
 ```
 
+### Apify
+Some jobs use an Apify scraper or proxy to get URL contents.  After signing up, get your [API token](https://console.apify.com/settings/integrations) and proxy [password](https://console.apify.com/proxy/http-settings) and add them to a `config/.env` file:
+
+```
+cd ~/ueo-watch/config
+echo "APIFY_TOKEN={your_token_here}" >> .env
+echo "PROXY_PASSWORD={your_proxy_password_here}" >> .env
+```
+
 ## Installation
 First, clone this repo:
 
@@ -150,7 +159,13 @@ The Jira reporter can also avoid assigning Jira tasks to volunteers who are unav
 1. Create a new service account with no roles.
 1. Click on the new service account on the [Service Accounts](https://console.cloud.google.com/iam-admin/serviceaccounts) page and go to the Keys tab.
 1. Add a new JSON key by selecting **Add key > Create new key** and choose the JSON option.
-1. Save the key in a secure location.
+1. Save the key in a secure location on the device that will run `urlwatch` jobs. Make note of the location for the next step:
+
+### Add JSON key file to env variables
+```
+cd ~/ueo_watch/config
+echo "SERVICE_ACCOUNT_CREDENTIAL_FILE=/put/path/to/your/json/here" >> .env
+```
 
 ### Enable Google Sheets API
 1. Go to the [Google Sheets API](https://console.cloud.google.com/apis/api/sheets.googleapis.com) on the APIs & Services page of your Google Cloud project.
