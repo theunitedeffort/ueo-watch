@@ -10,4 +10,3 @@ __pycache__/
 env/
 venv/
 dev-env/
-autohouse/urls.yaml

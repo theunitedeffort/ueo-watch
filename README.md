@@ -1,5 +1,5 @@
 # ueo-watch
-This repository contains configuration files to set up URL watching jobs relevant to UEO.  There are also a few convenience scripts for maintaining the system.  Sets of jobs are organized into folders within this project.  At the moment there is a set of housing jobs (`housing` folder), benefits eligibility jobs (`eligibility` folder), and automated affordable housing search jobs (`autohouse` folder).
+This repository contains configuration files to set up URL watching jobs relevant to UEO.  There are also a few convenience scripts for maintaining the system.  Sets of jobs are organized into folders within this project.  At the moment there is a set of housing jobs (`housing` folder) and benefits eligibility jobs (`eligibility` folder).
 
 # Setup
 These configuration files were written to be used on a Google Compute Engine instance running Linux (Debian Buster).  The instructions below are meant to replicate the environment as it currently exists for production runs. 
