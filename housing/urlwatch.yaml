@@ -18,6 +18,7 @@ job_defaults:
             - '.*tamienstation\.com'
             - '.*oakgroveaptliving\.com/floor-plans$' # income restrictions are in <nav>
             - '.*charlotteparkaptliving\.com/floor-plans$' # income restrictions are in <nav>
+            - '.*sofiaaptliving\.com' # phone number is in .navbar
           invert_selection: true
           filter: css
           selector: body
@@ -63,6 +64,7 @@ job_defaults:
             div.orbit,
             div.ngg-slideshow,
             div.lazy-community-carousel,
+            .carousel,
             .gallery__slider,
             #acadp-slider-wrapper,
             .swiper-wrapper,
@@ -75,6 +77,7 @@ job_defaults:
             .pro-gallery-parent-container,
             .sqs-gallery-container,
             .sqs-gallery-thumbnails,
+            .gallery-social-widget,
             .fancybox3,
             .hubdb-events,
             .sponsors_section,
@@ -275,6 +278,8 @@ job_defaults:
             #myLeaseCostModal.modal,
             #myContactModal.modal,
             #PreQualify.modal,
+            #floorplans-video-modal,
+            #floorplans-3dtour-modal,
             .skip-links,
             .skip-link,
             .pojo-skip-link,
@@ -341,7 +346,6 @@ job_defaults:
             - '.*novomountainview\.com/'
             - '.*prometheusapartments\.com/'
             - '.*rentbalmoral\.com/'
-            - '.*sevensmv\.com/'
             - '.*sofiaaptliving\.com/'
             - '.*tamarindsquare\.com/'
             - '.*udr\.com/san-francisco-bay-area-apartments/'
@@ -443,6 +447,13 @@ job_defaults:
             - '.*griffisresidential\.com/property/south-bay/pricing-availability'
           filter: css
           selector: article.tag-affordable-home
+      - selective:
+          select_pattern:
+            - '.*abode\.org/what-we-do/abode-housing-development/gallery'
+            - '.*abode\.org/what-we-do/abode-property-management/gallery'
+          filter: css
+          selector: '[data-county="Santa Clara"]'
+          exclude: '.property-bedroom-data'
       - re.sub: 'Image Detail [a-z0-9]{32}'
       - re.sub:
           pattern: '/x(.*?\.[a-zA-Z]{3,4})(,qitok=[a-zA-Z0-9-]{8})?\.pagespeed\.ic\.[a-zA-Z0-9-]{10}\.[a-zA-Z]{3,4}'
@@ -478,16 +489,22 @@ job_defaults:
           repl: '\1"'
       - html2text:
           method: pyhtml2text
+          wrap_links: false
       # Normalize phone numbers
       - re.sub:
           pattern: '(?:\+?1[ \.\-]?)?\(?(\d{3})\)? ?[ \.\-] ?(\d{3}) ?[ \.\-] ?(\d{4})'
           repl: '\1-\2-\3'
-      - re.sub: '©.*?(\d{4}-)?20\d{2}'
+      - re.sub: '(Ⓒ|©).*?(\d{4}-)?20\d{2}'
       - re.sub: 'Copyright 20\d{2}'
       - re.sub: 'time=\d+'
       - re.sub: '&MoveInDate=\d{1,2}/\d{1,2}/\d{4}'
       - re.sub: '\?lit\$\d+?\$'
+      - re.sub:
+          pattern: ' {2,}'
+          repl: ' '
       - if_empty: error
+      - error_on:
+          - 'Please wait while your request is being verified'
   browser:
     wait_until: networkidle2
   cloudscraper:
@@ -530,14 +547,14 @@ job_defaults:
     headers:
       accept: '*/*'
       accept-language: 'en-US,en'
-      sec-ch-ua: '"Chromium";v="134", "Not:A-Brand";v="24", "Google Chrome";v="134"'
+      sec-ch-ua: '"Google Chrome";v="149", "Chromium";v="149", "Not)A;Brand";v="24"'
       sec-ch-ua-mobile: '?0'
       sec-ch-ua-platform: '"Linux"'
       sec-fetch-dest: 'document'
       sec-fetch-mode: 'navigate'
       sec-fetch-site: 'same-origin'
       sec-fetch-user: '?1'
-      user-agent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36'
+      user-agent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36'
 report:
   custom_email:
     enabled: true
@@ -571,15 +588,16 @@ report:
       - id: 712020:8ad994d4-719d-45fb-b332-ac14adae6a33  # Trevor
       - id: 70121:118f97c5-dec8-4865-b802-b63a76a8983b   # Finbarr
       - id: 712020:85b5e074-0fe2-44bc-9439-764894222c4d  # Marine
-        weight: 0.67
+      - id: 712020:4b126702-9248-4640-9a92-2293b6c99b4d  # Allen
       - id: 712020:c06385c5-5924-49ab-91ae-a4a832b69d23  # JF
       - id: 712020:89ef25b5-e5cf-4beb-925e-628779e764c5  # AA
+        weight: 0.60
       - id: 712020:3e481b27-a57c-4cec-a429-c6679f68c793  # SC
     reviewers:
       - id: 712020:8ad994d4-719d-45fb-b332-ac14adae6a33  # Trevor
-      - id: 70121:118f97c5-dec8-4865-b802-b63a76a8983b   # Finbarr
       - id: 712020:85b5e074-0fe2-44bc-9439-764894222c4d  # Marine
-        weight: 0.67
+      - id: 70121:118f97c5-dec8-4865-b802-b63a76a8983b   # Finbarr
+      - id: 712020:4b126702-9248-4640-9a92-2293b6c99b4d  # Allen
     error_assignee: 712020:8ad994d4-719d-45fb-b332-ac14adae6a33  # Trevor
     details_url: https://storage.googleapis.com/ueo-changes/housing/report-{datetime}.html
   html:

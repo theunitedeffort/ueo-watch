@@ -1,5 +1,5 @@
 # ueo-watch
-This repository contains configuration files to set up URL watching jobs relevant to UEO.  There are also a few convenience scripts for maintaining the system.  Sets of jobs are organized into folders within this project.  At the moment there is a set of housing jobs (`housing` folder), benefits eligibility jobs (`eligibility` folder), and automated affordable housing search jobs (`autohouse` folder).
+This repository contains configuration files to set up URL watching jobs relevant to UEO.  There are also a few convenience scripts for maintaining the system.  Sets of jobs are organized into folders within this project.  At the moment there is a set of housing jobs (`housing` folder) and benefits eligibility jobs (`eligibility` folder).
 
 # Setup
 These configuration files were written to be used on a Google Compute Engine instance running Linux (Debian Buster).  The instructions below are meant to replicate the environment as it currently exists for production runs. 
@@ -49,26 +49,14 @@ While the `pdftotext` Python package will be installed in the Installation step 
 sudo apt install build-essential libpoppler-cpp-dev pkg-config python3-dev
 ```
 
-## Google Cloud Setup
-The jobs in `autohouse` are meant to search for affordable housing properties matching a given set of search parameters.  These search parameters are stored on Google Drive in a Google Sheet.  A separate script generates the list of jobs for urlwatch from this spreadsheet and therefore needs access to the sheet.
+### Apify
+Some jobs use an Apify scraper or proxy to get URL contents.  After signing up, get your [API token](https://console.apify.com/settings/integrations) and proxy [password](https://console.apify.com/proxy/http-settings) and add them to a `config/.env` file:
 
-The below assumes the existence of a Google Cloud project.
-
-### Create a Google Cloud service account
-1. Go to Cloud Console [Service Accounts](https://console.cloud.google.com/iam-admin/serviceaccounts).
-1. Create a new service account with no roles.
-1. Clicking on the new service account on the [Service Accounts](https://console.cloud.google.com/iam-admin/serviceaccounts) page and go to the Keys tab.
-1. Add a new JSON key by selecting **Add key > Create new key** and choose the JSON option.
-1. Save the key in a secure location.
-
-### Enable Google Drive API
-1. Go to the [Google Drive API](https://console.developers.google.com/apis/api/drive.googleapis.com/overview) on the APIs & Services page of your Google Cloud project.
-1. Click on Enable API.
-
-### Share search parameters spreadsheet with the service account
-1. Find the spreadsheet containing housing search parameters on Google Drive.
-1. Using the Drive UI, share the spreadsheet with the email address associated with the new service account.  It will likely be of the form `{ID}@{PROJECT}.iam.gserviceaccount.com`.  Provide **view-only** access to this email address.
-
+```
+cd ~/ueo-watch/config
+echo "APIFY_TOKEN={your_token_here}" >> .env
+echo "PROXY_PASSWORD={your_proxy_password_here}" >> .env
+```
 
 ## Installation
 First, clone this repo:
@@ -164,6 +152,30 @@ login myaccount@theunitedeffort.org
 password MY_API_KEY
 ```
 
+The Jira reporter can also avoid assigning Jira tasks to volunteers who are unavailable.  Availability is stored in a [Google Sheet](https://docs.google.com/spreadsheets/d/1u3sYy2n3ZtKYe18IQmajwsJyj57GKSBL-fcVVWDDxGY) so all volunteers can update their availabilities themselves.  To allow access to the spreadsheet, follow these steps.  The below assumes the existence of a Google Cloud project.
+
+### Create a Google Cloud service account
+1. Go to Cloud Console [Service Accounts](https://console.cloud.google.com/iam-admin/serviceaccounts).
+1. Create a new service account with no roles.
+1. Click on the new service account on the [Service Accounts](https://console.cloud.google.com/iam-admin/serviceaccounts) page and go to the Keys tab.
+1. Add a new JSON key by selecting **Add key > Create new key** and choose the JSON option.
+1. Save the key in a secure location on the device that will run `urlwatch` jobs. Make note of the location for the next step:
+
+### Add JSON key file to env variables
+```
+cd ~/ueo_watch/config
+echo "SERVICE_ACCOUNT_CREDENTIAL_FILE=/put/path/to/your/json/here" >> .env
+```
+
+### Enable Google Sheets API
+1. Go to the [Google Sheets API](https://console.cloud.google.com/apis/api/sheets.googleapis.com) on the APIs & Services page of your Google Cloud project.
+1. Click on Enable API.
+
+### Share availability spreadsheet with the new service account
+1. Find the spreadsheet containing availability on Google Drive.
+1. Using the Google Drive UI, share the spreadsheet with the email address associated with the new service account.  It will likely be of the form `{ID}@{PROJECT}.iam.gserviceaccount.com`.  Provide **view-only** access to this email address.
+
+
 # Cronjob Setup
 To have the ueo-watch jobs run daily, edit the cron table with:
 
@@ -176,6 +188,3 @@ And add the following job, replacing `YOUR_USERNAME` with your username and `YOU
 ```
 0 6 * * * export PATH=$PATH:/home/YOUR_USERNAME/urlwatch; export PYPPETEER_CHROMIUM_REVISION=839947; . /home/YOUR_USERNAME/ueo-watch/YOUR_VENV/bin/activate && /home/YOUR_USERNAME/ueo-watch/run.sh > /home/YOUR_USERNAME/ueo-watch/run.log 2>&1
 ```
-
-# Acknowledgements
-Thanks to [Tang3672](https://github.com/Tang3672) for contributions (outside of GitHub) to the `autohouse` project.
