@@ -506,7 +506,7 @@ job_defaults:
       - error_on:
           - 'Please wait while your request is being verified'
   browser:
-    wait_until: networkidle2
+    wait_until: networkidle
   cloudscraper:
     max_tries: 4
   scraper:
