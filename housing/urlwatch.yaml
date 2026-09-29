@@ -54,6 +54,7 @@ job_defaults:
       - css:
           selector: body
           exclude: >-
+            iframe,
             select,
             .staff-block,
             div.gform_wrapper,
@@ -268,6 +269,7 @@ job_defaults:
             #moove_gdpr_cookie_modal,
             #moove_gdpr_cookie_info_bar,
             .cookieinfo,
+            .cli-modal,
             [href^="https://onlineleasing.force.com"],
             img[alt*="logo"],
             img[alt*="LOGO"],
@@ -506,7 +508,7 @@ job_defaults:
       - error_on:
           - 'Please wait while your request is being verified'
   browser:
-    wait_until: networkidle2
+    wait_until: networkidle
   cloudscraper:
     max_tries: 4
   scraper:
