@@ -54,6 +54,7 @@ job_defaults:
       - css:
           selector: body
           exclude: >-
+            iframe,
             select,
             .staff-block,
             div.gform_wrapper,
@@ -268,6 +269,7 @@ job_defaults:
             #moove_gdpr_cookie_modal,
             #moove_gdpr_cookie_info_bar,
             .cookieinfo,
+            .cli-modal,
             [href^="https://onlineleasing.force.com"],
             img[alt*="logo"],
             img[alt*="LOGO"],
