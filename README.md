@@ -155,7 +155,7 @@ password MY_API_KEY
 and ensure it has the proper permissions:
 
 ```
-chmod 666 ~/.netrc
+chmod 600 ~/.netrc
 ```
 
 The Jira reporter can also avoid assigning Jira tasks to volunteers who are unavailable.  Availability is stored in a [Google Sheet](https://docs.google.com/spreadsheets/d/1u3sYy2n3ZtKYe18IQmajwsJyj57GKSBL-fcVVWDDxGY) so all volunteers can update their availabilities themselves.  To allow access to the spreadsheet, follow these steps.  The below assumes the existence of a Google Cloud project.
