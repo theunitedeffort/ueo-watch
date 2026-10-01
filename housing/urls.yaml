@@ -1,6 +1,6 @@
 # City websites
 navigate: https://www.risehousing.com/applicants-cupertino-bmr-rental
-wait_for: '#tab-resources'
+wait_for: '#tabpanel-resources .sqs-block-content'
 ---
 url: https://www.cityofgilroy.org/797/Affordable-Apartments
 ---
