@@ -2205,7 +2205,7 @@ wait_for: '#main-content'
 navigate: https://housingbayarea.mtc.ca.gov/listing/25edb14f-31a4-4f5e-b0dd-696ac64fc95b/mi_la_los_altos_330_distel_circle_los_altos_ca
 wait_for: '#main-content'
 ---
-navigate: https://housingbayarea.mtc.ca.gov/listing/55880b8e-e817-4f1f-89b9-f20413cab58d/montecito_apartments_3765_tamarack_ln_santa_clara_ca
+navigate: https://housingbayarea.mtc.ca.gov/listing/3e64584c-aae6-4116-a99a-0f76c7dcc289/montecito_apartments_3765_tamarack_ln_santa_clara_ca
 wait_for: '#main-content'
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/ext/70e62705-a8e8-4be0-b5a1-4b59ea950755
