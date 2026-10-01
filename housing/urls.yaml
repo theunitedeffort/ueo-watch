@@ -2509,6 +2509,18 @@ url: https://www.sunnyvale.ca.gov/home/showpublisheddocument/366/638581259044030
 filter:
   - pdf2text
 ---
+url: https://eah-fe.netlify.app/content/vista-park-1-property-flyer
+filter:
+  - pdf2text
+---
+url: https://eah-fe.netlify.app/content/vista-park-1-rent-income-requirements
+filter:
+  - pdf2text
+---
+url: https://eah-fe.netlify.app/content/vista-park-1-rsp
+filter:
+  - pdf2text
+---
 # This guarantees a detected change on each run.
 ---
 name: "Test change"
