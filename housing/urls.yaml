@@ -2509,15 +2509,27 @@ url: https://www.sunnyvale.ca.gov/home/showpublisheddocument/366/638581259044030
 filter:
   - pdf2text
 ---
-url: https://eah-fe.netlify.app/content/vista-park-1-property-flyer
+url: https://www.eahhousing.org/content/vista-park-1-property-flyer
 filter:
   - pdf2text
 ---
-url: https://eah-fe.netlify.app/content/vista-park-1-rent-income-requirements
+url: https://www.eahhousing.org/content/vista-park-1-rent-income-requirements
 filter:
   - pdf2text
 ---
-url: https://eah-fe.netlify.app/content/vista-park-1-rsp
+url: https://www.eahhousing.org/content/vista-park-1-rsp
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/taylor-oaks-property-flyer
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/taylor-oaks-apartments-rent-income-requirements
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/taylor-oaks-rsp
 filter:
   - pdf2text
 ---
