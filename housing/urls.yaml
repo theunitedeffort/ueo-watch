@@ -2533,6 +2533,18 @@ url: https://www.eahhousing.org/content/taylor-oaks-rsp
 filter:
   - pdf2text
 ---
+url: https://www.eahhousing.org/content/town-park-towers-property-flyer
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/town-park-towers-rent-income-requirements
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/town-park-towers-rsp
+filter:
+  - pdf2text
+---
 # This guarantees a detected change on each run.
 ---
 name: "Test change"
