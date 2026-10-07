@@ -252,6 +252,7 @@ job_defaults:
             .elementor-widget-theme-site-logo,
             .themer-logo,
             .Mobile-bar-branding-logo,
+            .main-logo-img,
             .sidebar-first-wrapper,
             .breadcrumb,
             .breadcrumbs,
@@ -275,7 +276,8 @@ job_defaults:
             img[alt*="logo"],
             img[alt*="LOGO"],
             img[alt*="Logo"],
-            img[src*="-logo-"],
+            img[src*="logo-"],
+            img[src*="/logo/"],
             img[src*="-logo@"],
             img[src*="-logo."],
             img[src*="%20logo%20"],
@@ -469,6 +471,7 @@ job_defaults:
       - re.sub: '\?itok=[a-zA-Z0-9-_]{8}'
       - re.sub: 'GA1\.\d\.\d{1,10}\.\d{10}'
       - re.sub: '\?((fit)|(resize))=\d{2,4}%2C\d{2,4}&amp;ssl=1'
+      - re.sub: '\s+\([oO]pens [iI]n ([aA] )?[nN]ew [tT]ab\)'
       # Normalize phone links
       - re.sub:
           pattern: 'href="tel:(?:[Cc]all)?(?:%20)?(?:\+?1(?:[ \.\-]|(?:%20))?)?\\?\(?(\d{3})\\?\)? ?(?:[ \.\-]|(?:%20))? ?(\d{3}) ?(?:[ \.\-]|(?:%20))? ?(\d{4})'
