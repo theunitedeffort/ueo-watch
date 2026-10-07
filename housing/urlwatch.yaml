@@ -12,7 +12,7 @@ job_defaults:
       - selective:
           select_pattern:
             - '.*housekeys\d+\.com/?$'
-            - '.*relatedcalifornia\.com'
+            - '.*relatedcalifornia\.com'  # empty result when nav is filtered.
             - '.*deanzaproperties\.com'
             - '.*787thealameda\.com/?$'
             - '.*tamienstation\.com'
@@ -220,6 +220,7 @@ job_defaults:
             [id*="menu-main-header-nav"],
             [class*="menu-main-header-nav"],
             .footer-wrapper .menu,
+            .menu--footer,
             .footer-nav-secondary,
             .footer-nav-list,
             #footer-menus-md-sm,
