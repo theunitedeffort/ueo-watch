@@ -7,7 +7,7 @@ if [ -z "$1" ]
   then
   	echo "Provide the name of the GCE instance to update."
     echo "For example:"
-    echo "  $0 ueo-vm-1 [diff-lookback]"
+    echo "  $0 ueo-vm-3 [diff-lookback]"
     exit 1
 fi
 

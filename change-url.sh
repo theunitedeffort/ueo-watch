@@ -37,7 +37,7 @@ new_url=$3
 vm_name=$4
 if [ -z "$vm_name" ]
   then
-    vm_name="ueo-vm-1"
+    vm_name="ueo-vm-3"
 fi
 local_config_path="$root_dir/$config_dir/urls.yaml"
 
