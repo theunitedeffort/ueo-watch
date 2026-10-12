@@ -349,6 +349,45 @@ class EmailDecodeFilter(filters.FilterBase):
     return re.sub(pattern, decode_email, data)
 
 
+class NuxtDevalueFilter(filters.FilterBase):
+  __kind__ = 'parse_nuxt_payload'
+
+  def _parse_nuxt_payload(self, data):
+    """
+    Recursively resolves numeric pointers in Nuxt 3 payload JSON arrays.
+    Thanks, Gemini.
+    """
+    def resolve(item, visited=None):
+      if visited is None:
+        visited = set()
+
+      # If the item is an integer pointer referencing an array index
+      if isinstance(item, int) and 0 <= item < len(data):
+        if item in visited:
+          return None  # Prevent infinite recursive loops
+        visited.add(item)
+        return resolve(data[item], visited.copy())
+
+      # If the item is a dictionary, resolve its values
+      elif isinstance(item, dict):
+        return {k: resolve(v, visited.copy()) for k, v in item.items()}
+
+      # If the item is a list, resolve each element
+      elif isinstance(item, list):
+        # Handles Nuxt special wrapper tuples like ["Reactive", 12] or ["Set", 5]
+        if len(item) == 2 and isinstance(item[0], str) and isinstance(item[1], int):
+          return resolve(item[1], visited.copy())
+        return [resolve(v, visited.copy()) for v in item]
+
+      return item
+
+    # Nuxt places the primary root state object at array index 0
+    return resolve(data[0])
+
+  def filter(self, data, subfilter):
+    return json.dumps(self._parse_nuxt_payload(json.loads(data)))
+
+
 class JqFilterBase(filters.FilterBase):
   def _pre_filter(self, data):
     filtered = filters.FilterBase.process('jq', {'query': self.__query__}, self.state, data)
@@ -364,6 +403,11 @@ class JqFilterBase(filters.FilterBase):
     filtered = self._post_filter(filtered)
     return filtered
 
+
+class Eah(JqFilterBase):
+
+  __kind__ = "eah"
+  __query__ = r'.data | with_entries(select(.key | match("gql"; "i")))[] | .properties[] | select(.county.slug == "santa-clara-county" and .propertyStatus.slug != "development" ) | "\(.name)\n\(.propertyStatus.name)\nhttps://eahhousing.org/affordable-housing-\(.city.slug)/\(.slug)\n\n"'
 
 class Doorway(JqFilterBase):
 
