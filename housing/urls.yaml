@@ -512,6 +512,12 @@ filter:
   - parse_nuxt_payload
   - eah
 ---
+user_visible_url: https://www.eahhousing.org/development-portfolio-search/?county=santa-clara-county
+url: https://www.eahhousing.org/development-portfolio-search/_payload.json
+filter:
+  - parse_nuxt_payload
+  - eah_development
+---
 url: https://www.eahhousing.org/affordable-housing-san-jose/art-ark-apartments/
 ---
 url: https://www.eahhousing.org/affordable-housing-morgan-hill/bella-terra/
@@ -531,8 +537,6 @@ url: https://www.eahhousing.org/affordable-housing-san-jose/don-de-dios/
 url: https://www.eahhousing.org/affordable-housing-san-jose/elena-gardens/
 ---
 url: https://www.eahhousing.org/affordable-housing-saratoga/fellowship-plaza/
----
-url: https://www.eahhousing.org/future/
 ---
 url: https://www.eahhousing.org/affordable-housing-santa-clara/gateway-santa-clara/
 ---
