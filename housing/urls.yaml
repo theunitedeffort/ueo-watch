@@ -506,9 +506,11 @@ url: https://www.drycreekcrossing.com/floorplans
 kind: cloudscraper
 url: https://www.drycreekcrossing.com/helpfulresources
 ---
-url: https://www.eahhousing.org/apartment-search-result-never-delete/
-data:
-  county: Santa Clara
+user_visible_url: https://www.eahhousing.org/apartment-search/?county=santa-clara-county&available=false
+url: https://www.eahhousing.org/apartment-search/_payload.json
+filter:
+  - parse_nuxt_payload
+  - eah
 ---
 url: https://www.eahhousing.org/apartments/art-ark-apartments/
 ---
