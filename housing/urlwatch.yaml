@@ -279,6 +279,7 @@ job_defaults:
             img[alt*="LOGO"],
             img[alt*="Logo"],
             img[src*="logo-"],
+            img[src*="logo_"],
             img[src*="/logo/"],
             img[src*="-logo@"],
             img[src*="-logo."],
