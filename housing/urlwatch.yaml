@@ -19,6 +19,7 @@ job_defaults:
             - '.*oakgroveaptliving\.com/floor-plans$' # income restrictions are in <nav>
             - '.*charlotteparkaptliving\.com/floor-plans$' # income restrictions are in <nav>
             - '.*sofiaaptliving\.com' # phone number is in .navbar
+            - '.*nandaonthealameda\.com/' # phone is in .top-bar
           invert_selection: true
           filter: css
           selector: body
@@ -38,7 +39,8 @@ job_defaults:
             #navbar,
             .navbar,
             [role="navigation"],
-            #inside-nav
+            #inside-nav,
+            .top-bar,
       # TODO: try to remove footer from all pages.
       - selective:
           select_pattern:
@@ -158,7 +160,6 @@ job_defaults:
             #menu-top-primary,
             .primary-menu,
             .top-bar-menu,
-            .top-bar,
             .top-nav,
             .top_nav,
             #top_nav,
@@ -356,6 +357,7 @@ job_defaults:
             - '.*murphystationapts\.com'
             - '.*museumparksanjose\.com/$'
             - '.*mvapartments\.com/$'
+            - '.*nandaonthealameda\.com/'
             - '.*novomountainview\.com/'
             - '.*prometheusapartments\.com/'
             - '.*rentbalmoral\.com/'

@@ -2137,9 +2137,6 @@ wait_for: '#main-content'
 navigate: https://housingbayarea.mtc.ca.gov/listing/7645aa1d-98ee-41a5-91f1-e9d75a36cc04/the_fountains_2005_san_ramon_ave_mountain_view_ca
 wait_for: '#main-content'
 ---
-navigate: https://housingbayarea.mtc.ca.gov/listing/95213fc3-d235-488f-93da-0c4eaa4595e6/paulson_park_i_111_montebello_avenue_mountain_view_ca
-wait_for: '#main-content'
----
 navigate: https://housingbayarea.mtc.ca.gov/listing/e8365ed3-133c-46db-b978-8340d8562787/paulson_park_ii_111_montebello_avenue_mountain_view_ca
 wait_for: '#main-content'
 ---
@@ -2188,7 +2185,7 @@ wait_for: '#main-content'
 navigate: https://housingbayarea.mtc.ca.gov/listing/ext/b7869b77-ad7c-47e4-8e9f-1d5003e4807e
 wait_for: '#main-content'
 ---
-navigate: https://housingbayarea.mtc.ca.gov/listing/a2a63f1c-36f8-4bb6-9fa4-f4f6a381caa5/ginzton_terrace_375_oaktree_drive_mountain_view_ca
+navigate: https://housingbayarea.mtc.ca.gov/listing/eb4107c8-9737-4d24-bfa4-8af67d1ecb4a/ginzton_terrace_375_oaktree_drive_mountain_view_ca
 wait_for: '#main-content'
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/ext/3b374f00-628a-4886-ad74-691835d74af7
@@ -2279,6 +2276,12 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/364d6d1a-0d51-42eb-9ba8-d46c
 wait_for: '#main-content'
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/cd9cac17-68b7-439e-bbcd-65e40fd16b10/riverwood_place_5090_lick_mill_boulevard_santa_clara_ca
+wait_for: '#main-content'
+---
+navigate: https://housingbayarea.mtc.ca.gov/listing/d0249867-611f-4f2e-8710-e48779e6ec43/paulson_park_i_111_montebello_avenue_mountain_view_ca
+wait_for: '#main-content'
+---
+navigate: https://housingbayarea.mtc.ca.gov/listing/b4202f70-9d71-471c-a294-3653e157bbcb/nanda_on_the_alameda_2685_the_alameda_santa_clara_ca
 wait_for: '#main-content'
 ---
 user_visible_url: https://housingbayarea.mtc.ca.gov/listings?search=counties:Santa%20Clara
@@ -2382,6 +2385,8 @@ kind: cloudscraper
 url: https://museumparksanjose.com/
 ---
 url: https://www.mvapartments.com/
+---
+url: https://www.nandaonthealameda.com/
 ---
 kind: cloudscraper
 url: https://www.novomountainview.com/
