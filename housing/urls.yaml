@@ -2285,10 +2285,10 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/b4202f70-9d71-471c-a294-3653
 wait_for: '#main-content'
 ---
 user_visible_url: https://housingbayarea.mtc.ca.gov/listings?search=counties:Santa%20Clara
-url: https://housingbayarea.mtc.ca.gov/api/adapter/listings/combined
+url: https://housingbayarea.mtc.ca.gov/api/adapter/listings/list
 headers:
   Content-type: application/json
-data: '{"view":"base","limit":200,"page":1,"filter":[{"$comparison":"IN","counties":["Santa Clara"]}],"orderBy":["mostRecentlyPublished"],"orderDir":["desc"]}'
+data: '{"view":"base","limit":200,"page":1,"filter":[{"$comparison": "=", "status": "active"}, {"$comparison": "=", "includeExternal": true}, {"$comparison":"IN","jurisdictions":["5d6957b4-7e02-44b4-9a2f-a598ed782f39"]}],"orderBy":["mostRecentlyPublished"],"orderDir":["desc"]}'
 filter:
   - doorway
   - if_empty: error
