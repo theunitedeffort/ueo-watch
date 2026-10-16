@@ -40,7 +40,7 @@ job_defaults:
             .navbar,
             [role="navigation"],
             #inside-nav,
-            .top-bar,
+            .top-bar
       # TODO: try to remove footer from all pages.
       - selective:
           select_pattern:
