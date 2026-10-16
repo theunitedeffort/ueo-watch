@@ -2284,7 +2284,7 @@ wait_for: '#main-content'
 navigate: https://housingbayarea.mtc.ca.gov/listing/b4202f70-9d71-471c-a294-3653e157bbcb/nanda_on_the_alameda_2685_the_alameda_santa_clara_ca
 wait_for: '#main-content'
 ---
-user_visible_url: https://housingbayarea.mtc.ca.gov/listings?search=counties:Santa%20Clara
+user_visible_url: https://housingbayarea.mtc.ca.gov/listings?jurisdictions=5d6957b4-7e02-44b4-9a2f-a598ed782f39
 url: https://housingbayarea.mtc.ca.gov/api/adapter/listings/list
 headers:
   Content-type: application/json
