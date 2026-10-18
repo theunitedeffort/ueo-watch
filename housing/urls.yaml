@@ -2251,7 +2251,7 @@ wait_for: '#main-content'
 navigate: https://housingbayarea.mtc.ca.gov/listing/1969875c-7198-4abb-9182-e97e5dac2d71/sunset_square_2080_alum_rock_ave_san_jose_ca
 wait_for: '#main-content'
 ---
-navigate: https://housingbayarea.mtc.ca.gov/listing/37ec429d-6ec0-44d4-af14-69844985ba2e/the_acacia_at_231_grant_educator_housing_units_available_now_231_grant_avenue_palo_alto_ca
+navigate: https://housingbayarea.mtc.ca.gov/listing/ef780a9e-d3db-4ff5-87f0-0e63384c2258/the_acacia_at_231_grant_educator_housing_units_available_now_231_grant_avenue_palo_alto_ca
 wait_for: '#main-content'
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/7645aa1d-98ee-41a5-91f1-e9d75a36cc04/the_fountains_2005_san_ramon_ave_mountain_view_ca
