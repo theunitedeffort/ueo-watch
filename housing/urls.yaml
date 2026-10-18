@@ -2284,6 +2284,9 @@ wait_for: '#main-content'
 navigate: https://housingbayarea.mtc.ca.gov/listing/291ffbd8-cfc3-415c-974d-9e8d30da8dc7/virginia_street_studios_255_east_virginia_street_san_jose_ca
 wait_for: '#main-content'
 ---
+navigate: https://housingbayarea.mtc.ca.gov/listing/e70de330-31de-427d-a09f-64ef0be55d1e/villa_torre_apartments_955_s_6_th_street_san_jose_ca
+wait_for: '#main-content'
+---
 user_visible_url: https://housingbayarea.mtc.ca.gov/listings?jurisdictions=5d6957b4-7e02-44b4-9a2f-a598ed782f39
 url: https://housingbayarea.mtc.ca.gov/api/adapter/listings/list
 headers:
