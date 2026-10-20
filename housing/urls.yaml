@@ -2131,7 +2131,7 @@ wait_for: '#main-content'
 navigate: https://housingbayarea.mtc.ca.gov/listing/9dbfe55a-5134-48a3-a38c-8e308b6bb9c0/ira_d_hall_square_1178_sonora_court_sunnyvale_ca
 wait_for: '#main-content'
 ---
-navigate: https://housingbayarea.mtc.ca.gov/listing/4618a4a9-d611-49b4-8c0d-b08d6432375a/la_fenetre_705_northrup_street_san_jose_ca
+navigate: https://housingbayarea.mtc.ca.gov/listing/91d1e7bb-886c-4555-b8f0-60382bbada4f/la_fenetre_705_northrup_street_san_jose_ca
 wait_for: '#main-content'
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/c7e74f5b-3e02-4e3b-8984-200cd67c2f20/linq_apartments_1700_newbury_park_dr_san_jose_ca
@@ -2285,6 +2285,9 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/291ffbd8-cfc3-415c-974d-9e8d
 wait_for: '#main-content'
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/e70de330-31de-427d-a09f-64ef0be55d1e/villa_torre_apartments_955_s_6_th_street_san_jose_ca
+wait_for: '#main-content'
+---
+navigate: https://housing.sanjoseca.gov/listing/9ffe4661-a225-44e2-88d2-8666bda8a698/le_mirador_senior_apartments_1191_coleman_road_san_jose_ca
 wait_for: '#main-content'
 ---
 user_visible_url: https://housingbayarea.mtc.ca.gov/listings?jurisdictions=5d6957b4-7e02-44b4-9a2f-a598ed782f39
