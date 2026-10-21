@@ -407,13 +407,13 @@ class JqFilterBase(filters.FilterBase):
 class Eah(JqFilterBase):
 
   __kind__ = 'eah'
-  __query__ = r'.data | with_entries(select(.key | match("gql"; "i")))[] | .properties[] | select(.county.slug == "santa-clara-county" and .propertyStatus.slug != "development" ) | "\(.name)\n\(.propertyStatus.name)\nhttps://eahhousing.org/affordable-housing-\(.city.slug)/\(.slug)\n\n"'
+  __query__ = r'.data | with_entries(select(.key | match("gql"; "i")))[] | .properties[] | select(.city.counties[0].slug == "santa-clara-county" and .propertyStatus.slug != "development" ) | "\(.name)\n\(.propertyStatus.name)\nhttps://eahhousing.org/affordable-housing-\(.city.slug)/\(.slug)\n\n"'
 
 
 class EahDevelopment(JqFilterBase):
 
   __kind__ = 'eah_development'
-  __query__ = r'.data | with_entries(select(.key | match("gql"; "i")))[] | .properties[] | select(.county.slug == "santa-clara-county" and .propertyStatus.slug == "development" ) | "\(.name)\n\(.developmentPhase.name)\nhttps://eahhousing.org/affordable-development-\(.city.slug)/\(.slug)\n\n"'
+  __query__ = r'.data | with_entries(select(.key | match("gql"; "i")))[] | .properties[] | select(.city.counties[0].slug == "santa-clara-county" and .propertyStatus.slug == "development" ) | "\(.name)\n\(.developmentPhase.name)\nhttps://eahhousing.org/affordable-development-\(.city.slug)/\(.slug)\n\n"'
 
 class Doorway(JqFilterBase):
 
