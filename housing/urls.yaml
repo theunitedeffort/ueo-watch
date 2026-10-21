@@ -511,12 +511,14 @@ url: https://www.eahhousing.org/apartment-search/_payload.json
 filter:
   - parse_nuxt_payload
   - eah
+  - if_empty: error
 ---
 user_visible_url: https://www.eahhousing.org/development-portfolio-search/?county=santa-clara-county
 url: https://www.eahhousing.org/development-portfolio-search/_payload.json
 filter:
   - parse_nuxt_payload
   - eah_development
+  - if_empty: error
 ---
 url: https://www.eahhousing.org/affordable-housing-san-jose/art-ark-apartments/
 ---
