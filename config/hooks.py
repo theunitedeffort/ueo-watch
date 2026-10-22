@@ -327,6 +327,8 @@ class EmailDecodeFilter(filters.FilterBase):
 
   def filter(self, data, subfilter):
     def decode_scraper_shield(s):
+      if not s:
+        return None
       # https://gist.github.com/nullableVoidPtr/632583d4e34b4b1bf3b92f5b4f5d0c7d
       decoded = ""
       key = int(s[:2], 16)
@@ -335,16 +337,19 @@ class EmailDecodeFilter(filters.FilterBase):
       return decoded
 
     def decode_email(match):
-      link = decode_scraper_shield(match.group(1))
+      link = decode_scraper_shield(match.group(1)) or ""
       text = link
       # The linked address may be different than the displayed text (in rare
       # cases)
       match = re.search(r'data-cfemail=[\'"](.*?)[\'"]', match.group(0))
       if match:
         text = decode_scraper_shield(match.group(1))
-      return '<a href="mailto:{link}">{text}</a>'.format(link=link, text=text)
+      if link:
+        return '<a href="mailto:{link}">{text}</a>'.format(link=link, text=text)
+      else:
+        return text
 
-    pattern = re.compile(r'<a[^<>]*?href=[\'"]/cdn-cgi/l/email-protection#([a-z0-9]+)[\'"][^<>]*?>.*?</a>',
+    pattern = re.compile(r'<a[^<>]*?href=[\'"]/cdn-cgi/l/email-protection(?:#([a-z0-9]+))?[\'"][^<>]*?>.*?</a>',
       re.DOTALL)
     return re.sub(pattern, decode_email, data)
 
