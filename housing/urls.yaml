@@ -2172,7 +2172,7 @@ wait_for: '#main-content'
 navigate: https://housingbayarea.mtc.ca.gov/listing/b4202f70-9d71-471c-a294-3653e157bbcb/nanda_on_the_alameda_2685_the_alameda_santa_clara_ca
 wait_for: '#main-content'
 ---
-navigate: https://housingbayarea.mtc.ca.gov/listing/03cd810c-60bd-40af-8f4d-d487638863c6/oak_tree_village_apartments_100_branham_lane_east_san_jose_ca
+navigate: https://housingbayarea.mtc.ca.gov/listing/d21fdfb0-cf55-4bd7-b4ad-f573db61611f/oak_tree_village_apartments_100_branham_lane_east_san_jose_ca
 wait_for: '#main-content'
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/caf65b46-6aae-4285-be3b-89a7178b9c5d/open_doors_634_w_parr_avenue_los_gatos_ca
