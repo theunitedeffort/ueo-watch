@@ -2528,23 +2528,311 @@ url: https://www.sunnyvale.ca.gov/home/showpublisheddocument/366/638581259044030
 filter:
   - pdf2text
 ---
-url: https://www.eahhousing.org/content/vista-park-1-property-flyer
+url: https://www.eahhousing.org/content/art-ark-rent-income-requirements
 filter:
   - pdf2text
 ---
-url: https://www.eahhousing.org/content/vista-park-1-rent-income-requirements
+url: https://www.eahhousing.org/content/art-ark-rsp
 filter:
   - pdf2text
 ---
-url: https://www.eahhousing.org/content/vista-park-1-rsp
+url: https://www.eahhousing.org/content/bella-terra-property-flyer
 filter:
   - pdf2text
 ---
-url: https://www.eahhousing.org/content/taylor-oaks-property-flyer
+url: https://www.eahhousing.org/content/bella-terra-rent-income-requirements
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/bella-terra-rsp
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/belovida-at-newbury-park-paper-application
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/belovida-at-newbury-park-property-flyer
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/belovida-at-newbury-park-rent-income-requirements
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/belovida-at-newbury-park-rsp
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/buena-vista-midtown-paper-application
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/buena-vista-midtown-rent-income-requirements
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/buena-vista-midtown-rsp
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/cochrane-village-property-flyer
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/cochrane-village-rent-income-requirements
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/cochrane-village-rsp
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/cornerstone-at-japantown-paper-application
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/cornerstone-at-japantown-rent-income-requirements
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/cornerstone-at-japantown-rsp
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/delmas-park-Paper-Application
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/delmas-park-property-flyer
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/delmas-park-rent-income-requirements
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/delmas-park-rsp
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/don-de-dios-property-flyer
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/don-de-dios-rent-income-requirements
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/don-de-dios-rsp
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/elena-gardens-property-flyer
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/elena-gardens-rent-income-requirements
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/elena-gardens-rsp
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/fellowship-plaza-property-flyer
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/fellowship-plaza-rent-income-requirements
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/fellowship-plaza-rsp
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/gateway-santa-clara-paper-application
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/gateway-santa-clara-property-flyer
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/gateway-santa-clara-rent-income-requirements
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/gateway-santa-clara-rsp
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/markham-Plaza-property-Flyer
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/markham-plaza-1-rent-income-requirements
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/markham-plaza-2-rent-income-requirements
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/markham-plaza-rsp
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/mila-cover-letter
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/mila-prop-flyer-ga
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/mila-prop-flyer-pbv
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/mila-rent-income-pbv
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/mila-rent-income-requirements-ga
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/mila-rsp
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/orchard-ranch-rent-income-requirements
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/orchard-ranch-rsp
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/palm-court-paper-application
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/palm-court-property-flyer
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/palm-court-rent-income-requirements
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/palm-court-rsp
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/park-place-paper-application
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/park-place-rent-income-requirements
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/park-place-rsp
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/parkview-family-paper-application
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/parkview-family-property-flyer
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/parkview-family-rent-income
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/parkview-family-rsp
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/parkview-senior-property-flyer
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/parkview-senior-rent-income-requirements
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/parkview-senior-rsp
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/paseo-senter-1-rent-income-requirements
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/paseo-senter-2-rent-income-requirements
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/paseo-senter-paper-application
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/paseo-senter-rsp
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/paseo-senter-waitlist-application
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/pollard-plaza-paper-application
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/pollard-plaza-property-flyer
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/pollard-plaza-rent-income-requirements
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/pollard-plaza-rsp
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/presidio-el-camino-paper-application
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/presidio-el-camino-property-flyer
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/presidio-el-camino-rsp
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/presidion-el-camino-rent-income-requirements
 filter:
   - pdf2text
 ---
 url: https://www.eahhousing.org/content/taylor-oaks-apartments-rent-income-requirements
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/taylor-oaks-paper-application
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/taylor-oaks-property-flyer
 filter:
   - pdf2text
 ---
@@ -2561,6 +2849,34 @@ filter:
   - pdf2text
 ---
 url: https://www.eahhousing.org/content/town-park-towers-rsp
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/vista-park-1-paper-application
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/vista-park-1-property-flyer
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/vista-park-1-rent-income-requirements
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/vista-park-1-rsp
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/vista-park-2-property-flyer
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/vista-park-2-rent-income-requirements
+filter:
+  - pdf2text
+---
+url: https://www.eahhousing.org/content/vista-park-2-rsp
 filter:
   - pdf2text
 ---
