@@ -2600,10 +2600,6 @@ url: https://www.eahhousing.org/content/cornerstone-at-japantown-rsp
 filter:
   - pdf2text
 ---
-url: https://www.eahhousing.org/content/delmas-park-Paper-Application
-filter:
-  - pdf2text
----
 url: https://www.eahhousing.org/content/delmas-park-property-flyer
 filter:
   - pdf2text
