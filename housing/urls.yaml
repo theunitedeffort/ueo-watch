@@ -1530,8 +1530,10 @@ url: https://www.redwoodseniors.com/
 ---
 url: https://www.redwoodseniors.com/floorplan/
 ---
+kind: cloudscraper
 url: https://www.relatedcalifornia.com/our-company/properties/mayfield-place
 ---
+kind: cloudscraper
 url: https://www.relatedcalifornia.com/our-company/properties/village-willow-glen
 ---
 url: https://www.rentalmaden.com/
