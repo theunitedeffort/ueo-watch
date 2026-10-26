@@ -428,7 +428,7 @@ class Doorway(JqFilterBase):
 class SpokeHs(JqFilterBase):
 
   __kind__ = "spokehs"
-  __query__ = r'.[] | "\(.title)\n\(.address)\nhttps://www.spokehs.com/FCFS/\(.id)\n\n"'
+  __query__ = r'.available'
 
 class ListingApiBase(JqFilterBase):
   def filter(self, data, subfilter):

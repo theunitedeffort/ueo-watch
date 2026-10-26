@@ -753,8 +753,10 @@ url: https://www.glenlomaapts.com/
 kind: cloudscraper
 url: https://www.glenlomaapts.com/floorplans
 ---
+kind: cloudscraper
 url: https://griffisresidential.com/property/south-bay/affordable-housing/
 ---
+kind: cloudscraper
 url: https://griffisresidential.com/property/south-bay/pricing-availability/
 ---
 kind: cloudscraper
@@ -1453,9 +1455,6 @@ url: https://www.morelandapartments.com/Floor-plans.aspx#links
 ---
 kind: cloudscraper
 url: https://www.mountainviewlot12.org/
----
-kind: cloudscraper
-url: https://museumparksanjose.com/p/below-market-homes/
 ---
 url: https://www.mvapartments.com/apartments/ca/mountain-view/below-market-rates
 ---
@@ -2292,7 +2291,7 @@ filter:
   - if_empty: error
 ---
 user_visible_url: https://www.spokehs.com/listings
-url: https://prod-api-spokehs.herokuapp.com/master/api/open-lotteries?section=available
+url: https://prod-api-spokehs.herokuapp.com/master/api/listings
 filter:
   - spokehs
 
@@ -2321,6 +2320,7 @@ url: https://www.aviarecupertino.com/
 kind: cloudscraper
 url: https://www.catalystmountainviewapartments.com/
 ---
+kind: cloudscraper
 url: https://citylineflats.com/
 ---
 url: https://www.deanzaproperties.com/south-bay-area/buckingham-place-apartments/
