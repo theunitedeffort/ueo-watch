@@ -270,6 +270,7 @@ job_defaults:
             #acsModal,
             .be-related-link-container,
             #cmplz-cookiebanner-container,
+            .privacy-controls-banner,
             #moove_gdpr_cookie_modal,
             #moove_gdpr_cookie_info_bar,
             .cookieinfo,
@@ -519,6 +520,7 @@ job_defaults:
       - re.sub:
           pattern: ' {2,}'
           repl: ' '
+      - strip
       - if_empty: error
       - error_on:
           - 'Please wait while your request is being verified'
