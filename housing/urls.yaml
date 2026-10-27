@@ -1935,9 +1935,6 @@ wait_for: '#main-content'
 navigate: https://housing.sanjoseca.gov/listing/9f6bb067-65c0-4fa5-8717-edd32b4eea10
 wait_for: '#main-content'
 ---
-navigate: https://housing.sanjoseca.gov/listing/0a4d4495-8659-4b72-a3c8-363eb8577bdf
-wait_for: '#main-content'
----
 navigate: https://housing.sanjoseca.gov/listing/3b374f00-628a-4886-ad74-691835d74af7
 wait_for: '#main-content'
 ---
@@ -2259,7 +2256,7 @@ wait_for: '#main-content'
 navigate: https://housingbayarea.mtc.ca.gov/listing/ac338a87-1d09-4351-81ea-93451e36254b/the_lafayette_2333_calle_del_mundo_santa_clara_ca
 wait_for: '#main-content'
 ---
-navigate: https://housingbayarea.mtc.ca.gov/listing/8b77d613-c818-4287-8a0f-3e20b1c8123f/the_verandas_apartments_1868_n_capitol_ave_san_jose_ca
+navigate: https://housingbayarea.mtc.ca.gov/listing/49fb7133-9e9b-48bc-af9e-b848f8559fff/the_verandas_apartments_1868_n_capitol_ave_san_jose_ca
 wait_for: '#main-content'
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/4239a066-64d4-4ff5-a2cb-d629e9b94e0f/timberwood_apartments_3903_seven_trees_boulevard_san_jose_ca
@@ -2281,6 +2278,9 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/e70de330-31de-427d-a09f-64ef
 wait_for: '#main-content'
 ---
 navigate: https://housing.sanjoseca.gov/listing/9ffe4661-a225-44e2-88d2-8666bda8a698/le_mirador_senior_apartments_1191_coleman_road_san_jose_ca
+wait_for: '#main-content'
+---
+navigate: https://housingbayarea.mtc.ca.gov/listing/3e3f5a7f-dbde-4177-bad5-de6b9a16bb87/meridian_family_apartments_969_meridian_ave_san_jose_ca
 wait_for: '#main-content'
 ---
 user_visible_url: https://housingbayarea.mtc.ca.gov/listings?jurisdictions=5d6957b4-7e02-44b4-9a2f-a598ed782f39
