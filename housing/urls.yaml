@@ -1784,7 +1784,7 @@ url: https://www.villageatmadrone.com/
 ---
 url: https://www.villageatmadrone.com/floor-plans
 ---
-user_visible_url: https://www.villageatmadrone.com/apartments/ca/morgan-hill/floor-plans#/#knock
+user_visible_url: https://www.villageatmadrone.com/floor-plans#knock
 url: https://doorway-api.knockrentals.com/v1/property/2028065/units
 filter:
   - knock_units
