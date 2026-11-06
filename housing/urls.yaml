@@ -1130,7 +1130,7 @@ kind: cloudscraper
 url: https://www.lasventanasapts.com/
 ---
 kind: cloudscraper
-url: https://www.lasventanasapts.com/floorplans
+url: https://www.lasventanasapts.com/floor-plans
 ---
 url: https://liveatagrihood.com/
 ---
@@ -1547,6 +1547,9 @@ url: https://www.rentatstonegateapts.com/floor-plans
 url: https://www.rentthehuntington.com/
 ---
 url: https://www.rentthehuntington.com/floorplans
+---
+url: https://www.rentthehuntington.com/income-limits
+---
 # Temporarily removing ROEM URLs because their website is broken and
 # keeps reporting noisy changes.
 # ---
@@ -1692,6 +1695,10 @@ url: https://terracinamorganhill.usamfm.com/applynow
 ---
 kind: cloudscraper
 url: https://terracinamorganhill.usamfm.com/floorplans
+---
+url: https://thecanneryapts.com/
+---
+url: https://thecanneryapts.com/floor-plans/
 ---
 kind: cloudscraper
 url: https://www.thelodgeatmorganhillapartments.com/
