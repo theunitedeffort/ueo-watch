@@ -2103,9 +2103,6 @@ wait_for: '#main-content'
 navigate: https://housingbayarea.mtc.ca.gov/listing/4cb0110c-d1f7-42e2-bb59-d8ffaa9ab635/fair_oaks_plaza_690_south_fair_oaks_avenue_sunnyvale_ca
 wait_for: '#main-content'
 ---
-navigate: https://housingbayarea.mtc.ca.gov/listing/1f163dec-0487-4fc2-81b9-b2a14966ccd8/legacy_at_fountain_plaza_190_ryland_st_san_jose_ca
-wait_for: '#main-content'
----
 navigate: https://housingbayarea.mtc.ca.gov/listing/84bf70f5-a139-4480-9a7e-20c7989cfadc/foxdale_village_apartments_1250_foxdale_loop_san_jose_ca
 wait_for: '#main-content'
 ---
