@@ -1241,8 +1241,10 @@ url: https://www.lasventanasapts.com/
 kind: cloudscraper
 url: https://www.lasventanasapts.com/floor-plans
 ---
+kind: cloudscraper
 url: https://liveatagrihood.com/
 ---
+kind: cloudscraper
 url: https://liveatagrihood.com/income-limits-unit-amis-rent-limits/
 ---
 kind: cloudscraper
