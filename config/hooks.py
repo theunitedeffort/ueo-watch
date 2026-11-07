@@ -141,6 +141,7 @@ class JscoPropertiesJob(MultistageJob):
     self.user_visible_url = self.url
     self.url = 'https://jsco.net/wp-admin/admin-ajax.php'
     self.setup_job = {
+      'kind': 'cloudscraper',
       'url': self.user_visible_url,
       'filter': [
         {'re.findall': {
