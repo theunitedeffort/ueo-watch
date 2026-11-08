@@ -2192,9 +2192,6 @@ wait_for: '#main-content'
 navigate: https://housingbayarea.mtc.ca.gov/listing/6d688cb6-fbbe-4dbd-ad37-c539b8cc0abb/clarendon_apartments_7213_clarendon_st_san_jose_ca
 wait_for: '#main-content'
 ---
-navigate: https://housingbayarea.mtc.ca.gov/listing/26581f1b-c62b-4ebd-b6d6-23f0e17b38a0/country_hills_124_rancho_drive_san_jose_ca
-wait_for: '#main-content'
----
 navigate: https://housingbayarea.mtc.ca.gov/listing/c0bed484-4c42-42e4-8d4d-615de75e304f/craig_gardens_2580_south_bascom_ave_campbell_ca
 wait_for: '#main-content'
 ---
