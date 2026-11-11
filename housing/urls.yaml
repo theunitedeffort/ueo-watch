@@ -2342,7 +2342,7 @@ wait_for: '#main-content'
 navigate: https://housingbayarea.mtc.ca.gov/listing/b31365b9-6e79-48c8-9997-579d1039c442/shorebreeze_ii_460_n_shoreline_boulevard_mountain_view_ca
 wait_for: '#main-content'
 ---
-navigate: https://housingbayarea.mtc.ca.gov/listing/6ae80c69-7f3a-4429-8436-c4dce420c7ba/sofia_apartments_3580_rambla_place_santa_clara_ca
+navigate: https://housingbayarea.mtc.ca.gov/listing/9774aeb2-e052-4ba5-bf24-bffbfb4f989a/sofia_apartments_3580_rambla_place_santa_clara_ca
 wait_for: '#main-content'
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/cd5f239d-5896-47f3-963d-5dab6245856f/summer_breeze_200_lewis_road_san_jose_ca
