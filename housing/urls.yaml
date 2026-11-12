@@ -2057,9 +2057,6 @@ wait_for: '#main-content'
 navigate: https://housing.sanjoseca.gov/listing/c0a779e0-4bbf-4f5b-bbb3-f26b979419f7
 wait_for: '#main-content'
 ---
-navigate: https://housing.sanjoseca.gov/listing/02e3a86f-40f0-4255-a940-f3afb4c91915
-wait_for: '#main-content'
----
 navigate: https://housing.sanjoseca.gov/listing/3c26073d-2062-4c1f-bc54-404740a3f1dd/monte_vista_senior_apartments_2605_la_hacienda_ct_san_jose_ca
 wait_for: '#main-content'
 ---
@@ -2124,6 +2121,9 @@ navigate: https://housing.sanjoseca.gov/listing/33d56d99-6323-496c-85a6-4845c2d6
 wait_for: '#main-content'
 ---
 navigate: https://housing.sanjoseca.gov/listing/4a27d186-4bcb-4a4d-b731-d457b848abd1
+wait_for: '#main-content'
+---
+navigate: https://housing.sanjoseca.gov/listing/9ffe4661-a225-44e2-88d2-8666bda8a698/le_mirador_senior_apartments_1191_coleman_road_san_jose_ca
 wait_for: '#main-content'
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/ee925c61-b3be-4683-96c6-6cf3bd9f6e02/88_saratoga_avenue_apartments_88_saratoga_avenue_santa_clara_ca
@@ -2387,7 +2387,7 @@ wait_for: '#main-content'
 navigate: https://housingbayarea.mtc.ca.gov/listing/e70de330-31de-427d-a09f-64ef0be55d1e/villa_torre_apartments_955_s_6_th_street_san_jose_ca
 wait_for: '#main-content'
 ---
-navigate: https://housing.sanjoseca.gov/listing/9ffe4661-a225-44e2-88d2-8666bda8a698/le_mirador_senior_apartments_1191_coleman_road_san_jose_ca
+navigate: https://housingbayarea.mtc.ca.gov/listing/dd541860-957e-470d-a347-37687a323b37/monte_alban_apartments_1324_santee_dr_san_jose_ca
 wait_for: '#main-content'
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/3e3f5a7f-dbde-4177-bad5-de6b9a16bb87/meridian_family_apartments_969_meridian_ave_san_jose_ca
