@@ -1216,6 +1216,12 @@ url: https://jscosccha.com/property/villa-hermosa/
 ---
 url: https://www.kooserarcade.com/
 ---
+url: https://www.labellamv.org/
+---
+url: https://www.labellamv.org/faq
+---
+url: https://www.labellamv.org/overview
+---
 url: https://www.lakevisioncap.com/museum-park/
 ---
 url: https://www.lakevisioncap.com/museum-park/below-market-rate-bmr-affordable-housing/
@@ -2082,7 +2088,7 @@ wait_for: '#main-content'
 navigate: https://housing.sanjoseca.gov/listing/f3c39f79-3c9e-422c-b2e8-a2b4e9c66651/quail_hills_senior_apartments_1260_piedmont_road_san_jose_ca
 wait_for: '#main-content'
 ---
-navigate: https://housing.sanjoseca.gov/listing/ac844a06-3735-4255-926e-aa7151985c54
+navigate: https://housing.sanjoseca.gov/listing/f11b8dea-a509-4f66-bb6d-3ad47a99bc68/quetzal_gardens_7_n_king_rd_san_jos_ca
 wait_for: '#main-content'
 ---
 navigate: https://housing.sanjoseca.gov/listing/b463898e-c76b-4c1d-9e71-5acacfbe840c
