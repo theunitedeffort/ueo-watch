@@ -275,6 +275,8 @@ job_defaults:
             #moove_gdpr_cookie_info_bar,
             .cookieinfo,
             #cookieConsent,
+            #cookie-law-info-bar,
+            #cookie-law-info-again,
             .cli-modal,
             [href^="https://onlineleasing.force.com"],
             img[alt*="logo"],
