@@ -1887,6 +1887,8 @@ url: https://www.unitycare.org/housing/
 ---
 url: https://usamfm.com/communities/mainline-north/
 ---
+url: https://usapropfund.com/community/terracina-at-morgan-hill/
+---
 url: https://usapropfund.com/community/virginia-street-studios/
 ---
 url: https://valleyvillageretirement.com/
@@ -2086,9 +2088,6 @@ navigate: https://housing.sanjoseca.gov/listing/b165d484-2ba3-4847-9095-250b306b
 wait_for: '#main-content'
 ---
 navigate: https://housing.sanjoseca.gov/listing/f3c39f79-3c9e-422c-b2e8-a2b4e9c66651/quail_hills_senior_apartments_1260_piedmont_road_san_jose_ca
-wait_for: '#main-content'
----
-navigate: https://housing.sanjoseca.gov/listing/f11b8dea-a509-4f66-bb6d-3ad47a99bc68/quetzal_gardens_7_n_king_rd_san_jos_ca
 wait_for: '#main-content'
 ---
 navigate: https://housing.sanjoseca.gov/listing/b463898e-c76b-4c1d-9e71-5acacfbe840c
@@ -2401,6 +2400,9 @@ navigate: https://housingbayarea.mtc.ca.gov/listing/dd541860-957e-470d-a347-3768
 wait_for: '#main-content'
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/3e3f5a7f-dbde-4177-bad5-de6b9a16bb87/meridian_family_apartments_969_meridian_ave_san_jose_ca
+wait_for: '#main-content'
+---
+navigate: https://housingbayarea.mtc.ca.gov/listing/26f67a8e-39ee-44a5-8e07-1992bc359b4e/quetzal_gardens_7_n_king_rd_san_jos_ca
 wait_for: '#main-content'
 ---
 user_visible_url: https://housingbayarea.mtc.ca.gov/listings?jurisdictions=5d6957b4-7e02-44b4-9a2f-a598ed782f39
