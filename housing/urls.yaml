@@ -2300,7 +2300,7 @@ wait_for: '#main-content'
 navigate: https://housingbayarea.mtc.ca.gov/listing/9873208e-b2ad-479b-aadd-0dfe07590045/page_street_studios_333_page_street_san_jose_ca
 wait_for: '#main-content'
 ---
-navigate: https://housingbayarea.mtc.ca.gov/listing/fb195fd3-b8f8-4029-8573-430c1770899e/palm_court_senior_apartments_1200_lick_ave_san_jose_ca
+navigate: https://housingbayarea.mtc.ca.gov/listing/08a6ddfb-1e66-41b9-b881-35ac2b76a594/palm_court_senior_apartments_1200_lick_ave_san_jose_ca
 wait_for: '#main-content'
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/c9d6511e-1f56-4378-a895-a303eab0aaa3/palo_alto_gardens_650_san_antonio_road_palo_alto_ca
@@ -2378,7 +2378,7 @@ wait_for: '#main-content'
 navigate: https://housingbayarea.mtc.ca.gov/listing/49fb7133-9e9b-48bc-af9e-b848f8559fff/the_verandas_apartments_1868_n_capitol_ave_san_jose_ca
 wait_for: '#main-content'
 ---
-navigate: https://housingbayarea.mtc.ca.gov/listing/4239a066-64d4-4ff5-a2cb-d629e9b94e0f/timberwood_apartments_3903_seven_trees_boulevard_san_jose_ca
+navigate: https://housingbayarea.mtc.ca.gov/listing/4f1cd2f8-91e7-4521-afb8-ec87f778fa9d/timberwood_apartments_3903_seven_trees_boulevard_san_jose_ca
 wait_for: '#main-content'
 ---
 navigate: https://housingbayarea.mtc.ca.gov/listing/ef351cb9-3a40-4da8-8dd3-960c0826838c/troy_apartments_714_s_almaden_avenue_san_jose_ca
