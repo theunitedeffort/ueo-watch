@@ -82,12 +82,19 @@ url: https://www.787thealameda.com/
 ---
 url: https://www.88saratoga.com/
 ---
-url: https://www.88saratoga.com/floorplans/#eligibility
----
 user_visible_url: https://www.88saratoga.com/floorplans/
 url: https://www.88saratoga.com/api/v3/floorplans/all/?api_key=591ad39e330e913b4ad1ed7ca19e4f7540a69363
 filter:
   - apartments247_floorplans
+---
+user_visible_url: https://www.88saratoga.com/income/
+url: https://www.88saratoga.com/api/affordable/
+filter:
+  - jq: .[0].custom_body_html
+  - html2text:
+      method: pyhtml2text
+      wrap_links: false
+  - if_empty: error
 ---
 kind: cloudscraper
 url: https://www.969meridian.com/
