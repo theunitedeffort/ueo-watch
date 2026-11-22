@@ -94,6 +94,7 @@ job_defaults:
             .contact-hours,
             .yelp-reviews,
             .other-communities,
+            .brxe-block > .community-card,
             img[src^="https://api.fouanalytics.com"],
             .search-form,
             .searchForm,
